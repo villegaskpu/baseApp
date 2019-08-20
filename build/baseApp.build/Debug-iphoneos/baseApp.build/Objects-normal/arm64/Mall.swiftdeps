@@ -1,0 +1,116 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Mall"
+provides-nominal:
+- "7baseApp4MallC"
+provides-member:
+- ["7baseApp4MallC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "<-"
+- "Mall"
+- "Map"
+- "Mappable"
+- "String"
+- "ZoneImg"
+depends-member:
+- ["12ObjectMapper12BaseMappableP", ""]
+- !private ["12ObjectMapper12BaseMappableP", "countOffer"]
+- !private ["12ObjectMapper12BaseMappableP", "countStore"]
+- !private ["12ObjectMapper12BaseMappableP", "estimatedSavingsOffers"]
+- !private ["12ObjectMapper12BaseMappableP", "idMall"]
+- ["12ObjectMapper12BaseMappableP", "init"]
+- !private ["12ObjectMapper12BaseMappableP", "logoURL"]
+- ["12ObjectMapper12BaseMappableP", "mapping"]
+- !private ["12ObjectMapper12BaseMappableP", "name"]
+- !private ["12ObjectMapper12BaseMappableP", "notify"]
+- !private ["12ObjectMapper12BaseMappableP", "zoneImg"]
+- ["7baseApp4MallC", "Map"]
+- ["7baseApp4MallC", "String"]
+- ["7baseApp4MallC", "ZoneImg"]
+- ["7baseApp4MallC", "countOffer"]
+- ["7baseApp4MallC", "countStore"]
+- ["7baseApp4MallC", "deinit"]
+- ["7baseApp4MallC", "estimatedSavingsOffers"]
+- ["7baseApp4MallC", "idMall"]
+- ["7baseApp4MallC", "init"]
+- ["7baseApp4MallC", "logoURL"]
+- ["7baseApp4MallC", "mapping"]
+- ["7baseApp4MallC", "name"]
+- ["7baseApp4MallC", "notify"]
+- ["7baseApp4MallC", "zoneImg"]
+- !private ["12ObjectMapper3MapC", "subscript"]
+- ["12ObjectMapper8MappableP", ""]
+- !private ["12ObjectMapper8MappableP", "countOffer"]
+- !private ["12ObjectMapper8MappableP", "countStore"]
+- !private ["12ObjectMapper8MappableP", "estimatedSavingsOffers"]
+- !private ["12ObjectMapper8MappableP", "idMall"]
+- ["12ObjectMapper8MappableP", "init"]
+- !private ["12ObjectMapper8MappableP", "logoURL"]
+- ["12ObjectMapper8MappableP", "mapping"]
+- !private ["12ObjectMapper8MappableP", "name"]
+- !private ["12ObjectMapper8MappableP", "notify"]
+- !private ["12ObjectMapper8MappableP", "zoneImg"]
+- !private ["7baseApp7ZoneImgC", "deinit"]
+depends-nominal:
+- "12ObjectMapper12BaseMappableP"
+- "7baseApp4MallC"
+- !private "12ObjectMapper3MapC"
+- "12ObjectMapper8MappableP"
+- !private "7baseApp7ZoneImgC"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/ObjectMapper.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "4a5bbc2d144ee2e809af9e195ec16030"

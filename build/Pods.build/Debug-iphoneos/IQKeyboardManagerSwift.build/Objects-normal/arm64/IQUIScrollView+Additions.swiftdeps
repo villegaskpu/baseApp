@@ -1,0 +1,408 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["So12UIScrollViewC", ""]
+- ["So11UITableViewC", ""]
+- ["So16UICollectionViewC", ""]
+- ["So12UIScrollViewC", "shouldIgnoreScrollingAdjustment"]
+- ["So12UIScrollViewC", "shouldRestoreScrollViewContentOffset"]
+- ["So11UITableViewC", "previousIndexPath"]
+- ["So16UICollectionViewC", "previousIndexPath"]
+provides-dynamic-lookup:
+- "shouldIgnoreScrollingAdjustment"
+- "shouldRestoreScrollViewContentOffset"
+depends-top-level:
+- !private "&&"
+- !private "-"
+- !private "-="
+- !private "<"
+- !private ">="
+- "AssignmentPrecedence"
+- "Bool"
+- "CastingPrecedence"
+- "IndexPath"
+- "UICollectionView"
+- "UIScrollView"
+- "UITableView"
+- !private "kIQShouldIgnoreScrollingAdjustment"
+- !private "kIQShouldRestoreScrollViewContentOffset"
+- !private "objc_AssociationPolicy"
+- !private "objc_getAssociatedObject"
+- !private "objc_setAssociatedObject"
+depends-member:
+- !private ["SK", "init"]
+- !private ["SK", "row"]
+- !private ["SK", "section"]
+- !private ["So15CALayerDelegateP", "IndexPath"]
+- !private ["So15CALayerDelegateP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So15CALayerDelegateP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So15CALayerDelegateP", "numberOfItems"]
+- !private ["So15CALayerDelegateP", "numberOfRows"]
+- !private ["So15CALayerDelegateP", "objc_AssociationPolicy"]
+- !private ["So15CALayerDelegateP", "objc_getAssociatedObject"]
+- !private ["So15CALayerDelegateP", "objc_setAssociatedObject"]
+- !private ["s7CVarArgP", "IndexPath"]
+- !private ["s7CVarArgP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["s7CVarArgP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["s7CVarArgP", "numberOfItems"]
+- !private ["s7CVarArgP", "numberOfRows"]
+- !private ["s7CVarArgP", "objc_AssociationPolicy"]
+- !private ["s7CVarArgP", "objc_getAssociatedObject"]
+- !private ["s7CVarArgP", "objc_setAssociatedObject"]
+- !private ["Sl", "init"]
+- !private ["Sl", "row"]
+- !private ["Sl", "section"]
+- !private ["SL", "init"]
+- !private ["SL", "row"]
+- !private ["SL", "section"]
+- !private ["s28CustomDebugStringConvertibleP", "IndexPath"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["s28CustomDebugStringConvertibleP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["s28CustomDebugStringConvertibleP", "numberOfItems"]
+- !private ["s28CustomDebugStringConvertibleP", "numberOfRows"]
+- !private ["s28CustomDebugStringConvertibleP", "objc_AssociationPolicy"]
+- !private ["s28CustomDebugStringConvertibleP", "objc_getAssociatedObject"]
+- !private ["s28CustomDebugStringConvertibleP", "objc_setAssociatedObject"]
+- !private ["s28CustomDebugStringConvertibleP", "row"]
+- !private ["s28CustomDebugStringConvertibleP", "section"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "row"]
+- !private ["s17CustomReflectableP", "section"]
+- !private ["s23CustomStringConvertibleP", "IndexPath"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["s23CustomStringConvertibleP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["s23CustomStringConvertibleP", "numberOfItems"]
+- !private ["s23CustomStringConvertibleP", "numberOfRows"]
+- !private ["s23CustomStringConvertibleP", "objc_AssociationPolicy"]
+- !private ["s23CustomStringConvertibleP", "objc_getAssociatedObject"]
+- !private ["s23CustomStringConvertibleP", "objc_setAssociatedObject"]
+- !private ["s23CustomStringConvertibleP", "row"]
+- !private ["s23CustomStringConvertibleP", "section"]
+- !private ["Se", "init"]
+- !private ["Se", "row"]
+- !private ["Se", "section"]
+- !private ["SE", "init"]
+- !private ["SE", "row"]
+- !private ["SE", "section"]
+- !private ["SQ", "IndexPath"]
+- !private ["SQ", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- !private ["SQ", "init"]
+- !private ["SQ", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["SQ", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["SQ", "numberOfItems"]
+- !private ["SQ", "numberOfRows"]
+- !private ["SQ", "objc_AssociationPolicy"]
+- !private ["SQ", "objc_getAssociatedObject"]
+- !private ["SQ", "objc_setAssociatedObject"]
+- !private ["SQ", "row"]
+- !private ["SQ", "section"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "row"]
+- !private ["s25ExpressibleByArrayLiteralP", "section"]
+- !private ["SH", "IndexPath"]
+- !private ["SH", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- !private ["SH", "init"]
+- !private ["SH", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["SH", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["SH", "numberOfItems"]
+- !private ["SH", "numberOfRows"]
+- !private ["SH", "objc_AssociationPolicy"]
+- !private ["SH", "objc_getAssociatedObject"]
+- !private ["SH", "objc_setAssociatedObject"]
+- !private ["SH", "row"]
+- !private ["SH", "section"]
+- !private ["10Foundation9IndexPathV", "init"]
+- !private ["10Foundation9IndexPathV", "row"]
+- !private ["10Foundation9IndexPathV", "section"]
+- !private ["SM", "init"]
+- !private ["SM", "row"]
+- !private ["SM", "section"]
+- !private ["So8NSCodingP", "IndexPath"]
+- !private ["So8NSCodingP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So8NSCodingP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So8NSCodingP", "numberOfItems"]
+- !private ["So8NSCodingP", "numberOfRows"]
+- !private ["So8NSCodingP", "objc_AssociationPolicy"]
+- !private ["So8NSCodingP", "objc_getAssociatedObject"]
+- !private ["So8NSCodingP", "objc_setAssociatedObject"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "IndexPath"]
+- !private ["So8NSObjectC", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So8NSObjectC", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So8NSObjectC", "numberOfItems"]
+- !private ["So8NSObjectC", "numberOfRows"]
+- !private ["So8NSObjectC", "objc_AssociationPolicy"]
+- !private ["So8NSObjectC", "objc_getAssociatedObject"]
+- !private ["So8NSObjectC", "objc_setAssociatedObject"]
+- ["So8NSObjectC", "previousIndexPath"]
+- ["So8NSObjectC", "shouldIgnoreScrollingAdjustment"]
+- ["So8NSObjectC", "shouldRestoreScrollViewContentOffset"]
+- !private ["So8NSObjectP", "IndexPath"]
+- !private ["So8NSObjectP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So8NSObjectP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So8NSObjectP", "numberOfItems"]
+- !private ["So8NSObjectP", "numberOfRows"]
+- !private ["So8NSObjectP", "objc_AssociationPolicy"]
+- !private ["So8NSObjectP", "objc_getAssociatedObject"]
+- !private ["So8NSObjectP", "objc_setAssociatedObject"]
+- !private ["Sk", "init"]
+- !private ["Sk", "row"]
+- !private ["Sk", "section"]
+- !private ["SY", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "row"]
+- !private ["10Foundation20ReferenceConvertibleP", "section"]
+- !private ["ST", "init"]
+- !private ["ST", "row"]
+- !private ["ST", "section"]
+- !private ["So29UIAccessibilityIdentificationP", "IndexPath"]
+- !private ["So29UIAccessibilityIdentificationP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So29UIAccessibilityIdentificationP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So29UIAccessibilityIdentificationP", "numberOfItems"]
+- !private ["So29UIAccessibilityIdentificationP", "numberOfRows"]
+- !private ["So29UIAccessibilityIdentificationP", "objc_AssociationPolicy"]
+- !private ["So29UIAccessibilityIdentificationP", "objc_getAssociatedObject"]
+- !private ["So29UIAccessibilityIdentificationP", "objc_setAssociatedObject"]
+- !private ["So12UIAppearanceP", "IndexPath"]
+- !private ["So12UIAppearanceP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So12UIAppearanceP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So12UIAppearanceP", "numberOfItems"]
+- !private ["So12UIAppearanceP", "numberOfRows"]
+- !private ["So12UIAppearanceP", "objc_AssociationPolicy"]
+- !private ["So12UIAppearanceP", "objc_getAssociatedObject"]
+- !private ["So12UIAppearanceP", "objc_setAssociatedObject"]
+- !private ["So21UIAppearanceContainerP", "IndexPath"]
+- !private ["So21UIAppearanceContainerP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So21UIAppearanceContainerP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So21UIAppearanceContainerP", "numberOfItems"]
+- !private ["So21UIAppearanceContainerP", "numberOfRows"]
+- !private ["So21UIAppearanceContainerP", "objc_AssociationPolicy"]
+- !private ["So21UIAppearanceContainerP", "objc_getAssociatedObject"]
+- !private ["So21UIAppearanceContainerP", "objc_setAssociatedObject"]
+- ["So16UICollectionViewC", "IndexPath"]
+- !private ["So16UICollectionViewC", "numberOfItems"]
+- ["So16UICollectionViewC", "previousIndexPath"]
+- !private ["So17UICoordinateSpaceP", "IndexPath"]
+- !private ["So17UICoordinateSpaceP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So17UICoordinateSpaceP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So17UICoordinateSpaceP", "numberOfItems"]
+- !private ["So17UICoordinateSpaceP", "numberOfRows"]
+- !private ["So17UICoordinateSpaceP", "objc_AssociationPolicy"]
+- !private ["So17UICoordinateSpaceP", "objc_getAssociatedObject"]
+- !private ["So17UICoordinateSpaceP", "objc_setAssociatedObject"]
+- !private ["So23UIDataSourceTranslatingP", "IndexPath"]
+- !private ["So23UIDataSourceTranslatingP", "numberOfItems"]
+- !private ["So23UIDataSourceTranslatingP", "numberOfRows"]
+- !private ["So13UIDynamicItemP", "IndexPath"]
+- !private ["So13UIDynamicItemP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So13UIDynamicItemP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So13UIDynamicItemP", "numberOfItems"]
+- !private ["So13UIDynamicItemP", "numberOfRows"]
+- !private ["So13UIDynamicItemP", "objc_AssociationPolicy"]
+- !private ["So13UIDynamicItemP", "objc_getAssociatedObject"]
+- !private ["So13UIDynamicItemP", "objc_setAssociatedObject"]
+- !private ["So18UIFocusEnvironmentP", "IndexPath"]
+- !private ["So18UIFocusEnvironmentP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So18UIFocusEnvironmentP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So18UIFocusEnvironmentP", "numberOfItems"]
+- !private ["So18UIFocusEnvironmentP", "numberOfRows"]
+- !private ["So18UIFocusEnvironmentP", "objc_AssociationPolicy"]
+- !private ["So18UIFocusEnvironmentP", "objc_getAssociatedObject"]
+- !private ["So18UIFocusEnvironmentP", "objc_setAssociatedObject"]
+- !private ["So11UIFocusItemP", "IndexPath"]
+- !private ["So11UIFocusItemP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So11UIFocusItemP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So11UIFocusItemP", "numberOfItems"]
+- !private ["So11UIFocusItemP", "numberOfRows"]
+- !private ["So11UIFocusItemP", "objc_AssociationPolicy"]
+- !private ["So11UIFocusItemP", "objc_getAssociatedObject"]
+- !private ["So11UIFocusItemP", "objc_setAssociatedObject"]
+- !private ["So20UIFocusItemContainerP", "IndexPath"]
+- !private ["So20UIFocusItemContainerP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So20UIFocusItemContainerP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So20UIFocusItemContainerP", "numberOfItems"]
+- !private ["So20UIFocusItemContainerP", "numberOfRows"]
+- !private ["So20UIFocusItemContainerP", "objc_AssociationPolicy"]
+- !private ["So20UIFocusItemContainerP", "objc_getAssociatedObject"]
+- !private ["So20UIFocusItemContainerP", "objc_setAssociatedObject"]
+- !private ["So30UIFocusItemScrollableContainerP", "IndexPath"]
+- !private ["So30UIFocusItemScrollableContainerP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So30UIFocusItemScrollableContainerP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So30UIFocusItemScrollableContainerP", "numberOfItems"]
+- !private ["So30UIFocusItemScrollableContainerP", "numberOfRows"]
+- !private ["So30UIFocusItemScrollableContainerP", "objc_AssociationPolicy"]
+- !private ["So30UIFocusItemScrollableContainerP", "objc_getAssociatedObject"]
+- !private ["So30UIFocusItemScrollableContainerP", "objc_setAssociatedObject"]
+- !private ["So30UIPasteConfigurationSupportingP", "IndexPath"]
+- !private ["So30UIPasteConfigurationSupportingP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So30UIPasteConfigurationSupportingP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So30UIPasteConfigurationSupportingP", "numberOfItems"]
+- !private ["So30UIPasteConfigurationSupportingP", "numberOfRows"]
+- !private ["So30UIPasteConfigurationSupportingP", "objc_AssociationPolicy"]
+- !private ["So30UIPasteConfigurationSupportingP", "objc_getAssociatedObject"]
+- !private ["So30UIPasteConfigurationSupportingP", "objc_setAssociatedObject"]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "IndexPath"]
+- !private ["So11UIResponderC", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So11UIResponderC", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So11UIResponderC", "numberOfItems"]
+- !private ["So11UIResponderC", "numberOfRows"]
+- !private ["So11UIResponderC", "objc_AssociationPolicy"]
+- !private ["So11UIResponderC", "objc_getAssociatedObject"]
+- !private ["So11UIResponderC", "objc_setAssociatedObject"]
+- ["So11UIResponderC", "previousIndexPath"]
+- ["So11UIResponderC", "shouldIgnoreScrollingAdjustment"]
+- ["So11UIResponderC", "shouldRestoreScrollViewContentOffset"]
+- !private ["So30UIResponderStandardEditActionsP", "IndexPath"]
+- !private ["So30UIResponderStandardEditActionsP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So30UIResponderStandardEditActionsP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So30UIResponderStandardEditActionsP", "numberOfItems"]
+- !private ["So30UIResponderStandardEditActionsP", "numberOfRows"]
+- !private ["So30UIResponderStandardEditActionsP", "objc_AssociationPolicy"]
+- !private ["So30UIResponderStandardEditActionsP", "objc_getAssociatedObject"]
+- !private ["So30UIResponderStandardEditActionsP", "objc_setAssociatedObject"]
+- ["So12UIScrollViewC", "Bool"]
+- ["So12UIScrollViewC", "IndexPath"]
+- !private ["So12UIScrollViewC", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So12UIScrollViewC", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So12UIScrollViewC", "numberOfItems"]
+- !private ["So12UIScrollViewC", "numberOfRows"]
+- !private ["So12UIScrollViewC", "objc_AssociationPolicy"]
+- !private ["So12UIScrollViewC", "objc_getAssociatedObject"]
+- !private ["So12UIScrollViewC", "objc_setAssociatedObject"]
+- ["So12UIScrollViewC", "previousIndexPath"]
+- ["So12UIScrollViewC", "shouldIgnoreScrollingAdjustment"]
+- ["So12UIScrollViewC", "shouldRestoreScrollViewContentOffset"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "IndexPath"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "numberOfItems"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "numberOfRows"]
+- ["So11UITableViewC", "IndexPath"]
+- !private ["So11UITableViewC", "numberOfRows"]
+- ["So11UITableViewC", "previousIndexPath"]
+- !private ["So18UITraitEnvironmentP", "IndexPath"]
+- !private ["So18UITraitEnvironmentP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So18UITraitEnvironmentP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So18UITraitEnvironmentP", "numberOfItems"]
+- !private ["So18UITraitEnvironmentP", "numberOfRows"]
+- !private ["So18UITraitEnvironmentP", "objc_AssociationPolicy"]
+- !private ["So18UITraitEnvironmentP", "objc_getAssociatedObject"]
+- !private ["So18UITraitEnvironmentP", "objc_setAssociatedObject"]
+- !private ["So23UIUserActivityRestoringP", "IndexPath"]
+- !private ["So23UIUserActivityRestoringP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So23UIUserActivityRestoringP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So23UIUserActivityRestoringP", "numberOfItems"]
+- !private ["So23UIUserActivityRestoringP", "numberOfRows"]
+- !private ["So23UIUserActivityRestoringP", "objc_AssociationPolicy"]
+- !private ["So23UIUserActivityRestoringP", "objc_getAssociatedObject"]
+- !private ["So23UIUserActivityRestoringP", "objc_setAssociatedObject"]
+- ["So6UIViewC", "Bool"]
+- ["So6UIViewC", "IndexPath"]
+- !private ["So6UIViewC", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["So6UIViewC", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["So6UIViewC", "numberOfItems"]
+- !private ["So6UIViewC", "numberOfRows"]
+- !private ["So6UIViewC", "objc_AssociationPolicy"]
+- !private ["So6UIViewC", "objc_getAssociatedObject"]
+- !private ["So6UIViewC", "objc_setAssociatedObject"]
+- ["So6UIViewC", "previousIndexPath"]
+- ["So6UIViewC", "shouldIgnoreScrollingAdjustment"]
+- ["So6UIViewC", "shouldRestoreScrollViewContentOffset"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "IndexPath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "numberOfItems"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "numberOfRows"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "objc_AssociationPolicy"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "objc_getAssociatedObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "objc_setAssociatedObject"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "row"]
+- !private ["s21_ObjectiveCBridgeableP", "section"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "IndexPath"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "kIQShouldIgnoreScrollingAdjustment"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "kIQShouldRestoreScrollViewContentOffset"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "numberOfItems"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "numberOfRows"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "objc_AssociationPolicy"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "objc_getAssociatedObject"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "objc_setAssociatedObject"]
+- !private ["So22objc_AssociationPolicyV", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+depends-nominal:
+- !private "SK"
+- !private "So15CALayerDelegateP"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "SH"
+- !private "10Foundation9IndexPathV"
+- !private "SM"
+- !private "So8NSCodingP"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "Sk"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "ST"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- "So16UICollectionViewC"
+- !private "So17UICoordinateSpaceP"
+- !private "So23UIDataSourceTranslatingP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- "So12UIScrollViewC"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- "So11UITableViewC"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+- !private "So22objc_AssociationPolicyV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/Pods/Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Pods.build/Debug-iphoneos/IQKeyboardManagerSwift.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "40b548ffdcdec30d0c1434b75d083f78"

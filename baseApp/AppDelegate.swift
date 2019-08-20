@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.goNext()
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Listo"
+        
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = createRootViewController()
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
@@ -39,6 +51,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func createRootViewController() -> UIViewController {
+        //        let bundle = Bundle(for: ManagerSectionController.self)
+        //        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        //
+        //        let vc = storyboard.instantiateInitialViewController() as!  ManagerSectionController
+        //        return vc
+        
+//        let bundle = Bundle(for: Login.self)
+//        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+//
+//        let vc = storyboard.instantiateInitialViewController() as!  Login
+        
+        let vc = LoginVC()
+        return vc
+        
     }
 
 

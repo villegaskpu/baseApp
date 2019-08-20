@@ -1,0 +1,169 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Store"
+provides-nominal:
+- "7baseApp5StoreC"
+provides-member:
+- ["7baseApp5StoreC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "<-"
+- "Commerce"
+- "Double"
+- "Mall"
+- "Map"
+- "Mappable"
+- "Offer"
+- "Schedule"
+- "State"
+- "Store"
+- "String"
+depends-member:
+- ["12ObjectMapper12BaseMappableP", "Commerce"]
+- ["12ObjectMapper12BaseMappableP", "Mall"]
+- ["12ObjectMapper12BaseMappableP", "State"]
+- ["12ObjectMapper12BaseMappableP", ""]
+- !private ["12ObjectMapper12BaseMappableP", "addressL1"]
+- !private ["12ObjectMapper12BaseMappableP", "addressL2"]
+- !private ["12ObjectMapper12BaseMappableP", "city"]
+- !private ["12ObjectMapper12BaseMappableP", "commerce"]
+- !private ["12ObjectMapper12BaseMappableP", "distance"]
+- !private ["12ObjectMapper12BaseMappableP", "email"]
+- !private ["12ObjectMapper12BaseMappableP", "idStore"]
+- !private ["12ObjectMapper12BaseMappableP", "imgURL"]
+- ["12ObjectMapper12BaseMappableP", "init"]
+- !private ["12ObjectMapper12BaseMappableP", "latitude"]
+- !private ["12ObjectMapper12BaseMappableP", "longitude"]
+- !private ["12ObjectMapper12BaseMappableP", "mall"]
+- ["12ObjectMapper12BaseMappableP", "mapping"]
+- !private ["12ObjectMapper12BaseMappableP", "name"]
+- !private ["12ObjectMapper12BaseMappableP", "offers"]
+- !private ["12ObjectMapper12BaseMappableP", "phoneNumber"]
+- !private ["12ObjectMapper12BaseMappableP", "schedules"]
+- !private ["12ObjectMapper12BaseMappableP", "state"]
+- !private ["12ObjectMapper12BaseMappableP", "virtualCommerce"]
+- !private ["12ObjectMapper12BaseMappableP", "website"]
+- !private ["12ObjectMapper12BaseMappableP", "zipCode"]
+- ["7baseApp8CommerceC", "deinit"]
+- ["7baseApp8CommerceC", "init"]
+- ["7baseApp4MallC", "deinit"]
+- ["7baseApp4MallC", "init"]
+- !private ["12ObjectMapper3MapC", "subscript"]
+- ["12ObjectMapper8MappableP", "Commerce"]
+- ["12ObjectMapper8MappableP", "Mall"]
+- ["12ObjectMapper8MappableP", "State"]
+- ["12ObjectMapper8MappableP", ""]
+- !private ["12ObjectMapper8MappableP", "addressL1"]
+- !private ["12ObjectMapper8MappableP", "addressL2"]
+- !private ["12ObjectMapper8MappableP", "city"]
+- !private ["12ObjectMapper8MappableP", "commerce"]
+- !private ["12ObjectMapper8MappableP", "distance"]
+- !private ["12ObjectMapper8MappableP", "email"]
+- !private ["12ObjectMapper8MappableP", "idStore"]
+- !private ["12ObjectMapper8MappableP", "imgURL"]
+- ["12ObjectMapper8MappableP", "init"]
+- !private ["12ObjectMapper8MappableP", "latitude"]
+- !private ["12ObjectMapper8MappableP", "longitude"]
+- !private ["12ObjectMapper8MappableP", "mall"]
+- ["12ObjectMapper8MappableP", "mapping"]
+- !private ["12ObjectMapper8MappableP", "name"]
+- !private ["12ObjectMapper8MappableP", "offers"]
+- !private ["12ObjectMapper8MappableP", "phoneNumber"]
+- !private ["12ObjectMapper8MappableP", "schedules"]
+- !private ["12ObjectMapper8MappableP", "state"]
+- !private ["12ObjectMapper8MappableP", "virtualCommerce"]
+- !private ["12ObjectMapper8MappableP", "website"]
+- !private ["12ObjectMapper8MappableP", "zipCode"]
+- !private ["7baseApp5OfferC", "deinit"]
+- !private ["7baseApp8ScheduleC", "deinit"]
+- ["7baseApp5StateC", "deinit"]
+- ["7baseApp5StateC", "init"]
+- ["7baseApp5StoreC", "Commerce"]
+- ["7baseApp5StoreC", "Double"]
+- ["7baseApp5StoreC", "Mall"]
+- ["7baseApp5StoreC", "Map"]
+- ["7baseApp5StoreC", "Offer"]
+- ["7baseApp5StoreC", "Schedule"]
+- ["7baseApp5StoreC", "State"]
+- ["7baseApp5StoreC", "String"]
+- ["7baseApp5StoreC", "addressL1"]
+- ["7baseApp5StoreC", "addressL2"]
+- ["7baseApp5StoreC", "city"]
+- ["7baseApp5StoreC", "commerce"]
+- ["7baseApp5StoreC", "deinit"]
+- ["7baseApp5StoreC", "distance"]
+- ["7baseApp5StoreC", "email"]
+- ["7baseApp5StoreC", "idStore"]
+- ["7baseApp5StoreC", "imgURL"]
+- ["7baseApp5StoreC", "init"]
+- ["7baseApp5StoreC", "latitude"]
+- ["7baseApp5StoreC", "longitude"]
+- ["7baseApp5StoreC", "mall"]
+- ["7baseApp5StoreC", "mapping"]
+- ["7baseApp5StoreC", "name"]
+- ["7baseApp5StoreC", "offers"]
+- ["7baseApp5StoreC", "phoneNumber"]
+- ["7baseApp5StoreC", "schedules"]
+- ["7baseApp5StoreC", "state"]
+- ["7baseApp5StoreC", "virtualCommerce"]
+- ["7baseApp5StoreC", "website"]
+- ["7baseApp5StoreC", "zipCode"]
+depends-nominal:
+- "12ObjectMapper12BaseMappableP"
+- "7baseApp8CommerceC"
+- "7baseApp4MallC"
+- !private "12ObjectMapper3MapC"
+- "12ObjectMapper8MappableP"
+- !private "7baseApp5OfferC"
+- !private "7baseApp8ScheduleC"
+- "7baseApp5StateC"
+- "7baseApp5StoreC"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/ObjectMapper.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "ab61a330beb6fa3e6a96e05e889ba457"

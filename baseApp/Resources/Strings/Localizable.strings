@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  Yopter
+
+  Created by Yoptersys on 3/30/17.
+  Copyright © 2017 Yopter. All rights reserved.
+*/
+
+// MARK: Commons strings
+"APP_NAME" = "Yopter Generico";
+"MISSING_INFO" = "Debe tener mínimo 6 caracteres";
+"MISSING_USER" = "Ingresa tu correo electrónico y contraseña";
+"INVALID_EMAIL" = "Correo no valido";
+"MISSING_PASSWORD" = "Ingresa tu contraseña";
+"AUTH_USER" = "Autenticando usuario...";
+"SIGN_USER" = "Registrando usuario...";
+"MISSING_EMAIL" = "Ingresa los datos que se te piden";
+"MISSING_REGISTERPASSWORD" = "Correo electrónico y/o password incorrectos";
+"MISSING_CODE" = "Error en el código ingresado";
+"FAIL_CONNECTION_SERVICE" = "Ocurrió un error en la conexión con el servicio";
+"UNNATENDED_ERROR" = "Error en la petición del servicio";
+"ENTER_YOUR_EMAIL" = "Ingresa tu correo electrónico";
+"SEND_BUTTON" = "Enviar";
+"CANCEL_BUTTON" = "Cancelar";
+"RECOVER_PASSWORD" = "Recuperar contraseña";
+"DESCRIPTION_RECOVER_PASSWORD" = "Ingresa tu correo electrónico registrado, enviaremos las instrucciones para recuperar tu contraseña";
+"RECOVERING_PASSWORD" = "Recuperando la contraseña";
+"SUCCESS_RECOVER_PASSWORD" = "Se han enviado las instrucciones para recuperar tu contraseña al correo electrónico ";
+"LOGIN_ANONYMOUS" = "Ingresando usuario anónimo";
+"SEND_EMAIL_UNAVAILABLE" = "Este dispositivo no cuenta con soporte para enviar correo electrónico";
+"NO_RESULTS" = "No hay resultados";
+"LOADING_OFFERS" = "Cargando ofertas";
+"NO_MORE_RESULTS" = "No hay más resultados";
+"NO_COMMENT" = "Introduce un comentario para reportar la oferta";
+"NO_SUCURSAL" = "Selecciona una sucursal para reportar la oferta";
+"NO_REPORT_REASON" = "Selecciona un motivo para reportar la oferta";
+"REPORT_OFFER_SUCCESS" = "Oferta reportada exitosamente";
+"GO" = "IR";
+"GO_TO_LOGIN_OR_REGISTER" = "Para tomar ofertas debes estar registrado o iniciar sesión";
+"LOAD_MORE_STORES" = "Cargando más sucursales";
+"Allow Notifications" = "Habilitar notificaciones";
+"Enable Location" = "Habilitar localización";
+"Allowed Notifications" = "Notificaciones permitidas";
+"Allowed Location" = "Localización permitida";
+"Denied Location" = "Localización no permitida";
+"Denied Notifications" = "Notificaciones no permitidas";
+"Close" = "Saltar";
+"Please enable access to LocationAlways in the Settings app" = "Por favor habilita el acceso a tu ubicación siempre en Ajustes";
+"Please enable access to Notifications in the Settings app" = "Por favor habilita el acceso a las notificaciones en ajustes";
+"Permission for LocationAlways was denied." = "El permiso para utilizar la ubicación siempre fue denegado";
+"Permission for Notifications was denied." = "El permiso para enviar notificaciones fue denegado";
+"MISSING_DIFFERENT_PASSWORD" = "Las contraseñas no coinciden";"

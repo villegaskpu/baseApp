@@ -1,0 +1,21 @@
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "208debe8ff35538cde1d26a8a69d535f"
+build_time: [1566315114, 50476000]
+inputs:
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/AFError.swift": [1565793861, 620283443]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/Alamofire.swift": [1565793861, 672415961]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift": [1565793861, 618075574]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/MultipartFormData.swift": [1565793861, 616137713]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/NetworkReachabilityManager.swift": [1565793861, 617056364]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/Notifications.swift": [1565793861, 621322275]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/ParameterEncoding.swift": [1565793861, 619496254]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/Request.swift": [1565793861, 674166123]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/Response.swift": [1565793861, 621998541]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/ResponseSerialization.swift": [1565793861, 676575673]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/Result.swift": [1565793861, 618692304]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/ServerTrustPolicy.swift": [1565793861, 708109640]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/SessionDelegate.swift": [1565793861, 728400272]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/SessionManager.swift": [1565793861, 675597696]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/TaskDelegate.swift": [1565793861, 614683792]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/Timeline.swift": [1565793861, 617599868]
+  "/Users/david/proyectosXcode/baseApp/Pods/Alamofire/Source/Validation.swift": [1565793861, 620849537]

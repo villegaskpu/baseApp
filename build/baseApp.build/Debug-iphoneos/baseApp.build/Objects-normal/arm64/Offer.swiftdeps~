@@ -1,0 +1,212 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Offer"
+provides-nominal:
+- "7baseApp5OfferC"
+provides-member:
+- ["7baseApp5OfferC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "<-"
+- "Article"
+- "AssignmentPrecedence"
+- "Category"
+- "Commerce"
+- "Image"
+- "Keyword"
+- "Map"
+- "Mappable"
+- "Offer"
+- "OfferStatus"
+- "OfferType"
+- "Rating"
+- "String"
+- "UserRating"
+depends-member:
+- !private ["7baseApp7ArticleC", "articleDescription"]
+- !private ["7baseApp7ArticleC", "favorite"]
+- !private ["7baseApp7ArticleC", "idArticle"]
+- !private ["7baseApp7ArticleC", "images"]
+- !private ["7baseApp7ArticleC", "offerStatus"]
+- !private ["7baseApp7ArticleC", "permanent"]
+- !private ["7baseApp7ArticleC", "rating"]
+- !private ["7baseApp7ArticleC", "title"]
+- !private ["7baseApp7ArticleC", "viewed"]
+- !private ["7baseApp7ArticleC", "websiteURL"]
+- ["12ObjectMapper12BaseMappableP", "Commerce"]
+- ["12ObjectMapper12BaseMappableP", "OfferStatus"]
+- ["12ObjectMapper12BaseMappableP", "OfferType"]
+- ["12ObjectMapper12BaseMappableP", "Rating"]
+- ["12ObjectMapper12BaseMappableP", "UserRating"]
+- ["12ObjectMapper12BaseMappableP", ""]
+- !private ["12ObjectMapper12BaseMappableP", "articleDescription"]
+- !private ["12ObjectMapper12BaseMappableP", "categories"]
+- !private ["12ObjectMapper12BaseMappableP", "commerce"]
+- !private ["12ObjectMapper12BaseMappableP", "conditions"]
+- !private ["12ObjectMapper12BaseMappableP", "createdAt"]
+- !private ["12ObjectMapper12BaseMappableP", "customerRequired"]
+- !private ["12ObjectMapper12BaseMappableP", "deleted"]
+- !private ["12ObjectMapper12BaseMappableP", "endDate"]
+- !private ["12ObjectMapper12BaseMappableP", "favorite"]
+- !private ["12ObjectMapper12BaseMappableP", "idArticle"]
+- !private ["12ObjectMapper12BaseMappableP", "idOffer"]
+- !private ["12ObjectMapper12BaseMappableP", "images"]
+- ["12ObjectMapper12BaseMappableP", "init"]
+- !private ["12ObjectMapper12BaseMappableP", "keywords"]
+- ["12ObjectMapper12BaseMappableP", "mapping"]
+- !private ["12ObjectMapper12BaseMappableP", "offerDescription"]
+- !private ["12ObjectMapper12BaseMappableP", "offerStatus"]
+- !private ["12ObjectMapper12BaseMappableP", "offerType"]
+- !private ["12ObjectMapper12BaseMappableP", "permanent"]
+- !private ["12ObjectMapper12BaseMappableP", "rating"]
+- !private ["12ObjectMapper12BaseMappableP", "title"]
+- !private ["12ObjectMapper12BaseMappableP", "userRating"]
+- !private ["12ObjectMapper12BaseMappableP", "viewed"]
+- !private ["12ObjectMapper12BaseMappableP", "virtual"]
+- !private ["12ObjectMapper12BaseMappableP", "websiteURL"]
+- !private ["7baseApp8CategoryC", "deinit"]
+- ["7baseApp8CommerceC", "deinit"]
+- ["7baseApp8CommerceC", "init"]
+- !private ["7baseApp5ImageC", "deinit"]
+- !private ["7baseApp7KeywordC", "deinit"]
+- !private ["12ObjectMapper3MapC", "subscript"]
+- ["12ObjectMapper8MappableP", "Commerce"]
+- ["12ObjectMapper8MappableP", "OfferStatus"]
+- ["12ObjectMapper8MappableP", "OfferType"]
+- ["12ObjectMapper8MappableP", "Rating"]
+- ["12ObjectMapper8MappableP", "UserRating"]
+- ["12ObjectMapper8MappableP", ""]
+- !private ["12ObjectMapper8MappableP", "articleDescription"]
+- !private ["12ObjectMapper8MappableP", "categories"]
+- !private ["12ObjectMapper8MappableP", "commerce"]
+- !private ["12ObjectMapper8MappableP", "conditions"]
+- !private ["12ObjectMapper8MappableP", "createdAt"]
+- !private ["12ObjectMapper8MappableP", "customerRequired"]
+- !private ["12ObjectMapper8MappableP", "deleted"]
+- !private ["12ObjectMapper8MappableP", "endDate"]
+- !private ["12ObjectMapper8MappableP", "favorite"]
+- !private ["12ObjectMapper8MappableP", "idArticle"]
+- !private ["12ObjectMapper8MappableP", "idOffer"]
+- !private ["12ObjectMapper8MappableP", "images"]
+- ["12ObjectMapper8MappableP", "init"]
+- !private ["12ObjectMapper8MappableP", "keywords"]
+- ["12ObjectMapper8MappableP", "mapping"]
+- !private ["12ObjectMapper8MappableP", "offerDescription"]
+- !private ["12ObjectMapper8MappableP", "offerStatus"]
+- !private ["12ObjectMapper8MappableP", "offerType"]
+- !private ["12ObjectMapper8MappableP", "permanent"]
+- !private ["12ObjectMapper8MappableP", "rating"]
+- !private ["12ObjectMapper8MappableP", "title"]
+- !private ["12ObjectMapper8MappableP", "userRating"]
+- !private ["12ObjectMapper8MappableP", "viewed"]
+- !private ["12ObjectMapper8MappableP", "virtual"]
+- !private ["12ObjectMapper8MappableP", "websiteURL"]
+- ["7baseApp5OfferC", "Article"]
+- ["7baseApp5OfferC", "Category"]
+- ["7baseApp5OfferC", "Commerce"]
+- ["7baseApp5OfferC", "Image"]
+- ["7baseApp5OfferC", "Keyword"]
+- ["7baseApp5OfferC", "Map"]
+- ["7baseApp5OfferC", "OfferStatus"]
+- ["7baseApp5OfferC", "OfferType"]
+- ["7baseApp5OfferC", "Rating"]
+- ["7baseApp5OfferC", "String"]
+- ["7baseApp5OfferC", "UserRating"]
+- ["7baseApp5OfferC", "categories"]
+- ["7baseApp5OfferC", "commerce"]
+- ["7baseApp5OfferC", "conditions"]
+- ["7baseApp5OfferC", "createdAt"]
+- ["7baseApp5OfferC", "customerRequired"]
+- ["7baseApp5OfferC", "deinit"]
+- ["7baseApp5OfferC", "deleted"]
+- ["7baseApp5OfferC", "endDate"]
+- ["7baseApp5OfferC", "favorite"]
+- ["7baseApp5OfferC", "idOffer"]
+- ["7baseApp5OfferC", "images"]
+- ["7baseApp5OfferC", "init"]
+- ["7baseApp5OfferC", "isArticle"]
+- ["7baseApp5OfferC", "isFavorite"]
+- ["7baseApp5OfferC", "isHome"]
+- ["7baseApp5OfferC", "keywords"]
+- ["7baseApp5OfferC", "mapping"]
+- ["7baseApp5OfferC", "offerDescription"]
+- ["7baseApp5OfferC", "offerStatus"]
+- ["7baseApp5OfferC", "offerType"]
+- ["7baseApp5OfferC", "permanent"]
+- ["7baseApp5OfferC", "rating"]
+- ["7baseApp5OfferC", "title"]
+- ["7baseApp5OfferC", "userRating"]
+- ["7baseApp5OfferC", "viewed"]
+- ["7baseApp5OfferC", "virtual"]
+- ["7baseApp5OfferC", "websiteURL"]
+- ["7baseApp11OfferStatusC", "deinit"]
+- ["7baseApp11OfferStatusC", "init"]
+- ["7baseApp9OfferTypeC", "deinit"]
+- ["7baseApp9OfferTypeC", "init"]
+- ["7baseApp6RatingC", "deinit"]
+- ["7baseApp6RatingC", "init"]
+- ["7baseApp10UserRatingC", "deinit"]
+- ["7baseApp10UserRatingC", "init"]
+depends-nominal:
+- !private "7baseApp7ArticleC"
+- "12ObjectMapper12BaseMappableP"
+- !private "7baseApp8CategoryC"
+- "7baseApp8CommerceC"
+- !private "7baseApp5ImageC"
+- !private "7baseApp7KeywordC"
+- !private "12ObjectMapper3MapC"
+- "12ObjectMapper8MappableP"
+- "7baseApp5OfferC"
+- "7baseApp11OfferStatusC"
+- "7baseApp9OfferTypeC"
+- "7baseApp6RatingC"
+- "7baseApp10UserRatingC"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/ObjectMapper.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "cc549073f42eab0ec322b6bb3b78bbef"

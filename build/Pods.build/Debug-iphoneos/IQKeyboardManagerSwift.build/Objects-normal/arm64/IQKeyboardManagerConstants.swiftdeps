@@ -1,0 +1,128 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "IQAutoToolbarManageBehaviour"
+- "IQPreviousNextDisplayMode"
+- "IQEnableMode"
+provides-nominal:
+- "22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO"
+- "22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO"
+- "22IQKeyboardManagerSwift12IQEnableModeO"
+provides-member:
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", ""]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", ""]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "IQAutoToolbarManageBehaviour"
+- "IQEnableMode"
+- "IQPreviousNextDisplayMode"
+- "Int"
+- !private "unsafeBitCast"
+- !private "~="
+depends-member:
+- ["SQ", "=="]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "unsafeBitCast"]
+- ["SH", "=="]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- ["SH", "_rawHashValue"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- ["SH", "rawValue"]
+- !private ["SH", "unsafeBitCast"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "=="]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "RawValue"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "_Default_RawValue"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "_rawHashValue"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "byPosition"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "bySubviews"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "byTag"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "deinit"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "hash"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "hashValue"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "init"]
+- ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "rawValue"]
+- !private ["22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO", "unsafeBitCast"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "=="]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "RawValue"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "_Default_RawValue"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "_rawHashValue"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "default"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "deinit"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "disabled"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "enabled"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "hash"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "hashValue"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "init"]
+- ["22IQKeyboardManagerSwift12IQEnableModeO", "rawValue"]
+- !private ["22IQKeyboardManagerSwift12IQEnableModeO", "unsafeBitCast"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "=="]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "RawValue"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "_Default_RawValue"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "_rawHashValue"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "alwaysHide"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "alwaysShow"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "default"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "deinit"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "hash"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "hashValue"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "init"]
+- ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "rawValue"]
+- !private ["22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO", "unsafeBitCast"]
+- ["SY", "=="]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- ["SY", "_rawHashValue"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "rawValue"]
+- !private ["SY", "unsafeBitCast"]
+depends-nominal:
+- "SQ"
+- "SH"
+- "22IQKeyboardManagerSwift28IQAutoToolbarManageBehaviourO"
+- "22IQKeyboardManagerSwift12IQEnableModeO"
+- "22IQKeyboardManagerSwift25IQPreviousNextDisplayModeO"
+- "SY"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/Pods/Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Pods.build/Debug-iphoneos/IQKeyboardManagerSwift.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "a8f57431ca7fc7a7db261b064d2f012f"
