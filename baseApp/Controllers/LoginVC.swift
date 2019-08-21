@@ -10,6 +10,8 @@ import UIKit
 import SkyFloatingLabelTextField
 import a4SysCoreIOS
 import Alamofire
+import ObjectMapper
+import CoreLocation
 
 class LoginVC: BViewController {
     
@@ -47,9 +49,16 @@ class LoginVC: BViewController {
         animateView(viewA: homeLogo, point: CGPoint(x: homeLogo.center.x - 150, y: homeLogo.center.y))
         animateView(viewA: viewTextFiels, point: CGPoint(x: viewTextFiels.center.x , y: viewTextFiels.center.y - 300))
         animateButtonLogin()
-        
-        
         addsTargets()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            LocationUtil.sharedInstance.delegate = self
+            LocationUtil.sharedInstance.startUpdatingLocation()
+        }
     }
     
     func addsTargets() {
@@ -115,14 +124,27 @@ class LoginVC: BViewController {
             let network = Network()
             network.setUrlParameters(urlParameters: Requests.createLoginRequest(txtCorreo.text!, txtPassword.text!, userAgent: Commons.getUserAgent()))
 
-
-            network.endPointN(endPont: .Login) { (statusCode, value, error) -> (Void) in
+            network.endPointN(endPont: .Login) { (statusCode, value, objeto) -> (Void) in
+                let statusC = statusCode.toInt() ?? 0
                 
-                if statusCode >= 200 && statusCode < 300 {
+                if statusC >= 200 && statusC < 300 {
                     print("ya estufas: \(value)")
+                    if let obj = objeto as? LoginResponse { // no se forsa el cast para evitar que truene el app
+                        Settings.sharedInstance.setSesion(true)
+                        Settings.sharedInstance.setUsername(value: self.txtCorreo.text!)
+                        Settings.sharedInstance.setPassword(value: self.txtPassword.text!)
+                        Settings.sharedInstance.setToken(value: obj.token ?? "")
+                        Settings.sharedInstance.setOldToken(value: obj.tokenYopter ?? "")
+                        Settings.sharedInstance.setAnonymous(value: "false")
+                    } else {
+                        Commons.showMessage("Error de comunicación")
+                    }
                 }else {
-                    print("valio pistola: \(value)")
-                    Commons.showMessage(StatusCode.strStatusCode(endPoint: .Login, StatusCode: statusCode))
+                    if let obj = objeto as? ApiError {
+                        Commons.showMessage("\(obj.message)", duration: .long)
+                    } else {
+                        Commons.showMessage("Error de comunicación")
+                    }
                 }
                 self.hideLoading()
             }
@@ -167,5 +189,15 @@ class LoginVC: BViewController {
                 txtPassword.errorMessage = ""
             }
         }
+    }
+}
+extension LoginVC : LocationUtilDelegate {
+    // MARK: LOCATION DELEGATE
+    func tracingLocation(currentLocation: CLLocation) {
+        LocationUtil.sharedInstance.currentLocation = currentLocation
+    }
+    
+    func tracingLocationDidFailWithError(error: Error) {
+        LocationUtil.sharedInstance.currentLocation = CLLocation.init(latitude: 0, longitude: 0)
     }
 }

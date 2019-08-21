@@ -9,6 +9,9 @@ provides-member:
 - ["SS", "capitalizingFirstLetter"]
 - ["SS", "convertWeekdaysIntoSchedule"]
 - ["SS", "replace"]
+- ["SS", "toFloat"]
+- ["SS", "toDouble"]
+- ["SS", "toInt"]
 provides-dynamic-lookup:
 depends-top-level:
 - !private "+"
@@ -19,19 +22,30 @@ depends-top-level:
 - !private ">"
 - !private "??"
 - !private "Bundle"
+- "Double"
 - !private "ExtendedGraphemeClusterType"
+- "Float"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
 - "NSAttributedString"
 - !private "NSMutableAttributedString"
 - !private "NSRange"
 - !private "NSString"
 - "String"
+- !private "StringLiteralType"
 - "TernaryPrecedence"
 - !private "UIColor"
 - !private "UnicodeScalarType"
 - !private "~="
 depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["s18AdditiveArithmeticP", "init"]
 - !private ["SK", "Bundle"]
+- !private ["SK", "Double"]
 - !private ["SK", "Encoding"]
+- !private ["SK", "Float"]
+- !private ["SK", "Int"]
 - !private ["SK", "NSAttributedString"]
 - !private ["SK", "NSMutableAttributedString"]
 - !private ["SK", "NSRange"]
@@ -48,12 +62,19 @@ depends-member:
 - !private ["SK", "init"]
 - !private ["SK", "prefix"]
 - !private ["SK", "replacingOccurrences"]
+- !private ["SB", "init"]
+- !private ["SB", "init"]
+- !private ["Sz", "init"]
+- !private ["Sz", "init"]
 - !private ["So8NSBundleC", "localizedString"]
 - !private ["So8NSBundleC", "main"]
 - !private ["s7CVarArgP", "Bundle"]
 - !private ["s7CVarArgP", "CompareOptions"]
 - !private ["s7CVarArgP", "DocumentType"]
+- !private ["s7CVarArgP", "Double"]
 - !private ["s7CVarArgP", "Encoding"]
+- !private ["s7CVarArgP", "Float"]
+- !private ["s7CVarArgP", "Int"]
 - !private ["s7CVarArgP", "NSAttributedString"]
 - !private ["s7CVarArgP", "NSMutableAttributedString"]
 - !private ["s7CVarArgP", "NSRange"]
@@ -75,7 +96,10 @@ depends-member:
 - !private ["s7CVarArgP", "replacingOccurrences"]
 - !private ["s7CVarArgP", "string"]
 - !private ["Sl", "Bundle"]
+- !private ["Sl", "Double"]
 - !private ["Sl", "Encoding"]
+- !private ["Sl", "Float"]
+- !private ["Sl", "Int"]
 - !private ["Sl", "NSAttributedString"]
 - !private ["Sl", "NSMutableAttributedString"]
 - !private ["Sl", "NSRange"]
@@ -93,7 +117,10 @@ depends-member:
 - !private ["Sl", "prefix"]
 - !private ["Sl", "replacingOccurrences"]
 - !private ["SL", "Bundle"]
+- !private ["SL", "Double"]
 - !private ["SL", "Encoding"]
+- !private ["SL", "Float"]
+- !private ["SL", "Int"]
 - !private ["SL", "NSAttributedString"]
 - !private ["SL", "NSMutableAttributedString"]
 - !private ["SL", "NSRange"]
@@ -114,7 +141,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "Bundle"]
 - !private ["s28CustomDebugStringConvertibleP", "CompareOptions"]
 - !private ["s28CustomDebugStringConvertibleP", "DocumentType"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
 - !private ["s28CustomDebugStringConvertibleP", "Encoding"]
+- !private ["s28CustomDebugStringConvertibleP", "Float"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
 - !private ["s28CustomDebugStringConvertibleP", "NSAttributedString"]
 - !private ["s28CustomDebugStringConvertibleP", "NSMutableAttributedString"]
 - !private ["s28CustomDebugStringConvertibleP", "NSRange"]
@@ -136,7 +166,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "replacingOccurrences"]
 - !private ["s28CustomDebugStringConvertibleP", "string"]
 - !private ["s17CustomReflectableP", "Bundle"]
+- !private ["s17CustomReflectableP", "Double"]
 - !private ["s17CustomReflectableP", "Encoding"]
+- !private ["s17CustomReflectableP", "Float"]
+- !private ["s17CustomReflectableP", "Int"]
 - !private ["s17CustomReflectableP", "NSAttributedString"]
 - !private ["s17CustomReflectableP", "NSMutableAttributedString"]
 - !private ["s17CustomReflectableP", "NSRange"]
@@ -156,7 +189,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "Bundle"]
 - !private ["s23CustomStringConvertibleP", "CompareOptions"]
 - !private ["s23CustomStringConvertibleP", "DocumentType"]
+- !private ["s23CustomStringConvertibleP", "Double"]
 - !private ["s23CustomStringConvertibleP", "Encoding"]
+- !private ["s23CustomStringConvertibleP", "Float"]
+- !private ["s23CustomStringConvertibleP", "Int"]
 - !private ["s23CustomStringConvertibleP", "NSAttributedString"]
 - !private ["s23CustomStringConvertibleP", "NSMutableAttributedString"]
 - !private ["s23CustomStringConvertibleP", "NSRange"]
@@ -180,7 +216,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "string"]
 - !private ["s23CustomStringConvertibleP", "utf8"]
 - !private ["Se", "Bundle"]
+- !private ["Se", "Double"]
 - !private ["Se", "Encoding"]
+- !private ["Se", "Float"]
+- !private ["Se", "Int"]
 - !private ["Se", "NSAttributedString"]
 - !private ["Se", "NSMutableAttributedString"]
 - !private ["Se", "NSRange"]
@@ -200,8 +239,13 @@ depends-member:
 - !private ["So42NSAttributedStringDocumentReadingOptionKeya", "characterEncoding"]
 - !private ["So42NSAttributedStringDocumentReadingOptionKeya", "documentType"]
 - !private ["So30NSAttributedStringDocumentTypea", "html"]
+- !private ["Sd", "init"]
+- !private ["Sd", "init"]
 - !private ["SE", "Bundle"]
+- !private ["SE", "Double"]
 - !private ["SE", "Encoding"]
+- !private ["SE", "Float"]
+- !private ["SE", "Int"]
 - !private ["SE", "NSAttributedString"]
 - !private ["SE", "NSMutableAttributedString"]
 - !private ["SE", "NSRange"]
@@ -223,7 +267,10 @@ depends-member:
 - !private ["SQ", "Bundle"]
 - !private ["SQ", "CompareOptions"]
 - !private ["SQ", "DocumentType"]
+- !private ["SQ", "Double"]
 - !private ["SQ", "Encoding"]
+- !private ["SQ", "Float"]
+- !private ["SQ", "Int"]
 - !private ["SQ", "NSAttributedString"]
 - !private ["SQ", "NSMutableAttributedString"]
 - !private ["SQ", "NSRange"]
@@ -254,7 +301,10 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "literal"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Bundle"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "CompareOptions"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Double"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Encoding"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Float"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Int"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "NSAttributedString"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "NSMutableAttributedString"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "NSRange"]
@@ -271,8 +321,15 @@ depends-member:
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "prefix"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s32ExpressibleByStringInterpolationP", "Bundle"]
+- !private ["s32ExpressibleByStringInterpolationP", "Double"]
 - !private ["s32ExpressibleByStringInterpolationP", "Encoding"]
+- !private ["s32ExpressibleByStringInterpolationP", "Float"]
+- !private ["s32ExpressibleByStringInterpolationP", "Int"]
 - !private ["s32ExpressibleByStringInterpolationP", "NSAttributedString"]
 - !private ["s32ExpressibleByStringInterpolationP", "NSMutableAttributedString"]
 - !private ["s32ExpressibleByStringInterpolationP", "NSRange"]
@@ -291,7 +348,10 @@ depends-member:
 - !private ["s32ExpressibleByStringInterpolationP", "replacingOccurrences"]
 - !private ["s26ExpressibleByStringLiteralP", "Bundle"]
 - !private ["s26ExpressibleByStringLiteralP", "CompareOptions"]
+- !private ["s26ExpressibleByStringLiteralP", "Double"]
 - !private ["s26ExpressibleByStringLiteralP", "Encoding"]
+- !private ["s26ExpressibleByStringLiteralP", "Float"]
+- !private ["s26ExpressibleByStringLiteralP", "Int"]
 - !private ["s26ExpressibleByStringLiteralP", "NSAttributedString"]
 - !private ["s26ExpressibleByStringLiteralP", "NSMutableAttributedString"]
 - !private ["s26ExpressibleByStringLiteralP", "NSRange"]
@@ -310,7 +370,10 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", "replacingOccurrences"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "Bundle"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "CompareOptions"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "Double"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "Encoding"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "Float"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "Int"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "NSAttributedString"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "NSMutableAttributedString"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "NSRange"]
@@ -327,10 +390,19 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "prefix"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "replacingOccurrences"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["Sf", "init"]
+- !private ["Sf", "init"]
+- !private ["SF", "init"]
+- !private ["SF", "init"]
 - !private ["SH", "Bundle"]
 - !private ["SH", "CompareOptions"]
 - !private ["SH", "DocumentType"]
+- !private ["SH", "Double"]
 - !private ["SH", "Encoding"]
+- !private ["SH", "Float"]
+- !private ["SH", "Int"]
 - !private ["SH", "NSAttributedString"]
 - !private ["SH", "NSMutableAttributedString"]
 - !private ["SH", "NSRange"]
@@ -357,9 +429,16 @@ depends-member:
 - !private ["SH", "replacingOccurrences"]
 - !private ["SH", "string"]
 - !private ["SH", "utf8"]
+- !private ["Si", "init"]
+- !private ["Si", "init"]
+- !private ["6Lottie14InterpolatableP", "init"]
+- !private ["6Lottie14InterpolatableP", "init"]
 - !private ["So21NSAttributedStringKeya", "foregroundColor"]
 - !private ["s25LosslessStringConvertibleP", "Bundle"]
+- !private ["s25LosslessStringConvertibleP", "Double"]
 - !private ["s25LosslessStringConvertibleP", "Encoding"]
+- !private ["s25LosslessStringConvertibleP", "Float"]
+- !private ["s25LosslessStringConvertibleP", "Int"]
 - !private ["s25LosslessStringConvertibleP", "NSAttributedString"]
 - !private ["s25LosslessStringConvertibleP", "NSMutableAttributedString"]
 - !private ["s25LosslessStringConvertibleP", "NSRange"]
@@ -377,7 +456,10 @@ depends-member:
 - !private ["s25LosslessStringConvertibleP", "prefix"]
 - !private ["s25LosslessStringConvertibleP", "replacingOccurrences"]
 - !private ["s10MirrorPathP", "Bundle"]
+- !private ["s10MirrorPathP", "Double"]
 - !private ["s10MirrorPathP", "Encoding"]
+- !private ["s10MirrorPathP", "Float"]
+- !private ["s10MirrorPathP", "Int"]
 - !private ["s10MirrorPathP", "NSAttributedString"]
 - !private ["s10MirrorPathP", "NSMutableAttributedString"]
 - !private ["s10MirrorPathP", "NSRange"]
@@ -528,9 +610,14 @@ depends-member:
 - !private ["So8NSStringC", "htmlToAttributedString"]
 - !private ["So8NSStringC", "prefix"]
 - !private ["So8NSStringC", "replacingOccurrences"]
+- !private ["Sj", "init"]
+- !private ["Sj", "init"]
 - !private ["s9OptionSetP", "literal"]
 - !private ["Sm", "Bundle"]
+- !private ["Sm", "Double"]
 - !private ["Sm", "Encoding"]
+- !private ["Sm", "Float"]
+- !private ["Sm", "Int"]
 - !private ["Sm", "NSAttributedString"]
 - !private ["Sm", "NSMutableAttributedString"]
 - !private ["Sm", "NSRange"]
@@ -554,8 +641,13 @@ depends-member:
 - !private ["SY", "literal"]
 - !private ["SY", "rawValue"]
 - !private ["SY", "utf8"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["s10SIMDScalarP", "init"]
 - !private ["ST", "Bundle"]
+- !private ["ST", "Double"]
 - !private ["ST", "Encoding"]
+- !private ["ST", "Float"]
+- !private ["ST", "Int"]
 - !private ["ST", "NSAttributedString"]
 - !private ["ST", "NSMutableAttributedString"]
 - !private ["ST", "NSRange"]
@@ -573,8 +665,17 @@ depends-member:
 - !private ["ST", "prefix"]
 - !private ["ST", "replacingOccurrences"]
 - !private ["s10SetAlgebraP", "literal"]
+- !private ["SZ", "init"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["Sx", "init"]
 - !private ["SS", "Bundle"]
+- ["SS", "Double"]
 - !private ["SS", "Encoding"]
+- ["SS", "Float"]
+- ["SS", "Int"]
 - ["SS", "NSAttributedString"]
 - !private ["SS", "NSMutableAttributedString"]
 - !private ["SS", "NSRange"]
@@ -596,8 +697,14 @@ depends-member:
 - !private ["SS", "prefix"]
 - ["SS", "replace"]
 - !private ["SS", "replacingOccurrences"]
+- ["SS", "toDouble"]
+- ["SS", "toFloat"]
+- ["SS", "toInt"]
 - !private ["Sy", "Bundle"]
+- !private ["Sy", "Double"]
 - !private ["Sy", "Encoding"]
+- !private ["Sy", "Float"]
+- !private ["Sy", "Int"]
 - !private ["Sy", "NSAttributedString"]
 - !private ["Sy", "NSMutableAttributedString"]
 - !private ["Sy", "NSRange"]
@@ -615,7 +722,10 @@ depends-member:
 - !private ["Sy", "prefix"]
 - !private ["Sy", "replacingOccurrences"]
 - !private ["s16TextOutputStreamP", "Bundle"]
+- !private ["s16TextOutputStreamP", "Double"]
 - !private ["s16TextOutputStreamP", "Encoding"]
+- !private ["s16TextOutputStreamP", "Float"]
+- !private ["s16TextOutputStreamP", "Int"]
 - !private ["s16TextOutputStreamP", "NSAttributedString"]
 - !private ["s16TextOutputStreamP", "NSMutableAttributedString"]
 - !private ["s16TextOutputStreamP", "NSRange"]
@@ -633,7 +743,10 @@ depends-member:
 - !private ["s16TextOutputStreamP", "prefix"]
 - !private ["s16TextOutputStreamP", "replacingOccurrences"]
 - !private ["s20TextOutputStreamableP", "Bundle"]
+- !private ["s20TextOutputStreamableP", "Double"]
 - !private ["s20TextOutputStreamableP", "Encoding"]
+- !private ["s20TextOutputStreamableP", "Float"]
+- !private ["s20TextOutputStreamableP", "Int"]
 - !private ["s20TextOutputStreamableP", "NSAttributedString"]
 - !private ["s20TextOutputStreamableP", "NSMutableAttributedString"]
 - !private ["s20TextOutputStreamableP", "NSRange"]
@@ -652,7 +765,10 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "replacingOccurrences"]
 - !private ["So7UIColorC", "init"]
 - !private ["9Alamofire14URLConvertibleP", "Bundle"]
+- !private ["9Alamofire14URLConvertibleP", "Double"]
 - !private ["9Alamofire14URLConvertibleP", "Encoding"]
+- !private ["9Alamofire14URLConvertibleP", "Float"]
+- !private ["9Alamofire14URLConvertibleP", "Int"]
 - !private ["9Alamofire14URLConvertibleP", "NSAttributedString"]
 - !private ["9Alamofire14URLConvertibleP", "NSMutableAttributedString"]
 - !private ["9Alamofire14URLConvertibleP", "NSRange"]
@@ -669,9 +785,16 @@ depends-member:
 - !private ["9Alamofire14URLConvertibleP", "init"]
 - !private ["9Alamofire14URLConvertibleP", "prefix"]
 - !private ["9Alamofire14URLConvertibleP", "replacingOccurrences"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "Bundle"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "CompareOptions"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "Double"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "Encoding"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "Float"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "Int"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "NSAttributedString"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "NSMutableAttributedString"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "NSRange"]
@@ -689,7 +812,10 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "prefix"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "replacingOccurrences"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "Bundle"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "Double"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "Encoding"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "Float"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "Int"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "NSAttributedString"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "NSMutableAttributedString"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "NSRange"]
@@ -706,8 +832,15 @@ depends-member:
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "prefix"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "Bundle"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "Double"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "Encoding"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "Float"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "Int"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "NSAttributedString"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "NSMutableAttributedString"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "NSRange"]
@@ -725,7 +858,10 @@ depends-member:
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "prefix"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "replacingOccurrences"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Bundle"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Double"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Encoding"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Float"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Int"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "NSAttributedString"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "NSMutableAttributedString"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "NSRange"]
@@ -744,7 +880,10 @@ depends-member:
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "replacingOccurrences"]
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
 - !private ["s19_HasContiguousBytesP", "Bundle"]
+- !private ["s19_HasContiguousBytesP", "Double"]
 - !private ["s19_HasContiguousBytesP", "Encoding"]
+- !private ["s19_HasContiguousBytesP", "Float"]
+- !private ["s19_HasContiguousBytesP", "Int"]
 - !private ["s19_HasContiguousBytesP", "NSAttributedString"]
 - !private ["s19_HasContiguousBytesP", "NSMutableAttributedString"]
 - !private ["s19_HasContiguousBytesP", "NSRange"]
@@ -772,6 +911,8 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "foregroundColor"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "html"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "htmlToAttributedString"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "prefix"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "replacingOccurrences"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CompareOptions"]
@@ -793,7 +934,10 @@ depends-member:
 - !private ["So8_NSRangeV", "init"]
 - !private ["So8_NSRangeV", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "Bundle"]
+- !private ["s21_ObjectiveCBridgeableP", "Double"]
 - !private ["s21_ObjectiveCBridgeableP", "Encoding"]
+- !private ["s21_ObjectiveCBridgeableP", "Float"]
+- !private ["s21_ObjectiveCBridgeableP", "Int"]
 - !private ["s21_ObjectiveCBridgeableP", "NSAttributedString"]
 - !private ["s21_ObjectiveCBridgeableP", "NSMutableAttributedString"]
 - !private ["s21_ObjectiveCBridgeableP", "NSRange"]
@@ -819,7 +963,10 @@ depends-member:
 - !private ["s20_SwiftNewtypeWrapperP", "foregroundColor"]
 - !private ["s20_SwiftNewtypeWrapperP", "html"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
 - !private "SK"
+- !private "SB"
+- !private "Sz"
 - !private "So8NSBundleC"
 - !private "s7CVarArgP"
 - !private "Sl"
@@ -831,15 +978,23 @@ depends-nominal:
 - !private "Se"
 - !private "So42NSAttributedStringDocumentReadingOptionKeya"
 - !private "So30NSAttributedStringDocumentTypea"
+- !private "Sd"
 - !private "SE"
 - !private "SS10FoundationE8EncodingV"
 - !private "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "Sf"
+- !private "SF"
 - !private "SH"
+- !private "Si"
+- !private "6Lottie14InterpolatableP"
 - !private "So21NSAttributedStringKeya"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
@@ -854,19 +1009,28 @@ depends-nominal:
 - !private "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
+- !private "Sj"
 - !private "s9OptionSetP"
 - !private "Sm"
 - !private "SY"
+- !private "s10SIMDScalarP"
 - !private "ST"
 - !private "s10SetAlgebraP"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
 - "SS"
 - !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So7UIColorC"
 - !private "9Alamofire14URLConvertibleP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
@@ -879,6 +1043,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/Lottie.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/ObjectMapper.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64.swiftmodule"
@@ -889,6 +1054,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
@@ -898,14 +1064,17 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/lottie-ios-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/Lottie-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
@@ -918,10 +1087,11 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "483a67a25b5ac20917c9c96e035096ba"
+interface-hash: "ac1babfc7384218e43ca079c72fc7386"

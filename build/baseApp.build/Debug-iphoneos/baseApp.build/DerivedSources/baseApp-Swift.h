@@ -167,8 +167,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
+@import CoreLocation;
 @import Foundation;
 @import MessageUI;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -214,6 +216,27 @@ SWIFT_CLASS("_TtC7baseApp15BViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC7baseApp4Font")
+@interface Font : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class CLLocationManager;
+@class CLLocation;
+@class CLRegion;
+
+SWIFT_CLASS("_TtC7baseApp12LocationUtil")
+@interface LocationUtil : NSObject <CLLocationManagerDelegate>
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didStartMonitoringForRegion:(CLRegion * _Nonnull)region;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion * _Nonnull)region;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didEnterRegion:(CLRegion * _Nonnull)region;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nonnull)error;
+@end
+
 @class UIImageView;
 @class UIView;
 @class UIButton;
@@ -232,9 +255,20 @@ SWIFT_CLASS("_TtC7baseApp7LoginVC")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ingresoAnonimo;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified crearCuenta;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
 - (IBAction)btnShowPassword:(id _Nonnull)sender;
 - (IBAction)btnEntrar:(id _Nonnull)sender;
 - (void)textFieldDidChange:(UITextField * _Nonnull)textfield;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+SWIFT_CLASS("_TtC7baseApp8OfertsVC")
+@interface OfertsVC : BViewController
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -421,11 +455,37 @@ typedef SWIFT_ENUM(NSInteger, TTGSnackbarDuration, closed) {
 
 
 
+
+
 SWIFT_CLASS("_TtC7baseApp14ViewController")
 @interface ViewController : UIViewController
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp12YopterAlerts")
+@interface YopterAlerts : UIView
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)dismissAlert;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+@interface YopterAlerts (SWIFT_EXTENSION(baseApp)) <UITextFieldDelegate>
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_PROTOCOL("_TtP7baseApp20YopterAlertsDelegate_")
+@protocol YopterAlertsDelegate
+@optional
+- (void)YopterAlertsButttonPressedWithLeftButton:(YopterAlerts * _Nonnull)alert;
+- (void)YopterAlertsButttonPressedWithRightButton:(YopterAlerts * _Nonnull)alert;
+- (void)YopterAlertsButttonPressedWithOneButton:(YopterAlerts * _Nonnull)alert;
+- (void)YopterAlertsButtonPressedWithLeftButtonTextField:(YopterAlerts * _Nonnull)alert textFieldText:(NSString * _Nonnull)textFieldText;
+- (void)YopterAlertsButtonPressedWithRightButtonTextField:(YopterAlerts * _Nonnull)alert textFieldText:(NSString * _Nonnull)textFieldText;
 @end
 
 #if __has_attribute(external_source_symbol)

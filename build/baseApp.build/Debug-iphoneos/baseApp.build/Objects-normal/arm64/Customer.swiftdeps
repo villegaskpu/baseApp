@@ -10,14 +10,11 @@ depends-top-level:
 - !private "<-"
 - "Customer"
 - "ExternalInfo"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - "Map"
 - "Mappable"
 - "MaritalStatus"
 - "State"
 - "String"
-- "StringLiteralType"
 - "User"
 depends-member:
 - ["12ObjectMapper12BaseMappableP", "ExternalInfo"]

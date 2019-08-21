@@ -17,19 +17,28 @@ depends-top-level:
 - "AppDelegate"
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
+- !private "FloatLiteralType"
 - !private "IQKeyboardManager"
+- !private "IntegerLiteralType"
 - !private "LoginVC"
+- !private "Settings"
+- !private "StringLiteralType"
 - "UIApplication"
 - "UIApplicationDelegate"
+- !private "UIColor"
 - "UIResponder"
 - !private "UIScreen"
 - "UIViewController"
 - "UIWindow"
+- !private "print"
 depends-member:
 - ["7baseApp0B8DelegateC", "Bool"]
 - !private ["7baseApp0B8DelegateC", "IQKeyboardManager"]
 - !private ["7baseApp0B8DelegateC", "LoginVC"]
+- !private ["7baseApp0B8DelegateC", "Settings"]
 - ["7baseApp0B8DelegateC", "UIApplication"]
+- !private ["7baseApp0B8DelegateC", "UIColor"]
 - !private ["7baseApp0B8DelegateC", "UIScreen"]
 - ["7baseApp0B8DelegateC", "UIViewController"]
 - ["7baseApp0B8DelegateC", "UIWindow"]
@@ -48,15 +57,20 @@ depends-member:
 - ["7baseApp0B8DelegateC", "createRootViewController"]
 - ["7baseApp0B8DelegateC", "deinit"]
 - ["7baseApp0B8DelegateC", "init"]
+- !private ["7baseApp0B8DelegateC", "print"]
 - ["7baseApp0B8DelegateC", "window"]
 - !private ["7baseApp15BViewControllerC", "init"]
+- !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "makeKeyAndVisible"]
 - !private ["So15CALayerDelegateP", "rootViewController"]
 - !private ["s7CVarArgP", "IQKeyboardManager"]
 - ["s7CVarArgP", "LaunchOptionsKey"]
 - !private ["s7CVarArgP", "LoginVC"]
+- !private ["s7CVarArgP", "Settings"]
+- !private ["s7CVarArgP", "UIColor"]
 - !private ["s7CVarArgP", "UIScreen"]
+- !private ["s7CVarArgP", "UIViewController"]
 - !private ["s7CVarArgP", "UIWindow"]
 - ["s7CVarArgP", ""]
 - ["s7CVarArgP", "application"]
@@ -71,6 +85,7 @@ depends-member:
 - ["s7CVarArgP", "applicationWillEnterForeground"]
 - ["s7CVarArgP", "applicationWillResignActive"]
 - ["s7CVarArgP", "applicationWillTerminate"]
+- !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "bounds"]
 - !private ["s7CVarArgP", "createRootViewController"]
 - !private ["s7CVarArgP", "enable"]
@@ -79,14 +94,20 @@ depends-member:
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "main"]
 - !private ["s7CVarArgP", "makeKeyAndVisible"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "red"]
 - !private ["s7CVarArgP", "rootViewController"]
 - !private ["s7CVarArgP", "shared"]
 - !private ["s7CVarArgP", "toolbarDoneBarButtonItemText"]
+- !private ["s7CVarArgP", "view"]
 - ["s7CVarArgP", "window"]
 - !private ["s28CustomDebugStringConvertibleP", "IQKeyboardManager"]
 - ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
 - !private ["s28CustomDebugStringConvertibleP", "LoginVC"]
+- !private ["s28CustomDebugStringConvertibleP", "Settings"]
+- !private ["s28CustomDebugStringConvertibleP", "UIColor"]
 - !private ["s28CustomDebugStringConvertibleP", "UIScreen"]
+- !private ["s28CustomDebugStringConvertibleP", "UIViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIWindow"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - ["s28CustomDebugStringConvertibleP", "application"]
@@ -101,6 +122,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "applicationWillEnterForeground"]
 - ["s28CustomDebugStringConvertibleP", "applicationWillResignActive"]
 - ["s28CustomDebugStringConvertibleP", "applicationWillTerminate"]
+- !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "bounds"]
 - !private ["s28CustomDebugStringConvertibleP", "createRootViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "enable"]
@@ -109,16 +131,25 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "makeKeyAndVisible"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "red"]
 - !private ["s28CustomDebugStringConvertibleP", "rootViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "toolbarDoneBarButtonItemText"]
+- !private ["s28CustomDebugStringConvertibleP", "view"]
 - ["s28CustomDebugStringConvertibleP", "window"]
+- !private ["s17CustomReflectableP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "IQKeyboardManager"]
 - ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
 - !private ["s23CustomStringConvertibleP", "LoginVC"]
+- !private ["s23CustomStringConvertibleP", "Settings"]
+- !private ["s23CustomStringConvertibleP", "UIColor"]
 - !private ["s23CustomStringConvertibleP", "UIScreen"]
+- !private ["s23CustomStringConvertibleP", "UIViewController"]
 - !private ["s23CustomStringConvertibleP", "UIWindow"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - ["s23CustomStringConvertibleP", "application"]
 - ["s23CustomStringConvertibleP", "applicationDidBecomeActive"]
 - ["s23CustomStringConvertibleP", "applicationDidEnterBackground"]
@@ -131,6 +162,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "applicationWillEnterForeground"]
 - ["s23CustomStringConvertibleP", "applicationWillResignActive"]
 - ["s23CustomStringConvertibleP", "applicationWillTerminate"]
+- !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "bounds"]
 - !private ["s23CustomStringConvertibleP", "createRootViewController"]
 - !private ["s23CustomStringConvertibleP", "enable"]
@@ -139,14 +171,24 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "main"]
 - !private ["s23CustomStringConvertibleP", "makeKeyAndVisible"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "red"]
 - !private ["s23CustomStringConvertibleP", "rootViewController"]
 - !private ["s23CustomStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "toolbarDoneBarButtonItemText"]
+- !private ["s23CustomStringConvertibleP", "view"]
 - ["s23CustomStringConvertibleP", "window"]
+- !private ["Se", "backgroundColor"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SE", "backgroundColor"]
 - !private ["SQ", "IQKeyboardManager"]
 - ["SQ", "LaunchOptionsKey"]
 - !private ["SQ", "LoginVC"]
+- !private ["SQ", "Settings"]
+- !private ["SQ", "UIColor"]
 - !private ["SQ", "UIScreen"]
+- !private ["SQ", "UIViewController"]
 - !private ["SQ", "UIWindow"]
 - ["SQ", ""]
 - ["SQ", "application"]
@@ -161,6 +203,7 @@ depends-member:
 - ["SQ", "applicationWillEnterForeground"]
 - ["SQ", "applicationWillResignActive"]
 - ["SQ", "applicationWillTerminate"]
+- !private ["SQ", "backgroundColor"]
 - !private ["SQ", "bounds"]
 - !private ["SQ", "createRootViewController"]
 - !private ["SQ", "enable"]
@@ -169,14 +212,21 @@ depends-member:
 - !private ["SQ", "init"]
 - !private ["SQ", "main"]
 - !private ["SQ", "makeKeyAndVisible"]
+- !private ["SQ", "print"]
+- !private ["SQ", "red"]
 - !private ["SQ", "rootViewController"]
 - !private ["SQ", "shared"]
 - !private ["SQ", "toolbarDoneBarButtonItemText"]
+- !private ["SQ", "view"]
 - ["SQ", "window"]
+- !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["SH", "IQKeyboardManager"]
 - ["SH", "LaunchOptionsKey"]
 - !private ["SH", "LoginVC"]
+- !private ["SH", "Settings"]
+- !private ["SH", "UIColor"]
 - !private ["SH", "UIScreen"]
+- !private ["SH", "UIViewController"]
 - !private ["SH", "UIWindow"]
 - ["SH", ""]
 - ["SH", "application"]
@@ -191,6 +241,7 @@ depends-member:
 - ["SH", "applicationWillEnterForeground"]
 - ["SH", "applicationWillResignActive"]
 - ["SH", "applicationWillTerminate"]
+- !private ["SH", "backgroundColor"]
 - !private ["SH", "bounds"]
 - !private ["SH", "createRootViewController"]
 - !private ["SH", "enable"]
@@ -199,25 +250,38 @@ depends-member:
 - !private ["SH", "init"]
 - !private ["SH", "main"]
 - !private ["SH", "makeKeyAndVisible"]
+- !private ["SH", "print"]
+- !private ["SH", "red"]
 - !private ["SH", "rootViewController"]
 - !private ["SH", "shared"]
 - !private ["SH", "toolbarDoneBarButtonItemText"]
+- !private ["SH", "view"]
 - ["SH", "window"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "enable"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "goNext"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "shared"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "toolbarDoneBarButtonItemText"]
+- !private ["7baseApp20LocationUtilDelegateP", "init"]
 - !private ["7baseApp7LoginVCC", "deinit"]
 - !private ["7baseApp7LoginVCC", "init"]
+- !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "makeKeyAndVisible"]
+- !private ["So8NSCodingP", "red"]
 - !private ["So8NSCodingP", "rootViewController"]
+- !private ["So8NSCodingP", "view"]
+- !private ["So9NSCopyingP", "red"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "view"]
+- !private ["So21NSItemProviderReadingP", "red"]
+- !private ["So21NSItemProviderWritingP", "red"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "IQKeyboardManager"]
 - ["So8NSObjectC", "LaunchOptionsKey"]
 - !private ["So8NSObjectC", "LoginVC"]
+- !private ["So8NSObjectC", "Settings"]
 - ["So8NSObjectC", "UIApplication"]
+- !private ["So8NSObjectC", "UIColor"]
 - !private ["So8NSObjectC", "UIScreen"]
 - ["So8NSObjectC", "UIViewController"]
 - ["So8NSObjectC", "UIWindow"]
@@ -233,6 +297,7 @@ depends-member:
 - ["So8NSObjectC", "applicationWillEnterForeground"]
 - ["So8NSObjectC", "applicationWillResignActive"]
 - ["So8NSObjectC", "applicationWillTerminate"]
+- !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "bounds"]
 - ["So8NSObjectC", "createRootViewController"]
 - !private ["So8NSObjectC", "enable"]
@@ -241,14 +306,20 @@ depends-member:
 - !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "main"]
 - !private ["So8NSObjectC", "makeKeyAndVisible"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "red"]
 - !private ["So8NSObjectC", "rootViewController"]
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "toolbarDoneBarButtonItemText"]
+- !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "window"]
 - !private ["So8NSObjectP", "IQKeyboardManager"]
 - ["So8NSObjectP", "LaunchOptionsKey"]
 - !private ["So8NSObjectP", "LoginVC"]
+- !private ["So8NSObjectP", "Settings"]
+- !private ["So8NSObjectP", "UIColor"]
 - !private ["So8NSObjectP", "UIScreen"]
+- !private ["So8NSObjectP", "UIViewController"]
 - !private ["So8NSObjectP", "UIWindow"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "application"]
@@ -263,6 +334,7 @@ depends-member:
 - ["So8NSObjectP", "applicationWillEnterForeground"]
 - ["So8NSObjectP", "applicationWillResignActive"]
 - ["So8NSObjectP", "applicationWillTerminate"]
+- !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "bounds"]
 - !private ["So8NSObjectP", "createRootViewController"]
 - !private ["So8NSObjectP", "enable"]
@@ -271,23 +343,41 @@ depends-member:
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "main"]
 - !private ["So8NSObjectP", "makeKeyAndVisible"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "red"]
 - !private ["So8NSObjectP", "rootViewController"]
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "toolbarDoneBarButtonItemText"]
+- !private ["So8NSObjectP", "view"]
 - ["So8NSObjectP", "window"]
+- !private ["So14NSSecureCodingP", "red"]
+- !private ["Sq", "backgroundColor"]
+- !private ["7baseApp8SettingsC", "getSesion"]
+- !private ["7baseApp8SettingsC", "sharedInstance"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "makeKeyAndVisible"]
 - !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
+- !private ["So12UIAppearanceP", "backgroundColor"]
 - !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "makeKeyAndVisible"]
 - !private ["So12UIAppearanceP", "rootViewController"]
+- !private ["So21UIAppearanceContainerP", "backgroundColor"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "makeKeyAndVisible"]
 - !private ["So21UIAppearanceContainerP", "rootViewController"]
+- !private ["So21UIAppearanceContainerP", "view"]
 - ["So13UIApplicationC", "LaunchOptionsKey"]
 - !private ["So21UIApplicationDelegateP", "IQKeyboardManager"]
 - !private ["So21UIApplicationDelegateP", "LoginVC"]
+- !private ["So21UIApplicationDelegateP", "Settings"]
+- !private ["So21UIApplicationDelegateP", "UIColor"]
 - !private ["So21UIApplicationDelegateP", "UIScreen"]
+- !private ["So21UIApplicationDelegateP", "UIViewController"]
 - !private ["So21UIApplicationDelegateP", "UIWindow"]
 - ["So21UIApplicationDelegateP", ""]
 - ["So21UIApplicationDelegateP", "application"]
@@ -303,20 +393,29 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillResignActive"]
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
 - !private ["So21UIApplicationDelegateP", "createRootViewController"]
+- !private ["So21UIApplicationDelegateP", "print"]
 - ["So21UIApplicationDelegateP", "window"]
+- !private ["So7UIColorC", "red"]
 - !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "view"]
+- !private ["So17UICoordinateSpaceP", "backgroundColor"]
 - !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "makeKeyAndVisible"]
 - !private ["So17UICoordinateSpaceP", "rootViewController"]
+- !private ["So13UIDynamicItemP", "backgroundColor"]
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "makeKeyAndVisible"]
 - !private ["So13UIDynamicItemP", "rootViewController"]
+- !private ["So18UIFocusEnvironmentP", "backgroundColor"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UIFocusEnvironmentP", "rootViewController"]
+- !private ["So18UIFocusEnvironmentP", "view"]
+- !private ["So11UIFocusItemP", "backgroundColor"]
 - !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "makeKeyAndVisible"]
 - !private ["So11UIFocusItemP", "rootViewController"]
+- !private ["So20UIFocusItemContainerP", "backgroundColor"]
 - !private ["So20UIFocusItemContainerP", "init"]
 - !private ["So20UIFocusItemContainerP", "makeKeyAndVisible"]
 - !private ["So20UIFocusItemContainerP", "rootViewController"]
@@ -327,7 +426,10 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "IQKeyboardManager"]
 - ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
 - !private ["So30UIPasteConfigurationSupportingP", "LoginVC"]
+- !private ["So30UIPasteConfigurationSupportingP", "Settings"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIScreen"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIWindow"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So30UIPasteConfigurationSupportingP", "application"]
@@ -342,17 +444,22 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "applicationWillEnterForeground"]
 - ["So30UIPasteConfigurationSupportingP", "applicationWillResignActive"]
 - ["So30UIPasteConfigurationSupportingP", "applicationWillTerminate"]
+- !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "createRootViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "makeKeyAndVisible"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "rootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "view"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "IQKeyboardManager"]
 - ["So11UIResponderC", "LaunchOptionsKey"]
 - !private ["So11UIResponderC", "LoginVC"]
+- !private ["So11UIResponderC", "Settings"]
 - ["So11UIResponderC", "UIApplication"]
+- !private ["So11UIResponderC", "UIColor"]
 - !private ["So11UIResponderC", "UIScreen"]
 - ["So11UIResponderC", "UIViewController"]
 - ["So11UIResponderC", "UIWindow"]
@@ -369,16 +476,22 @@ depends-member:
 - ["So11UIResponderC", "applicationWillEnterForeground"]
 - ["So11UIResponderC", "applicationWillResignActive"]
 - ["So11UIResponderC", "applicationWillTerminate"]
+- !private ["So11UIResponderC", "backgroundColor"]
 - ["So11UIResponderC", "createRootViewController"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "makeKeyAndVisible"]
+- !private ["So11UIResponderC", "print"]
 - !private ["So11UIResponderC", "rootViewController"]
+- !private ["So11UIResponderC", "view"]
 - ["So11UIResponderC", "window"]
 - !private ["So30UIResponderStandardEditActionsP", "IQKeyboardManager"]
 - ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
 - !private ["So30UIResponderStandardEditActionsP", "LoginVC"]
+- !private ["So30UIResponderStandardEditActionsP", "Settings"]
+- !private ["So30UIResponderStandardEditActionsP", "UIColor"]
 - !private ["So30UIResponderStandardEditActionsP", "UIScreen"]
+- !private ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIWindow"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - ["So30UIResponderStandardEditActionsP", "application"]
@@ -393,24 +506,33 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "applicationWillEnterForeground"]
 - ["So30UIResponderStandardEditActionsP", "applicationWillResignActive"]
 - ["So30UIResponderStandardEditActionsP", "applicationWillTerminate"]
+- !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
 - !private ["So30UIResponderStandardEditActionsP", "createRootViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "makeKeyAndVisible"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "rootViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "view"]
 - ["So30UIResponderStandardEditActionsP", "window"]
 - !private ["So8UIScreenC", "bounds"]
 - !private ["So8UIScreenC", "main"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "view"]
+- !private ["So18UITraitEnvironmentP", "backgroundColor"]
 - !private ["So18UITraitEnvironmentP", "bounds"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "main"]
 - !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UITraitEnvironmentP", "rootViewController"]
+- !private ["So18UITraitEnvironmentP", "view"]
 - !private ["So23UIUserActivityRestoringP", "IQKeyboardManager"]
 - ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
 - !private ["So23UIUserActivityRestoringP", "LoginVC"]
+- !private ["So23UIUserActivityRestoringP", "Settings"]
+- !private ["So23UIUserActivityRestoringP", "UIColor"]
 - !private ["So23UIUserActivityRestoringP", "UIScreen"]
+- !private ["So23UIUserActivityRestoringP", "UIViewController"]
 - !private ["So23UIUserActivityRestoringP", "UIWindow"]
 - ["So23UIUserActivityRestoringP", ""]
 - ["So23UIUserActivityRestoringP", "application"]
@@ -425,23 +547,32 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "applicationWillEnterForeground"]
 - ["So23UIUserActivityRestoringP", "applicationWillResignActive"]
 - ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
+- !private ["So23UIUserActivityRestoringP", "backgroundColor"]
 - !private ["So23UIUserActivityRestoringP", "createRootViewController"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "makeKeyAndVisible"]
+- !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "rootViewController"]
+- !private ["So23UIUserActivityRestoringP", "view"]
 - ["So23UIUserActivityRestoringP", "window"]
+- !private ["So6UIViewC", "backgroundColor"]
 - !private ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "makeKeyAndVisible"]
 - !private ["So6UIViewC", "rootViewController"]
 - !private ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "view"]
 - !private ["So8UIWindowC", "init"]
 - !private ["So8UIWindowC", "makeKeyAndVisible"]
 - !private ["So8UIWindowC", "rootViewController"]
+- !private ["s26_ExpressibleByColorLiteralP", "red"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IQKeyboardManager"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "LoginVC"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Settings"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIWindow"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - ["10Foundation27_KeyValueCodingAndObservingP", "application"]
@@ -456,6 +587,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillEnterForeground"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillResignActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillTerminate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "createRootViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "enable"]
@@ -464,10 +596,15 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "makeKeyAndVisible"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "red"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "rootViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "toolbarDoneBarButtonItemText"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
+- !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "makeKeyAndVisible"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
@@ -477,20 +614,35 @@ depends-nominal:
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SE"
 - "SQ"
+- !private "s23ExpressibleByNilLiteralP"
 - "SH"
 - !private "22IQKeyboardManagerSwift0aB0C"
+- !private "7baseApp20LocationUtilDelegateP"
 - !private "7baseApp7LoginVCC"
 - !private "So8NSCodingP"
+- !private "So9NSCopyingP"
 - !private "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sq"
+- !private "7baseApp8SettingsC"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - !private "So21UIAppearanceContainerP"
 - "So13UIApplicationC"
 - "So21UIApplicationDelegateP"
+- !private "So7UIColorC"
 - !private "So18UIContentContainerP"
 - !private "So17UICoordinateSpaceP"
 - !private "So13UIDynamicItemP"
@@ -508,11 +660,15 @@ depends-nominal:
 - !private "So6UIViewC"
 - !private "So16UIViewControllerC"
 - !private "So8UIWindowC"
+- !private "s26_ExpressibleByColorLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
+- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/Lottie.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/ObjectMapper.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64.swiftmodule"
@@ -523,23 +679,30 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/lottie-ios-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/Lottie-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
@@ -552,8 +715,10 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"

@@ -11,4 +11,5 @@ target 'baseApp' do
    pod 'SkyFloatingLabelTextField', '~> 3.0'
    pod 'IQKeyboardManagerSwift'
    pod 'NVActivityIndicatorView/AppExtension'
+   pod 'lottie-ios'
 end

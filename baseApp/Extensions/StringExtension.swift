@@ -13,22 +13,7 @@ extension String{
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return NSAttributedString() }
         do {
-            /*let attributedString = NSMutableAttributedString(string: "Con Up Beneficios tendrás soluciones integrales, para que cuides lo que más valoras.", attributes: [
-                .font: UIFont(name: "Avenir-Medium", size: 12.0)!,
-                .foregroundColor: UIColor(red: 161.0 / 255.0, green: 163.0 / 255.0, blue: 166.0 / 255.0, alpha: 1.0)
-                ])
-            attributedString.addAttribute(.foregroundColor, value: UIColor(white: 137.0 / 255.0, alpha: 1.0), range: NSRange(location: 0, length: 3))
-            attributedString.addAttributes([
-                .font: UIFont(name: "Avenir-Heavy", size: 12.0)!,
-                .foregroundColor: UIColor(red: 247.0 / 255.0, green: 128.0 / 255.0, blue: 40.0 / 255.0, alpha: 1.0)
-                ], range: NSRange(location: 3, length: 15))*/
-            //31,53,94
             let finalMutableAttributedString = try NSMutableAttributedString.init(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
-
-            /*if let font = UIFont(name: "Como-Regular", size: 15) {
-                
-                finalMutableAttributedString.addAttribute(.font, value: font, range: NSRange.init(location: 0, length: finalMutableAttributedString.string.count - 1))
-            } */ 
            if self.count > 0
            {
             finalMutableAttributedString.addAttribute(.foregroundColor, value: UIColor(red: 31/255, green: 53/255, blue: 94/255, alpha: 1.0), range: NSRange.init(location: 0, length: finalMutableAttributedString.string.count - 1))
@@ -92,6 +77,20 @@ extension String
     func replace(target: String, withString: String) -> String
     {
         return self.replacingOccurrences(of: target, with: withString, options: NSString.CompareOptions.literal, range: nil)
+    }
+}
+extension String
+{
+    func toFloat() -> Float? {
+        return Float.init(self)
+    }
+    
+    func toDouble() -> Double? {
+        return Double.init(self)
+    }
+    
+    func toInt() -> Int? {
+        return Int.init(self)
     }
 }
 

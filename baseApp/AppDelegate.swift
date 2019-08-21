@@ -18,16 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
+        print("ver si es login : \(Settings.sharedInstance.getSesion())")
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.goNext()
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Listo"
         
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = createRootViewController()
-        window?.makeKeyAndVisible()
-        
+        if Settings.sharedInstance.getSesion() { // si la sesion esta iniciada
+            
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor.red
+            
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = vc
+            window?.makeKeyAndVisible()
+        } else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = createRootViewController()
+            window?.makeKeyAndVisible()
+        }
         return true
     }
 
