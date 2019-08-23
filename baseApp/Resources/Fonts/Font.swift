@@ -44,4 +44,8 @@ class Font: NSObject {
     static func FONT_BOLD() -> String {
         return "Como-Bold"
     }
+    
+    static func FONT_HEAVY_ITALIC() -> String {
+        return "Como-Bold"
+    }
 }

@@ -25,8 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if Settings.sharedInstance.getSesion() { // si la sesion esta iniciada
             
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.red
+            let vc = OffertsVC()
             
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.rootViewController = vc

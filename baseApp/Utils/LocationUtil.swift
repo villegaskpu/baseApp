@@ -31,12 +31,10 @@ class LocationUtil : NSObject, CLLocationManagerDelegate
     
     private override init() {
         super.init()
-        
         self.locationManager = CLLocationManager()
         guard let locationManager = self.locationManager else {
             return
         }
-        
 //        if CLLocationManager.authorizationStatus() == .notDetermined {
 //            // you have 2 choice
 //            // 1. requestAlwaysAuthorization
@@ -47,40 +45,40 @@ class LocationUtil : NSObject, CLLocationManagerDelegate
         let status = CLLocationManager.authorizationStatus()
         switch status
         {
-            //case CLAuthorizationStatus.restricted:
-        //print("denegado")
+        case .authorizedAlways, .authorizedWhenInUse, .authorized:
+            print("permitido")
+            break
         case .denied:
-            let alert = YopterAlerts(title: "AVISO", message: "Para poder continuar con la demo, es necesario acceder a tu ubicación. Activa los servicios de ubicación en los ajustes del sistema.", leftButtonTitle: "CANCELAR", rightButtonTitle: "IR A AJUSTES")
+            let alert = YopterAlerts(title: "AVISO", message: "Para poder continuar es necesario acceder a tu ubicación. Activa los servicios de ubicación en los ajustes del sistema.", leftButtonTitle: "CANCELAR", rightButtonTitle: "IR A AJUSTES")
 //            alert.delegate = self
             alert.presentAlert()
-        case .authorized:
-            print("permitido")
         case .restricted:
-            let alert = YopterAlerts(title: "AVISO", message: "Para poder continuar con la demo, es necesario acceder a tu ubicación. Activa los servicios de ubicación en los ajustes del sistema.", leftButtonTitle: "CANCELAR", rightButtonTitle: "IR A AJUSTES")
+            let alert = YopterAlerts(title: "AVISO", message: "Para poder continuar es necesario acceder a tu ubicación. Activa los servicios de ubicación en los ajustes del sistema.", leftButtonTitle: "CANCELAR", rightButtonTitle: "IR A AJUSTES")
 //            alert.delegate = self
             alert.presentAlert()
-        case .authorizedWhenInUse:
-            print("permitido")
         case .notDetermined:
 //            let alert = YopterAlerts(title: "AVISO", message: "Para poder continuar con la demo, es necesario acceder a tu ubicación. Activa los servicios de ubicación en los ajustes del sistema.", leftButtonTitle: "CANCELAR", rightButtonTitle: "IR A AJUSTES")
 ////            alert.delegate = self
 //            alert.presentAlert()
             locationManager.requestAlwaysAuthorization()
-        case .authorizedAlways:
-            print("permitido")
         }
-        
-        
-        
-        
-        
-        
-        
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest // The accuracy of the location data
-//        locationManager.allowsBackgroundLocationUpdates = true
-//        locationManager.delegate = self
-//        locationManager.startUpdatingLocation()
-//        locationManager.startMonitoringSignificantLocationChanges()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // The accuracy of the location data
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        locationManager.startMonitoringSignificantLocationChanges()
+    }
+    
+    func permisoAutorizado() {
+        self.locationManager = CLLocationManager()
+        guard let locationManager = self.locationManager else {
+            return
+        }
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // The accuracy of the location data
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        locationManager.startMonitoringSignificantLocationChanges()
     }
     
     func startUpdatingLocation() {
@@ -156,13 +154,15 @@ class LocationUtil : NSObject, CLLocationManagerDelegate
 
         
         
-//        if UIApplication.shared.applicationState == .active || UIApplication.shared.applicationState == .background || UIApplication.shared.applicationState == .inactive{
-//            Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { (Timer) in
-//                let parameters = [[
-//                    "latitude": "\(LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0)",
-//                    "longitude": "\(LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0)",
-//                    "beatAt": Commons.getCurrentDate()]]
-//                
+        if UIApplication.shared.applicationState == .active || UIApplication.shared.applicationState == .background || UIApplication.shared.applicationState == .inactive{
+            Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { (Timer) in
+                let parameters = [[
+                    "latitude": "\(LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0)",
+                    "longitude": "\(LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0)",
+                    "beatAt": Commons.getCurrentDate()]]
+                
+                print("parameters: \(parameters)")
+//
 //                let requestSerializer = AFJSONRequestSerializer.init()
 //                requestSerializer.setValue("application/json", forHTTPHeaderField: "content-type")
 //                requestSerializer.setValue("application/json", forHTTPHeaderField: "accept")
@@ -184,18 +184,18 @@ class LocationUtil : NSObject, CLLocationManagerDelegate
 //                    print(data ?? "Error getting fireannouncements")
 //                    print(error)
 //                })
-//            }
-//        } else {
-//            let Device = UIDevice.current
-//            let iosVersion = Double(Device.systemVersion) ?? 0
-//            
-//            let iOS10 = iosVersion >= 10
-//            if iOS10{
-//                LocationUtil.sharedInstance.locationManager?.allowsBackgroundLocationUpdates = true
-//                LocationUtil.sharedInstance.locationManager?.pausesLocationUpdatesAutomatically = false
-//                LocationUtil.sharedInstance.locationManager?.startMonitoringSignificantLocationChanges()
-//            }
-//        }
+            }
+        } else {
+            let Device = UIDevice.current
+            let iosVersion = Double(Device.systemVersion) ?? 0
+            
+            let iOS10 = iosVersion >= 10
+            if iOS10{
+                LocationUtil.sharedInstance.locationManager?.allowsBackgroundLocationUpdates = true
+                LocationUtil.sharedInstance.locationManager?.pausesLocationUpdatesAutomatically = false
+                LocationUtil.sharedInstance.locationManager?.startMonitoringSignificantLocationChanges()
+            }
+        }
     }
     
     func removeAllGeofences()

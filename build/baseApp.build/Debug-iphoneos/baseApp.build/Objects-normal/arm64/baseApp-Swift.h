@@ -217,8 +217,92 @@ SWIFT_CLASS("_TtC7baseApp15BViewController")
 @end
 
 
+SWIFT_CLASS("_TtC7baseApp20BTableViewController")
+@interface BTableViewController : BViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIPresentationController;
+
+@interface BTableViewController (SWIFT_EXTENSION(baseApp)) <UIPopoverPresentationControllerDelegate>
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController * _Nonnull)controller SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITableView;
+@class UITableViewCell;
+@class UIView;
+
+@interface BTableViewController (SWIFT_EXTENSION(baseApp)) <UITableViewDataSource, UITableViewDelegate>
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForFooterInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForFooterInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)tableView:(UITableView * _Nonnull)tableView canEditRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class InfoManager;
+
+SWIFT_PROTOCOL("_TtP7baseApp18BTableViewDelegate_")
+@protocol BTableViewDelegate
+@optional
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems spinnerItemAt:(NSIndexPath * _Nonnull)indexPath indexPathItem:(NSIndexPath * _Nonnull)indexPathItem spinnerName:(NSString * _Nonnull)spinnerName;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems observationsDidChange:(NSString * _Nonnull)text indexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems textFieldDidChange:(NSString * _Nonnull)text indexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems buttonPressedAt:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems telefonoDidEndEditing:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems correoShowspinnerDel:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems correoDidEndEditing:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems StatusBarOnItemSelected:(NSInteger)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems statusBarChange:(NSIndexPath * _Nonnull)at idStatus:(NSString * _Nonnull)idStatus;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems dateSelected:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems checkBoxPressed:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems checkBoxPressedRass:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems checkBoxDerechoActive:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems selectRadio:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems radioDidSelect3:(NSString * _Nonnull)selectRadio3 indexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems returnValoresCheck:(NSString * _Nonnull)texto valor:(NSString * _Nonnull)valor indexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems selectAutoInteres:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems infoPressed:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems segmentChange:(NSInteger)at indexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems add:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems deleteCorreo:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems deleteTelefono:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems selectVersionAuto:(NSString * _Nonnull)idMarca idAuto:(NSString * _Nonnull)idAuto modelo:(NSString * _Nonnull)modelo idProducto:(NSString * _Nonnull)idProducto idColor:(NSString * _Nonnull)idColor;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems selectVersionAutoAux:(BOOL)press;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems pressColapsable:(BOOL)press;
+@end
+
+
+
 SWIFT_CLASS("_TtC7baseApp4Font")
 @interface Font : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp10HeaderCell")
+@interface HeaderCell : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp8InfoItem")
+@interface InfoItem : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp11InfoManager")
+@interface InfoManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -238,7 +322,6 @@ SWIFT_CLASS("_TtC7baseApp12LocationUtil")
 @end
 
 @class UIImageView;
-@class UIView;
 @class UIButton;
 @class SkyFloatingLabelTextFieldWithIcon;
 @class UITextField;
@@ -266,10 +349,27 @@ SWIFT_CLASS("_TtC7baseApp7LoginVC")
 
 
 
-SWIFT_CLASS("_TtC7baseApp8OfertsVC")
-@interface OfertsVC : BViewController
+SWIFT_CLASS("_TtC7baseApp9OffertsVC")
+@interface OffertsVC : BTableViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface OffertsVC (SWIFT_EXTENSION(baseApp)) <BTableViewDelegate>
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp12SOHeaderCell")
+@interface SOHeaderCell : UITableViewHeaderFooterView
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titulo;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified contenedor;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified left;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified right;
+- (void)awakeFromNib;
+- (nonnull instancetype)initWithReuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -350,7 +450,7 @@ SWIFT_CLASS("_TtC7baseApp11TTGSnackbar")
 /// SeparateView background color
 @property (nonatomic, strong) UIColor * _Nonnull separateViewBackgroundColor;
 /// ActivityIndicatorViewStyle
-@property (nonatomic) enum UIActivityIndicatorViewStyle activityIndicatorViewStyle;
+@property (nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle;
 /// ActivityIndicatorView color
 @property (nonatomic, strong) UIColor * _Nonnull activityIndicatorViewColor;
 /// Animation SpringWithDamping. Default is 0.7
@@ -389,12 +489,12 @@ SWIFT_CLASS("_TtC7baseApp11TTGSnackbar")
 
 
 
-
-
 @interface TTGSnackbar (SWIFT_EXTENSION(baseApp))
 /// Dismiss the snackbar manually.
 - (void)dismiss;
 @end
+
+
 
 /// Snackbar animation types.
 /// <ul>
@@ -453,6 +553,17 @@ typedef SWIFT_ENUM(NSInteger, TTGSnackbarDuration, closed) {
 };
 
 
+SWIFT_CLASS("_TtC7baseApp20TableViewCellFactory")
+@interface TableViewCellFactory : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+@interface UITableView (SWIFT_EXTENSION(baseApp))
+- (void)awakeFromNib;
+@end
 
 
 
@@ -486,6 +597,25 @@ SWIFT_PROTOCOL("_TtP7baseApp20YopterAlertsDelegate_")
 - (void)YopterAlertsButttonPressedWithOneButton:(YopterAlerts * _Nonnull)alert;
 - (void)YopterAlertsButtonPressedWithLeftButtonTextField:(YopterAlerts * _Nonnull)alert textFieldText:(NSString * _Nonnull)textFieldText;
 - (void)YopterAlertsButtonPressedWithRightButtonTextField:(YopterAlerts * _Nonnull)alert textFieldText:(NSString * _Nonnull)textFieldText;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp10cellOffert")
+@interface cellOffert : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified companyName;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified offertTitle;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified offertDistance;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified likeImage;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified dislikeImage;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified saveOrDeleteImage;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified newIndicator;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified offertImage;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified companyLogo;
+- (void)awakeFromNib;
+- (void)prepareForReuse;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #if __has_attribute(external_source_symbol)

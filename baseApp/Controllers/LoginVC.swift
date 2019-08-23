@@ -55,9 +55,11 @@ class LoginVC: BViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            LocationUtil.sharedInstance.delegate = self
-            LocationUtil.sharedInstance.startUpdatingLocation()
+        if Settings.sharedInstance.getSesion() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                LocationUtil.sharedInstance.delegate = self
+                LocationUtil.sharedInstance.startUpdatingLocation()
+            }
         }
     }
     
@@ -130,6 +132,7 @@ class LoginVC: BViewController {
                 if statusC >= 200 && statusC < 300 {
                     print("ya estufas: \(value)")
                     if let obj = objeto as? LoginResponse { // no se forsa el cast para evitar que truene el app
+                        print("SetValues")
                         Settings.sharedInstance.setSesion(true)
                         Settings.sharedInstance.setUsername(value: self.txtCorreo.text!)
                         Settings.sharedInstance.setPassword(value: self.txtPassword.text!)

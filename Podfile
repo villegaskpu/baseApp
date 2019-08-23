@@ -12,4 +12,5 @@ target 'baseApp' do
    pod 'IQKeyboardManagerSwift'
    pod 'NVActivityIndicatorView/AppExtension'
    pod 'lottie-ios'
+   pod 'SDWebImage', '~>4.0'
 end
