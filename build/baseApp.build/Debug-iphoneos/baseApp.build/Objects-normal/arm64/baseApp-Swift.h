@@ -280,8 +280,23 @@ SWIFT_PROTOCOL("_TtP7baseApp18BTableViewDelegate_")
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems selectVersionAutoAux:(BOOL)press;
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems pressColapsable:(BOOL)press;
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems updateCell:(NSIndexPath * _Nonnull)indexPath value:(NSString * _Nonnull)value action:(NSString * _Nonnull)action;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems deleteCell:(NSIndexPath * _Nonnull)indexPath;
 @end
 
+
+
+SWIFT_CLASS("_TtC7baseApp11FavoritosVC")
+@interface FavoritosVC : BTableViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface FavoritosVC (SWIFT_EXTENSION(baseApp)) <BTableViewDelegate>
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems deleteCell:(NSIndexPath * _Nonnull)indexPath;
+@end
 
 
 SWIFT_CLASS("_TtC7baseApp4Font")
@@ -493,12 +508,12 @@ SWIFT_CLASS("_TtC7baseApp11TTGSnackbar")
 
 
 
-
-
 @interface TTGSnackbar (SWIFT_EXTENSION(baseApp))
 /// Dismiss the snackbar manually.
 - (void)dismiss;
 @end
+
+
 
 /// Snackbar animation types.
 /// <ul>
@@ -623,6 +638,14 @@ SWIFT_CLASS("_TtC7baseApp10cellOffert")
 - (void)like:(UITapGestureRecognizer * _Nonnull)gestureRecognizer;
 - (void)dislike:(UITapGestureRecognizer * _Nonnull)gestureRecognizer;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp17principalTabBarVC")
+@interface principalTabBarVC : UITabBarController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 

@@ -9,40 +9,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "baseApp/Controllers/LoginVC.swift"
-            timestampString = "588612492.879475"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "btnEntrar(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "baseApp/Controllers/LoginVC.swift"
-            timestampString = "588612492.880143"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "btnEntrar(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "baseApp/views/TableViewCellFactory.swift"
-            timestampString = "588620120.874215"
+            timestampString = "588636879.894466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "592"
@@ -58,45 +26,109 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "baseApp/views/yopterCominicacells/cellOffert.swift"
-            timestampString = "588620120.874308"
+            timestampString = "588636879.8950551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
-            landmarkName = "like(_:)"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "saveOrDelete(_:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "baseApp.cellOffert.like(__C.UITapGestureRecognizer) -&gt; ()"
+                  symbolName = "baseApp.cellOffert.saveOrDelete(__C.UITapGestureRecognizer) -&gt; ()"
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "588620121.265964"
+                  timestampString = "588636890.139147"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "328"
-                  endingLineNumber = "328"
-                  offsetFromSymbolStart = "3872">
+                  startingLineNumber = "272"
+                  endingLineNumber = "272"
+                  offsetFromSymbolStart = "7072">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "baseApp.cellOffert.like(__C.UITapGestureRecognizer) -&gt; ()"
+                  symbolName = "baseApp.cellOffert.saveOrDelete(__C.UITapGestureRecognizer) -&gt; ()"
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "588620121.269828"
+                  timestampString = "588636890.14148"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "328"
-                  endingLineNumber = "328"
-                  offsetFromSymbolStart = "6764">
+                  startingLineNumber = "272"
+                  endingLineNumber = "272"
+                  offsetFromSymbolStart = "10896">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "baseApp/views/yopterCominicacells/cellOffert.swift"
+            timestampString = "588637654.838066"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
+            landmarkName = "saveOrDelete(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "baseApp.cellOffert.saveOrDelete(__C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "baseApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
+                  timestampString = "588637654.852733"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "278"
+                  endingLineNumber = "278"
+                  offsetFromSymbolStart = "7804">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (Swift.String, Any, Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; () in baseApp.cellOffert.saveOrDelete(__C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "baseApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
+                  timestampString = "588637654.855932"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "279"
+                  endingLineNumber = "279"
+                  offsetFromSymbolStart = "280">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "baseApp/views/yopterCominicacells/cellOffert.swift"
+            timestampString = "588637796.782016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
+            landmarkName = "saveOrDelete(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

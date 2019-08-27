@@ -275,6 +275,7 @@ depends-member:
 - ["7baseApp7CommonsC", "checkIfWifi"]
 - ["7baseApp7CommonsC", "compareVersion"]
 - ["7baseApp7CommonsC", "createDirectory"]
+- ["7baseApp7CommonsC", "deinit"]
 - ["7baseApp7CommonsC", "deleteDirectory"]
 - ["7baseApp7CommonsC", "generateCode128"]
 - ["7baseApp7CommonsC", "generateCodeQR"]

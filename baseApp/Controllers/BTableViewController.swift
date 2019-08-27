@@ -58,6 +58,7 @@ protocol BTableViewDelegate {
     
     
     @objc optional func BTableView(tableItems: InfoManager, updateCell indexPath: IndexPath, value: String, action: String)
+    @objc optional func BTableView(tableItems: InfoManager, deleteCell indexPath: IndexPath)
 }
 
 class BTableViewController: BViewController {
@@ -243,6 +244,10 @@ extension BTableViewController: UIPopoverPresentationControllerDelegate {
 extension BTableViewController: cellOffertDelegate{
     func updateCell(indexPath: IndexPath, value: String, action: String) {
         BaseDelegate?.BTableView?(tableItems: tableItems, updateCell: indexPath, value: value, action: action)
+    }
+    
+    func deleteCell(indexPath: IndexPath) {
+        BaseDelegate?.BTableView?(tableItems: tableItems, deleteCell: indexPath)
     }
 }
 

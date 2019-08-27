@@ -22,6 +22,7 @@ depends-member:
 - ["7baseApp10StatusCodeC", "Bool"]
 - ["7baseApp10StatusCodeC", "Int"]
 - ["7baseApp10StatusCodeC", "String"]
+- ["7baseApp10StatusCodeC", "deinit"]
 - ["7baseApp10StatusCodeC", "endPoint"]
 - ["7baseApp10StatusCodeC", "init"]
 - !private ["7baseApp10StatusCodeC", "strLoguin"]

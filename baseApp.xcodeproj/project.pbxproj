@@ -23,8 +23,11 @@
 		63755E3E22FDD7A000D161FA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755E3D22FDD7A000D161FA /* StringExtension.swift */; };
 		63755E4322FDF17700D161FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755E4122FDF17700D161FA /* LoginVC.swift */; };
 		63755E4422FDF17700D161FA /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63755E4222FDF17700D161FA /* LoginVC.xib */; };
-		63DFBA1323159E0B00918A51 /* a4SysCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA1123159E0200918A51 /* a4SysCoreIOS.framework */; };
-		63DFBA1423159E0B00918A51 /* a4SysCoreIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA1123159E0200918A51 /* a4SysCoreIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63DFBA162315A40E00918A51 /* principalTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DFBA152315A40E00918A51 /* principalTabBarVC.swift */; };
+		63DFBA192315A60700918A51 /* FavoritosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DFBA172315A60700918A51 /* FavoritosVC.swift */; };
+		63DFBA1A2315A60700918A51 /* FavoritosVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DFBA182315A60700918A51 /* FavoritosVC.xib */; };
+		63DFBA312315E11500918A51 /* a4SysCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA2F2315E10500918A51 /* a4SysCoreIOS.framework */; };
+		63DFBA322315E11500918A51 /* a4SysCoreIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA2F2315E10500918A51 /* a4SysCoreIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63E2A798230C49D200EB0F9C /* TTGSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2A797230C49D200EB0F9C /* TTGSnackbar.swift */; };
 		63E2A80E230C5F5600EB0F9C /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2A80D230C5F5600EB0F9C /* StatusCode.swift */; };
 		63E2A84E230DA2C600EB0F9C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2A84D230DA2C600EB0F9C /* Settings.swift */; };
@@ -65,7 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				63DFBA1423159E0B00918A51 /* a4SysCoreIOS.framework in Embed Frameworks */,
+				63DFBA322315E11500918A51 /* a4SysCoreIOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,7 +95,10 @@
 		63755E3D22FDD7A000D161FA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		63755E4122FDF17700D161FA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		63755E4222FDF17700D161FA /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
-		63DFBA1123159E0200918A51 /* a4SysCoreIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = a4SysCoreIOS.framework; sourceTree = "<group>"; };
+		63DFBA152315A40E00918A51 /* principalTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = principalTabBarVC.swift; sourceTree = "<group>"; };
+		63DFBA172315A60700918A51 /* FavoritosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosVC.swift; sourceTree = "<group>"; };
+		63DFBA182315A60700918A51 /* FavoritosVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritosVC.xib; sourceTree = "<group>"; };
+		63DFBA2F2315E10500918A51 /* a4SysCoreIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = a4SysCoreIOS.framework; sourceTree = "<group>"; };
 		63E2A797230C49D200EB0F9C /* TTGSnackbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTGSnackbar.swift; sourceTree = "<group>"; };
 		63E2A80D230C5F5600EB0F9C /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		63E2A84D230DA2C600EB0F9C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -132,7 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DFBA1323159E0B00918A51 /* a4SysCoreIOS.framework in Frameworks */,
+				63DFBA312315E11500918A51 /* a4SysCoreIOS.framework in Frameworks */,
 				67D156784708F3A8BE66DFA2 /* Pods_baseApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +205,7 @@
 		63755D6F22FDC9D200D161FA /* views */ = {
 			isa = PBXGroup;
 			children = (
+				63DFBA1C2315A64100918A51 /* faviritas */,
 				63E2A8B1230EF8FF00EB0F9C /* yopterCominicacells */,
 				63E2A8AD230EF8B100EB0F9C /* TableViewCellFactory.swift */,
 				63E2A8AF230EF8F700EB0F9C /* HeaderCell.swift */,
@@ -212,10 +219,12 @@
 		63755D7222FDC9E800D161FA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63DFBA1B2315A60C00918A51 /* favoritas */,
 				63755D8322FDCC8000D161FA /* BViewController.swift */,
 				63E2A8CF230F458200EB0F9C /* BTableViewController.swift */,
 				63E2A8CB230F444100EB0F9C /* OffertsVC.swift */,
 				63755E4122FDF17700D161FA /* LoginVC.swift */,
+				63DFBA152315A40E00918A51 /* principalTabBarVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,10 +297,26 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		63DFBA1B2315A60C00918A51 /* favoritas */ = {
+			isa = PBXGroup;
+			children = (
+				63DFBA172315A60700918A51 /* FavoritosVC.swift */,
+			);
+			path = favoritas;
+			sourceTree = "<group>";
+		};
+		63DFBA1C2315A64100918A51 /* faviritas */ = {
+			isa = PBXGroup;
+			children = (
+				63DFBA182315A60700918A51 /* FavoritosVC.xib */,
+			);
+			path = faviritas;
+			sourceTree = "<group>";
+		};
 		63E2A769230B000000EB0F9C /* newFrame */ = {
 			isa = PBXGroup;
 			children = (
-				63DFBA1123159E0200918A51 /* a4SysCoreIOS.framework */,
+				63DFBA2F2315E10500918A51 /* a4SysCoreIOS.framework */,
 			);
 			path = newFrame;
 			sourceTree = "<group>";
@@ -422,6 +447,7 @@
 				63E2A88F230DEEB500EB0F9C /* citas.json in Resources */,
 				63E2A890230DEEB500EB0F9C /* loading3.json in Resources */,
 				63E2A894230DEEB500EB0F9C /* descartados.json in Resources */,
+				63DFBA1A2315A60700918A51 /* FavoritosVC.xib in Resources */,
 				63E2A88D230DEEB500EB0F9C /* recibidos.json in Resources */,
 				63755D7822FDCA5700D161FA /* Localizable.strings in Resources */,
 				63E2A899230DEEB500EB0F9C /* efectivos.json in Resources */,
@@ -500,6 +526,7 @@
 				63E2A798230C49D200EB0F9C /* TTGSnackbar.swift in Sources */,
 				63755D8422FDCC8000D161FA /* BViewController.swift in Sources */,
 				63E2A8D2230F477E00EB0F9C /* SOHeaderCell.swift in Sources */,
+				63DFBA162315A40E00918A51 /* principalTabBarVC.swift in Sources */,
 				635940532310475F009CF80F /* TableViewExtension.swift in Sources */,
 				63755E3E22FDD7A000D161FA /* StringExtension.swift in Sources */,
 				63E2A8CD230F444100EB0F9C /* OffertsVC.swift in Sources */,
@@ -510,6 +537,7 @@
 				6311E37022FB5335008F3328 /* AppDelegate.swift in Sources */,
 				63E2A8AE230EF8B200EB0F9C /* TableViewCellFactory.swift in Sources */,
 				63E2A879230DE32D00EB0F9C /* Font.swift in Sources */,
+				63DFBA192315A60700918A51 /* FavoritosVC.swift in Sources */,
 				63E2A8AC230EF73800EB0F9C /* InfoManager.swift in Sources */,
 				63755E3922FDD5A800D161FA /* Commons.swift in Sources */,
 				63E2A84E230DA2C600EB0F9C /* Settings.swift in Sources */,
