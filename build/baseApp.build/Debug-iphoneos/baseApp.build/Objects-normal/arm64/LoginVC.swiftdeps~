@@ -22,15 +22,12 @@ provides-dynamic-lookup:
 - "viewTextFiels"
 depends-top-level:
 - !private "!"
-- !private "&&"
 - !private "+"
 - !private "-"
 - !private "<"
 - !private "=="
-- !private ">="
 - !private "??"
 - "AnyObject"
-- !private "ApiError"
 - "AssignmentPrecedence"
 - "BViewController"
 - "Bool"
@@ -42,7 +39,6 @@ depends-top-level:
 - "Error"
 - !private "LocationUtil"
 - "LocationUtilDelegate"
-- !private "LoginResponse"
 - "LoginVC"
 - !private "Network"
 - !private "Requests"
@@ -58,9 +54,7 @@ depends-top-level:
 - !private "||"
 depends-member:
 - !private ["So22UIViewAnimationOptionsV", "curveLinear"]
-- !private ["12a4SysCoreIOS8ApiErrorC", "message"]
 - ["7baseApp15BViewControllerC", "AnyObject"]
-- !private ["7baseApp15BViewControllerC", "ApiError"]
 - ["7baseApp15BViewControllerC", "Bool"]
 - ["7baseApp15BViewControllerC", "CGPoint"]
 - ["7baseApp15BViewControllerC", "CLLocation"]
@@ -68,7 +62,6 @@ depends-member:
 - !private ["7baseApp15BViewControllerC", "DispatchQueue"]
 - ["7baseApp15BViewControllerC", "Error"]
 - !private ["7baseApp15BViewControllerC", "LocationUtil"]
-- !private ["7baseApp15BViewControllerC", "LoginResponse"]
 - !private ["7baseApp15BViewControllerC", "Network"]
 - !private ["7baseApp15BViewControllerC", "Requests"]
 - !private ["7baseApp15BViewControllerC", "Settings"]
@@ -108,12 +101,8 @@ depends-member:
 - ["7baseApp15BViewControllerC", "viewDidAppear"]
 - ["7baseApp15BViewControllerC", "viewDidLoad"]
 - ["7baseApp15BViewControllerC", "viewTextFiels"]
-- !private ["12ObjectMapper12BaseMappableP", "message"]
-- !private ["12ObjectMapper12BaseMappableP", "token"]
-- !private ["12ObjectMapper12BaseMappableP", "tokenYopter"]
 - !private ["SK", "count"]
 - !private ["SK", "localized"]
-- !private ["SK", "toInt"]
 - !private ["So15CALayerDelegateP", "addTarget"]
 - !private ["So15CALayerDelegateP", "adjustsFontSizeToFitWidth"]
 - !private ["So15CALayerDelegateP", "alpha"]
@@ -164,7 +153,6 @@ depends-member:
 - !private ["s7CVarArgP", "currentLocation"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "endEditing"]
-- !private ["s7CVarArgP", "endPointN"]
 - !private ["s7CVarArgP", "errorMessage"]
 - !private ["s7CVarArgP", "hideLoading"]
 - !private ["s7CVarArgP", "homeLogo"]
@@ -180,7 +168,6 @@ depends-member:
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "recuperarContrase\xF1a"]
 - !private ["s7CVarArgP", "setImage"]
-- !private ["s7CVarArgP", "setUrlParameters"]
 - !private ["s7CVarArgP", "sharedInstance"]
 - !private ["s7CVarArgP", "showLoading"]
 - !private ["s7CVarArgP", "showPassword"]
@@ -189,7 +176,6 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "textFieldDidChange"]
 - !private ["s7CVarArgP", "titleLabel"]
-- !private ["s7CVarArgP", "toInt"]
 - ["s7CVarArgP", "tracingLocation"]
 - ["s7CVarArgP", "tracingLocationDidFailWithError"]
 - !private ["s7CVarArgP", "txtCorreo"]
@@ -201,14 +187,11 @@ depends-member:
 - !private ["s7CVarArgP", "viewTextFiels"]
 - !private ["Sl", "count"]
 - !private ["Sl", "localized"]
-- !private ["Sl", "toInt"]
 - !private ["7baseApp7CommonsC", "getUserAgent"]
 - !private ["7baseApp7CommonsC", "isValidEmail"]
-- !private ["7baseApp7CommonsC", "showMessage"]
 - !private ["SL", "count"]
 - !private ["SL", "localized"]
 - !private ["SL", "now"]
-- !private ["SL", "toInt"]
 - !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
 - !private ["s28CustomDebugStringConvertibleP", "CLLocation"]
 - !private ["s28CustomDebugStringConvertibleP", "Commons"]
@@ -235,7 +218,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "currentLocation"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "endEditing"]
-- !private ["s28CustomDebugStringConvertibleP", "endPointN"]
 - !private ["s28CustomDebugStringConvertibleP", "errorMessage"]
 - !private ["s28CustomDebugStringConvertibleP", "hideLoading"]
 - !private ["s28CustomDebugStringConvertibleP", "homeLogo"]
@@ -251,7 +233,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "recuperarContrase\xF1a"]
 - !private ["s28CustomDebugStringConvertibleP", "setImage"]
-- !private ["s28CustomDebugStringConvertibleP", "setUrlParameters"]
 - !private ["s28CustomDebugStringConvertibleP", "sharedInstance"]
 - !private ["s28CustomDebugStringConvertibleP", "showLoading"]
 - !private ["s28CustomDebugStringConvertibleP", "showPassword"]
@@ -260,7 +241,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "textFieldDidChange"]
 - !private ["s28CustomDebugStringConvertibleP", "titleLabel"]
-- !private ["s28CustomDebugStringConvertibleP", "toInt"]
 - ["s28CustomDebugStringConvertibleP", "tracingLocation"]
 - ["s28CustomDebugStringConvertibleP", "tracingLocationDidFailWithError"]
 - !private ["s28CustomDebugStringConvertibleP", "txtCorreo"]
@@ -287,7 +267,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "tag"]
 - !private ["s17CustomReflectableP", "text"]
 - !private ["s17CustomReflectableP", "titleLabel"]
-- !private ["s17CustomReflectableP", "toInt"]
 - !private ["s17CustomReflectableP", "x"]
 - !private ["s17CustomReflectableP", "y"]
 - !private ["s23CustomStringConvertibleP", "CGPoint"]
@@ -308,8 +287,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "animate"]
 - !private ["s23CustomStringConvertibleP", "animateButtonLogin"]
 - !private ["s23CustomStringConvertibleP", "animateView"]
-- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
-- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "asyncAfter"]
 - !private ["s23CustomStringConvertibleP", "btnLogin"]
 - !private ["s23CustomStringConvertibleP", "center"]
@@ -318,7 +295,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "currentLocation"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "endEditing"]
-- !private ["s23CustomStringConvertibleP", "endPointN"]
 - !private ["s23CustomStringConvertibleP", "errorMessage"]
 - !private ["s23CustomStringConvertibleP", "hideLoading"]
 - !private ["s23CustomStringConvertibleP", "homeLogo"]
@@ -334,7 +310,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "recuperarContrase\xF1a"]
 - !private ["s23CustomStringConvertibleP", "setImage"]
-- !private ["s23CustomStringConvertibleP", "setUrlParameters"]
 - !private ["s23CustomStringConvertibleP", "sharedInstance"]
 - !private ["s23CustomStringConvertibleP", "showLoading"]
 - !private ["s23CustomStringConvertibleP", "showPassword"]
@@ -343,7 +318,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "textFieldDidChange"]
 - !private ["s23CustomStringConvertibleP", "titleLabel"]
-- !private ["s23CustomStringConvertibleP", "toInt"]
 - ["s23CustomStringConvertibleP", "tracingLocation"]
 - ["s23CustomStringConvertibleP", "tracingLocationDidFailWithError"]
 - !private ["s23CustomStringConvertibleP", "txtCorreo"]
@@ -368,11 +342,8 @@ depends-member:
 - !private ["Se", "tag"]
 - !private ["Se", "text"]
 - !private ["Se", "titleLabel"]
-- !private ["Se", "toInt"]
 - !private ["Se", "x"]
 - !private ["Se", "y"]
-- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
-- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["So18OS_dispatch_objectC", "asyncAfter"]
 - !private ["So18OS_dispatch_objectC", "main"]
 - !private ["So17OS_dispatch_queueC", "asyncAfter"]
@@ -393,7 +364,6 @@ depends-member:
 - !private ["SE", "tag"]
 - !private ["SE", "text"]
 - !private ["SE", "titleLabel"]
-- !private ["SE", "toInt"]
 - !private ["SE", "x"]
 - !private ["SE", "y"]
 - !private ["SQ", "CGPoint"]
@@ -401,7 +371,6 @@ depends-member:
 - !private ["SQ", "Commons"]
 - !private ["SQ", "DispatchQueue"]
 - !private ["SQ", "LocationUtil"]
-- !private ["SQ", "Login"]
 - !private ["SQ", "Network"]
 - !private ["SQ", "Requests"]
 - !private ["SQ", "Settings"]
@@ -425,7 +394,6 @@ depends-member:
 - !private ["SQ", "delegate"]
 - !private ["SQ", "editingChanged"]
 - !private ["SQ", "endEditing"]
-- !private ["SQ", "endPointN"]
 - !private ["SQ", "errorMessage"]
 - !private ["SQ", "hideLoading"]
 - !private ["SQ", "homeLogo"]
@@ -435,7 +403,6 @@ depends-member:
 - !private ["SQ", "init"]
 - !private ["SQ", "isSecureTextEntry"]
 - !private ["SQ", "localized"]
-- !private ["SQ", "long"]
 - !private ["SQ", "main"]
 - !private ["SQ", "minimumFontSize"]
 - !private ["SQ", "minimumScaleFactor"]
@@ -444,7 +411,6 @@ depends-member:
 - !private ["SQ", "print"]
 - !private ["SQ", "recuperarContrase\xF1a"]
 - !private ["SQ", "setImage"]
-- !private ["SQ", "setUrlParameters"]
 - !private ["SQ", "sharedInstance"]
 - !private ["SQ", "showLoading"]
 - !private ["SQ", "showPassword"]
@@ -453,7 +419,6 @@ depends-member:
 - !private ["SQ", "text"]
 - !private ["SQ", "textFieldDidChange"]
 - !private ["SQ", "titleLabel"]
-- !private ["SQ", "toInt"]
 - ["SQ", "tracingLocation"]
 - ["SQ", "tracingLocationDidFailWithError"]
 - !private ["SQ", "txtCorreo"]
@@ -471,7 +436,6 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "normal"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "localized"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "toInt"]
 - !private ["s23ExpressibleByNilLiteralP", "addTarget"]
 - !private ["s23ExpressibleByNilLiteralP", "adjustsFontSizeToFitWidth"]
 - !private ["s23ExpressibleByNilLiteralP", "alpha"]
@@ -486,19 +450,15 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "titleLabel"]
 - !private ["s32ExpressibleByStringInterpolationP", "count"]
 - !private ["s32ExpressibleByStringInterpolationP", "localized"]
-- !private ["s32ExpressibleByStringInterpolationP", "toInt"]
 - !private ["s26ExpressibleByStringLiteralP", "count"]
 - !private ["s26ExpressibleByStringLiteralP", "localized"]
-- !private ["s26ExpressibleByStringLiteralP", "toInt"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "localized"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "toInt"]
 - !private ["SH", "CGPoint"]
 - !private ["SH", "CLLocation"]
 - !private ["SH", "Commons"]
 - !private ["SH", "DispatchQueue"]
 - !private ["SH", "LocationUtil"]
-- !private ["SH", "Login"]
 - !private ["SH", "Network"]
 - !private ["SH", "Requests"]
 - !private ["SH", "Settings"]
@@ -520,7 +480,6 @@ depends-member:
 - !private ["SH", "currentLocation"]
 - !private ["SH", "delegate"]
 - !private ["SH", "endEditing"]
-- !private ["SH", "endPointN"]
 - !private ["SH", "errorMessage"]
 - !private ["SH", "hideLoading"]
 - !private ["SH", "homeLogo"]
@@ -530,14 +489,12 @@ depends-member:
 - !private ["SH", "init"]
 - !private ["SH", "isSecureTextEntry"]
 - !private ["SH", "localized"]
-- !private ["SH", "long"]
 - !private ["SH", "main"]
 - !private ["SH", "minimumFontSize"]
 - !private ["SH", "minimumScaleFactor"]
 - !private ["SH", "print"]
 - !private ["SH", "recuperarContrase\xF1a"]
 - !private ["SH", "setImage"]
-- !private ["SH", "setUrlParameters"]
 - !private ["SH", "sharedInstance"]
 - !private ["SH", "showLoading"]
 - !private ["SH", "showPassword"]
@@ -546,7 +503,6 @@ depends-member:
 - !private ["SH", "text"]
 - !private ["SH", "textFieldDidChange"]
 - !private ["SH", "titleLabel"]
-- !private ["SH", "toInt"]
 - ["SH", "tracingLocation"]
 - ["SH", "tracingLocationDidFailWithError"]
 - !private ["SH", "txtCorreo"]
@@ -595,10 +551,7 @@ depends-member:
 - !private ["7baseApp20LocationUtilDelegateP", "validateForm"]
 - !private ["7baseApp20LocationUtilDelegateP", "view"]
 - !private ["7baseApp20LocationUtilDelegateP", "viewTextFiels"]
-- !private ["12a4SysCoreIOS13LoginResponseC", "token"]
-- !private ["12a4SysCoreIOS13LoginResponseC", "tokenYopter"]
 - ["7baseApp7LoginVCC", "AnyObject"]
-- !private ["7baseApp7LoginVCC", "ApiError"]
 - ["7baseApp7LoginVCC", "Bool"]
 - ["7baseApp7LoginVCC", "CGPoint"]
 - ["7baseApp7LoginVCC", "CLLocation"]
@@ -606,7 +559,6 @@ depends-member:
 - !private ["7baseApp7LoginVCC", "DispatchQueue"]
 - ["7baseApp7LoginVCC", "Error"]
 - !private ["7baseApp7LoginVCC", "LocationUtil"]
-- !private ["7baseApp7LoginVCC", "LoginResponse"]
 - !private ["7baseApp7LoginVCC", "Network"]
 - !private ["7baseApp7LoginVCC", "Requests"]
 - !private ["7baseApp7LoginVCC", "Settings"]
@@ -646,13 +598,8 @@ depends-member:
 - ["7baseApp7LoginVCC", "viewTextFiels"]
 - !private ["s25LosslessStringConvertibleP", "count"]
 - !private ["s25LosslessStringConvertibleP", "localized"]
-- !private ["s25LosslessStringConvertibleP", "toInt"]
-- !private ["12ObjectMapper8MappableP", "message"]
-- !private ["12ObjectMapper8MappableP", "token"]
-- !private ["12ObjectMapper8MappableP", "tokenYopter"]
 - !private ["s10MirrorPathP", "count"]
 - !private ["s10MirrorPathP", "localized"]
-- !private ["s10MirrorPathP", "toInt"]
 - !private ["So8NSCodingP", "CGPoint"]
 - !private ["So8NSCodingP", "CLLocation"]
 - !private ["So8NSCodingP", "Commons"]
@@ -696,7 +643,6 @@ depends-member:
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "textFieldDidChange"]
 - !private ["So8NSCodingP", "titleLabel"]
-- !private ["So8NSCodingP", "toInt"]
 - ["So8NSCodingP", "tracingLocation"]
 - ["So8NSCodingP", "tracingLocationDidFailWithError"]
 - !private ["So8NSCodingP", "txtCorreo"]
@@ -710,7 +656,6 @@ depends-member:
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "localized"]
-- !private ["So9NSCopyingP", "toInt"]
 - !private ["So26NSExtensionRequestHandlingP", "CGPoint"]
 - !private ["So26NSExtensionRequestHandlingP", "CLLocation"]
 - !private ["So26NSExtensionRequestHandlingP", "Commons"]
@@ -750,16 +695,12 @@ depends-member:
 - !private ["So21NSItemProviderReadingP", "count"]
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderReadingP", "localized"]
-- !private ["So21NSItemProviderReadingP", "toInt"]
 - !private ["So21NSItemProviderWritingP", "count"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So21NSItemProviderWritingP", "localized"]
-- !private ["So21NSItemProviderWritingP", "toInt"]
 - !private ["So16NSMutableCopyingP", "count"]
 - !private ["So16NSMutableCopyingP", "localized"]
-- !private ["So16NSMutableCopyingP", "toInt"]
 - ["So8NSObjectC", "AnyObject"]
-- !private ["So8NSObjectC", "ApiError"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "CGPoint"]
 - ["So8NSObjectC", "CLLocation"]
@@ -767,7 +708,6 @@ depends-member:
 - !private ["So8NSObjectC", "DispatchQueue"]
 - ["So8NSObjectC", "Error"]
 - !private ["So8NSObjectC", "LocationUtil"]
-- !private ["So8NSObjectC", "LoginResponse"]
 - !private ["So8NSObjectC", "Network"]
 - !private ["So8NSObjectC", "Requests"]
 - !private ["So8NSObjectC", "Settings"]
@@ -795,7 +735,6 @@ depends-member:
 - !private ["So8NSObjectC", "currentLocation"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "endEditing"]
-- !private ["So8NSObjectC", "endPointN"]
 - !private ["So8NSObjectC", "errorMessage"]
 - !private ["So8NSObjectC", "hideLoading"]
 - ["So8NSObjectC", "homeLogo"]
@@ -811,7 +750,6 @@ depends-member:
 - !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "recuperarContrase\xF1a"]
 - !private ["So8NSObjectC", "setImage"]
-- !private ["So8NSObjectC", "setUrlParameters"]
 - !private ["So8NSObjectC", "sharedInstance"]
 - !private ["So8NSObjectC", "showLoading"]
 - ["So8NSObjectC", "showPassword"]
@@ -820,7 +758,6 @@ depends-member:
 - !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "textFieldDidChange"]
 - !private ["So8NSObjectC", "titleLabel"]
-- !private ["So8NSObjectC", "toInt"]
 - ["So8NSObjectC", "tracingLocation"]
 - ["So8NSObjectC", "tracingLocationDidFailWithError"]
 - ["So8NSObjectC", "txtCorreo"]
@@ -856,7 +793,6 @@ depends-member:
 - !private ["So8NSObjectP", "currentLocation"]
 - !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "endEditing"]
-- !private ["So8NSObjectP", "endPointN"]
 - !private ["So8NSObjectP", "errorMessage"]
 - !private ["So8NSObjectP", "hideLoading"]
 - !private ["So8NSObjectP", "homeLogo"]
@@ -872,7 +808,6 @@ depends-member:
 - !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "recuperarContrase\xF1a"]
 - !private ["So8NSObjectP", "setImage"]
-- !private ["So8NSObjectP", "setUrlParameters"]
 - !private ["So8NSObjectP", "sharedInstance"]
 - !private ["So8NSObjectP", "showLoading"]
 - !private ["So8NSObjectP", "showPassword"]
@@ -881,7 +816,6 @@ depends-member:
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "textFieldDidChange"]
 - !private ["So8NSObjectP", "titleLabel"]
-- !private ["So8NSObjectP", "toInt"]
 - ["So8NSObjectP", "tracingLocation"]
 - ["So8NSObjectP", "tracingLocationDidFailWithError"]
 - !private ["So8NSObjectP", "txtCorreo"]
@@ -895,13 +829,8 @@ depends-member:
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "localized"]
-- !private ["So14NSSecureCodingP", "toInt"]
 - !private ["So8NSStringC", "count"]
 - !private ["So8NSStringC", "localized"]
-- !private ["So8NSStringC", "toInt"]
-- !private ["12a4SysCoreIOS7NetworkC", "endPointN"]
-- !private ["12a4SysCoreIOS7NetworkC", "init"]
-- !private ["12a4SysCoreIOS7NetworkC", "setUrlParameters"]
 - !private ["So9OS_objectC", "asyncAfter"]
 - !private ["So9OS_objectC", "main"]
 - !private ["s9OptionSetP", "curveLinear"]
@@ -921,25 +850,15 @@ depends-member:
 - !private ["Sq", "titleLabel"]
 - !private ["Sm", "count"]
 - !private ["Sm", "localized"]
-- !private ["Sm", "toInt"]
 - !private ["SY", "curveLinear"]
 - !private ["SY", "editingChanged"]
-- !private ["SY", "long"]
 - !private ["SY", "normal"]
-- !private ["12a4SysCoreIOS8RequestsC", "createLoginRequest"]
 - !private ["ST", "count"]
 - !private ["ST", "localized"]
-- !private ["ST", "toInt"]
 - !private ["s10SetAlgebraP", "curveLinear"]
 - !private ["s10SetAlgebraP", "editingChanged"]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["7baseApp8SettingsC", "getSesion"]
-- !private ["7baseApp8SettingsC", "setAnonymous"]
-- !private ["7baseApp8SettingsC", "setOldToken"]
-- !private ["7baseApp8SettingsC", "setPassword"]
-- !private ["7baseApp8SettingsC", "setSesion"]
-- !private ["7baseApp8SettingsC", "setToken"]
-- !private ["7baseApp8SettingsC", "setUsername"]
 - !private ["7baseApp8SettingsC", "sharedInstance"]
 - !private ["25SkyFloatingLabelTextFieldAAC", "addTarget"]
 - !private ["25SkyFloatingLabelTextFieldAAC", "adjustsFontSizeToFitWidth"]
@@ -958,21 +877,12 @@ depends-member:
 - !private ["So14UIControlStateV", "normal"]
 - !private ["SS", "count"]
 - !private ["SS", "localized"]
-- !private ["SS", "toInt"]
-- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
-- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
 - !private ["Sy", "count"]
 - !private ["Sy", "localized"]
-- !private ["Sy", "toInt"]
-- !private ["7baseApp19TTGSnackbarDurationO", "long"]
-- !private ["s16TextOutputStreamP", "appendInterpolation"]
-- !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s16TextOutputStreamP", "count"]
 - !private ["s16TextOutputStreamP", "localized"]
-- !private ["s16TextOutputStreamP", "toInt"]
 - !private ["s20TextOutputStreamableP", "count"]
 - !private ["s20TextOutputStreamableP", "localized"]
-- !private ["s20TextOutputStreamableP", "toInt"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "alpha"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "center"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setImage"]
@@ -1287,7 +1197,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewTextFiels"]
 - ["So11UIResponderC", "AnyObject"]
-- !private ["So11UIResponderC", "ApiError"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "CGPoint"]
 - ["So11UIResponderC", "CLLocation"]
@@ -1295,7 +1204,6 @@ depends-member:
 - !private ["So11UIResponderC", "DispatchQueue"]
 - ["So11UIResponderC", "Error"]
 - !private ["So11UIResponderC", "LocationUtil"]
-- !private ["So11UIResponderC", "LoginResponse"]
 - !private ["So11UIResponderC", "Network"]
 - !private ["So11UIResponderC", "Requests"]
 - !private ["So11UIResponderC", "Settings"]
@@ -1594,7 +1502,6 @@ depends-member:
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "titleLabel"]
 - ["So16UIViewControllerC", "AnyObject"]
-- !private ["So16UIViewControllerC", "ApiError"]
 - ["So16UIViewControllerC", "Bool"]
 - ["So16UIViewControllerC", "CGPoint"]
 - ["So16UIViewControllerC", "CLLocation"]
@@ -1602,7 +1509,6 @@ depends-member:
 - !private ["So16UIViewControllerC", "DispatchQueue"]
 - ["So16UIViewControllerC", "Error"]
 - !private ["So16UIViewControllerC", "LocationUtil"]
-- !private ["So16UIViewControllerC", "LoginResponse"]
 - !private ["So16UIViewControllerC", "Network"]
 - !private ["So16UIViewControllerC", "Requests"]
 - !private ["So16UIViewControllerC", "Settings"]
@@ -1642,29 +1548,22 @@ depends-member:
 - ["So16UIViewControllerC", "viewTextFiels"]
 - !private ["9Alamofire14URLConvertibleP", "count"]
 - !private ["9Alamofire14URLConvertibleP", "localized"]
-- !private ["9Alamofire14URLConvertibleP", "toInt"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "count"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "localized"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "toInt"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "x"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "y"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "localized"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "toInt"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "localized"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "toInt"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "localized"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "toInt"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "localized"]
-- !private ["s19_HasContiguousBytesP", "toInt"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "localized"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "toInt"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CLLocation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Commons"]
@@ -1691,7 +1590,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "currentLocation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endEditing"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "endPointN"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "errorMessage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "hideLoading"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "homeLogo"]
@@ -1707,7 +1605,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "recuperarContrase\xF1a"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setImage"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "setUrlParameters"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedInstance"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "showLoading"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "showPassword"]
@@ -1716,7 +1613,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textFieldDidChange"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleLabel"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "toInt"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "tracingLocation"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "tracingLocationDidFailWithError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "txtCorreo"]
@@ -1741,7 +1637,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "tag"]
 - !private ["s21_ObjectiveCBridgeableP", "text"]
 - !private ["s21_ObjectiveCBridgeableP", "titleLabel"]
-- !private ["s21_ObjectiveCBridgeableP", "toInt"]
 - !private ["s21_ObjectiveCBridgeableP", "x"]
 - !private ["s21_ObjectiveCBridgeableP", "y"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addTarget"]
@@ -1759,12 +1654,9 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "tag"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
-- !private ["12a4SysCoreIOS8endPointO", "Login"]
 depends-nominal:
 - !private "So22UIViewAnimationOptionsV"
-- !private "12a4SysCoreIOS8ApiErrorC"
 - "7baseApp15BViewControllerC"
-- !private "12ObjectMapper12BaseMappableP"
 - !private "SK"
 - !private "So15CALayerDelegateP"
 - !private "So7CGPointV"
@@ -1778,7 +1670,6 @@ depends-nominal:
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "Se"
-- !private "s26DefaultStringInterpolationV"
 - !private "So18OS_dispatch_objectC"
 - !private "So17OS_dispatch_queueC"
 - !private "8Dispatch0A4TimeV"
@@ -1795,10 +1686,8 @@ depends-nominal:
 - !private "6Lottie14InterpolatableP"
 - !private "7baseApp12LocationUtilC"
 - "7baseApp20LocationUtilDelegateP"
-- !private "12a4SysCoreIOS13LoginResponseC"
 - "7baseApp7LoginVCC"
 - !private "s25LosslessStringConvertibleP"
-- !private "12ObjectMapper8MappableP"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
@@ -1810,13 +1699,11 @@ depends-nominal:
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
-- !private "12a4SysCoreIOS7NetworkC"
 - !private "So9OS_objectC"
 - !private "s9OptionSetP"
 - !private "Sq"
 - !private "Sm"
 - !private "SY"
-- !private "12a4SysCoreIOS8RequestsC"
 - !private "ST"
 - !private "s10SetAlgebraP"
 - !private "7baseApp8SettingsC"
@@ -1824,9 +1711,7 @@ depends-nominal:
 - !private "25SkyFloatingLabelTextField0abcdE8WithIconC"
 - !private "So14UIControlStateV"
 - !private "SS"
-- !private "s27StringInterpolationProtocolP"
 - !private "Sy"
-- !private "7baseApp19TTGSnackbarDurationO"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
@@ -1873,10 +1758,8 @@ depends-nominal:
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
-- !private "12a4SysCoreIOS8endPointO"
 depends-dynamic-lookup:
 depends-external:
-- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/Lottie.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
@@ -1897,7 +1780,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
-- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
@@ -1931,7 +1813,6 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoderHelper.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
-- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/Lottie-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
@@ -1939,7 +1820,6 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
-- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/module.modulemap"
@@ -1958,7 +1838,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"

@@ -12,7 +12,6 @@
 		6311E37522FB5335008F3328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6311E37322FB5335008F3328 /* Main.storyboard */; };
 		6311E37A22FB5341008F3328 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6311E37822FB5341008F3328 /* LaunchScreen.storyboard */; };
 		635940532310475F009CF80F /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635940522310475F009CF80F /* TableViewExtension.swift */; };
-		6359405723104C40009CF80F /* a4SysCoreIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6359405423104C31009CF80F /* a4SysCoreIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63755D7822FDCA5700D161FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63755D7722FDCA5700D161FA /* Localizable.strings */; };
 		63755D7C22FDCA7800D161FA /* Como-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63755D7A22FDCA7700D161FA /* Como-Bold.ttf */; };
 		63755D7D22FDCA7800D161FA /* Como-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63755D7B22FDCA7800D161FA /* Como-Regular.ttf */; };
@@ -24,6 +23,8 @@
 		63755E3E22FDD7A000D161FA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755E3D22FDD7A000D161FA /* StringExtension.swift */; };
 		63755E4322FDF17700D161FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755E4122FDF17700D161FA /* LoginVC.swift */; };
 		63755E4422FDF17700D161FA /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63755E4222FDF17700D161FA /* LoginVC.xib */; };
+		63DFBA0B2315842900918A51 /* a4SysCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA092315842500918A51 /* a4SysCoreIOS.framework */; };
+		63DFBA0C2315842900918A51 /* a4SysCoreIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA092315842500918A51 /* a4SysCoreIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63E2A798230C49D200EB0F9C /* TTGSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2A797230C49D200EB0F9C /* TTGSnackbar.swift */; };
 		63E2A80E230C5F5600EB0F9C /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2A80D230C5F5600EB0F9C /* StatusCode.swift */; };
 		63E2A84E230DA2C600EB0F9C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2A84D230DA2C600EB0F9C /* Settings.swift */; };
@@ -64,7 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6359405723104C40009CF80F /* a4SysCoreIOS.framework in Embed Frameworks */,
+				63DFBA0C2315842900918A51 /* a4SysCoreIOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +81,6 @@
 		6311E37922FB5341008F3328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6311E37B22FB5341008F3328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635940522310475F009CF80F /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
-		6359405423104C31009CF80F /* a4SysCoreIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = a4SysCoreIOS.framework; sourceTree = "<group>"; };
 		63755D7722FDCA5700D161FA /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		63755D7A22FDCA7700D161FA /* Como-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Como-Bold.ttf"; sourceTree = "<group>"; };
 		63755D7B22FDCA7800D161FA /* Como-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Como-Regular.ttf"; sourceTree = "<group>"; };
@@ -92,6 +92,7 @@
 		63755E3D22FDD7A000D161FA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		63755E4122FDF17700D161FA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		63755E4222FDF17700D161FA /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		63DFBA092315842500918A51 /* a4SysCoreIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = a4SysCoreIOS.framework; sourceTree = "<group>"; };
 		63E2A797230C49D200EB0F9C /* TTGSnackbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTGSnackbar.swift; sourceTree = "<group>"; };
 		63E2A80D230C5F5600EB0F9C /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		63E2A84D230DA2C600EB0F9C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DFBA0B2315842900918A51 /* a4SysCoreIOS.framework in Frameworks */,
 				67D156784708F3A8BE66DFA2 /* Pods_baseApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +291,7 @@
 		63E2A769230B000000EB0F9C /* newFrame */ = {
 			isa = PBXGroup;
 			children = (
-				6359405423104C31009CF80F /* a4SysCoreIOS.framework */,
+				63DFBA092315842500918A51 /* a4SysCoreIOS.framework */,
 			);
 			path = newFrame;
 			sourceTree = "<group>";

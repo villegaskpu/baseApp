@@ -599,6 +599,7 @@ SWIFT_PROTOCOL("_TtP7baseApp20YopterAlertsDelegate_")
 - (void)YopterAlertsButtonPressedWithRightButtonTextField:(YopterAlerts * _Nonnull)alert textFieldText:(NSString * _Nonnull)textFieldText;
 @end
 
+@class UITapGestureRecognizer;
 
 SWIFT_CLASS("_TtC7baseApp10cellOffert")
 @interface cellOffert : UITableViewCell
@@ -614,6 +615,9 @@ SWIFT_CLASS("_TtC7baseApp10cellOffert")
 - (void)awakeFromNib;
 - (void)prepareForReuse;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (void)saveOrDelete:(UITapGestureRecognizer * _Nonnull)gestureRecognizer;
+- (void)like:(UITapGestureRecognizer * _Nonnull)gestureRecognizer;
+- (void)dislike:(UITapGestureRecognizer * _Nonnull)gestureRecognizer;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

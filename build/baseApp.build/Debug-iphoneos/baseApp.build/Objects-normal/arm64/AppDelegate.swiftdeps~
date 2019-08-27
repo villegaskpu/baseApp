@@ -17,10 +17,13 @@ depends-top-level:
 - "AppDelegate"
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
+- !private "FloatLiteralType"
 - !private "IQKeyboardManager"
+- !private "IntegerLiteralType"
 - !private "LoginVC"
-- !private "OffertsVC"
 - !private "Settings"
+- !private "StringLiteralType"
 - "UIApplication"
 - "UIApplicationDelegate"
 - "UIResponder"
@@ -32,7 +35,6 @@ depends-member:
 - ["7baseApp0B8DelegateC", "Bool"]
 - !private ["7baseApp0B8DelegateC", "IQKeyboardManager"]
 - !private ["7baseApp0B8DelegateC", "LoginVC"]
-- !private ["7baseApp0B8DelegateC", "OffertsVC"]
 - !private ["7baseApp0B8DelegateC", "Settings"]
 - ["7baseApp0B8DelegateC", "UIApplication"]
 - !private ["7baseApp0B8DelegateC", "UIScreen"]
@@ -55,8 +57,6 @@ depends-member:
 - ["7baseApp0B8DelegateC", "init"]
 - !private ["7baseApp0B8DelegateC", "print"]
 - ["7baseApp0B8DelegateC", "window"]
-- !private ["7baseApp20BTableViewControllerC", "init"]
-- !private ["7baseApp18BTableViewDelegateP", "init"]
 - !private ["7baseApp15BViewControllerC", "init"]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "makeKeyAndVisible"]
@@ -64,7 +64,6 @@ depends-member:
 - !private ["s7CVarArgP", "IQKeyboardManager"]
 - ["s7CVarArgP", "LaunchOptionsKey"]
 - !private ["s7CVarArgP", "LoginVC"]
-- !private ["s7CVarArgP", "OffertsVC"]
 - !private ["s7CVarArgP", "Settings"]
 - !private ["s7CVarArgP", "UIScreen"]
 - !private ["s7CVarArgP", "UIWindow"]
@@ -97,7 +96,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "IQKeyboardManager"]
 - ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
 - !private ["s28CustomDebugStringConvertibleP", "LoginVC"]
-- !private ["s28CustomDebugStringConvertibleP", "OffertsVC"]
 - !private ["s28CustomDebugStringConvertibleP", "Settings"]
 - !private ["s28CustomDebugStringConvertibleP", "UIScreen"]
 - !private ["s28CustomDebugStringConvertibleP", "UIWindow"]
@@ -130,7 +128,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "IQKeyboardManager"]
 - ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
 - !private ["s23CustomStringConvertibleP", "LoginVC"]
-- !private ["s23CustomStringConvertibleP", "OffertsVC"]
 - !private ["s23CustomStringConvertibleP", "Settings"]
 - !private ["s23CustomStringConvertibleP", "UIScreen"]
 - !private ["s23CustomStringConvertibleP", "UIWindow"]
@@ -167,7 +164,6 @@ depends-member:
 - !private ["SQ", "IQKeyboardManager"]
 - ["SQ", "LaunchOptionsKey"]
 - !private ["SQ", "LoginVC"]
-- !private ["SQ", "OffertsVC"]
 - !private ["SQ", "Settings"]
 - !private ["SQ", "UIScreen"]
 - !private ["SQ", "UIWindow"]
@@ -200,7 +196,6 @@ depends-member:
 - !private ["SH", "IQKeyboardManager"]
 - ["SH", "LaunchOptionsKey"]
 - !private ["SH", "LoginVC"]
-- !private ["SH", "OffertsVC"]
 - !private ["SH", "Settings"]
 - !private ["SH", "UIScreen"]
 - !private ["SH", "UIWindow"]
@@ -245,7 +240,6 @@ depends-member:
 - !private ["So8NSObjectC", "IQKeyboardManager"]
 - ["So8NSObjectC", "LaunchOptionsKey"]
 - !private ["So8NSObjectC", "LoginVC"]
-- !private ["So8NSObjectC", "OffertsVC"]
 - !private ["So8NSObjectC", "Settings"]
 - ["So8NSObjectC", "UIApplication"]
 - !private ["So8NSObjectC", "UIScreen"]
@@ -279,7 +273,6 @@ depends-member:
 - !private ["So8NSObjectP", "IQKeyboardManager"]
 - ["So8NSObjectP", "LaunchOptionsKey"]
 - !private ["So8NSObjectP", "LoginVC"]
-- !private ["So8NSObjectP", "OffertsVC"]
 - !private ["So8NSObjectP", "Settings"]
 - !private ["So8NSObjectP", "UIScreen"]
 - !private ["So8NSObjectP", "UIWindow"]
@@ -309,8 +302,6 @@ depends-member:
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "toolbarDoneBarButtonItemText"]
 - ["So8NSObjectP", "window"]
-- !private ["7baseApp9OffertsVCC", "deinit"]
-- !private ["7baseApp9OffertsVCC", "init"]
 - !private ["7baseApp8SettingsC", "getSesion"]
 - !private ["7baseApp8SettingsC", "sharedInstance"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
@@ -320,7 +311,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "makeKeyAndVisible"]
 - !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
-- !private ["So40UIAdaptivePresentationControllerDelegateP", "init"]
 - !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "makeKeyAndVisible"]
 - !private ["So12UIAppearanceP", "rootViewController"]
@@ -330,7 +320,6 @@ depends-member:
 - ["So13UIApplicationC", "LaunchOptionsKey"]
 - !private ["So21UIApplicationDelegateP", "IQKeyboardManager"]
 - !private ["So21UIApplicationDelegateP", "LoginVC"]
-- !private ["So21UIApplicationDelegateP", "OffertsVC"]
 - !private ["So21UIApplicationDelegateP", "Settings"]
 - !private ["So21UIApplicationDelegateP", "UIScreen"]
 - !private ["So21UIApplicationDelegateP", "UIWindow"]
@@ -373,7 +362,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "IQKeyboardManager"]
 - ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
 - !private ["So30UIPasteConfigurationSupportingP", "LoginVC"]
-- !private ["So30UIPasteConfigurationSupportingP", "OffertsVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "Settings"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIScreen"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIWindow"]
@@ -397,12 +385,10 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "rootViewController"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
-- !private ["So39UIPopoverPresentationControllerDelegateP", "init"]
 - ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "IQKeyboardManager"]
 - ["So11UIResponderC", "LaunchOptionsKey"]
 - !private ["So11UIResponderC", "LoginVC"]
-- !private ["So11UIResponderC", "OffertsVC"]
 - !private ["So11UIResponderC", "Settings"]
 - ["So11UIResponderC", "UIApplication"]
 - !private ["So11UIResponderC", "UIScreen"]
@@ -431,7 +417,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "IQKeyboardManager"]
 - ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
 - !private ["So30UIResponderStandardEditActionsP", "LoginVC"]
-- !private ["So30UIResponderStandardEditActionsP", "OffertsVC"]
 - !private ["So30UIResponderStandardEditActionsP", "Settings"]
 - !private ["So30UIResponderStandardEditActionsP", "UIScreen"]
 - !private ["So30UIResponderStandardEditActionsP", "UIWindow"]
@@ -457,10 +442,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "window"]
 - !private ["So8UIScreenC", "bounds"]
 - !private ["So8UIScreenC", "main"]
-- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
-- !private ["So21UITableViewDataSourceP", "init"]
-- !private ["So19UITableViewDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "bounds"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "main"]
@@ -469,7 +451,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "IQKeyboardManager"]
 - ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
 - !private ["So23UIUserActivityRestoringP", "LoginVC"]
-- !private ["So23UIUserActivityRestoringP", "OffertsVC"]
 - !private ["So23UIUserActivityRestoringP", "Settings"]
 - !private ["So23UIUserActivityRestoringP", "UIScreen"]
 - !private ["So23UIUserActivityRestoringP", "UIWindow"]
@@ -503,7 +484,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IQKeyboardManager"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "LoginVC"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "OffertsVC"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Settings"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIWindow"]
@@ -538,8 +518,6 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
 depends-nominal:
 - "7baseApp0B8DelegateC"
-- !private "7baseApp20BTableViewControllerC"
-- !private "7baseApp18BTableViewDelegateP"
 - !private "7baseApp15BViewControllerC"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
@@ -555,12 +533,10 @@ depends-nominal:
 - !private "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "7baseApp9OffertsVCC"
 - !private "7baseApp8SettingsC"
 - !private "s27StringInterpolationProtocolP"
 - !private "s16TextOutputStreamP"
 - !private "So29UIAccessibilityIdentificationP"
-- !private "So40UIAdaptivePresentationControllerDelegateP"
 - !private "So12UIAppearanceP"
 - !private "So21UIAppearanceContainerP"
 - "So13UIApplicationC"
@@ -573,14 +549,10 @@ depends-nominal:
 - !private "So20UIFocusItemContainerP"
 - !private "So27UIGestureRecognizerDelegateP"
 - "So30UIPasteConfigurationSupportingP"
-- !private "So39UIPopoverPresentationControllerDelegateP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - !private "So8UIScreenC"
-- !private "So20UIScrollViewDelegateP"
 - !private "So16UIStateRestoringP"
-- !private "So21UITableViewDataSourceP"
-- !private "So19UITableViewDelegateP"
 - !private "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
