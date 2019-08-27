@@ -94,5 +94,7 @@ class OffertsVC: BTableViewController {
     }
 }
 extension OffertsVC: BTableViewDelegate {
-    
+    func BTableView(tableItems: InfoManager, updateCell indexPath: IndexPath, value: String, action: String) {
+        print("delegateINOfert")
+    }
 }

@@ -55,6 +55,9 @@ protocol BTableViewDelegate {
     @objc optional func BTableView(tableItems: InfoManager, selectVersionAutoAux press: Bool)
     // delegado del colapsable
     @objc optional func BTableView(tableItems: InfoManager, pressColapsable press: Bool)
+    
+    
+    @objc optional func BTableView(tableItems: InfoManager, updateCell indexPath: IndexPath, value: String, action: String)
 }
 
 class BTableViewController: BViewController {
@@ -233,6 +236,13 @@ extension BTableViewController: UIPopoverPresentationControllerDelegate {
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
+    }
+}
+
+//MARK: OFFERT CEL DELEGATE
+extension BTableViewController: cellOffertDelegate{
+    func updateCell(indexPath: IndexPath, value: String, action: String) {
+        BaseDelegate?.BTableView?(tableItems: tableItems, updateCell: indexPath, value: value, action: action)
     }
 }
 

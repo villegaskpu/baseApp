@@ -31,6 +31,6 @@ class SOHeaderCell: UITableViewHeaderFooterView {
 //        titulo.textColor = .SOAzul
         titulo.textColor = UIColor.blue
 //        titulo.font = UIFont(name: Constants.Font.medium, size: 19.0)
-        titulo.font = UIFont(name: Font.FONT_MEDIUM(), size: 19.0)
+        titulo.font = UIFont(name: Font.FONT_MEDIUM(), size: 15.0)
     }
 }

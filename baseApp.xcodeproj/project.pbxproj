@@ -23,8 +23,8 @@
 		63755E3E22FDD7A000D161FA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755E3D22FDD7A000D161FA /* StringExtension.swift */; };
 		63755E4322FDF17700D161FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755E4122FDF17700D161FA /* LoginVC.swift */; };
 		63755E4422FDF17700D161FA /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63755E4222FDF17700D161FA /* LoginVC.xib */; };
-		63DFBA0B2315842900918A51 /* a4SysCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA092315842500918A51 /* a4SysCoreIOS.framework */; };
-		63DFBA0C2315842900918A51 /* a4SysCoreIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA092315842500918A51 /* a4SysCoreIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63DFBA1323159E0B00918A51 /* a4SysCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA1123159E0200918A51 /* a4SysCoreIOS.framework */; };
+		63DFBA1423159E0B00918A51 /* a4SysCoreIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFBA1123159E0200918A51 /* a4SysCoreIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63E2A798230C49D200EB0F9C /* TTGSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2A797230C49D200EB0F9C /* TTGSnackbar.swift */; };
 		63E2A80E230C5F5600EB0F9C /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2A80D230C5F5600EB0F9C /* StatusCode.swift */; };
 		63E2A84E230DA2C600EB0F9C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2A84D230DA2C600EB0F9C /* Settings.swift */; };
@@ -65,7 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				63DFBA0C2315842900918A51 /* a4SysCoreIOS.framework in Embed Frameworks */,
+				63DFBA1423159E0B00918A51 /* a4SysCoreIOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,7 +92,7 @@
 		63755E3D22FDD7A000D161FA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		63755E4122FDF17700D161FA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		63755E4222FDF17700D161FA /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
-		63DFBA092315842500918A51 /* a4SysCoreIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = a4SysCoreIOS.framework; sourceTree = "<group>"; };
+		63DFBA1123159E0200918A51 /* a4SysCoreIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = a4SysCoreIOS.framework; sourceTree = "<group>"; };
 		63E2A797230C49D200EB0F9C /* TTGSnackbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTGSnackbar.swift; sourceTree = "<group>"; };
 		63E2A80D230C5F5600EB0F9C /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		63E2A84D230DA2C600EB0F9C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DFBA0B2315842900918A51 /* a4SysCoreIOS.framework in Frameworks */,
+				63DFBA1323159E0B00918A51 /* a4SysCoreIOS.framework in Frameworks */,
 				67D156784708F3A8BE66DFA2 /* Pods_baseApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +291,7 @@
 		63E2A769230B000000EB0F9C /* newFrame */ = {
 			isa = PBXGroup;
 			children = (
-				63DFBA092315842500918A51 /* a4SysCoreIOS.framework */,
+				63DFBA1123159E0200918A51 /* a4SysCoreIOS.framework */,
 			);
 			path = newFrame;
 			sourceTree = "<group>";

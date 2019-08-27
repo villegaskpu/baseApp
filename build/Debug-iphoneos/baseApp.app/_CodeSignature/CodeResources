@@ -258,7 +258,7 @@
 		</data>
 		<key>Frameworks/a4SysCoreIOS.framework/Alamofire.framework/Alamofire</key>
 		<data>
-		h0+L8ppjBLeH8isMdBYMcilrFEI=
+		oEDKvIKccY8uOb31LK5JbewnuxY=
 		</data>
 		<key>Frameworks/a4SysCoreIOS.framework/Alamofire.framework/Info.plist</key>
 		<data>
@@ -278,15 +278,15 @@
 		</data>
 		<key>Frameworks/a4SysCoreIOS.framework/ObjectMapper.framework/ObjectMapper</key>
 		<data>
-		b+P8BSmx/2lmqPSNXMEHDhqBRks=
+		8SIWM5oks38eK2jOmxmgZWyHysU=
 		</data>
 		<key>Frameworks/a4SysCoreIOS.framework/_CodeSignature/CodeResources</key>
 		<data>
-		WTH7RJsRHJKZRhwrovz5BBiPyjo=
+		ZvV3Qs4qfJrko1ukC5oUZuobVBQ=
 		</data>
 		<key>Frameworks/a4SysCoreIOS.framework/a4SysCoreIOS</key>
 		<data>
-		DpOlqzFA+XpGn2Twz50NVixY/fA=
+		1Dv2NdxdkE2gJQb+jdXHyWt3FS0=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -1144,11 +1144,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			h0+L8ppjBLeH8isMdBYMcilrFEI=
+			oEDKvIKccY8uOb31LK5JbewnuxY=
 			</data>
 			<key>hash2</key>
 			<data>
-			lZb6cGQAzq/ZpUAlqfPGccvVPLHwr58jrnkWxIoU268=
+			stqSzhFu1OFk5T/JLBWwMzDr5muhzJstMfIoOYehAzY=
 			</data>
 		</dict>
 		<key>Frameworks/a4SysCoreIOS.framework/Alamofire.framework/Info.plist</key>
@@ -1199,33 +1199,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			b+P8BSmx/2lmqPSNXMEHDhqBRks=
+			8SIWM5oks38eK2jOmxmgZWyHysU=
 			</data>
 			<key>hash2</key>
 			<data>
-			vHP+fgyZ0VLITxCxINGgwLDGdX+6p565Pq92zfL0nEo=
+			g4xCTmLtVrVxHiCZKZqVByMcswSMA/wg7hmTjUhgBLo=
 			</data>
 		</dict>
 		<key>Frameworks/a4SysCoreIOS.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WTH7RJsRHJKZRhwrovz5BBiPyjo=
+			ZvV3Qs4qfJrko1ukC5oUZuobVBQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			eZftlsSY2h++N2sAM4oGt94JSpPWzIAXRsFVwlSGj+g=
+			6rzLDL9EsGeibvKQQoNfilM4KsW48Pv7nd5ZsYNb/yY=
 			</data>
 		</dict>
 		<key>Frameworks/a4SysCoreIOS.framework/a4SysCoreIOS</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DpOlqzFA+XpGn2Twz50NVixY/fA=
+			1Dv2NdxdkE2gJQb+jdXHyWt3FS0=
 			</data>
 			<key>hash2</key>
 			<data>
-			aocNBk8RvYTgWc94lgQbm1WEDjtjOIMylA4ITifuB8c=
+			hhVSMbIQOz6qDiX/Bo6kGikrxMUTw8E9NaVHzsA8JZI=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>

@@ -31,7 +31,6 @@ depends-top-level:
 - !private "NSRange"
 - !private "NSString"
 - "String"
-- !private "StringLiteralType"
 - "TernaryPrecedence"
 - !private "UIColor"
 - !private "UnicodeScalarType"

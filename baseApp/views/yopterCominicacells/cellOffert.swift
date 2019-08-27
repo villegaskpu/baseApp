@@ -10,6 +10,10 @@ import UIKit
 import SDWebImage
 import a4SysCoreIOS
 
+protocol cellOffertDelegate {
+    func updateCell(indexPath:IndexPath, value:String, action:String)
+}
+
 class cellOffert: UITableViewCell {
     
     
@@ -28,8 +32,9 @@ class cellOffert: UITableViewCell {
     @IBOutlet weak var offertImage: UIImageView!
     @IBOutlet weak var companyLogo: UIImageView!
     
+    var isOffert = true
     var indexPath:IndexPath?
-
+    var delegate:cellOffertDelegate?
     
     var offer: Offer? {
         didSet {
@@ -39,6 +44,7 @@ class cellOffert: UITableViewCell {
             validDistanceOfert(off: off)
             setImageLogo(infoCell: off)
             setActions()
+            setIconButtons()
         }
     }
     
@@ -116,10 +122,54 @@ class cellOffert: UITableViewCell {
         else{
             newIndicator.isHidden = true
         }
-        
-        
-        
-        
+    }
+    
+    private func setIconButtons() {
+        if let infoCell = offer {
+            var puedeSerFevoriota = 0
+            
+            let userRating = Int((infoCell.userRating.rating))
+            switch(userRating)
+            {
+            case 1:
+                likeImage.image = UIImage(named: "like")
+                dislikeImage.image = UIImage(named: "dislike_on")
+                saveOrDeleteImage.isHidden = true
+            case 5:
+                puedeSerFevoriota = 5
+                likeImage.image = UIImage(named: "like_on")
+                dislikeImage.image = UIImage(named: "dislike")
+                saveOrDeleteImage.image = UIImage(named: "star_off")
+                saveOrDeleteImage.isHidden = false
+            default:
+                likeImage.image = UIImage(named: "like")
+                dislikeImage.image = UIImage(named: "dislike")
+                saveOrDeleteImage.isHidden = true
+            }
+
+            
+            if infoCell.favorite > 0
+            {
+                saveOrDeleteImage.isHidden = false
+                saveOrDeleteImage.image = UIImage(named: "star")
+            }
+            else
+            {
+                if puedeSerFevoriota == 5 {
+                    saveOrDeleteImage.isHidden = false
+                } else {
+                    saveOrDeleteImage.isHidden = true
+                }
+            }
+            
+            if infoCell.isFavorite
+            {
+                saveOrDeleteImage.image = UIImage(named: "Trash_off")
+                likeImage.isHidden = true
+                dislikeImage.isHidden = true
+                saveOrDeleteImage.isHidden = false
+            }
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -261,93 +311,114 @@ class cellOffert: UITableViewCell {
     @objc func like(_ gestureRecognizer: UITapGestureRecognizer)
     {
         print("like")
-//        if (UIImage(named:"like")?.isEqual(self.likeImage.image!))!
-//        {
-//            self.likeImage.image = UIImage(named: "like_on")
-//            self.dislikeImage.image = UIImage(named: "dislike")
-//            if self.saveOrDeleteImage.isHidden || !(UIImage(named: "star_off")?.isEqual(self.saveOrDeleteImage.image!))!
-//            {
-//                self.saveOrDeleteImage.isHidden = false
-//                self.saveOrDeleteImage.image = UIImage(named: "star_off")
-//            }
-//            let request = Requests.createRateOfferRequest(5, LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0.0, LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0.0)
-//
-//            if (assignedOffer?.isArticle)!
-//            {
-//                sessionManager.request(YopterRouter.ArticleRating(idOffer: "\(self.assignedOffer?.idOffer ?? 0)", parameter: request)).response{ (response) in
-//                    if (response.response?.statusCode)! >= 200 && (response.response?.statusCode)! < 300
-//                    {
-//                        print("Like sucess")
-//                        let info = ["action" : "likes", "value" : "5", "idOffer" : "\(self.assignedOffer?.idOffer ?? 0)"]
-//                        NotificationCenter.default.post(name: .updateCellNotificationName, object: nil, userInfo: info)
-//                    }
-//                    else
-//                    {
-//                        print("Like fail")
-//                        let apiError = Mapper<ApiError>().map(JSONObject: response.data)
-//                        print(apiError?.message ?? "UNNATENDED_ERROR".localized)
-//                    }
-//                }
-//            }
-//            else
-//            {
-//                sessionManager.request(YopterRouter.OfferRating(idOffer: "\(self.assignedOffer?.idOffer ?? 0)", parameter: request)).response{ (response) in
-//                    if (response.response?.statusCode)! >= 200 && (response.response?.statusCode)! < 300
-//                    {
-//                        print("Like sucess")
-//                        let info = ["action" : "likes", "value" : "5", "idOffer" : "\(self.assignedOffer?.idOffer ?? 0)"]
-//                        NotificationCenter.default.post(name: .updateCellNotificationName, object: nil, userInfo: info)
-//                    }
-//                    else
-//                    {
-//                        print("Like fail")
-//                        let apiError = Mapper<ApiError>().map(JSONObject: response.data)
-//                        print(apiError?.message ?? "UNNATENDED_ERROR".localized)
-//                    }
-//                }
-//            }
-//        }
-//        else
-//        {
-//            self.likeImage.image = UIImage(named: "like")
-//            self.saveOrDeleteImage.isHidden = true
-//            let request = Requests.createRateOfferRequest(3, LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0.0, LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0.0)
-//
-//            if (assignedOffer?.isArticle)!
-//            {
-//                sessionManager.request(YopterRouter.ArticleRating(idOffer: "\(self.assignedOffer?.idOffer ?? 0)", parameter: request)).response{ (response) in
-//                    if (response.response?.statusCode)! >= 200 && (response.response?.statusCode)! < 300
-//                    {
-//                        print("Unlike sucess")
-//                        let info = ["action" : "likes", "value" : "3", "idOffer" : "\(self.assignedOffer?.idOffer ?? 0)"]
-//                        NotificationCenter.default.post(name: .updateCellNotificationName, object: nil, userInfo: info)
-//                    }
-//                    else
-//                    {
-//                        print("Unlike fail")
-//                        let apiError = Mapper<ApiError>().map(JSONObject: response.data)
-//                        print(apiError?.message ?? "UNNATENDED_ERROR".localized)
-//                    }
-//                }
-//            }
-//            else
-//            {
-//                sessionManager.request(YopterRouter.OfferRating(idOffer: "\(self.assignedOffer?.idOffer ?? 0)", parameter: request)).response{ (response) in
-//                    if (response.response?.statusCode)! >= 200 && (response.response?.statusCode)! < 300
-//                    {
-//                        print("Unlike sucess")
-//                        let info = ["action" : "likes", "value" : "3", "idOffer" : "\(self.assignedOffer?.idOffer ?? 0)"]
-//                        NotificationCenter.default.post(name: .updateCellNotificationName, object: nil, userInfo: info)
-//                    }
-//                    else
-//                    {
-//                        print("Unlike fail")
-//                        let apiError = Mapper<ApiError>().map(JSONObject: response.data)
-//                        print(apiError?.message ?? "UNNATENDED_ERROR".localized)
-//                    }
-//                }
-//            }
-//        }
+        if (UIImage(named:"like")?.isEqual(self.likeImage.image!))!
+        {
+            self.likeImage.image = UIImage(named: "like_on")
+            self.dislikeImage.image = UIImage(named: "dislike")
+            if self.saveOrDeleteImage.isHidden || !(UIImage(named: "star_off")?.isEqual(self.saveOrDeleteImage.image!))!
+            {
+                self.saveOrDeleteImage.isHidden = false
+                self.saveOrDeleteImage.image = UIImage(named: "star_off")
+            }
+            let parameters = Requests.createRateOfferRequest(5, LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0.0, LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0.0)
+            let network = Network()
+            network.setUrlParameters(urlParameters: parameters)
+            let idOfer = offer?.idOffer ?? 0
+            network.setIdOffert(idOfert: "\(idOfer)")
+            if (offer?.isArticle)! {
+
+                network.endPointN(endPont: .ArticleRating) { (StatusCode, value, objeto) -> (Void) in
+                    let statusC = StatusCode.toInt() ?? 0
+
+                    if statusC >= 200 && statusC < 300 {
+                        print("ya estufas: \(value)")
+                        if let index = self.indexPath {
+                            print("delegate")
+                            self.delegate?.updateCell(indexPath: index, value: "5", action: "likes")
+                        }
+                    }else {
+                        print("Unlike fail")
+                        self.likeImage.image = UIImage(named: "like")
+                        if let obj = objeto as? ApiError {
+                            Commons.showMessage("\(obj.message)", duration: .long)
+                        } else {
+                            Commons.showMessage("Error de comunicación")
+                        }
+                    }
+                }
+            }
+            else
+            {
+
+                network.endPointN(endPont: .OfferRating) { (StatusCode, value, objeto) -> (Void) in
+                    let statusC = StatusCode.toInt() ?? 0
+
+                    print("valuevaluevalue: \(value)")
+                    if statusC >= 200 && statusC < 300 {
+                        print("ya estufas: \(value)")
+                        if let index = self.indexPath {
+                            print("delegate")
+                            self.delegate?.updateCell(indexPath: index, value: "5", action: "likes")
+                        }
+                    }else {
+                        print("Unlike fail")
+                        self.likeImage.image = UIImage(named: "like")
+                        if let obj = objeto as? ApiError {
+                            Commons.showMessage("\(obj.message)", duration: .long)
+                        } else {
+                            Commons.showMessage("Error de comunicación")
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            self.likeImage.image = UIImage(named: "like")
+            self.saveOrDeleteImage.isHidden = true
+            let request = Requests.createRateOfferRequest(3, LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0.0, LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0.0)
+
+            let network = Network()
+            let idOfer = offer?.idOffer ?? 0
+            network.setIdOffert(idOfert: "\(idOfer)")
+            network.setUrlParameters(urlParameters: request)
+            if (self.offer?.isArticle)!
+            {
+                network.endPointN(endPont: .ArticleRating) { (statusCode, value, objeto) -> (Void) in
+                    let statusC = statusCode.toInt() ?? 0
+
+                    if statusC >= 200 && statusC < 300 {
+                        print("ya estufas: \(value)")
+                        self.delegate?.updateCell(indexPath: self.indexPath!, value: "3", action: "")
+                    }else {
+                        print("Unlike fail")
+                        self.likeImage.image = UIImage(named: "like_on")
+                        if let obj = objeto as? ApiError {
+                            Commons.showMessage("\(obj.message)", duration: .long)
+                        } else {
+                            Commons.showMessage("Error de comunicación")
+                        }
+                    }
+                }
+            } else {
+                network.endPointN(endPont: .OfferRating) { (statusCode, value, objeto) -> (Void) in
+                    let statusC = statusCode.toInt() ?? 0
+
+                    if statusC >= 200 && statusC < 300 {
+                        print("ya estufas: \(value)")
+                        self.delegate?.updateCell(indexPath: self.indexPath!, value: "3", action: "")
+                    }else {
+                        print("Unlike fail")
+                        self.likeImage.image = UIImage(named: "like_on")
+                        if let obj = objeto as? ApiError {
+                            Commons.showMessage("\(obj.message)", duration: .long)
+                        } else {
+                            Commons.showMessage("Error de comunicación")
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @objc func dislike(_ gestureRecognizer: UITapGestureRecognizer)

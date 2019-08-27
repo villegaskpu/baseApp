@@ -17,14 +17,10 @@ depends-top-level:
 - "AppDelegate"
 - "AssignmentPrecedence"
 - "Bool"
-- !private "BooleanLiteralType"
-- !private "FloatLiteralType"
 - !private "IQKeyboardManager"
-- !private "IntegerLiteralType"
 - !private "LoginVC"
 - !private "OffertsVC"
 - !private "Settings"
-- !private "StringLiteralType"
 - "UIApplication"
 - "UIApplicationDelegate"
 - "UIResponder"
@@ -540,6 +536,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "makeKeyAndVisible"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
+- !private ["7baseApp18cellOffertDelegateP", "init"]
 depends-nominal:
 - "7baseApp0B8DelegateC"
 - !private "7baseApp20BTableViewControllerC"
@@ -592,6 +589,7 @@ depends-nominal:
 - !private "So8UIWindowC"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
+- !private "7baseApp18cellOffertDelegateP"
 depends-dynamic-lookup:
 depends-external:
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"

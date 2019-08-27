@@ -225,6 +225,8 @@ SWIFT_CLASS("_TtC7baseApp20BTableViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+
 @class UIPresentationController;
 
 @interface BTableViewController (SWIFT_EXTENSION(baseApp)) <UIPopoverPresentationControllerDelegate>
@@ -277,6 +279,7 @@ SWIFT_PROTOCOL("_TtP7baseApp18BTableViewDelegate_")
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems selectVersionAuto:(NSString * _Nonnull)idMarca idAuto:(NSString * _Nonnull)idAuto modelo:(NSString * _Nonnull)modelo idProducto:(NSString * _Nonnull)idProducto idColor:(NSString * _Nonnull)idColor;
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems selectVersionAutoAux:(BOOL)press;
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems pressColapsable:(BOOL)press;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems updateCell:(NSIndexPath * _Nonnull)indexPath value:(NSString * _Nonnull)value action:(NSString * _Nonnull)action;
 @end
 
 
@@ -359,6 +362,7 @@ SWIFT_CLASS("_TtC7baseApp9OffertsVC")
 
 
 @interface OffertsVC (SWIFT_EXTENSION(baseApp)) <BTableViewDelegate>
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems updateCell:(NSIndexPath * _Nonnull)indexPath value:(NSString * _Nonnull)value action:(NSString * _Nonnull)action;
 @end
 
 
@@ -489,12 +493,12 @@ SWIFT_CLASS("_TtC7baseApp11TTGSnackbar")
 
 
 
+
+
 @interface TTGSnackbar (SWIFT_EXTENSION(baseApp))
 /// Dismiss the snackbar manually.
 - (void)dismiss;
 @end
-
-
 
 /// Snackbar animation types.
 /// <ul>
