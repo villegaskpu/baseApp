@@ -17,11 +17,13 @@ depends-top-level:
 - "AppDelegate"
 - "AssignmentPrecedence"
 - "Bool"
+- "CastingPrecedence"
+- !private "HomeVC"
 - !private "IQKeyboardManager"
-- !private "LoginVC"
 - !private "Settings"
 - "UIApplication"
 - "UIApplicationDelegate"
+- !private "UINavigationController"
 - "UIResponder"
 - !private "UIScreen"
 - "UIViewController"
@@ -30,10 +32,11 @@ depends-top-level:
 - !private "print"
 depends-member:
 - ["7baseApp0B8DelegateC", "Bool"]
+- !private ["7baseApp0B8DelegateC", "HomeVC"]
 - !private ["7baseApp0B8DelegateC", "IQKeyboardManager"]
-- !private ["7baseApp0B8DelegateC", "LoginVC"]
 - !private ["7baseApp0B8DelegateC", "Settings"]
 - ["7baseApp0B8DelegateC", "UIApplication"]
+- !private ["7baseApp0B8DelegateC", "UINavigationController"]
 - !private ["7baseApp0B8DelegateC", "UIScreen"]
 - ["7baseApp0B8DelegateC", "UIViewController"]
 - ["7baseApp0B8DelegateC", "UIWindow"]
@@ -55,14 +58,17 @@ depends-member:
 - !private ["7baseApp0B8DelegateC", "principalTabBarVC"]
 - !private ["7baseApp0B8DelegateC", "print"]
 - ["7baseApp0B8DelegateC", "window"]
+- !private ["Sa", "insert"]
 - !private ["7baseApp15BViewControllerC", "init"]
+- !private ["SK", "insert"]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "makeKeyAndVisible"]
 - !private ["So15CALayerDelegateP", "rootViewController"]
+- !private ["s7CVarArgP", "HomeVC"]
 - !private ["s7CVarArgP", "IQKeyboardManager"]
 - ["s7CVarArgP", "LaunchOptionsKey"]
-- !private ["s7CVarArgP", "LoginVC"]
 - !private ["s7CVarArgP", "Settings"]
+- !private ["s7CVarArgP", "UINavigationController"]
 - !private ["s7CVarArgP", "UIScreen"]
 - !private ["s7CVarArgP", "UIWindow"]
 - ["s7CVarArgP", ""]
@@ -79,11 +85,11 @@ depends-member:
 - ["s7CVarArgP", "applicationWillResignActive"]
 - ["s7CVarArgP", "applicationWillTerminate"]
 - !private ["s7CVarArgP", "bounds"]
-- !private ["s7CVarArgP", "createRootViewController"]
 - !private ["s7CVarArgP", "enable"]
 - !private ["s7CVarArgP", "goNext"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "insert"]
 - !private ["s7CVarArgP", "main"]
 - !private ["s7CVarArgP", "makeKeyAndVisible"]
 - !private ["s7CVarArgP", "principalTabBarVC"]
@@ -91,11 +97,15 @@ depends-member:
 - !private ["s7CVarArgP", "rootViewController"]
 - !private ["s7CVarArgP", "shared"]
 - !private ["s7CVarArgP", "toolbarDoneBarButtonItemText"]
+- !private ["s7CVarArgP", "viewControllers"]
 - ["s7CVarArgP", "window"]
+- !private ["Sl", "insert"]
+- !private ["10Foundation15ContiguousBytesP", "insert"]
+- !private ["s28CustomDebugStringConvertibleP", "HomeVC"]
 - !private ["s28CustomDebugStringConvertibleP", "IQKeyboardManager"]
 - ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
-- !private ["s28CustomDebugStringConvertibleP", "LoginVC"]
 - !private ["s28CustomDebugStringConvertibleP", "Settings"]
+- !private ["s28CustomDebugStringConvertibleP", "UINavigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIScreen"]
 - !private ["s28CustomDebugStringConvertibleP", "UIWindow"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -112,11 +122,11 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "applicationWillResignActive"]
 - ["s28CustomDebugStringConvertibleP", "applicationWillTerminate"]
 - !private ["s28CustomDebugStringConvertibleP", "bounds"]
-- !private ["s28CustomDebugStringConvertibleP", "createRootViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "enable"]
 - !private ["s28CustomDebugStringConvertibleP", "goNext"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "insert"]
 - !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "makeKeyAndVisible"]
 - !private ["s28CustomDebugStringConvertibleP", "principalTabBarVC"]
@@ -124,11 +134,15 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "rootViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "toolbarDoneBarButtonItemText"]
+- !private ["s28CustomDebugStringConvertibleP", "viewControllers"]
 - ["s28CustomDebugStringConvertibleP", "window"]
+- !private ["s17CustomReflectableP", "insert"]
+- !private ["s17CustomReflectableP", "viewControllers"]
+- !private ["s23CustomStringConvertibleP", "HomeVC"]
 - !private ["s23CustomStringConvertibleP", "IQKeyboardManager"]
 - ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
-- !private ["s23CustomStringConvertibleP", "LoginVC"]
 - !private ["s23CustomStringConvertibleP", "Settings"]
+- !private ["s23CustomStringConvertibleP", "UINavigationController"]
 - !private ["s23CustomStringConvertibleP", "UIScreen"]
 - !private ["s23CustomStringConvertibleP", "UIWindow"]
 - ["s23CustomStringConvertibleP", ""]
@@ -147,11 +161,11 @@ depends-member:
 - ["s23CustomStringConvertibleP", "applicationWillResignActive"]
 - ["s23CustomStringConvertibleP", "applicationWillTerminate"]
 - !private ["s23CustomStringConvertibleP", "bounds"]
-- !private ["s23CustomStringConvertibleP", "createRootViewController"]
 - !private ["s23CustomStringConvertibleP", "enable"]
 - !private ["s23CustomStringConvertibleP", "goNext"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "insert"]
 - !private ["s23CustomStringConvertibleP", "main"]
 - !private ["s23CustomStringConvertibleP", "makeKeyAndVisible"]
 - !private ["s23CustomStringConvertibleP", "principalTabBarVC"]
@@ -159,13 +173,20 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "rootViewController"]
 - !private ["s23CustomStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "toolbarDoneBarButtonItemText"]
+- !private ["s23CustomStringConvertibleP", "viewControllers"]
 - ["s23CustomStringConvertibleP", "window"]
+- !private ["10Foundation12DataProtocolP", "insert"]
+- !private ["Se", "insert"]
+- !private ["Se", "viewControllers"]
 - !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
 - !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SE", "insert"]
+- !private ["SE", "viewControllers"]
+- !private ["SQ", "HomeVC"]
 - !private ["SQ", "IQKeyboardManager"]
 - ["SQ", "LaunchOptionsKey"]
-- !private ["SQ", "LoginVC"]
 - !private ["SQ", "Settings"]
+- !private ["SQ", "UINavigationController"]
 - !private ["SQ", "UIScreen"]
 - !private ["SQ", "UIWindow"]
 - ["SQ", ""]
@@ -182,11 +203,11 @@ depends-member:
 - ["SQ", "applicationWillResignActive"]
 - ["SQ", "applicationWillTerminate"]
 - !private ["SQ", "bounds"]
-- !private ["SQ", "createRootViewController"]
 - !private ["SQ", "enable"]
 - !private ["SQ", "goNext"]
 - !private ["SQ", "init"]
 - !private ["SQ", "init"]
+- !private ["SQ", "insert"]
 - !private ["SQ", "main"]
 - !private ["SQ", "makeKeyAndVisible"]
 - !private ["SQ", "principalTabBarVC"]
@@ -194,11 +215,15 @@ depends-member:
 - !private ["SQ", "rootViewController"]
 - !private ["SQ", "shared"]
 - !private ["SQ", "toolbarDoneBarButtonItemText"]
+- !private ["SQ", "viewControllers"]
 - ["SQ", "window"]
+- !private ["s25ExpressibleByArrayLiteralP", "insert"]
+- !private ["s23ExpressibleByNilLiteralP", "viewControllers"]
+- !private ["SH", "HomeVC"]
 - !private ["SH", "IQKeyboardManager"]
 - ["SH", "LaunchOptionsKey"]
-- !private ["SH", "LoginVC"]
 - !private ["SH", "Settings"]
+- !private ["SH", "UINavigationController"]
 - !private ["SH", "UIScreen"]
 - !private ["SH", "UIWindow"]
 - ["SH", ""]
@@ -215,11 +240,11 @@ depends-member:
 - ["SH", "applicationWillResignActive"]
 - ["SH", "applicationWillTerminate"]
 - !private ["SH", "bounds"]
-- !private ["SH", "createRootViewController"]
 - !private ["SH", "enable"]
 - !private ["SH", "goNext"]
 - !private ["SH", "init"]
 - !private ["SH", "init"]
+- !private ["SH", "insert"]
 - !private ["SH", "main"]
 - !private ["SH", "makeKeyAndVisible"]
 - !private ["SH", "principalTabBarVC"]
@@ -227,24 +252,30 @@ depends-member:
 - !private ["SH", "rootViewController"]
 - !private ["SH", "shared"]
 - !private ["SH", "toolbarDoneBarButtonItemText"]
+- !private ["SH", "viewControllers"]
 - ["SH", "window"]
+- !private ["7baseApp6HomeVCC", "deinit"]
+- !private ["7baseApp6HomeVCC", "init"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "enable"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "goNext"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "shared"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "toolbarDoneBarButtonItemText"]
-- !private ["7baseApp20LocationUtilDelegateP", "init"]
-- !private ["7baseApp7LoginVCC", "deinit"]
-- !private ["7baseApp7LoginVCC", "init"]
+- !private ["6Lottie14InterpolatableP", "insert"]
+- !private ["SM", "insert"]
+- !private ["10Foundation19MutableDataProtocolP", "insert"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "makeKeyAndVisible"]
 - !private ["So8NSCodingP", "rootViewController"]
+- !private ["So8NSCodingP", "viewControllers"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "viewControllers"]
 - ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "HomeVC"]
 - !private ["So8NSObjectC", "IQKeyboardManager"]
 - ["So8NSObjectC", "LaunchOptionsKey"]
-- !private ["So8NSObjectC", "LoginVC"]
 - !private ["So8NSObjectC", "Settings"]
 - ["So8NSObjectC", "UIApplication"]
+- !private ["So8NSObjectC", "UINavigationController"]
 - !private ["So8NSObjectC", "UIScreen"]
 - ["So8NSObjectC", "UIViewController"]
 - ["So8NSObjectC", "UIWindow"]
@@ -273,11 +304,13 @@ depends-member:
 - !private ["So8NSObjectC", "rootViewController"]
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "toolbarDoneBarButtonItemText"]
+- !private ["So8NSObjectC", "viewControllers"]
 - ["So8NSObjectC", "window"]
+- !private ["So8NSObjectP", "HomeVC"]
 - !private ["So8NSObjectP", "IQKeyboardManager"]
 - ["So8NSObjectP", "LaunchOptionsKey"]
-- !private ["So8NSObjectP", "LoginVC"]
 - !private ["So8NSObjectP", "Settings"]
+- !private ["So8NSObjectP", "UINavigationController"]
 - !private ["So8NSObjectP", "UIScreen"]
 - !private ["So8NSObjectP", "UIWindow"]
 - ["So8NSObjectP", ""]
@@ -294,7 +327,6 @@ depends-member:
 - ["So8NSObjectP", "applicationWillResignActive"]
 - ["So8NSObjectP", "applicationWillTerminate"]
 - !private ["So8NSObjectP", "bounds"]
-- !private ["So8NSObjectP", "createRootViewController"]
 - !private ["So8NSObjectP", "enable"]
 - !private ["So8NSObjectP", "goNext"]
 - !private ["So8NSObjectP", "init"]
@@ -306,7 +338,12 @@ depends-member:
 - !private ["So8NSObjectP", "rootViewController"]
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "toolbarDoneBarButtonItemText"]
+- !private ["So8NSObjectP", "viewControllers"]
 - ["So8NSObjectP", "window"]
+- !private ["Sq", "viewControllers"]
+- !private ["Sk", "insert"]
+- !private ["Sm", "insert"]
+- !private ["ST", "insert"]
 - !private ["7baseApp8SettingsC", "getSesion"]
 - !private ["7baseApp8SettingsC", "sharedInstance"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
@@ -322,10 +359,12 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "makeKeyAndVisible"]
 - !private ["So21UIAppearanceContainerP", "rootViewController"]
+- !private ["So21UIAppearanceContainerP", "viewControllers"]
 - ["So13UIApplicationC", "LaunchOptionsKey"]
+- !private ["So21UIApplicationDelegateP", "HomeVC"]
 - !private ["So21UIApplicationDelegateP", "IQKeyboardManager"]
-- !private ["So21UIApplicationDelegateP", "LoginVC"]
 - !private ["So21UIApplicationDelegateP", "Settings"]
+- !private ["So21UIApplicationDelegateP", "UINavigationController"]
 - !private ["So21UIApplicationDelegateP", "UIScreen"]
 - !private ["So21UIApplicationDelegateP", "UIWindow"]
 - ["So21UIApplicationDelegateP", ""]
@@ -341,11 +380,11 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillEnterForeground"]
 - ["So21UIApplicationDelegateP", "applicationWillResignActive"]
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
-- !private ["So21UIApplicationDelegateP", "createRootViewController"]
 - !private ["So21UIApplicationDelegateP", "principalTabBarVC"]
 - !private ["So21UIApplicationDelegateP", "print"]
 - ["So21UIApplicationDelegateP", "window"]
 - !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "viewControllers"]
 - !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "makeKeyAndVisible"]
 - !private ["So17UICoordinateSpaceP", "rootViewController"]
@@ -355,6 +394,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UIFocusEnvironmentP", "rootViewController"]
+- !private ["So18UIFocusEnvironmentP", "viewControllers"]
 - !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "makeKeyAndVisible"]
 - !private ["So11UIFocusItemP", "rootViewController"]
@@ -365,10 +405,13 @@ depends-member:
 - !private ["So27UIGestureRecognizerDelegateP", "goNext"]
 - !private ["So27UIGestureRecognizerDelegateP", "shared"]
 - !private ["So27UIGestureRecognizerDelegateP", "toolbarDoneBarButtonItemText"]
+- !private ["So22UINavigationControllerC", "init"]
+- !private ["So22UINavigationControllerC", "viewControllers"]
+- !private ["So30UIPasteConfigurationSupportingP", "HomeVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "IQKeyboardManager"]
 - ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
-- !private ["So30UIPasteConfigurationSupportingP", "LoginVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "Settings"]
+- !private ["So30UIPasteConfigurationSupportingP", "UINavigationController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIScreen"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIWindow"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -384,20 +427,21 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "applicationWillEnterForeground"]
 - ["So30UIPasteConfigurationSupportingP", "applicationWillResignActive"]
 - ["So30UIPasteConfigurationSupportingP", "applicationWillTerminate"]
-- !private ["So30UIPasteConfigurationSupportingP", "createRootViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "makeKeyAndVisible"]
 - !private ["So30UIPasteConfigurationSupportingP", "principalTabBarVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "rootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewControllers"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So11UIResponderC", "Bool"]
+- !private ["So11UIResponderC", "HomeVC"]
 - !private ["So11UIResponderC", "IQKeyboardManager"]
 - ["So11UIResponderC", "LaunchOptionsKey"]
-- !private ["So11UIResponderC", "LoginVC"]
 - !private ["So11UIResponderC", "Settings"]
 - ["So11UIResponderC", "UIApplication"]
+- !private ["So11UIResponderC", "UINavigationController"]
 - !private ["So11UIResponderC", "UIScreen"]
 - ["So11UIResponderC", "UIViewController"]
 - ["So11UIResponderC", "UIWindow"]
@@ -421,11 +465,13 @@ depends-member:
 - !private ["So11UIResponderC", "principalTabBarVC"]
 - !private ["So11UIResponderC", "print"]
 - !private ["So11UIResponderC", "rootViewController"]
+- !private ["So11UIResponderC", "viewControllers"]
 - ["So11UIResponderC", "window"]
+- !private ["So30UIResponderStandardEditActionsP", "HomeVC"]
 - !private ["So30UIResponderStandardEditActionsP", "IQKeyboardManager"]
 - ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
-- !private ["So30UIResponderStandardEditActionsP", "LoginVC"]
 - !private ["So30UIResponderStandardEditActionsP", "Settings"]
+- !private ["So30UIResponderStandardEditActionsP", "UINavigationController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIScreen"]
 - !private ["So30UIResponderStandardEditActionsP", "UIWindow"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -441,17 +487,18 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "applicationWillEnterForeground"]
 - ["So30UIResponderStandardEditActionsP", "applicationWillResignActive"]
 - ["So30UIResponderStandardEditActionsP", "applicationWillTerminate"]
-- !private ["So30UIResponderStandardEditActionsP", "createRootViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "makeKeyAndVisible"]
 - !private ["So30UIResponderStandardEditActionsP", "principalTabBarVC"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "rootViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "viewControllers"]
 - ["So30UIResponderStandardEditActionsP", "window"]
 - !private ["So8UIScreenC", "bounds"]
 - !private ["So8UIScreenC", "main"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "viewControllers"]
 - !private ["So18UITabBarControllerC", "init"]
 - !private ["So16UITabBarDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "bounds"]
@@ -459,10 +506,12 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "main"]
 - !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UITraitEnvironmentP", "rootViewController"]
+- !private ["So18UITraitEnvironmentP", "viewControllers"]
+- !private ["So23UIUserActivityRestoringP", "HomeVC"]
 - !private ["So23UIUserActivityRestoringP", "IQKeyboardManager"]
 - ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
-- !private ["So23UIUserActivityRestoringP", "LoginVC"]
 - !private ["So23UIUserActivityRestoringP", "Settings"]
+- !private ["So23UIUserActivityRestoringP", "UINavigationController"]
 - !private ["So23UIUserActivityRestoringP", "UIScreen"]
 - !private ["So23UIUserActivityRestoringP", "UIWindow"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -478,25 +527,31 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "applicationWillEnterForeground"]
 - ["So23UIUserActivityRestoringP", "applicationWillResignActive"]
 - ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
-- !private ["So23UIUserActivityRestoringP", "createRootViewController"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "makeKeyAndVisible"]
 - !private ["So23UIUserActivityRestoringP", "principalTabBarVC"]
 - !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "rootViewController"]
+- !private ["So23UIUserActivityRestoringP", "viewControllers"]
 - ["So23UIUserActivityRestoringP", "window"]
 - !private ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "makeKeyAndVisible"]
 - !private ["So6UIViewC", "rootViewController"]
 - !private ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "viewControllers"]
 - !private ["So8UIWindowC", "init"]
 - !private ["So8UIWindowC", "makeKeyAndVisible"]
 - !private ["So8UIWindowC", "rootViewController"]
+- !private ["s14_ArrayProtocolP", "insert"]
+- !private ["s24_DestructorSafeContainerP", "insert"]
+- !private ["s19_HasContiguousBytesP", "insert"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "insert"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HomeVC"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IQKeyboardManager"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "LoginVC"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Settings"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UINavigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIWindow"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -513,7 +568,6 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillResignActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillTerminate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "createRootViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "enable"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "goNext"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
@@ -525,7 +579,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "rootViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "toolbarDoneBarButtonItemText"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewControllers"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
+- !private ["s21_ObjectiveCBridgeableP", "insert"]
+- !private ["s21_ObjectiveCBridgeableP", "viewControllers"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "makeKeyAndVisible"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
@@ -533,21 +590,37 @@ depends-member:
 - !private ["7baseApp17principalTabBarVCC", "init"]
 depends-nominal:
 - "7baseApp0B8DelegateC"
+- !private "Sa"
 - !private "7baseApp15BViewControllerC"
+- !private "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
+- !private "Sl"
+- !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
 - !private "s26DefaultStringInterpolationV"
+- !private "SE"
 - "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - "SH"
+- !private "7baseApp6HomeVCC"
 - !private "22IQKeyboardManagerSwift0aB0C"
-- !private "7baseApp20LocationUtilDelegateP"
-- !private "7baseApp7LoginVCC"
+- !private "6Lottie14InterpolatableP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
 - !private "So8NSCodingP"
 - !private "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- !private "ST"
 - !private "7baseApp8SettingsC"
 - !private "s27StringInterpolationProtocolP"
 - !private "s16TextOutputStreamP"
@@ -563,6 +636,7 @@ depends-nominal:
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
 - !private "So27UIGestureRecognizerDelegateP"
+- !private "So22UINavigationControllerC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
@@ -575,7 +649,12 @@ depends-nominal:
 - !private "So6UIViewC"
 - !private "So16UIViewControllerC"
 - !private "So8UIWindowC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
 - !private "7baseApp17principalTabBarVCC"
 depends-dynamic-lookup:

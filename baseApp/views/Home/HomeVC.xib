@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="baseApp" customModuleProvider="target">
+            <connections>
+                <outlet property="HomeLogo" destination="FIl-do-oVk" id="Prz-Zx-SQN"/>
+                <outlet property="bgDark" destination="GbY-Z4-KvH" id="DnL-pR-69Q"/>
+                <outlet property="btnIniciarSesionO" destination="0cG-Q6-rUV" id="ZIh-E4-dfB"/>
+                <outlet property="btnRegistrarseO" destination="dKp-z2-h3C" id="Pxr-u3-xEi"/>
+                <outlet property="lVersion" destination="6y2-g3-FCM" id="fTS-4H-85J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgDark" translatesAutoresizingMaskIntoConstraints="NO" id="GbY-Z4-KvH">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeLogoR" translatesAutoresizingMaskIntoConstraints="NO" id="FIl-do-oVk">
+                    <rect key="frame" x="20" y="58" width="374" height="224"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="224" id="h8D-Ox-q3Z"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Goz-Oo-pvD">
+                    <rect key="frame" x="20" y="626" width="374" height="160"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKp-z2-h3C">
+                            <rect key="frame" x="40" y="77" width="294" height="83"/>
+                            <state key="normal" image="btnRegister"/>
+                            <connections>
+                                <action selector="btnRegistrarse:" destination="-1" eventType="touchUpInside" id="ThZ-zT-o0l"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cG-Q6-rUV">
+                            <rect key="frame" x="40" y="0.0" width="294" height="83"/>
+                            <state key="normal" image="btnLogin"/>
+                            <connections>
+                                <action selector="btnIniciarSesion:" destination="-1" eventType="touchUpInside" id="RtA-ZK-VC6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="6tg-ew-sEX"/>
+                        <constraint firstItem="dKp-z2-h3C" firstAttribute="width" secondItem="0cG-Q6-rUV" secondAttribute="width" id="CwY-dO-QEF"/>
+                        <constraint firstItem="dKp-z2-h3C" firstAttribute="leading" secondItem="Goz-Oo-pvD" secondAttribute="leading" constant="40" id="Lgw-8M-rE5"/>
+                        <constraint firstAttribute="trailing" secondItem="dKp-z2-h3C" secondAttribute="trailing" constant="40" id="OWI-KY-cwn"/>
+                        <constraint firstItem="0cG-Q6-rUV" firstAttribute="leading" secondItem="Goz-Oo-pvD" secondAttribute="leading" constant="40" id="PZn-jG-qqR"/>
+                        <constraint firstAttribute="bottom" secondItem="dKp-z2-h3C" secondAttribute="bottom" id="a16-4p-AHM"/>
+                        <constraint firstItem="0cG-Q6-rUV" firstAttribute="top" secondItem="Goz-Oo-pvD" secondAttribute="top" id="dH1-uF-Xsw"/>
+                        <constraint firstAttribute="trailing" secondItem="0cG-Q6-rUV" secondAttribute="trailing" constant="40" id="l1C-OW-FKY"/>
+                        <constraint firstAttribute="width" constant="374" id="o4K-Av-sTB"/>
+                        <constraint firstItem="dKp-z2-h3C" firstAttribute="height" secondItem="0cG-Q6-rUV" secondAttribute="height" id="sHh-Is-NFr"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V.5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y2-g3-FCM">
+                    <rect key="frame" x="132" y="811" width="150" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="RMh-eb-TQ1"/>
+                        <constraint firstAttribute="width" constant="150" id="xdX-jf-X5E"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6y2-g3-FCM" secondAttribute="bottom" constant="22" id="3HZ-tK-XJp"/>
+                <constraint firstAttribute="bottom" secondItem="GbY-Z4-KvH" secondAttribute="bottom" id="ARE-jl-6df"/>
+                <constraint firstItem="FIl-do-oVk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="Doe-rx-RVu"/>
+                <constraint firstItem="GbY-Z4-KvH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LDD-oz-fQz"/>
+                <constraint firstItem="6y2-g3-FCM" firstAttribute="top" secondItem="Goz-Oo-pvD" secondAttribute="bottom" constant="25" id="MvK-es-Nul"/>
+                <constraint firstItem="FIl-do-oVk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WDP-qG-QNb"/>
+                <constraint firstItem="GbY-Z4-KvH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Y0h-PZ-gMx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FIl-do-oVk" secondAttribute="trailing" constant="20" id="a1w-pa-9xI"/>
+                <constraint firstItem="6y2-g3-FCM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gWu-hg-WBe"/>
+                <constraint firstItem="GbY-Z4-KvH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rsF-x9-E2G"/>
+                <constraint firstItem="Goz-Oo-pvD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uoQ-A7-zav"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="HomeLogoR" width="415" height="340"/>
+        <image name="bgDark" width="376" height="671.5"/>
+        <image name="btnLogin" width="295" height="83"/>
+        <image name="btnRegister" width="295" height="65"/>
+    </resources>
+</document>

@@ -480,6 +480,7 @@ class Commons{
         let emailTest = NSPredicate.init(format: "SELF MATCHES %@", emailRegex)
         return emailTest.evaluate(with: test)
     }
+    
 }
 struct Screen {
     static let width = UIScreen.main.bounds.size.width

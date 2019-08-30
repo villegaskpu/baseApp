@@ -88,7 +88,16 @@ class OffertsVC: BTableViewController {
                 })
                 self.hideLoading()
             } else {
-                print("value: \(value)")
+                print("value error: \(value)")
+                self.hideLoading()
+                
+                self.tableItems.set(section: "Sin resultados")
+                self.tableView.reloadData()
+                UIView.animate(withDuration: 2.0, animations: {
+                    self.tableView.alpha = 1
+                })
+                let val = objeto as! ApiError
+                Commons.showMessage("\(val.message)", duration: TTGSnackbarDuration.long)
             }
         }
     }

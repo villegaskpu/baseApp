@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "ef9cb4353ac921e196a5b5c9108ce919"
-build_time: [1566919488, 191541000]
+build_time: [1567178058, 587715000]
 inputs:
   "/Users/david/proyectosXcode/baseApp/Pods/ObjectMapper/Sources/CodableTransform.swift": [1565792824, 139752823]
   "/Users/david/proyectosXcode/baseApp/Pods/ObjectMapper/Sources/CustomDateFormatTransform.swift": [1565792824, 92559167]

@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>PAAS8HF76V.com.yopter.yoptercomunica</string>
+	<string>PAAS8HF76V.com.yopter.vyco</string>
 	<key>com.apple.developer.team-identifier</key>
 	<string>PAAS8HF76V</string>
 	<key>get-task-allow</key>
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>PAAS8HF76V.com.yopter.yoptercomunica</string>
+		<string>PAAS8HF76V.com.yopter.vyco</string>
 	</array>
 </dict>
 </plist>

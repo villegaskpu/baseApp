@@ -227,6 +227,14 @@ SWIFT_CLASS("_TtC7baseApp20BTableViewController")
 
 
 
+@class UITextField;
+
+@interface BTableViewController (SWIFT_EXTENSION(baseApp))
+- (void)yopterTextFieldChangeWithTextField:(UITextField * _Nonnull)textField indexPath:(NSIndexPath * _Nonnull)indexPath text:(NSString * _Nonnull)text;
+@end
+
+
+
 @class UIPresentationController;
 
 @interface BTableViewController (SWIFT_EXTENSION(baseApp)) <UIPopoverPresentationControllerDelegate>
@@ -311,6 +319,23 @@ SWIFT_CLASS("_TtC7baseApp10HeaderCell")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class UIImageView;
+@class UIButton;
+
+SWIFT_CLASS("_TtC7baseApp6HomeVC")
+@interface HomeVC : BViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified bgDark;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified HomeLogo;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnIniciarSesionO;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnRegistrarseO;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lVersion;
+- (void)viewDidLoad;
+- (IBAction)btnIniciarSesion:(id _Nonnull)sender;
+- (IBAction)btnRegistrarse:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC7baseApp8InfoItem")
 @interface InfoItem : NSObject
@@ -339,10 +364,7 @@ SWIFT_CLASS("_TtC7baseApp12LocationUtil")
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nonnull)error;
 @end
 
-@class UIImageView;
-@class UIButton;
 @class SkyFloatingLabelTextFieldWithIcon;
-@class UITextField;
 
 SWIFT_CLASS("_TtC7baseApp7LoginVC")
 @interface LoginVC : BViewController
@@ -378,6 +400,30 @@ SWIFT_CLASS("_TtC7baseApp9OffertsVC")
 
 @interface OffertsVC (SWIFT_EXTENSION(baseApp)) <BTableViewDelegate>
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems updateCell:(NSIndexPath * _Nonnull)indexPath value:(NSString * _Nonnull)value action:(NSString * _Nonnull)action;
+@end
+
+@class UIScrollView;
+
+SWIFT_CLASS("_TtC7baseApp10RegistroVC")
+@interface RegistroVC : BTableViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+- (void)viewDidLoad;
+- (void)close;
+- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface RegistroVC (SWIFT_EXTENSION(baseApp)) <BTableViewDelegate>
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems buttonPressedAt:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+@interface RegistroVC (SWIFT_EXTENSION(baseApp))
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -500,6 +546,8 @@ SWIFT_CLASS("_TtC7baseApp11TTGSnackbar")
 
 
 
+
+
 @interface TTGSnackbar (SWIFT_EXTENSION(baseApp))
 /// Show the snackbar.
 - (void)show;
@@ -512,8 +560,6 @@ SWIFT_CLASS("_TtC7baseApp11TTGSnackbar")
 /// Dismiss the snackbar manually.
 - (void)dismiss;
 @end
-
-
 
 /// Snackbar animation types.
 /// <ul>
@@ -580,6 +626,8 @@ SWIFT_CLASS("_TtC7baseApp20TableViewCellFactory")
 
 
 
+
+
 @interface UITableView (SWIFT_EXTENSION(baseApp))
 - (void)awakeFromNib;
 @end
@@ -618,6 +666,31 @@ SWIFT_PROTOCOL("_TtP7baseApp20YopterAlertsDelegate_")
 - (void)YopterAlertsButtonPressedWithRightButtonTextField:(YopterAlerts * _Nonnull)alert textFieldText:(NSString * _Nonnull)textFieldText;
 @end
 
+
+SWIFT_CLASS("_TtC7baseApp5boton")
+@interface boton : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified boton;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp11celdaStack3")
+@interface celdaStack3 : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified firstBox;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified thirdBox;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnUno;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnDos;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (IBAction)actionUno:(id _Nonnull)sender;
+- (IBAction)actionDos:(id _Nonnull)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UITapGestureRecognizer;
 
 SWIFT_CLASS("_TtC7baseApp10cellOffert")
@@ -641,11 +714,41 @@ SWIFT_CLASS("_TtC7baseApp10cellOffert")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSLayoutConstraint;
+
+SWIFT_CLASS("_TtC7baseApp5label")
+@interface label : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified contenedor;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titulo;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified contenido;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified tituloHeight;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified viewContent;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC7baseApp17principalTabBarVC")
 @interface principalTabBarVC : UITabBarController
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp9textField")
+@interface textField : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified contenedor;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titulo;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified valor;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified bottomLine;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified contraintHeightTitulo;
+- (void)awakeFromNib;
+- (void)prepareForReuse;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 

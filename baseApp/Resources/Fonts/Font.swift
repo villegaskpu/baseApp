@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Font: NSObject {
     //titulos
@@ -47,5 +48,21 @@ class Font: NSObject {
     
     static func FONT_HEAVY_ITALIC() -> String {
         return "Como-Bold"
+    }
+    
+    static func SIZE_FONT_HEAVY_ITALIC() -> CGFloat {
+        return 17.0
+    }
+    
+    static func SIZE_FONT_BOLD() -> CGFloat {
+        return 17.0
+    }
+    
+    static func SIZE_FONT_MEDIUM() -> CGFloat {
+        return 17.0
+    }
+    
+    static func SIZE_FONT_REGULAR() -> CGFloat {
+        return 17.0
     }
 }

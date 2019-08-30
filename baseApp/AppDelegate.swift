@@ -23,19 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.goNext()
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Listo"
         
+        var navigationController: UINavigationController!
+        
+        let vcHome = HomeVC() as UIViewController
+        
+        
         if Settings.sharedInstance.getSesion() { // si la sesion esta iniciada
-            
-//            let vc = OffertsVC()
-            let vc = principalTabBarVC()
-            
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.rootViewController = vc
-            window?.makeKeyAndVisible()
+            let vc = principalTabBarVC() as UIViewController
+            navigationController = UINavigationController(rootViewController: vc)
+            var viewControllers = navigationController.viewControllers
+            viewControllers.insert(vcHome, at: 0)
+            navigationController.viewControllers = viewControllers
         } else {
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.rootViewController = createRootViewController()
-            window?.makeKeyAndVisible()
+            navigationController = UINavigationController(rootViewController: vcHome)
         }
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         return true
     }
 
@@ -75,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        let vc = storyboard.instantiateInitialViewController() as!  Login
         
-        let vc = LoginVC()
+        let vc = HomeVC()
         return vc
         
     }

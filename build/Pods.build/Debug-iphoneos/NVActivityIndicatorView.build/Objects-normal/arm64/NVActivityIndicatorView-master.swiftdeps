@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "d969a5955cc6d8b97fa7de9811c59401"
-build_time: [1566919491, 114036000]
+build_time: [1567178046, 453434000]
 inputs:
   "/Users/david/proyectosXcode/baseApp/Pods/NVActivityIndicatorView/Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationAudioEqualizer.swift": [1565713212, 424307510]
   "/Users/david/proyectosXcode/baseApp/Pods/NVActivityIndicatorView/Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallBeat.swift": [1565713212, 419844901]
