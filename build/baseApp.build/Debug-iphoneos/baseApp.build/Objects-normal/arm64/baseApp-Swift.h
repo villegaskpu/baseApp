@@ -227,6 +227,10 @@ SWIFT_CLASS("_TtC7baseApp20BTableViewController")
 
 
 
+
+
+
+
 @class UITextField;
 
 @interface BTableViewController (SWIFT_EXTENSION(baseApp))
@@ -289,6 +293,7 @@ SWIFT_PROTOCOL("_TtP7baseApp18BTableViewDelegate_")
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems pressColapsable:(BOOL)press;
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems updateCell:(NSIndexPath * _Nonnull)indexPath value:(NSString * _Nonnull)value action:(NSString * _Nonnull)action;
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems deleteCell:(NSIndexPath * _Nonnull)indexPath;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems pikerViewDel:(NSInteger)Index;
 @end
 
 
@@ -381,12 +386,25 @@ SWIFT_CLASS("_TtC7baseApp7LoginVC")
 - (void)viewDidAppear:(BOOL)animated;
 - (IBAction)btnShowPassword:(id _Nonnull)sender;
 - (IBAction)btnEntrar:(id _Nonnull)sender;
+- (IBAction)btnCrearCuenta:(id _Nonnull)sender;
+- (IBAction)btnRecuperarPassword:(id _Nonnull)sender;
+- (IBAction)btnIngresoAnonimo:(id _Nonnull)sender;
 - (void)textFieldDidChange:(UITextField * _Nonnull)textfield;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+
+@protocol UIViewControllerContextTransitioning;
+
+SWIFT_CLASS("_TtC7baseApp12MyTransition")
+@interface MyTransition : NSObject <UIViewControllerAnimatedTransitioning>
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning> _Nullable)transitionContext SWIFT_WARN_UNUSED_RESULT;
+- (void)animateTransition:(id <UIViewControllerContextTransitioning> _Nonnull)transitionContext;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
 
 
 SWIFT_CLASS("_TtC7baseApp9OffertsVC")
@@ -424,6 +442,7 @@ SWIFT_CLASS("_TtC7baseApp10RegistroVC")
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 
@@ -554,12 +573,12 @@ SWIFT_CLASS("_TtC7baseApp11TTGSnackbar")
 @end
 
 
-
-
 @interface TTGSnackbar (SWIFT_EXTENSION(baseApp))
 /// Dismiss the snackbar manually.
 - (void)dismiss;
 @end
+
+
 
 /// Snackbar animation types.
 /// <ul>
@@ -622,6 +641,22 @@ SWIFT_CLASS("_TtC7baseApp20TableViewCellFactory")
 @interface TableViewCellFactory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+@class UITextView;
+
+SWIFT_CLASS("_TtC7baseApp22TerminosYCondicionesVC")
+@interface TerminosYCondicionesVC : BViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lTitulo;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified lTerminosText;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnCloseO;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified viewContent;
+- (void)viewDidLoad;
+- (IBAction)btnCloseA:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 
 
 
@@ -714,7 +749,22 @@ SWIFT_CLASS("_TtC7baseApp10cellOffert")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIDatePicker;
 @class NSLayoutConstraint;
+
+SWIFT_CLASS("_TtC7baseApp9datePiker")
+@interface datePiker : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified contenedor;
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titulo;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified contraintHeight;
+- (void)awakeFromNib;
+- (void)prepareForReuse;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC7baseApp5label")
 @interface label : UITableViewCell
@@ -729,12 +779,35 @@ SWIFT_CLASS("_TtC7baseApp5label")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIPickerView;
+
+SWIFT_CLASS("_TtC7baseApp14pickerViewcell")
+@interface pickerViewcell : UITableViewCell <UIPickerViewDataSource, UIPickerViewDelegate>
+@property (nonatomic, weak) IBOutlet UIPickerView * _Null_unspecified pickerView;
+- (void)prepareForReuse;
+- (void)awakeFromNib;
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+- (UIView * _Nonnull)pickerView:(UIPickerView * _Nonnull)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView * _Nullable)view SWIFT_WARN_UNUSED_RESULT;
+/// ///////
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC7baseApp17principalTabBarVC")
 @interface principalTabBarVC : UITabBarController
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface principalTabBarVC (SWIFT_EXTENSION(baseApp)) <UITabBarControllerDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)tabBarController:(UITabBarController * _Nonnull)tabBarController animationControllerForTransitionFromViewController:(UIViewController * _Nonnull)fromVC toViewController:(UIViewController * _Nonnull)toVC SWIFT_WARN_UNUSED_RESULT;
 @end
 
 

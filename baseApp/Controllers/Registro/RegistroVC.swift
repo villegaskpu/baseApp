@@ -34,7 +34,7 @@ class RegistroVC: BTableViewController {
         tableView.dataSource = self
         BaseDelegate = self
         
-        TableViewCellFactory.registerCells(tableView: tableView, types: .textField, .label, .button, .stack)
+        TableViewCellFactory.registerCells(tableView: tableView, types: .textField, .label, .button, .stack, .pickerView, .datePicker)
         
         tableItems.removeAll()
         setParalax()
@@ -69,10 +69,23 @@ class RegistroVC: BTableViewController {
     func initData() {
         let empresa = InfoItem.init(identifier: campos.empresa.rawValue, type: InfoItemType.textField, title: "Empresa", value: "")
         empresa.required = true
+        empresa.showItem = false
         
         let noEmpleado = InfoItem.init(identifier: campos.empresa.rawValue, type: InfoItemType.textField, title: "No. Epleado", value: "")
+        let genero = InfoItem.init(identifier: campos.empresa.rawValue, type: InfoItemType.pickerView, title: "Género", value: "")
+        genero.tupleArray = [("G","Género"),("F", "Femenino"), ("M","Masculino")]
+        genero.showItem = false
         
-        let fechaDeNecimiento = InfoItem.init(identifier: campos.fechaNacimiento.rawValue, type: InfoItemType.textField, title: "Fecha de necimiento", value: "")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        
+        let date = Date()
+        
+        let strDate = "\(date.currentDay(true))-\(date.currentMonth(true))-\(date.currentYear())"
+        
+        let pickerFecha = InfoItem(identifier: "datePiker", type: .datePicker, title: "Fecha de nacimiento", value: strDate)
+        pickerFecha.typePicker = .date
         
         let correo = InfoItem.init(identifier: campos.fechaNacimiento.rawValue, type: InfoItemType.textField, title: "Correo Electrónico", value: "")
         let confirmaCorreo = InfoItem.init(identifier: campos.confirmaCorreoElectronico.rawValue, type: InfoItemType.textField, title: "Confirmar correo", value: "")
@@ -90,7 +103,8 @@ class RegistroVC: BTableViewController {
         tableItems.set(section: "", identifier: "captura")
         tableItems.append(item: empresa)
         tableItems.append(item: noEmpleado)
-        tableItems.append(item: fechaDeNecimiento)
+        tableItems.append(item: pickerFecha)
+        tableItems.append(item: genero)
         tableItems.append(item: correo)
         tableItems.append(item: confirmaCorreo)
         tableItems.append(item: contrasenia)
@@ -125,9 +139,6 @@ extension RegistroVC {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-    
         if tableItems.getItemIdentifier(section: indexPath.section, at: indexPath.row) == campos.stack.rawValue {
             let item = tableItems.getItem(section: indexPath.section, at: indexPath.row)
             
@@ -140,6 +151,15 @@ extension RegistroVC {
             return super.tableView(tableView, cellForRowAt: indexPath)
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableItems.getItem(section: indexPath.section, at: indexPath.row).identifier == campos.aviso.rawValue {
+            let vc = TerminosYCondicionesVC()
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
 }
 
 extension RegistroVC : BTableViewDelegate , celdaStack3Delegate{
@@ -149,12 +169,24 @@ extension RegistroVC : BTableViewDelegate , celdaStack3Delegate{
         if tableItems.isReadyToSave() {
             print("todo chido")
         } else {
-            Commons.showMessage("Haven falta campos obligatorios")
+            Commons.showMessage("Los campos marcados con (*) son obligatorios")
+            tableView.reloadData()
         }
+        
     }
     
     func selectBtn(value: Int) {
         print("valuesSelected: \(value)")
+        if value == 1 {
+            let vc = LoginVC()
+            self.navigationController?.fadeTo(vc)
+        } else {
+            self.sendEmail()
+        }
     }
+    
+//    func BTableView(tableItems: InfoManager, dateSelected indexPath: IndexPath) {
+//
+//    }
 }
 

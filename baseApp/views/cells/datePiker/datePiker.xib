@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="datePiker" rowHeight="238" id="KGk-i7-Jjw" customClass="datePiker" customModule="SeekOp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="412" height="238"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="412" height="237.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cA2-gK-AZZ">
+                        <rect key="frame" x="20" y="11" width="372" height="216"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Próximo compromiso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJs-ic-JX0">
+                                <rect key="frame" x="8" y="0.0" width="356" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="a9d-dt-zVw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="01Q-aY-T2d">
+                                <rect key="frame" x="8" y="38" width="356" height="170"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <date key="date" timeIntervalSinceReferenceDate="495185164.46613002">
+                                    <!--2016-09-10 07:26:04 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="01Q-aY-T2d" firstAttribute="leading" secondItem="cA2-gK-AZZ" secondAttribute="leading" constant="8" id="6ai-dL-4yf"/>
+                            <constraint firstAttribute="trailing" secondItem="01Q-aY-T2d" secondAttribute="trailing" constant="8" id="9OK-8B-aUd"/>
+                            <constraint firstItem="01Q-aY-T2d" firstAttribute="top" secondItem="MJs-ic-JX0" secondAttribute="bottom" constant="8" id="TGR-11-8nY"/>
+                            <constraint firstAttribute="bottom" secondItem="01Q-aY-T2d" secondAttribute="bottom" constant="8" id="iNF-mw-vW1"/>
+                            <constraint firstAttribute="trailing" secondItem="MJs-ic-JX0" secondAttribute="trailing" constant="8" id="jdL-IE-OTE"/>
+                            <constraint firstItem="MJs-ic-JX0" firstAttribute="top" secondItem="cA2-gK-AZZ" secondAttribute="top" id="k48-zD-qDE"/>
+                            <constraint firstItem="MJs-ic-JX0" firstAttribute="leading" secondItem="cA2-gK-AZZ" secondAttribute="leading" constant="8" id="vqS-1v-dnW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cA2-gK-AZZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="A9n-e8-ySf"/>
+                    <constraint firstItem="cA2-gK-AZZ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="aTl-nK-HU8"/>
+                    <constraint firstItem="cA2-gK-AZZ" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="fjJ-kg-fVN"/>
+                    <constraint firstItem="cA2-gK-AZZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="gwt-E7-1Pk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contenedor" destination="cA2-gK-AZZ" id="JKm-yA-VKx"/>
+                <outlet property="contraintHeight" destination="a9d-dt-zVw" id="aSR-VN-lfD"/>
+                <outlet property="datePicker" destination="01Q-aY-T2d" id="Hin-9O-hYt"/>
+                <outlet property="titulo" destination="MJs-ic-JX0" id="64a-HE-tSC"/>
+            </connections>
+            <point key="canvasLocation" x="402" y="261"/>
+        </tableViewCell>
+    </objects>
+</document>

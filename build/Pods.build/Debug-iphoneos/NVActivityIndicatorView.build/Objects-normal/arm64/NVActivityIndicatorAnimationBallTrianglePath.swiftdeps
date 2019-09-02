@@ -13,6 +13,7 @@ depends-top-level:
 - !private "/"
 - !private "AnyObject"
 - "AssignmentPrecedence"
+- !private "BooleanLiteralType"
 - "CAKeyframeAnimation"
 - "CALayer"
 - !private "CAMediaTimingFunction"
@@ -22,7 +23,9 @@ depends-top-level:
 - !private "CGRect"
 - "CGSize"
 - "CastingPrecedence"
+- !private "FloatLiteralType"
 - !private "HUGE"
+- !private "IntegerLiteralType"
 - !private "NSCoder"
 - !private "NSMutableArray"
 - !private "NSMutableString"
@@ -33,6 +36,7 @@ depends-top-level:
 - "NVActivityIndicatorAnimationDelegate"
 - !private "NVActivityIndicatorShape"
 - "String"
+- !private "StringLiteralType"
 - "UIColor"
 depends-member:
 - !private ["So8CAActionP", "duration"]

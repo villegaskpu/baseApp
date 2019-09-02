@@ -14,10 +14,12 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "=="
+- "FloatLiteralType"
 - "IQAutoToolbarManageBehaviour"
 - "IQEnableMode"
 - "IQPreviousNextDisplayMode"
 - "Int"
+- "IntegerLiteralType"
 - !private "unsafeBitCast"
 - !private "~="
 depends-member:

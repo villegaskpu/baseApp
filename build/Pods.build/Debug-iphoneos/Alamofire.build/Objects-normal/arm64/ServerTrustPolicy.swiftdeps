@@ -17,6 +17,7 @@ depends-top-level:
 - !private "AnyObject"
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
 - "Bundle"
 - !private "CFArray"
 - !private "CFData"

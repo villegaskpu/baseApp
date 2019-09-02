@@ -6,8 +6,11 @@ provides-nominal:
 provides-member:
 - ["7baseApp7LoginVCC", ""]
 provides-dynamic-lookup:
+- "btnCrearCuenta"
 - "btnEntrar"
+- "btnIngresoAnonimo"
 - "btnLogin"
+- "btnRecuperarPassword"
 - "btnShowPassword"
 - "crearCuenta"
 - "homeLogo"
@@ -45,6 +48,7 @@ depends-top-level:
 - !private "LoginResponse"
 - "LoginVC"
 - !private "Network"
+- !private "RegistroVC"
 - !private "Requests"
 - !private "Settings"
 - "SkyFloatingLabelTextFieldWithIcon"
@@ -54,11 +58,14 @@ depends-top-level:
 - "UITextField"
 - "UIView"
 - !private "Void"
+- !private "principalTabBarVC"
 - !private "print"
 - !private "||"
 depends-member:
 - !private ["So22UIViewAnimationOptionsV", "curveLinear"]
 - !private ["12a4SysCoreIOS8ApiErrorC", "message"]
+- !private ["7baseApp20BTableViewControllerC", "init"]
+- !private ["7baseApp18BTableViewDelegateP", "init"]
 - ["7baseApp15BViewControllerC", "AnyObject"]
 - !private ["7baseApp15BViewControllerC", "ApiError"]
 - ["7baseApp15BViewControllerC", "Bool"]
@@ -70,6 +77,7 @@ depends-member:
 - !private ["7baseApp15BViewControllerC", "LocationUtil"]
 - !private ["7baseApp15BViewControllerC", "LoginResponse"]
 - !private ["7baseApp15BViewControllerC", "Network"]
+- !private ["7baseApp15BViewControllerC", "RegistroVC"]
 - !private ["7baseApp15BViewControllerC", "Requests"]
 - !private ["7baseApp15BViewControllerC", "Settings"]
 - ["7baseApp15BViewControllerC", "SkyFloatingLabelTextFieldWithIcon"]
@@ -83,8 +91,11 @@ depends-member:
 - ["7baseApp15BViewControllerC", "addsTargets"]
 - ["7baseApp15BViewControllerC", "animateButtonLogin"]
 - ["7baseApp15BViewControllerC", "animateView"]
+- ["7baseApp15BViewControllerC", "btnCrearCuenta"]
 - ["7baseApp15BViewControllerC", "btnEntrar"]
+- ["7baseApp15BViewControllerC", "btnIngresoAnonimo"]
 - ["7baseApp15BViewControllerC", "btnLogin"]
+- ["7baseApp15BViewControllerC", "btnRecuperarPassword"]
 - ["7baseApp15BViewControllerC", "btnShowPassword"]
 - ["7baseApp15BViewControllerC", "crearCuenta"]
 - !private ["7baseApp15BViewControllerC", "deinit"]
@@ -94,6 +105,8 @@ depends-member:
 - ["7baseApp15BViewControllerC", "ingresoAnonimo"]
 - ["7baseApp15BViewControllerC", "init"]
 - !private ["7baseApp15BViewControllerC", "init"]
+- !private ["7baseApp15BViewControllerC", "navigationController"]
+- !private ["7baseApp15BViewControllerC", "principalTabBarVC"]
 - !private ["7baseApp15BViewControllerC", "print"]
 - ["7baseApp15BViewControllerC", "recuperarContrase\xF1a"]
 - !private ["7baseApp15BViewControllerC", "showLoading"]
@@ -144,6 +157,7 @@ depends-member:
 - !private ["s7CVarArgP", "DispatchQueue"]
 - !private ["s7CVarArgP", "LocationUtil"]
 - !private ["s7CVarArgP", "Network"]
+- !private ["s7CVarArgP", "RegistroVC"]
 - !private ["s7CVarArgP", "Requests"]
 - !private ["s7CVarArgP", "Settings"]
 - !private ["s7CVarArgP", "UIImage"]
@@ -166,6 +180,7 @@ depends-member:
 - !private ["s7CVarArgP", "endEditing"]
 - !private ["s7CVarArgP", "endPointN"]
 - !private ["s7CVarArgP", "errorMessage"]
+- !private ["s7CVarArgP", "fadeTo"]
 - !private ["s7CVarArgP", "hideLoading"]
 - !private ["s7CVarArgP", "homeLogo"]
 - !private ["s7CVarArgP", "iconEye"]
@@ -177,7 +192,10 @@ depends-member:
 - !private ["s7CVarArgP", "main"]
 - !private ["s7CVarArgP", "minimumFontSize"]
 - !private ["s7CVarArgP", "minimumScaleFactor"]
+- !private ["s7CVarArgP", "navigationController"]
+- !private ["s7CVarArgP", "principalTabBarVC"]
 - !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "pushViewController"]
 - !private ["s7CVarArgP", "recuperarContrase\xF1a"]
 - !private ["s7CVarArgP", "setImage"]
 - !private ["s7CVarArgP", "setUrlParameters"]
@@ -215,6 +233,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
 - !private ["s28CustomDebugStringConvertibleP", "LocationUtil"]
 - !private ["s28CustomDebugStringConvertibleP", "Network"]
+- !private ["s28CustomDebugStringConvertibleP", "RegistroVC"]
 - !private ["s28CustomDebugStringConvertibleP", "Requests"]
 - !private ["s28CustomDebugStringConvertibleP", "Settings"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImage"]
@@ -237,6 +256,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "endEditing"]
 - !private ["s28CustomDebugStringConvertibleP", "endPointN"]
 - !private ["s28CustomDebugStringConvertibleP", "errorMessage"]
+- !private ["s28CustomDebugStringConvertibleP", "fadeTo"]
 - !private ["s28CustomDebugStringConvertibleP", "hideLoading"]
 - !private ["s28CustomDebugStringConvertibleP", "homeLogo"]
 - !private ["s28CustomDebugStringConvertibleP", "iconEye"]
@@ -248,7 +268,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "minimumFontSize"]
 - !private ["s28CustomDebugStringConvertibleP", "minimumScaleFactor"]
+- !private ["s28CustomDebugStringConvertibleP", "navigationController"]
+- !private ["s28CustomDebugStringConvertibleP", "principalTabBarVC"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "pushViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "recuperarContrase\xF1a"]
 - !private ["s28CustomDebugStringConvertibleP", "setImage"]
 - !private ["s28CustomDebugStringConvertibleP", "setUrlParameters"]
@@ -296,6 +319,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "DispatchQueue"]
 - !private ["s23CustomStringConvertibleP", "LocationUtil"]
 - !private ["s23CustomStringConvertibleP", "Network"]
+- !private ["s23CustomStringConvertibleP", "RegistroVC"]
 - !private ["s23CustomStringConvertibleP", "Requests"]
 - !private ["s23CustomStringConvertibleP", "Settings"]
 - !private ["s23CustomStringConvertibleP", "UIImage"]
@@ -320,6 +344,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "endEditing"]
 - !private ["s23CustomStringConvertibleP", "endPointN"]
 - !private ["s23CustomStringConvertibleP", "errorMessage"]
+- !private ["s23CustomStringConvertibleP", "fadeTo"]
 - !private ["s23CustomStringConvertibleP", "hideLoading"]
 - !private ["s23CustomStringConvertibleP", "homeLogo"]
 - !private ["s23CustomStringConvertibleP", "iconEye"]
@@ -331,7 +356,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "main"]
 - !private ["s23CustomStringConvertibleP", "minimumFontSize"]
 - !private ["s23CustomStringConvertibleP", "minimumScaleFactor"]
+- !private ["s23CustomStringConvertibleP", "navigationController"]
+- !private ["s23CustomStringConvertibleP", "principalTabBarVC"]
 - !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "pushViewController"]
 - !private ["s23CustomStringConvertibleP", "recuperarContrase\xF1a"]
 - !private ["s23CustomStringConvertibleP", "setImage"]
 - !private ["s23CustomStringConvertibleP", "setUrlParameters"]
@@ -403,6 +431,7 @@ depends-member:
 - !private ["SQ", "LocationUtil"]
 - !private ["SQ", "Login"]
 - !private ["SQ", "Network"]
+- !private ["SQ", "RegistroVC"]
 - !private ["SQ", "Requests"]
 - !private ["SQ", "Settings"]
 - !private ["SQ", "UIImage"]
@@ -427,6 +456,7 @@ depends-member:
 - !private ["SQ", "endEditing"]
 - !private ["SQ", "endPointN"]
 - !private ["SQ", "errorMessage"]
+- !private ["SQ", "fadeTo"]
 - !private ["SQ", "hideLoading"]
 - !private ["SQ", "homeLogo"]
 - !private ["SQ", "iconEye"]
@@ -439,9 +469,12 @@ depends-member:
 - !private ["SQ", "main"]
 - !private ["SQ", "minimumFontSize"]
 - !private ["SQ", "minimumScaleFactor"]
+- !private ["SQ", "navigationController"]
 - !private ["SQ", "normal"]
 - !private ["SQ", "now"]
+- !private ["SQ", "principalTabBarVC"]
 - !private ["SQ", "print"]
+- !private ["SQ", "pushViewController"]
 - !private ["SQ", "recuperarContrase\xF1a"]
 - !private ["SQ", "setImage"]
 - !private ["SQ", "setUrlParameters"]
@@ -500,6 +533,7 @@ depends-member:
 - !private ["SH", "LocationUtil"]
 - !private ["SH", "Login"]
 - !private ["SH", "Network"]
+- !private ["SH", "RegistroVC"]
 - !private ["SH", "Requests"]
 - !private ["SH", "Settings"]
 - !private ["SH", "UIImage"]
@@ -522,6 +556,7 @@ depends-member:
 - !private ["SH", "endEditing"]
 - !private ["SH", "endPointN"]
 - !private ["SH", "errorMessage"]
+- !private ["SH", "fadeTo"]
 - !private ["SH", "hideLoading"]
 - !private ["SH", "homeLogo"]
 - !private ["SH", "iconEye"]
@@ -534,7 +569,10 @@ depends-member:
 - !private ["SH", "main"]
 - !private ["SH", "minimumFontSize"]
 - !private ["SH", "minimumScaleFactor"]
+- !private ["SH", "navigationController"]
+- !private ["SH", "principalTabBarVC"]
 - !private ["SH", "print"]
+- !private ["SH", "pushViewController"]
 - !private ["SH", "recuperarContrase\xF1a"]
 - !private ["SH", "setImage"]
 - !private ["SH", "setUrlParameters"]
@@ -569,6 +607,7 @@ depends-member:
 - !private ["7baseApp20LocationUtilDelegateP", "DispatchQueue"]
 - !private ["7baseApp20LocationUtilDelegateP", "LocationUtil"]
 - !private ["7baseApp20LocationUtilDelegateP", "Network"]
+- !private ["7baseApp20LocationUtilDelegateP", "RegistroVC"]
 - !private ["7baseApp20LocationUtilDelegateP", "Requests"]
 - !private ["7baseApp20LocationUtilDelegateP", "Settings"]
 - !private ["7baseApp20LocationUtilDelegateP", "UIImage"]
@@ -583,6 +622,8 @@ depends-member:
 - !private ["7baseApp20LocationUtilDelegateP", "homeLogo"]
 - !private ["7baseApp20LocationUtilDelegateP", "iconEye"]
 - !private ["7baseApp20LocationUtilDelegateP", "ingresoAnonimo"]
+- !private ["7baseApp20LocationUtilDelegateP", "navigationController"]
+- !private ["7baseApp20LocationUtilDelegateP", "principalTabBarVC"]
 - !private ["7baseApp20LocationUtilDelegateP", "print"]
 - !private ["7baseApp20LocationUtilDelegateP", "recuperarContrase\xF1a"]
 - !private ["7baseApp20LocationUtilDelegateP", "showLoading"]
@@ -608,6 +649,7 @@ depends-member:
 - !private ["7baseApp7LoginVCC", "LocationUtil"]
 - !private ["7baseApp7LoginVCC", "LoginResponse"]
 - !private ["7baseApp7LoginVCC", "Network"]
+- !private ["7baseApp7LoginVCC", "RegistroVC"]
 - !private ["7baseApp7LoginVCC", "Requests"]
 - !private ["7baseApp7LoginVCC", "Settings"]
 - ["7baseApp7LoginVCC", "SkyFloatingLabelTextFieldWithIcon"]
@@ -620,8 +662,11 @@ depends-member:
 - ["7baseApp7LoginVCC", "addsTargets"]
 - !private ["7baseApp7LoginVCC", "animateButtonLogin"]
 - !private ["7baseApp7LoginVCC", "animateView"]
+- ["7baseApp7LoginVCC", "btnCrearCuenta"]
 - ["7baseApp7LoginVCC", "btnEntrar"]
+- ["7baseApp7LoginVCC", "btnIngresoAnonimo"]
 - ["7baseApp7LoginVCC", "btnLogin"]
+- ["7baseApp7LoginVCC", "btnRecuperarPassword"]
 - ["7baseApp7LoginVCC", "btnShowPassword"]
 - ["7baseApp7LoginVCC", "crearCuenta"]
 - ["7baseApp7LoginVCC", "deinit"]
@@ -630,6 +675,8 @@ depends-member:
 - ["7baseApp7LoginVCC", "iconEye"]
 - ["7baseApp7LoginVCC", "ingresoAnonimo"]
 - ["7baseApp7LoginVCC", "init"]
+- !private ["7baseApp7LoginVCC", "navigationController"]
+- !private ["7baseApp7LoginVCC", "principalTabBarVC"]
 - !private ["7baseApp7LoginVCC", "print"]
 - ["7baseApp7LoginVCC", "recuperarContrase\xF1a"]
 - !private ["7baseApp7LoginVCC", "showLoading"]
@@ -659,6 +706,7 @@ depends-member:
 - !private ["So8NSCodingP", "DispatchQueue"]
 - !private ["So8NSCodingP", "LocationUtil"]
 - !private ["So8NSCodingP", "Network"]
+- !private ["So8NSCodingP", "RegistroVC"]
 - !private ["So8NSCodingP", "Requests"]
 - !private ["So8NSCodingP", "Settings"]
 - !private ["So8NSCodingP", "UIImage"]
@@ -677,6 +725,7 @@ depends-member:
 - !private ["So8NSCodingP", "crearCuenta"]
 - !private ["So8NSCodingP", "endEditing"]
 - !private ["So8NSCodingP", "errorMessage"]
+- !private ["So8NSCodingP", "fadeTo"]
 - !private ["So8NSCodingP", "hideLoading"]
 - !private ["So8NSCodingP", "homeLogo"]
 - !private ["So8NSCodingP", "iconEye"]
@@ -687,7 +736,10 @@ depends-member:
 - !private ["So8NSCodingP", "localized"]
 - !private ["So8NSCodingP", "minimumFontSize"]
 - !private ["So8NSCodingP", "minimumScaleFactor"]
+- !private ["So8NSCodingP", "navigationController"]
+- !private ["So8NSCodingP", "principalTabBarVC"]
 - !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "pushViewController"]
 - !private ["So8NSCodingP", "recuperarContrase\xF1a"]
 - !private ["So8NSCodingP", "setImage"]
 - !private ["So8NSCodingP", "showLoading"]
@@ -717,6 +769,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
 - !private ["So26NSExtensionRequestHandlingP", "LocationUtil"]
 - !private ["So26NSExtensionRequestHandlingP", "Network"]
+- !private ["So26NSExtensionRequestHandlingP", "RegistroVC"]
 - !private ["So26NSExtensionRequestHandlingP", "Requests"]
 - !private ["So26NSExtensionRequestHandlingP", "Settings"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImage"]
@@ -727,13 +780,17 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "animateView"]
 - !private ["So26NSExtensionRequestHandlingP", "btnLogin"]
 - !private ["So26NSExtensionRequestHandlingP", "crearCuenta"]
+- !private ["So26NSExtensionRequestHandlingP", "fadeTo"]
 - !private ["So26NSExtensionRequestHandlingP", "hideLoading"]
 - !private ["So26NSExtensionRequestHandlingP", "homeLogo"]
 - !private ["So26NSExtensionRequestHandlingP", "iconEye"]
 - !private ["So26NSExtensionRequestHandlingP", "ingresoAnonimo"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "navigationController"]
+- !private ["So26NSExtensionRequestHandlingP", "principalTabBarVC"]
 - !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "recuperarContrase\xF1a"]
 - !private ["So26NSExtensionRequestHandlingP", "showLoading"]
 - !private ["So26NSExtensionRequestHandlingP", "showPassword"]
@@ -769,6 +826,7 @@ depends-member:
 - !private ["So8NSObjectC", "LocationUtil"]
 - !private ["So8NSObjectC", "LoginResponse"]
 - !private ["So8NSObjectC", "Network"]
+- !private ["So8NSObjectC", "RegistroVC"]
 - !private ["So8NSObjectC", "Requests"]
 - !private ["So8NSObjectC", "Settings"]
 - ["So8NSObjectC", "SkyFloatingLabelTextFieldWithIcon"]
@@ -786,8 +844,11 @@ depends-member:
 - ["So8NSObjectC", "animateButtonLogin"]
 - ["So8NSObjectC", "animateView"]
 - !private ["So8NSObjectC", "asyncAfter"]
+- ["So8NSObjectC", "btnCrearCuenta"]
 - ["So8NSObjectC", "btnEntrar"]
+- ["So8NSObjectC", "btnIngresoAnonimo"]
 - ["So8NSObjectC", "btnLogin"]
+- ["So8NSObjectC", "btnRecuperarPassword"]
 - ["So8NSObjectC", "btnShowPassword"]
 - !private ["So8NSObjectC", "center"]
 - !private ["So8NSObjectC", "count"]
@@ -797,6 +858,7 @@ depends-member:
 - !private ["So8NSObjectC", "endEditing"]
 - !private ["So8NSObjectC", "endPointN"]
 - !private ["So8NSObjectC", "errorMessage"]
+- !private ["So8NSObjectC", "fadeTo"]
 - !private ["So8NSObjectC", "hideLoading"]
 - ["So8NSObjectC", "homeLogo"]
 - ["So8NSObjectC", "iconEye"]
@@ -808,7 +870,10 @@ depends-member:
 - !private ["So8NSObjectC", "main"]
 - !private ["So8NSObjectC", "minimumFontSize"]
 - !private ["So8NSObjectC", "minimumScaleFactor"]
+- !private ["So8NSObjectC", "navigationController"]
+- !private ["So8NSObjectC", "principalTabBarVC"]
 - !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "pushViewController"]
 - ["So8NSObjectC", "recuperarContrase\xF1a"]
 - !private ["So8NSObjectC", "setImage"]
 - !private ["So8NSObjectC", "setUrlParameters"]
@@ -836,6 +901,7 @@ depends-member:
 - !private ["So8NSObjectP", "DispatchQueue"]
 - !private ["So8NSObjectP", "LocationUtil"]
 - !private ["So8NSObjectP", "Network"]
+- !private ["So8NSObjectP", "RegistroVC"]
 - !private ["So8NSObjectP", "Requests"]
 - !private ["So8NSObjectP", "Settings"]
 - !private ["So8NSObjectP", "UIImage"]
@@ -858,6 +924,7 @@ depends-member:
 - !private ["So8NSObjectP", "endEditing"]
 - !private ["So8NSObjectP", "endPointN"]
 - !private ["So8NSObjectP", "errorMessage"]
+- !private ["So8NSObjectP", "fadeTo"]
 - !private ["So8NSObjectP", "hideLoading"]
 - !private ["So8NSObjectP", "homeLogo"]
 - !private ["So8NSObjectP", "iconEye"]
@@ -869,7 +936,10 @@ depends-member:
 - !private ["So8NSObjectP", "main"]
 - !private ["So8NSObjectP", "minimumFontSize"]
 - !private ["So8NSObjectP", "minimumScaleFactor"]
+- !private ["So8NSObjectP", "navigationController"]
+- !private ["So8NSObjectP", "principalTabBarVC"]
 - !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "pushViewController"]
 - !private ["So8NSObjectP", "recuperarContrase\xF1a"]
 - !private ["So8NSObjectP", "setImage"]
 - !private ["So8NSObjectP", "setUrlParameters"]
@@ -926,6 +996,8 @@ depends-member:
 - !private ["SY", "editingChanged"]
 - !private ["SY", "long"]
 - !private ["SY", "normal"]
+- !private ["7baseApp10RegistroVCC", "deinit"]
+- !private ["7baseApp10RegistroVCC", "init"]
 - !private ["12a4SysCoreIOS8RequestsC", "createLoginRequest"]
 - !private ["ST", "count"]
 - !private ["ST", "localized"]
@@ -992,6 +1064,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "tag"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "titleLabel"]
+- !private ["So40UIAdaptivePresentationControllerDelegateP", "init"]
 - !private ["So12UIAppearanceP", "addTarget"]
 - !private ["So12UIAppearanceP", "adjustsFontSizeToFitWidth"]
 - !private ["So12UIAppearanceP", "alpha"]
@@ -1013,6 +1086,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - !private ["So21UIAppearanceContainerP", "LocationUtil"]
 - !private ["So21UIAppearanceContainerP", "Network"]
+- !private ["So21UIAppearanceContainerP", "RegistroVC"]
 - !private ["So21UIAppearanceContainerP", "Requests"]
 - !private ["So21UIAppearanceContainerP", "Settings"]
 - !private ["So21UIAppearanceContainerP", "UIImage"]
@@ -1030,6 +1104,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "crearCuenta"]
 - !private ["So21UIAppearanceContainerP", "endEditing"]
 - !private ["So21UIAppearanceContainerP", "errorMessage"]
+- !private ["So21UIAppearanceContainerP", "fadeTo"]
 - !private ["So21UIAppearanceContainerP", "hideLoading"]
 - !private ["So21UIAppearanceContainerP", "homeLogo"]
 - !private ["So21UIAppearanceContainerP", "iconEye"]
@@ -1039,7 +1114,10 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "isSecureTextEntry"]
 - !private ["So21UIAppearanceContainerP", "minimumFontSize"]
 - !private ["So21UIAppearanceContainerP", "minimumScaleFactor"]
+- !private ["So21UIAppearanceContainerP", "navigationController"]
+- !private ["So21UIAppearanceContainerP", "principalTabBarVC"]
 - !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "pushViewController"]
 - !private ["So21UIAppearanceContainerP", "recuperarContrase\xF1a"]
 - !private ["So21UIAppearanceContainerP", "setImage"]
 - !private ["So21UIAppearanceContainerP", "showLoading"]
@@ -1066,6 +1144,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "DispatchQueue"]
 - !private ["So18UIContentContainerP", "LocationUtil"]
 - !private ["So18UIContentContainerP", "Network"]
+- !private ["So18UIContentContainerP", "RegistroVC"]
 - !private ["So18UIContentContainerP", "Requests"]
 - !private ["So18UIContentContainerP", "Settings"]
 - !private ["So18UIContentContainerP", "UIImage"]
@@ -1076,13 +1155,17 @@ depends-member:
 - !private ["So18UIContentContainerP", "animateView"]
 - !private ["So18UIContentContainerP", "btnLogin"]
 - !private ["So18UIContentContainerP", "crearCuenta"]
+- !private ["So18UIContentContainerP", "fadeTo"]
 - !private ["So18UIContentContainerP", "hideLoading"]
 - !private ["So18UIContentContainerP", "homeLogo"]
 - !private ["So18UIContentContainerP", "iconEye"]
 - !private ["So18UIContentContainerP", "ingresoAnonimo"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "navigationController"]
+- !private ["So18UIContentContainerP", "principalTabBarVC"]
 - !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "pushViewController"]
 - !private ["So18UIContentContainerP", "recuperarContrase\xF1a"]
 - !private ["So18UIContentContainerP", "showLoading"]
 - !private ["So18UIContentContainerP", "showPassword"]
@@ -1150,6 +1233,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - !private ["So18UIFocusEnvironmentP", "LocationUtil"]
 - !private ["So18UIFocusEnvironmentP", "Network"]
+- !private ["So18UIFocusEnvironmentP", "RegistroVC"]
 - !private ["So18UIFocusEnvironmentP", "Requests"]
 - !private ["So18UIFocusEnvironmentP", "Settings"]
 - !private ["So18UIFocusEnvironmentP", "UIImage"]
@@ -1167,6 +1251,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "crearCuenta"]
 - !private ["So18UIFocusEnvironmentP", "endEditing"]
 - !private ["So18UIFocusEnvironmentP", "errorMessage"]
+- !private ["So18UIFocusEnvironmentP", "fadeTo"]
 - !private ["So18UIFocusEnvironmentP", "hideLoading"]
 - !private ["So18UIFocusEnvironmentP", "homeLogo"]
 - !private ["So18UIFocusEnvironmentP", "iconEye"]
@@ -1176,7 +1261,10 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "isSecureTextEntry"]
 - !private ["So18UIFocusEnvironmentP", "minimumFontSize"]
 - !private ["So18UIFocusEnvironmentP", "minimumScaleFactor"]
+- !private ["So18UIFocusEnvironmentP", "navigationController"]
+- !private ["So18UIFocusEnvironmentP", "principalTabBarVC"]
 - !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "pushViewController"]
 - !private ["So18UIFocusEnvironmentP", "recuperarContrase\xF1a"]
 - !private ["So18UIFocusEnvironmentP", "setImage"]
 - !private ["So18UIFocusEnvironmentP", "showLoading"]
@@ -1236,12 +1324,15 @@ depends-member:
 - !private ["So10UIKeyInputP", "text"]
 - !private ["So7UILabelC", "adjustsFontSizeToFitWidth"]
 - !private ["So7UILabelC", "minimumScaleFactor"]
+- !private ["So22UINavigationControllerC", "fadeTo"]
+- !private ["So22UINavigationControllerC", "pushViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGPoint"]
 - !private ["So30UIPasteConfigurationSupportingP", "CLLocation"]
 - !private ["So30UIPasteConfigurationSupportingP", "Commons"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "LocationUtil"]
 - !private ["So30UIPasteConfigurationSupportingP", "Network"]
+- !private ["So30UIPasteConfigurationSupportingP", "RegistroVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "Requests"]
 - !private ["So30UIPasteConfigurationSupportingP", "Settings"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImage"]
@@ -1259,6 +1350,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "crearCuenta"]
 - !private ["So30UIPasteConfigurationSupportingP", "endEditing"]
 - !private ["So30UIPasteConfigurationSupportingP", "errorMessage"]
+- !private ["So30UIPasteConfigurationSupportingP", "fadeTo"]
 - !private ["So30UIPasteConfigurationSupportingP", "hideLoading"]
 - !private ["So30UIPasteConfigurationSupportingP", "homeLogo"]
 - !private ["So30UIPasteConfigurationSupportingP", "iconEye"]
@@ -1268,7 +1360,10 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "isSecureTextEntry"]
 - !private ["So30UIPasteConfigurationSupportingP", "minimumFontSize"]
 - !private ["So30UIPasteConfigurationSupportingP", "minimumScaleFactor"]
+- !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
+- !private ["So30UIPasteConfigurationSupportingP", "principalTabBarVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "pushViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "recuperarContrase\xF1a"]
 - !private ["So30UIPasteConfigurationSupportingP", "setImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "showLoading"]
@@ -1286,6 +1381,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidAppear"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewTextFiels"]
+- !private ["So39UIPopoverPresentationControllerDelegateP", "init"]
 - ["So11UIResponderC", "AnyObject"]
 - !private ["So11UIResponderC", "ApiError"]
 - ["So11UIResponderC", "Bool"]
@@ -1297,6 +1393,7 @@ depends-member:
 - !private ["So11UIResponderC", "LocationUtil"]
 - !private ["So11UIResponderC", "LoginResponse"]
 - !private ["So11UIResponderC", "Network"]
+- !private ["So11UIResponderC", "RegistroVC"]
 - !private ["So11UIResponderC", "Requests"]
 - !private ["So11UIResponderC", "Settings"]
 - ["So11UIResponderC", "SkyFloatingLabelTextFieldWithIcon"]
@@ -1313,13 +1410,17 @@ depends-member:
 - !private ["So11UIResponderC", "animate"]
 - ["So11UIResponderC", "animateButtonLogin"]
 - ["So11UIResponderC", "animateView"]
+- ["So11UIResponderC", "btnCrearCuenta"]
 - ["So11UIResponderC", "btnEntrar"]
+- ["So11UIResponderC", "btnIngresoAnonimo"]
 - ["So11UIResponderC", "btnLogin"]
+- ["So11UIResponderC", "btnRecuperarPassword"]
 - ["So11UIResponderC", "btnShowPassword"]
 - !private ["So11UIResponderC", "center"]
 - ["So11UIResponderC", "crearCuenta"]
 - !private ["So11UIResponderC", "endEditing"]
 - !private ["So11UIResponderC", "errorMessage"]
+- !private ["So11UIResponderC", "fadeTo"]
 - !private ["So11UIResponderC", "hideLoading"]
 - ["So11UIResponderC", "homeLogo"]
 - ["So11UIResponderC", "iconEye"]
@@ -1329,7 +1430,10 @@ depends-member:
 - !private ["So11UIResponderC", "isSecureTextEntry"]
 - !private ["So11UIResponderC", "minimumFontSize"]
 - !private ["So11UIResponderC", "minimumScaleFactor"]
+- !private ["So11UIResponderC", "navigationController"]
+- !private ["So11UIResponderC", "principalTabBarVC"]
 - !private ["So11UIResponderC", "print"]
+- !private ["So11UIResponderC", "pushViewController"]
 - ["So11UIResponderC", "recuperarContrase\xF1a"]
 - !private ["So11UIResponderC", "setImage"]
 - !private ["So11UIResponderC", "showLoading"]
@@ -1353,6 +1457,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "LocationUtil"]
 - !private ["So30UIResponderStandardEditActionsP", "Network"]
+- !private ["So30UIResponderStandardEditActionsP", "RegistroVC"]
 - !private ["So30UIResponderStandardEditActionsP", "Requests"]
 - !private ["So30UIResponderStandardEditActionsP", "Settings"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImage"]
@@ -1370,6 +1475,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "crearCuenta"]
 - !private ["So30UIResponderStandardEditActionsP", "endEditing"]
 - !private ["So30UIResponderStandardEditActionsP", "errorMessage"]
+- !private ["So30UIResponderStandardEditActionsP", "fadeTo"]
 - !private ["So30UIResponderStandardEditActionsP", "hideLoading"]
 - !private ["So30UIResponderStandardEditActionsP", "homeLogo"]
 - !private ["So30UIResponderStandardEditActionsP", "iconEye"]
@@ -1379,7 +1485,10 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "isSecureTextEntry"]
 - !private ["So30UIResponderStandardEditActionsP", "minimumFontSize"]
 - !private ["So30UIResponderStandardEditActionsP", "minimumScaleFactor"]
+- !private ["So30UIResponderStandardEditActionsP", "navigationController"]
+- !private ["So30UIResponderStandardEditActionsP", "principalTabBarVC"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "pushViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "recuperarContrase\xF1a"]
 - !private ["So30UIResponderStandardEditActionsP", "setImage"]
 - !private ["So30UIResponderStandardEditActionsP", "showLoading"]
@@ -1397,6 +1506,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "viewDidAppear"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "viewTextFiels"]
+- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "alpha"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "setImage"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "titleLabel"]
@@ -1406,6 +1516,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
 - !private ["So16UIStateRestoringP", "LocationUtil"]
 - !private ["So16UIStateRestoringP", "Network"]
+- !private ["So16UIStateRestoringP", "RegistroVC"]
 - !private ["So16UIStateRestoringP", "Requests"]
 - !private ["So16UIStateRestoringP", "Settings"]
 - !private ["So16UIStateRestoringP", "UIImage"]
@@ -1416,13 +1527,17 @@ depends-member:
 - !private ["So16UIStateRestoringP", "animateView"]
 - !private ["So16UIStateRestoringP", "btnLogin"]
 - !private ["So16UIStateRestoringP", "crearCuenta"]
+- !private ["So16UIStateRestoringP", "fadeTo"]
 - !private ["So16UIStateRestoringP", "hideLoading"]
 - !private ["So16UIStateRestoringP", "homeLogo"]
 - !private ["So16UIStateRestoringP", "iconEye"]
 - !private ["So16UIStateRestoringP", "ingresoAnonimo"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "navigationController"]
+- !private ["So16UIStateRestoringP", "principalTabBarVC"]
 - !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "pushViewController"]
 - !private ["So16UIStateRestoringP", "recuperarContrase\xF1a"]
 - !private ["So16UIStateRestoringP", "showLoading"]
 - !private ["So16UIStateRestoringP", "showPassword"]
@@ -1436,6 +1551,11 @@ depends-member:
 - !private ["So16UIStateRestoringP", "viewDidAppear"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So16UIStateRestoringP", "viewTextFiels"]
+- !private ["So18UITabBarControllerC", "init"]
+- !private ["So26UITabBarControllerDelegateP", "init"]
+- !private ["So16UITabBarDelegateP", "init"]
+- !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So19UITableViewDelegateP", "init"]
 - !private ["So15UITextDraggableP", "addTarget"]
 - !private ["So15UITextDraggableP", "adjustsFontSizeToFitWidth"]
 - !private ["So15UITextDraggableP", "errorMessage"]
@@ -1484,6 +1604,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - !private ["So18UITraitEnvironmentP", "LocationUtil"]
 - !private ["So18UITraitEnvironmentP", "Network"]
+- !private ["So18UITraitEnvironmentP", "RegistroVC"]
 - !private ["So18UITraitEnvironmentP", "Requests"]
 - !private ["So18UITraitEnvironmentP", "Settings"]
 - !private ["So18UITraitEnvironmentP", "UIImage"]
@@ -1501,6 +1622,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "crearCuenta"]
 - !private ["So18UITraitEnvironmentP", "endEditing"]
 - !private ["So18UITraitEnvironmentP", "errorMessage"]
+- !private ["So18UITraitEnvironmentP", "fadeTo"]
 - !private ["So18UITraitEnvironmentP", "hideLoading"]
 - !private ["So18UITraitEnvironmentP", "homeLogo"]
 - !private ["So18UITraitEnvironmentP", "iconEye"]
@@ -1510,7 +1632,10 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "isSecureTextEntry"]
 - !private ["So18UITraitEnvironmentP", "minimumFontSize"]
 - !private ["So18UITraitEnvironmentP", "minimumScaleFactor"]
+- !private ["So18UITraitEnvironmentP", "navigationController"]
+- !private ["So18UITraitEnvironmentP", "principalTabBarVC"]
 - !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "pushViewController"]
 - !private ["So18UITraitEnvironmentP", "recuperarContrase\xF1a"]
 - !private ["So18UITraitEnvironmentP", "setImage"]
 - !private ["So18UITraitEnvironmentP", "showLoading"]
@@ -1534,6 +1659,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
 - !private ["So23UIUserActivityRestoringP", "LocationUtil"]
 - !private ["So23UIUserActivityRestoringP", "Network"]
+- !private ["So23UIUserActivityRestoringP", "RegistroVC"]
 - !private ["So23UIUserActivityRestoringP", "Requests"]
 - !private ["So23UIUserActivityRestoringP", "Settings"]
 - !private ["So23UIUserActivityRestoringP", "UIImage"]
@@ -1551,6 +1677,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "crearCuenta"]
 - !private ["So23UIUserActivityRestoringP", "endEditing"]
 - !private ["So23UIUserActivityRestoringP", "errorMessage"]
+- !private ["So23UIUserActivityRestoringP", "fadeTo"]
 - !private ["So23UIUserActivityRestoringP", "hideLoading"]
 - !private ["So23UIUserActivityRestoringP", "homeLogo"]
 - !private ["So23UIUserActivityRestoringP", "iconEye"]
@@ -1560,7 +1687,10 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "isSecureTextEntry"]
 - !private ["So23UIUserActivityRestoringP", "minimumFontSize"]
 - !private ["So23UIUserActivityRestoringP", "minimumScaleFactor"]
+- !private ["So23UIUserActivityRestoringP", "navigationController"]
+- !private ["So23UIUserActivityRestoringP", "principalTabBarVC"]
 - !private ["So23UIUserActivityRestoringP", "print"]
+- !private ["So23UIUserActivityRestoringP", "pushViewController"]
 - !private ["So23UIUserActivityRestoringP", "recuperarContrase\xF1a"]
 - !private ["So23UIUserActivityRestoringP", "setImage"]
 - !private ["So23UIUserActivityRestoringP", "showLoading"]
@@ -1604,6 +1734,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "LocationUtil"]
 - !private ["So16UIViewControllerC", "LoginResponse"]
 - !private ["So16UIViewControllerC", "Network"]
+- !private ["So16UIViewControllerC", "RegistroVC"]
 - !private ["So16UIViewControllerC", "Requests"]
 - !private ["So16UIViewControllerC", "Settings"]
 - ["So16UIViewControllerC", "SkyFloatingLabelTextFieldWithIcon"]
@@ -1616,17 +1747,24 @@ depends-member:
 - ["So16UIViewControllerC", "addsTargets"]
 - ["So16UIViewControllerC", "animateButtonLogin"]
 - ["So16UIViewControllerC", "animateView"]
+- ["So16UIViewControllerC", "btnCrearCuenta"]
 - ["So16UIViewControllerC", "btnEntrar"]
+- ["So16UIViewControllerC", "btnIngresoAnonimo"]
 - ["So16UIViewControllerC", "btnLogin"]
+- ["So16UIViewControllerC", "btnRecuperarPassword"]
 - ["So16UIViewControllerC", "btnShowPassword"]
 - ["So16UIViewControllerC", "crearCuenta"]
+- !private ["So16UIViewControllerC", "fadeTo"]
 - !private ["So16UIViewControllerC", "hideLoading"]
 - ["So16UIViewControllerC", "homeLogo"]
 - ["So16UIViewControllerC", "iconEye"]
 - ["So16UIViewControllerC", "ingresoAnonimo"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "navigationController"]
+- !private ["So16UIViewControllerC", "principalTabBarVC"]
 - !private ["So16UIViewControllerC", "print"]
+- !private ["So16UIViewControllerC", "pushViewController"]
 - ["So16UIViewControllerC", "recuperarContrase\xF1a"]
 - !private ["So16UIViewControllerC", "showLoading"]
 - ["So16UIViewControllerC", "showPassword"]
@@ -1643,6 +1781,7 @@ depends-member:
 - !private ["9Alamofire14URLConvertibleP", "count"]
 - !private ["9Alamofire14URLConvertibleP", "localized"]
 - !private ["9Alamofire14URLConvertibleP", "toInt"]
+- !private ["7baseApp23YopterTextFieldDelegateP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "count"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "localized"]
@@ -1671,6 +1810,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "LocationUtil"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Network"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "RegistroVC"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Requests"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Settings"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImage"]
@@ -1693,6 +1833,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endEditing"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endPointN"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "errorMessage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fadeTo"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "hideLoading"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "homeLogo"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "iconEye"]
@@ -1704,7 +1845,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "minimumFontSize"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "minimumScaleFactor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "principalTabBarVC"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pushViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "recuperarContrase\xF1a"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setUrlParameters"]
@@ -1759,10 +1903,19 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "tag"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
+- !private ["7baseApp13botonDelegateP", "init"]
+- !private ["7baseApp19celdaStack3DelegateP", "init"]
+- !private ["7baseApp18cellOffertDelegateP", "init"]
+- !private ["7baseApp18datePickeProtocol2P", "init"]
 - !private ["12a4SysCoreIOS8endPointO", "Login"]
+- !private ["7baseApp22pickerViewcellDelegateP", "init"]
+- !private ["7baseApp17principalTabBarVCC", "deinit"]
+- !private ["7baseApp17principalTabBarVCC", "init"]
 depends-nominal:
 - !private "So22UIViewAnimationOptionsV"
 - !private "12a4SysCoreIOS8ApiErrorC"
+- !private "7baseApp20BTableViewControllerC"
+- !private "7baseApp18BTableViewDelegateP"
 - "7baseApp15BViewControllerC"
 - !private "12ObjectMapper12BaseMappableP"
 - !private "SK"
@@ -1816,6 +1969,7 @@ depends-nominal:
 - !private "Sq"
 - !private "Sm"
 - !private "SY"
+- !private "7baseApp10RegistroVCC"
 - !private "12a4SysCoreIOS8RequestsC"
 - !private "ST"
 - !private "s10SetAlgebraP"
@@ -1831,6 +1985,7 @@ depends-nominal:
 - !private "s20TextOutputStreamableP"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - !private "So29UIAccessibilityIdentificationP"
+- !private "So40UIAdaptivePresentationControllerDelegateP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
 - !private "So8UIButtonC"
@@ -1847,11 +2002,19 @@ depends-nominal:
 - !private "So39UIItemProviderPresentationSizeProvidingP"
 - !private "So10UIKeyInputP"
 - !private "So7UILabelC"
+- !private "So22UINavigationControllerC"
 - "So30UIPasteConfigurationSupportingP"
+- !private "So39UIPopoverPresentationControllerDelegateP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
+- !private "So20UIScrollViewDelegateP"
 - !private "So35UISpringLoadedInteractionSupportingP"
 - "So16UIStateRestoringP"
+- !private "So18UITabBarControllerC"
+- !private "So26UITabBarControllerDelegateP"
+- !private "So16UITabBarDelegateP"
+- !private "So21UITableViewDataSourceP"
+- !private "So19UITableViewDelegateP"
 - !private "So15UITextDraggableP"
 - !private "So15UITextDroppableP"
 - !private "So11UITextFieldC"
@@ -1863,6 +2026,7 @@ depends-nominal:
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "9Alamofire14URLConvertibleP"
+- !private "7baseApp23YopterTextFieldDelegateP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
@@ -1873,7 +2037,13 @@ depends-nominal:
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
+- !private "7baseApp13botonDelegateP"
+- !private "7baseApp19celdaStack3DelegateP"
+- !private "7baseApp18cellOffertDelegateP"
+- !private "7baseApp18datePickeProtocol2P"
 - !private "12a4SysCoreIOS8endPointO"
+- !private "7baseApp22pickerViewcellDelegateP"
+- !private "7baseApp17principalTabBarVCC"
 depends-dynamic-lookup:
 depends-external:
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"
@@ -1963,4 +2133,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "364467eb4fda0f73c47032ce2463d8b5"
+interface-hash: "8dd56a477187b408e710e0bff3625513"

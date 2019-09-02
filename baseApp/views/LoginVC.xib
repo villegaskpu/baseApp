@@ -231,6 +231,9 @@
                             <state key="normal" title="Recuperar password">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="btnRecuperarPassword:" destination="-1" eventType="touchUpInside" id="4GM-ce-W0Q"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsd-6V-XEw">
                             <rect key="frame" x="116" y="0.0" width="101" height="24"/>
@@ -238,6 +241,9 @@
                             <state key="normal" title="|  Ingreso anónimo ">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="btnIngresoAnonimo:" destination="-1" eventType="touchUpInside" id="83O-Jw-JjV"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0Y-El-exO">
                             <rect key="frame" x="222" y="0.0" width="82" height="24"/>
@@ -245,6 +251,9 @@
                             <state key="normal" title="|   Crear cuenta">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="btnCrearCuenta:" destination="-1" eventType="touchUpInside" id="nss-Hf-nSN"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

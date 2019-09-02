@@ -62,17 +62,17 @@ public class BViewController: UIViewController {
     
     
     func sendEmail() {
-//        if MFMailComposeViewController.canSendMail() {
-//            let mail = MFMailComposeViewController()
-//            mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
-//            mail.setToRecipients([Constants.emailContact])
-//            mail.setSubject(Constants.emailSubject)
-//            mail.setMessageBody("<br /><br /><br /><br /><br /><br /><br /><br /><br />\(Commons.getUserAgentForEmail())", isHTML: true)
-//
-//            present(mail, animated: true)
-//        } else {
-//            Commons.showMessage("SEND_EMAIL_UNAVAILABLE".localized)
-//        }
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
+            mail.setToRecipients([Constants.emailContact])
+            mail.setSubject(Constants.emailSubject)
+            mail.setMessageBody("<br /><br /><br /><br /><br /><br /><br /><br /><br />\(Commons.getUserAgentForEmail())", isHTML: true)
+
+            present(mail, animated: true)
+        } else {
+            Commons.showMessage("SEND_EMAIL_UNAVAILABLE".localized)
+        }
     }
     
     func sendEmailWithRecipient(_ recipient: String) {

@@ -19,9 +19,7 @@ depends-top-level:
 - "Dictionary"
 - !private "Double"
 - !private "Float"
-- !private "FloatLiteralType"
 - !private "Int"
-- !private "IntegerLiteralType"
 - "Map"
 - !private "Mapper"
 - !private "NSNull"
@@ -274,7 +272,6 @@ depends-member:
 - ["12ObjectMapper6ToJSONC", "Set"]
 - ["12ObjectMapper6ToJSONC", "String"]
 - ["12ObjectMapper6ToJSONC", "basicType"]
-- ["12ObjectMapper6ToJSONC", "deinit"]
 - ["12ObjectMapper6ToJSONC", "init"]
 - ["12ObjectMapper6ToJSONC", "object"]
 - ["12ObjectMapper6ToJSONC", "objectArray"]

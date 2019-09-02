@@ -69,6 +69,8 @@ class OffertsVC: BTableViewController {
         
         
         let network = Network()
+        let a = Constants()
+        network.setConstants(constants: constantsParameters)
         network.setUrlParameters(urlParameters: parameters)
         network.endPointN(endPont: .OfferSearch) { (statusCode, value, objeto) -> (Void) in
             if StatusCode.validateStatusCode(code: statusCode.toInt() ?? 0) {

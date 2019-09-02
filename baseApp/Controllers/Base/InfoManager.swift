@@ -218,30 +218,33 @@ class InfoManager: NSObject {
         var color = UIColor.green
         itemsNotReadyArray.removeAll()
         contMotivos = 0
+        
+        let colorRojo = #colorLiteral(red: 1, green: 0.1493165817, blue: 0.1344394096, alpha: 1)
+        let colorVerde = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         for (i, section) in sections.enumerated() where section.showSection {
             for (j, item) in section.items.enumerated() where item.showItem {
-//                if item.required {
-//                    if item.type == .spinner {
-//                        if item.valueId.isEmpty {
-//                            color = colorRojo
-//                            ready = false
-//                            itemsNotReadyArray.append("\n" + item.title)
-//                        }
-//                        else {
-//                            color = colorVerde
-//                        }
-//                    }
-//                    else if item.type == .textField || item.type == .observations {
-//                        if item.value.isEmpty {
-//                            color = colorRojo
-//                            ready = false
-//                            readyAux2 = false
-//                            itemsNotReadyArray.append("\n" + item.title)
-//                        }
-//                        else {
-//                            color = colorVerde
-//                        }
-//                    }
+                if item.required {
+                    if item.type == .spinner {
+                        if item.valueId.isEmpty {
+                            color = colorRojo
+                            ready = false
+                            itemsNotReadyArray.append("\n" + item.title)
+                        }
+                        else {
+                            color = colorVerde
+                        }
+                    }
+                    else if item.type == .textField || item.type == .observations {
+                        if item.value.isEmpty {
+                            color = colorRojo
+                            ready = false
+                            readyAux2 = false
+                            itemsNotReadyArray.append("\n" + item.title)
+                        }
+                        else {
+                            color = colorVerde
+                        }
+                    }
 //                    else if item.type == .isTelefono {
 //                        if item.idTipoTelefono == "2" { // es el tipo oficina
 //                            if item.numExt.isEmpty {
@@ -326,11 +329,11 @@ class InfoManager: NSObject {
 //                    else if item.type == .autoInteres || item.type == .seguimiento {
 //                        ready = ready && item.tableItems.isReadyToSave()
 //                    }
-//                }
-//                else {
-//                    color = colorVerde
-//                }
-//                
+                }
+                else {
+                    color = colorVerde
+                }
+//
                 sections[i].items[j].titleColor = color
             }
         }
@@ -404,8 +407,10 @@ enum InfoItemType: String {
     case imageBtnCell = "imageBtnCell"
     case headColapsable = "headColapsable"
     
+    case pickerView = "pickerViewcell"
     //yopter
     case offertCell = "cellOffert"
+    
 }
 
 enum AutoInteresType {

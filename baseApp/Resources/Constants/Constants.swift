@@ -8,12 +8,19 @@
 
 import UIKit
 
+let constantsParameters:[String:Any] = ["baseURLString" : "https://fyf5tabava.execute-api.us-east-1.amazonaws.com/pro",
+                                         "newBaseURLString" : "https://tms93ofcxe.execute-api.us-east-1.amazonaws.com/pro",
+                                         "appID" : "1ed3d6e03ee03c04bf3365f808fc28f1",
+                                         "token" : "\(Settings.sharedInstance.getAccessToken() ?? "")",
+                                         "tokenYopter" : "\(Settings.sharedInstance.getOldToken() ?? "")"
+]
+
 struct Constants{
-    static let baseURLString = "https://fyf5tabava.execute-api.us-east-1.amazonaws.com/test"
-    static let newBaseURLString = "https://tms93ofcxe.execute-api.us-east-1.amazonaws.com/test"
-    static let appID = "453875783ea67b7733f19fa896ecf9a0"
+    static let baseURLString = "https://fyf5tabava.execute-api.us-east-1.amazonaws.com/pro"
+    static let newBaseURLString = "https://tms93ofcxe.execute-api.us-east-1.amazonaws.com/pro"
+    static let appID = "1ed3d6e03ee03c04bf3365f808fc28f1"
     static let appIDTienda = "1464721739"
-    static let appName = "Mi2"
+    static let appName = "Vyco Comunica perro"
     static let contentType = "application/json"
     static let accept = "application/json"
     static let uuid = "B9407F30-F5F8-466E-AFF9-25556B57FE6D"
@@ -34,6 +41,4 @@ struct Constants{
     static let defaultColor = UIColor.init(red: 180/255, green: 3/255, blue: 56/255, alpha: 1)
     static let secondColor = UIColor.init(red: 132/255, green: 132/255, blue: 132/255, alpha: 1)
     static let thirdColor = UIColor.black
-    static let nameAppTitle = "Yopter Cominica"
 }
-

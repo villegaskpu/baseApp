@@ -15,7 +15,6 @@ depends-top-level:
 - "ISO8601DateTransform"
 - !private "Locale"
 - "String"
-- "StringLiteralType"
 depends-member:
 - !private ["s7CVarArgP", "Locale"]
 - !private ["s7CVarArgP", "dateFormat"]

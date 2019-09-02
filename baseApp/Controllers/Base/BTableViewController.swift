@@ -59,6 +59,9 @@ protocol BTableViewDelegate {
     
     @objc optional func BTableView(tableItems: InfoManager, updateCell indexPath: IndexPath, value: String, action: String)
     @objc optional func BTableView(tableItems: InfoManager, deleteCell indexPath: IndexPath)
+    
+    
+    @objc optional func BTableView(tableItems: InfoManager, pikerViewDel Index: Int)
 }
 
 class BTableViewController: BViewController {
@@ -344,15 +347,22 @@ extension BTableViewController: botonDelegate {
 //        SOdelegate?.BTableView?(tableItems: tableItems, statusBarChange: indexPath, idStatus: idStatus)
 //    }
 //}
-////MARK: BUTTON DELEGATE METHODS
-//extension BTableViewController: datePickeProtocol2 {
-//
-//    func dateSelected(date: Date, dateString: String, indexPath: IndexPath) {
-//        tableItems.getItem(section: indexPath.section, at: indexPath.row).value = dateString
-//        tableItems.getItem(section: indexPath.section, at: indexPath.row).dateValue = date
-//        SOdelegate?.BTableView?(tableItems: tableItems, dateSelected: indexPath)
-//    }
-//}
+//MARK: BUTTON DELEGATE METHODS
+extension BTableViewController: datePickeProtocol2 {
+
+    func dateSelected(date: Date, dateString: String, indexPath: IndexPath) {
+        tableItems.getItem(section: indexPath.section, at: indexPath.row).value = dateString
+        tableItems.getItem(section: indexPath.section, at: indexPath.row).dateValue = date
+        BaseDelegate?.BTableView?(tableItems: tableItems, dateSelected: indexPath)
+    }
+}
+extension BTableViewController : pickerViewcellDelegate {
+    func pikerViewDel(_ index: Int) {
+        BaseDelegate?.BTableView?(tableItems: tableItems, pikerViewDel: index)
+    }
+    
+    
+}
 //
 //
 ////MARK: ADD DELEGATE METHODS

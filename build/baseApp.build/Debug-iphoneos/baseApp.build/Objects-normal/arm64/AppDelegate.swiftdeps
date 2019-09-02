@@ -500,6 +500,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "viewControllers"]
 - !private ["So18UITabBarControllerC", "init"]
+- !private ["So26UITabBarControllerDelegateP", "init"]
 - !private ["So16UITabBarDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "bounds"]
 - !private ["So18UITraitEnvironmentP", "init"]
@@ -643,6 +644,7 @@ depends-nominal:
 - !private "So8UIScreenC"
 - !private "So16UIStateRestoringP"
 - !private "So18UITabBarControllerC"
+- !private "So26UITabBarControllerDelegateP"
 - !private "So16UITabBarDelegateP"
 - !private "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"

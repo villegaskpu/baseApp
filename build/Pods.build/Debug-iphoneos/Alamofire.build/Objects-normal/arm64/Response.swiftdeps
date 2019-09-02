@@ -41,15 +41,19 @@ depends-top-level:
 - "DefaultDownloadResponse"
 - "DownloadResponse"
 - "Error"
+- !private "FloatLiteralType"
 - "HTTPURLResponse"
+- !private "IntegerLiteralType"
 - "Response"
 - "Result"
 - "String"
+- !private "StringLiteralType"
 - "TernaryPrecedence"
 - "Timeline"
 - "URL"
 - "URLRequest"
 - "URLSessionTaskMetrics"
+- !private "UnicodeScalarType"
 depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "joined"]

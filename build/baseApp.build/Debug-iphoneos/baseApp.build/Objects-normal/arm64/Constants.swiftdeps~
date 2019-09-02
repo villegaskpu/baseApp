@@ -1,5 +1,6 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "constantsParameters"
 - "Constants"
 provides-nominal:
 - "7baseApp9ConstantsV"
@@ -8,9 +9,13 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "/"
+- "??"
 - "CGFloat"
 - "Constants"
+- "Settings"
+- "String"
 - "UIColor"
+- "constantsParameters"
 depends-member:
 - ["s7CVarArgP", "black"]
 - ["s7CVarArgP", "init"]
@@ -36,7 +41,6 @@ depends-member:
 - ["7baseApp9ConstantsV", "language"]
 - ["7baseApp9ConstantsV", "lastNameToSignUp"]
 - ["7baseApp9ConstantsV", "movementTextFieldDistance"]
-- ["7baseApp9ConstantsV", "nameAppTitle"]
 - ["7baseApp9ConstantsV", "nameToSignUp"]
 - ["7baseApp9ConstantsV", "newBaseURLString"]
 - ["7baseApp9ConstantsV", "numberOfRowsPerPage"]
@@ -47,9 +51,13 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "black"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "appendInterpolation"]
+- ["s23CustomStringConvertibleP", "appendLiteral"]
 - ["s23CustomStringConvertibleP", "black"]
 - ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "init"]
+- ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- ["s26DefaultStringInterpolationV", "appendLiteral"]
 - ["SQ", "black"]
 - ["SQ", "init"]
 - ["SQ", "init"]
@@ -77,6 +85,13 @@ depends-member:
 - ["So14NSSecureCodingP", "black"]
 - ["So14NSSecureCodingP", "init"]
 - ["So14NSSecureCodingP", "init"]
+- ["7baseApp8SettingsC", "getAccessToken"]
+- ["7baseApp8SettingsC", "getOldToken"]
+- ["7baseApp8SettingsC", "sharedInstance"]
+- ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- ["s27StringInterpolationProtocolP", "appendLiteral"]
+- ["s16TextOutputStreamP", "appendInterpolation"]
+- ["s16TextOutputStreamP", "appendLiteral"]
 - ["So7UIColorC", "black"]
 - ["So7UIColorC", "init"]
 - ["So7UIColorC", "init"]
@@ -91,6 +106,7 @@ depends-nominal:
 - "7baseApp9ConstantsV"
 - "s28CustomDebugStringConvertibleP"
 - "s23CustomStringConvertibleP"
+- "s26DefaultStringInterpolationV"
 - "SQ"
 - "SH"
 - "So8NSCodingP"
@@ -100,12 +116,14 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - "So14NSSecureCodingP"
+- "7baseApp8SettingsC"
+- "s27StringInterpolationProtocolP"
+- "s16TextOutputStreamP"
 - "So7UIColorC"
 - "s26_ExpressibleByColorLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 depends-dynamic-lookup:
 depends-external:
-- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/Lottie.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
@@ -126,7 +144,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
-- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
@@ -160,7 +177,6 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoderHelper.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
-- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/Lottie-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
@@ -168,7 +184,6 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
-- "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/module.modulemap"
@@ -187,9 +202,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c6578ed393bed9cf85fccdb9336ad455"
+interface-hash: "ad40a317c362e3a8497752280df53bbd"

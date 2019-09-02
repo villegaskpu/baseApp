@@ -59,6 +59,8 @@ class TableViewCellFactory: NSObject {
                 return 50
             case .dobleCampo, .cellDemoRass:
                 return item.itemHeight
+            case .pickerView:
+                return 100
             case .precioCell:
                 return 80
             case .scoreTcell:
@@ -275,53 +277,30 @@ class TableViewCellFactory: NSObject {
 //                }
 //
 //                return cell
-//            case .datePicker:
-//                let cell = cell_ as! datePiker
-//                cell.dateString = item.value
-//                cell.datePicker.datePickerMode = item.typePicker
-//                cell.contraintHeight.constant = CGFloat(item.heightDatePicker)
-//                cell.indexPath = indexPath
-//                cell.delegate2 = delegate as? datePickeProtocol2
-//
-//                if item.title.isEmpty {
-//                    cell.contraintHeight.constant = 0.0
-//                }
-//                else {
-//                    cell.titulo.text = item.title
-//                }
-//
-//                if let fecha = toDateTime(item.value, formato: "yyyy-MM-dd HH:mm:ss") {
-//                    cell.datePicker.date = fecha
-//                }
-//                else if let fecha = toDateTime(item.value, formato: "yyyy-MM-dd HH:mm:ss", isSegimiento: true) {
-//                    cell.datePicker.date = fecha
-//                }
-//                cell.indexPath = indexPath
-//                cell.delegate2 = delegate as? datePickeProtocol2
-//                if item.rechazo
-//                {
-//                    cell.backgroundColor = UIColor.groupTableViewBackground
-//                    cell.titulo.alpha = 1.0
-//                    cell.titulo.text = item.title
-//                    cell.titulo.textColor = colorAzul
-//                }
-//                else
-//                {
-//                    cell.titulo.alpha = 0.0
-//                    if !item.showItem || !items.isSectionVisible(section: indexPath.section) || item.itemHeight == 0.0 {
-//                        cell.contenedor.alpha = 0.0
-//                    }
-//                }
-//                if item.posVenta
-//                {
-//                    let date = Date()
-//
-//                    let endDate = Calendar.current.date(byAdding: Calendar.Component.day, value: -45, to: date)!
-//                    cell.datePicker.maximumDate = date
-//                    cell.datePicker.minimumDate = endDate
-//                }
-//
-//                return cell
+            case .pickerView:
+                let cell = cell_ as! pickerViewcell
+                cell.items = item.tupleArray
+                cell.indexPath = indexPath
+                cell.delegate = delegate as? pickerViewcellDelegate
+                return cell
+            case .datePicker:
+                let cell = cell_ as! datePiker
+                cell.dateString = item.value
+                cell.datePicker.datePickerMode = item.typePicker
+                cell.contraintHeight.constant = CGFloat(item.heightDatePicker)
+                cell.indexPath = indexPath
+                cell.delegate2 = delegate as? datePickeProtocol2
+
+                if item.title.isEmpty {
+                    cell.contraintHeight.constant = 0.0
+                }
+                else {
+                    cell.titulo.text = item.title
+                }
+
+                cell.indexPath = indexPath
+                cell.delegate2 = delegate as? datePickeProtocol2
+                return cell
 //            case .statusbar:
 //                let cell = cell_ as! statusBarCell
 //                cell.label.text = item.title
@@ -587,5 +566,20 @@ class TableViewCellFactory: NSObject {
                 return UITableViewCell()
             }
         }
+    }
+    
+    static func toDateTime(_ fecha: String, formato:String = "yyyy-M-d HH:mm:ss", isSegimiento:Bool = false) -> Date? {
+        
+        let dateFormatter = DateFormatter()
+        
+//        if !isSegimiento {
+            let a = Locale(identifier: "en_US_POSIX")
+            dateFormatter.locale = a
+//        }
+        
+        dateFormatter.dateFormat = formato
+        let dateFromString = dateFormatter.date(from: fecha)
+        
+        return dateFromString
     }
 }

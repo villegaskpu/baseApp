@@ -20,6 +20,7 @@ depends-top-level:
 - !private "AF_INET"
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
 - "DispatchQueue"
 - "Equatable"
 - !private "MemoryLayout"

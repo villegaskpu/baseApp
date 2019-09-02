@@ -44,7 +44,7 @@ class HomeVC: BViewController {
         btnRegistrarseO.pulsate()
         let vc = RegistroVC()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.fadeTo(vc)
         }
     }
 }

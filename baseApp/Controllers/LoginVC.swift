@@ -139,6 +139,8 @@ class LoginVC: BViewController {
                         Settings.sharedInstance.setToken(value: obj.token ?? "")
                         Settings.sharedInstance.setOldToken(value: obj.tokenYopter ?? "")
                         Settings.sharedInstance.setAnonymous(value: "false")
+                        let vc = principalTabBarVC()
+                        self.navigationController?.fadeTo(vc)
                     } else {
                         Commons.showMessage("Error de comunicación")
                     }
@@ -154,6 +156,24 @@ class LoginVC: BViewController {
         } else {
             self.hideLoading()
         }
+    }
+    
+    
+    
+    @IBAction func btnCrearCuenta(_ sender: Any) {
+        let vc = RegistroVC()
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    @IBAction func btnRecuperarPassword(_ sender: Any) {
+        print("recuperar pasword")
+    }
+    
+    
+    @IBAction func btnIngresoAnonimo(_ sender: Any) {
+        print("ingreso anonimo")
     }
     
     

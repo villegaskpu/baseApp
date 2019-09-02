@@ -19,7 +19,6 @@ depends-top-level:
 - "String"
 - "UIColor"
 - !private "UInt32"
-- !private "UnicodeScalarType"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["SK", "count"]

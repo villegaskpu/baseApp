@@ -13,7 +13,6 @@ depends-top-level:
 - !private "..<"
 - !private "/"
 - "AssignmentPrecedence"
-- !private "BooleanLiteralType"
 - !private "CACurrentMediaTime"
 - !private "CAKeyframeAnimation"
 - "CALayer"
@@ -22,13 +21,10 @@ depends-top-level:
 - !private "CGFloat"
 - !private "CGRect"
 - "CGSize"
-- !private "FloatLiteralType"
 - !private "HUGE"
-- !private "IntegerLiteralType"
 - "NVActivityIndicatorAnimationBallPulseSync"
 - "NVActivityIndicatorAnimationDelegate"
 - !private "NVActivityIndicatorShape"
-- !private "StringLiteralType"
 - "UIColor"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TerminosYCondicionesVC" customModule="baseApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCloseO" destination="Lsz-Hn-Aj8" id="oHu-7U-c3d"/>
+                <outlet property="lTerminosText" destination="yn1-7r-VjV" id="Ocm-qp-Fog"/>
+                <outlet property="lTitulo" destination="OhK-yd-cI4" id="4V5-ZZ-2Cn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContent" destination="es1-Hn-4nT" id="B2l-g4-rIE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="es1-Hn-4nT">
+                    <rect key="frame" x="20" y="81" width="374" height="761"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwz-Z5-g2Z">
+                            <rect key="frame" x="8" y="20" width="358" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terminos y Condiciones." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhK-yd-cI4">
+                                    <rect key="frame" x="19" y="8" width="325" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsz-Hn-Aj8">
+                                    <rect key="frame" x="328" y="4" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="D6w-6x-IAr"/>
+                                        <constraint firstAttribute="height" constant="30" id="rBO-Tt-YuE"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="btnCloseA:" destination="-1" eventType="touchUpInside" id="T2P-lv-3qx"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Lsz-Hn-Aj8" firstAttribute="top" secondItem="Uwz-Z5-g2Z" secondAttribute="top" constant="4" id="2h2-nF-Qti"/>
+                                <constraint firstItem="OhK-yd-cI4" firstAttribute="top" secondItem="Uwz-Z5-g2Z" secondAttribute="top" constant="8" id="600-PW-bRH"/>
+                                <constraint firstAttribute="trailing" secondItem="OhK-yd-cI4" secondAttribute="trailing" constant="14" id="6A1-EP-xXX"/>
+                                <constraint firstItem="OhK-yd-cI4" firstAttribute="leading" secondItem="Uwz-Z5-g2Z" secondAttribute="leading" constant="19" id="auV-v2-hpD"/>
+                                <constraint firstAttribute="bottom" secondItem="OhK-yd-cI4" secondAttribute="bottom" constant="8" id="bWB-0R-I9I"/>
+                                <constraint firstAttribute="trailing" secondItem="Lsz-Hn-Aj8" secondAttribute="trailing" id="i54-g6-Gj5"/>
+                                <constraint firstAttribute="height" constant="40" id="yBd-ZJ-fNg"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abd-aT-BvK">
+                            <rect key="frame" x="8" y="68" width="358" height="685"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-7r-VjV">
+                                    <rect key="frame" x="8" y="8" width="342" height="669"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <mutableString key="text">Términos y Condiciones del Servicio de la Aplicación Vyco Comunica
+	
+Los servicios que esta aplicación te presta a través de YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V., para efectos del presente documento se le denominará YOPTER, cuyo domicilio fiscal está ubicado en Calle Juan Salvador Agraz No. 97 Piso 6-A Colonia Cuajimalpa, Delegación Cuajimalpa de Morelos C.P. 05000, Cd. de México.
+La utilización de esta aplicación te atribuye la condición de USUARIO e implica la aceptación el momento mismo en que aceptes los mismos.
+Definiciones plena y sin reservas de todas y cada una de las disposiciones incluidas en estos Términos y Condiciones, en la versión publicada por YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V. en
+APLICACIÓN: Es la aplicación móvil denominada Vyco Comunica  ingresada a registro  ante el Instituto Nacional de Derecho de Autor como Aplicación Yopter App IOS y Aplicación Yopter Android, que los USUARIOS descargan en sus celulares inteligentes para poder recibir, ofertas, promociones, descuentos y/o campañas publicitarias de diferentes comercios.
+PLATAFORMA YOPTER: Es el programa de marketing móvil en el cual el COMERCIO AFILIADO carga sus ofertas, promociones, descuentos y/o campañas publicitarias que desee enviar a los USUARIOS de la aplicación Vyco Comunica.
+USUARIO: Es la persona física que descarga la aplicación Vyco Comunicah en su celular inteligente para poder recibir ofertas, promociones, descuentos y/o campañas publicitarias de los diferentes COMERCIOS AFILIADOS que pertenezca a la red de YOPTER.
+COMERCIO AFILIADO: Es la persona física o moral que mediante la plataforma Yopter envía campañas publicitarias, promociones, ofertas y/o descuentos a los USUARIOS de la aplicación que son CLIENTES actuales y/o potenciales del COMERCIO AFILIADO.
+DATA: Es toda la información que Yopter obtenga y genere de los USUARIOS y/o COMERCIOS AFILIADOS.
+BEACON: Es un pequeño dispositivo que emite una señal en la onda corta de bluetooth para enviar las ofertas, promociones, descuentos y/o campañas publicitarias a la aplicación Vyco Comunica que tengan los USUARIOS descargada en sus celulares inteligentes.
+Funcionamiento de la aplicación Vyco Comunica
+Como USUARIO recibirás ofertas, promociones, campañas publicitarias y/o descuentos a la aplicación Vyco Comunica que tendrás descargada en tu celular inteligente. Todo lo que recibirás será de acuerdo a tus gustos, preferencias y comportamientos de consumo.
+Las ofertas, promociones, descuentos y/o campañas publicitarias también podrán ser enviadas a la aplicación Vyco Comunica si pasas cerca de un beacon instalado dentro de los COMERCIO AFILIADOS que pertenecen a la red de YOPTER.
+Uso de Datos
+Qué información nos compartes como USUARIO  y cómo la utiliza YOPTER
+Información de registro: Se trata de la información que necesitas inscribir en la aplicación para quedar registrado y poder acceder a la misma, como correo electrónico, número de celular y nombre de usuario.
+Información que decides compartir
+Información generada al usar nuestros servicios: Es toda la información de tus gustos, preferencias y comportamientos de consumo sobre los COMERCIOS AFILIADOS y tu información de registro.
+Uso de tu información por YOPTER
+Al registrarte, subir, enviar, compartir y/o adjuntar información en la aplicación Vyco Comunica, nos concedes autorización para usar, analizar, compartir, almacenar, generar, crear y explotar dicha información.
+Al aceptar estos términos y condiciones autorizas a YOPTER para que pueda compartir tu información a sus clientes y/o socios comerciales de acuerdo a lo que se establece en nuestro aviso de privacidad, el cual se encuentra disponible en www.yopter.com
+Protección de la privacidad de tus datos personales
+El Aviso de Privacidad y los presentes términos y condiciones explican el tratamiento de los datos personales y la protección de la privacidad al usar nuestro servicio y, en caso de cualquier inconformidad, puedes manifestarte de acuerdo como se te indica en el Aviso de Privacidad.
+Podemos compartir tus datos con nuestros proveedores, clientes y/o socios comerciales como TCI Telecoberturas Internacionales S.A. de C.V. (empresa del sector de telemarketing) con arreglo a obligaciones de confidencialidad compatibles con el presente y con la condición de que los terceros utilicen tus datos personales únicamente por cuenta de YOPTER y conforme a nuestras instrucciones.
+También podemos conservar o revelar información si consideramos que es razonablemente necesaria para cumplir con una ley, reglamento o requerimiento legal; para proteger los derechos o la propiedad de YOPTER. No obstante, lo dispuesto en el presente no pretende limitar cualquier defensa u objeción legal que tú puedas tener frente a un requerimiento de un tercero para que revele tu información.
+Además podemos compartir información de carácter no personal con el público en general, nuestros socios, anunciantes, clientes, proveedores y relacionados, por ejemplo: podemos compartir información públicamente para mostrar tendencias, gustos, preferencias sobre el uso general de nuestros servicios y/o servicios y/o productos de nuestros clientes.
+Modificaciones a nuestros servicios
+YOPTER podrá cambiar y/o mejorar los servicios constantemente, por ello es posible que agreguemos o eliminemos algunas funciones o características de la aplicación Vyco Comunica siempre para brindarte un mejor servicio.
+Costo de la aplicación Vyco Comunica
+La aplicación Vyco Comunica no tendrá ningún costo para ti como USUARIO. Podrás descargarla en versión IOS y Android, así como sus actualizaciones de forma gratuita.
+Propiedad Industrial
+Todas las marcas, nombres comerciales o signos distintivos de cualquier clase que aparecen en la aplicación son de explotación de YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V., sin que pueda entenderse que el uso o acceso a la aplicación Vyco Comunica atribuya el derecho alguno sobre las citadas marcas, nombres comerciales y/o signos distintivos. No podrá hacer ningún uso de dichas marcas sin contar con el previo consentimiento de los respectivos titulares de las mismas.
+Los contenidos difundidos a través de la aplicación, sus aplicativos y canales de comunicación son propiedad intelectual de YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V. Bajo ninguna circunstancia podrá interpretarse que adquieres derecho alguno sobre tales contenidos en virtud del uso que hagas de la aplicación y/o de los contenidos provistos a través de la misma. Cualquier redistribución, retransmisión, publicación o utilización de cualquier material o contenido provisto a través de la aplicación se encuentra estrictamente prohibida sin el previo consentimiento escrito del respectivo titular o autor.
+YOPTER y Vyco Comunica son una marca registrada ® por lo que quien lo use sin el consentimiento de su titular constituye una violación a lo dispuesto por la Ley de la Propiedad Industrial en vigor. Todas las demás marcas, leyendas y en general, signos distintivos, son propiedad de sus debidos titulares.
+Derechos de Autor
+YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V. está autorizada conforme a la Ley de Derechos de Autor vigente en la República Mexicana para la explotación exclusiva de la aplicación Yopter App IOS y Yopter App Android.
+Garantías y renuncias de responsabilidad
+YOPTER te ofrece sus servicios con un nivel de competencia y diligencia razonable y nos comprometemos contigo a tener un nivel de seguridad muy alto para proteger la información que nos confieres.
+YOPTER ni sus proveedores ofrecen garantías específicas sobre los servicios distintos a los establecidos de forma expresa en el presente.
+Cambios y actualizaciones
+YOPTER tiene la facultad de modificar los presentes términos y condiciones y cambios en la ley que afecten nuestros servicios, por lo que te avisaremos vía correo electrónico y/o por la aplicación de cualquier modificación sustancial. Las modificaciones y actualizaciones no se aplicarán con carácter retroactivo y entrarán en vigor en el momento de su publicación.
+Jurisdicción y leyes
+Estos términos y condiciones rigen la relación entre YOPTER y USUARIOS y no generan ningún derecho del que pueda ser beneficiario un tercero.
+Si realizas alguna violación a los presentes Términos y Condiciones y YOPTER no toma ninguna medida al respecto de forma inmediata, no se entenderá que YOPTER renuncia a los derechos de los que podamos disponer.
+En el caso de que algún punto del presente no sea de obligado cumplimiento, el resto de los Términos y Condiciones no se verán afectados.
+La legislación aplicable al presente son las leyes de los Estados Unidos Mexicanos y, en caso de cualquier litigio, se someterán a los tribunales competentes de la Ciudad de México,  renunciando a cualquier otro fuero que en razón de sus domicilios presentes o futuros o por cualquier otra causa pudieran corresponderles sin importar el país donde te encuentres como USUARIO o donde se te haya prestado el servicio.
+
+
+AVISO DE PRIVACIDAD
+YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V. con domicilio fiscal en Calle Juan Salvador Agraz No. 97 piso 6-A Colonia Cuajimalpa, Ciudad de México, C.P. 05000 según lo dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, hace de su conocimiento los términos y condiciones a que estarán sujetos sus datos personales, aun los sensibles, proporcionados a nuestra Empresa.
+Los datos obtenidos como correo electrónico, teléfono celular y nombre de usuario, ya sea de manera oral o escrita, a través de cualquier medio, de manera enunciativa mas no limitativa, tales como medios electrónicos, electromagnéticos, visuales, sonoros (por ejemplo correos electrónicos, llenado de formatos, llamadas telefónicas, contratos, correo, tarjetas de presentación, Aplicación Yopter App IOS o Aplicación Yopter Android en sus diferentes versiones o cualquier otro); se tratarán como fin primario para operación, administración, comercialización, análisis de comportamientos de consumo, envió de campañas publicitarias y otros fines análogos  de acuerdo con el objeto social de nuestra Empresa como por ejemplo marketing digital, desarrollo y aplicación de sistemas de internet y como fin secundario identificación de gustos y preferencias de consumo.
+Su consentimiento a este Aviso de Privacidad, además, autoriza de forma expresa YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V., para transferir sus datos personales a terceros (incluyendo los datos personales sensibles), sean nacionales o extranjeros, incluyendo TCI Telecoberturas Internacionales S.A. de C.V. del sector de telemarketing, siempre que los datos sean utilizados para los fines señalados en el presente Aviso. YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V. se compromete a dar a conocer los términos de este Aviso de Privacidad en términos de las disposiciones legales aplicables.
+Se hace de su conocimiento que YOPTER INNOVATION INTERNATIONAL S.A.P.I. S.A. DE C.V., cuenta con los soportes físicos y electrónicos, así como con las medidas de seguridad técnicas y administrativas para proteger y limitar el uso o divulgación de sus datos personales.
+El ejercicio de los derechos de acceso, rectificación, cancelación y oposición (ARCO), así como los derechos de divulgación y limitación de uso; o la revocación del consentimiento, por parte del Titular de los datos podrán efectuarse, en cualquier momento, por escrito dirigido a Sofía Escamilla Méndez al domicilio ubicado en Calle Juan Salvador Agraz No. 97 piso 6-A Colonia Cuajimalpa, Ciudad de México, C.P. 05000 o al correo electrónico protecciondatos@yopter.com ; debiendo señalar domicilio y/o correo electrónico para oír y recibir notificaciones; documento con el que acredita ser el Titular de los datos personales, señalar los datos y derechos precisos objeto de la solicitud.
+Nos reservamos el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente aviso de privacidad, para la atención de novedades legislativas o jurisprudenciales, políticas internas, nuevos requerimientos para la prestación u ofrecimiento de nuestros servicios o productos y prácticas del mercado. Estas modificaciones se darán a conocer en nuestras oficinas o mediante comunicados que nuestro personal le hará llegar, o bien en esta página de internet  o por cualquier otro medio autorizado.
+Al no manifestar oposición por escrito, ante YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V., se entiende que Usted ha leído y comprendido los términos y condiciones señalados en este Aviso de Privacidad; y expresa su entera conformidad con el tratamiento que hará nuestra Empresa de sus datos personales.
+Si Usted no está de acuerdo con los términos señalados en este Aviso de Privacidad, no proporcione sus datos personales a esta Empresa por ningún medio o en su caso le pedimos iniciar las acciones correspondientes para que nuestra Empresa no realice el tratamiento de sus datos personales, si es que ya contábamos con ellos.
+Para cualquier aclaración o duda al respecto, los datos de contacto son los siguientes: Sofía Escamilla Méndez al domicilio ubicado en Calle Juan Salvador Agraz No. 97 piso 6-A Colonia Cuajimalpa, Ciudad de México, C.P. 05000 o al correo electrónico protecciondatos@yopter.com.
+Última actualización 28-10-2017
+
+
+
+
+
+
+
+</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="yn1-7r-VjV" firstAttribute="top" secondItem="abd-aT-BvK" secondAttribute="top" constant="8" id="Cdg-Yl-p5n"/>
+                                <constraint firstAttribute="bottom" secondItem="yn1-7r-VjV" secondAttribute="bottom" constant="8" id="HmF-lp-8N2"/>
+                                <constraint firstItem="yn1-7r-VjV" firstAttribute="leading" secondItem="abd-aT-BvK" secondAttribute="leading" constant="8" id="OHO-2R-hxS"/>
+                                <constraint firstAttribute="trailing" secondItem="yn1-7r-VjV" secondAttribute="trailing" constant="8" id="v3S-le-Sbf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Uwz-Z5-g2Z" firstAttribute="leading" secondItem="es1-Hn-4nT" secondAttribute="leading" constant="8" id="4N6-vW-AHs"/>
+                        <constraint firstItem="abd-aT-BvK" firstAttribute="leading" secondItem="es1-Hn-4nT" secondAttribute="leading" constant="8" id="JYp-qJ-LEF"/>
+                        <constraint firstAttribute="trailing" secondItem="abd-aT-BvK" secondAttribute="trailing" constant="8" id="JZ6-7C-dVJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Uwz-Z5-g2Z" secondAttribute="trailing" constant="8" id="bl1-ei-eH5"/>
+                        <constraint firstItem="abd-aT-BvK" firstAttribute="top" secondItem="Uwz-Z5-g2Z" secondAttribute="bottom" constant="8" id="h1T-jV-kea"/>
+                        <constraint firstAttribute="bottom" secondItem="abd-aT-BvK" secondAttribute="bottom" constant="8" id="iHR-yl-OGK"/>
+                        <constraint firstItem="Uwz-Z5-g2Z" firstAttribute="top" secondItem="es1-Hn-4nT" secondAttribute="top" constant="20" id="zVI-UL-RGF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="es1-Hn-4nT" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-20" id="1Ch-0o-Gsl"/>
+                <constraint firstItem="es1-Hn-4nT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="BD3-yC-svE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="es1-Hn-4nT" secondAttribute="trailing" constant="20" id="Xpw-NC-TvS"/>
+                <constraint firstItem="es1-Hn-4nT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="37" id="aib-yZ-R6a"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="117.85714285714285"/>
+        </view>
+    </objects>
+</document>
