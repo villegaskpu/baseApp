@@ -7,20 +7,21 @@
 //
 
 import UIKit
+import a4SysCoreIOS
 
-let constantsParameters:[String:Any] = ["baseURLString" : "https://fyf5tabava.execute-api.us-east-1.amazonaws.com/pro",
-                                         "newBaseURLString" : "https://tms93ofcxe.execute-api.us-east-1.amazonaws.com/pro",
-                                         "appID" : "1ed3d6e03ee03c04bf3365f808fc28f1",
+let constantsParameters:[String:Any] = [ "appID" : "1ed3d6e03ee03c04bf3365f808fc28f1",
                                          "token" : "\(Settings.sharedInstance.getAccessToken() ?? "")",
                                          "tokenYopter" : "\(Settings.sharedInstance.getOldToken() ?? "")"
 ]
 
+let ENVIROMENTAPP:Environment = .test
+
 struct Constants{
-    static let baseURLString = "https://fyf5tabava.execute-api.us-east-1.amazonaws.com/pro"
-    static let newBaseURLString = "https://tms93ofcxe.execute-api.us-east-1.amazonaws.com/pro"
+    static let baseURLString = "https://fyf5tabava.execute-api.us-east-1.amazonaws.com/test"
+    static let newBaseURLString = "https://tms93ofcxe.execute-api.us-east-1.amazonaws.com/test"
     static let appID = "1ed3d6e03ee03c04bf3365f808fc28f1"
     static let appIDTienda = "1464721739"
-    static let appName = "Vyco Comunica perro"
+    static let appName = "Vyco Comunica"
     static let contentType = "application/json"
     static let accept = "application/json"
     static let uuid = "B9407F30-F5F8-466E-AFF9-25556B57FE6D"

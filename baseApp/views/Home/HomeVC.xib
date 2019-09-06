@@ -9,14 +9,24 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="baseApp" customModuleProvider="target">
             <connections>
                 <outlet property="HomeLogo" destination="FIl-do-oVk" id="Prz-Zx-SQN"/>
                 <outlet property="bgDark" destination="GbY-Z4-KvH" id="DnL-pR-69Q"/>
                 <outlet property="btnIniciarSesionO" destination="0cG-Q6-rUV" id="ZIh-E4-dfB"/>
-                <outlet property="btnRegistrarseO" destination="dKp-z2-h3C" id="Pxr-u3-xEi"/>
-                <outlet property="lVersion" destination="6y2-g3-FCM" id="fTS-4H-85J"/>
+                <outlet property="btnRegistrarseO" destination="gUe-P1-lV7" id="pUE-kt-0fT"/>
+                <outlet property="lNoTienesCuenta" destination="vOs-3M-N9d" id="nMw-Zb-v1M"/>
+                <outlet property="lTitulos" destination="HtY-Lu-zqf" id="Fep-tQ-pzD"/>
+                <outlet property="txtWelcome" destination="kzu-Jg-wRc" id="1HD-Wj-e2V"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,77 +38,94 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgDark" translatesAutoresizingMaskIntoConstraints="NO" id="GbY-Z4-KvH">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeLogoR" translatesAutoresizingMaskIntoConstraints="NO" id="FIl-do-oVk">
-                    <rect key="frame" x="20" y="58" width="374" height="224"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cG-Q6-rUV">
+                    <rect key="frame" x="45.5" y="674" width="323" height="53"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="224" id="h8D-Ox-q3Z"/>
+                        <constraint firstAttribute="height" constant="53" id="DNb-hb-Kch"/>
+                        <constraint firstAttribute="width" constant="323" id="pFT-D8-HcS"/>
                     </constraints>
-                </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Goz-Oo-pvD">
-                    <rect key="frame" x="20" y="626" width="374" height="160"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKp-z2-h3C">
-                            <rect key="frame" x="40" y="77" width="294" height="83"/>
-                            <state key="normal" image="btnRegister"/>
-                            <connections>
-                                <action selector="btnRegistrarse:" destination="-1" eventType="touchUpInside" id="ThZ-zT-o0l"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cG-Q6-rUV">
-                            <rect key="frame" x="40" y="0.0" width="294" height="83"/>
-                            <state key="normal" image="btnLogin"/>
-                            <connections>
-                                <action selector="btnIniciarSesion:" destination="-1" eventType="touchUpInside" id="RtA-ZK-VC6"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="btnLogin"/>
+                    <connections>
+                        <action selector="btnIniciarSesion:" destination="-1" eventType="touchUpInside" id="RtA-ZK-VC6"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No tienes una cuenta?  Crear cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOs-3M-N9d">
+                    <rect key="frame" x="105" y="753" width="204" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="160" id="6tg-ew-sEX"/>
-                        <constraint firstItem="dKp-z2-h3C" firstAttribute="width" secondItem="0cG-Q6-rUV" secondAttribute="width" id="CwY-dO-QEF"/>
-                        <constraint firstItem="dKp-z2-h3C" firstAttribute="leading" secondItem="Goz-Oo-pvD" secondAttribute="leading" constant="40" id="Lgw-8M-rE5"/>
-                        <constraint firstAttribute="trailing" secondItem="dKp-z2-h3C" secondAttribute="trailing" constant="40" id="OWI-KY-cwn"/>
-                        <constraint firstItem="0cG-Q6-rUV" firstAttribute="leading" secondItem="Goz-Oo-pvD" secondAttribute="leading" constant="40" id="PZn-jG-qqR"/>
-                        <constraint firstAttribute="bottom" secondItem="dKp-z2-h3C" secondAttribute="bottom" id="a16-4p-AHM"/>
-                        <constraint firstItem="0cG-Q6-rUV" firstAttribute="top" secondItem="Goz-Oo-pvD" secondAttribute="top" id="dH1-uF-Xsw"/>
-                        <constraint firstAttribute="trailing" secondItem="0cG-Q6-rUV" secondAttribute="trailing" constant="40" id="l1C-OW-FKY"/>
-                        <constraint firstAttribute="width" constant="374" id="o4K-Av-sTB"/>
-                        <constraint firstItem="dKp-z2-h3C" firstAttribute="height" secondItem="0cG-Q6-rUV" secondAttribute="height" id="sHh-Is-NFr"/>
+                        <constraint firstAttribute="height" constant="40" id="spe-G1-Nzk"/>
+                        <constraint firstAttribute="width" constant="204" id="uKy-90-R4X"/>
                     </constraints>
-                </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V.5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y2-g3-FCM">
-                    <rect key="frame" x="132" y="811" width="150" height="29"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="29" id="RMh-eb-TQ1"/>
-                        <constraint firstAttribute="width" constant="150" id="xdX-jf-X5E"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somos una nueva experiencia personalizada en asistencia profesional…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzu-Jg-wRc">
+                    <rect key="frame" x="49.5" y="609" width="315" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="DYh-JV-dqO"/>
+                        <constraint firstAttribute="width" constant="315" id="UMC-Nh-zw9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtY-Lu-zqf">
+                    <rect key="frame" x="49.5" y="520" width="315" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="315" id="nyM-NI-0Ph"/>
+                        <constraint firstAttribute="height" constant="80" id="wi1-N7-nRE"/>
+                    </constraints>
+                    <string key="text">Soluciones pensadas
+para tu empresa…</string>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUe-P1-lV7">
+                    <rect key="frame" x="238" y="753" width="92" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="92" id="4qB-bB-XXU"/>
+                        <constraint firstAttribute="height" constant="35" id="mCf-fm-IB8"/>
+                    </constraints>
+                    <connections>
+                        <action selector="btnRegistrarse:" destination="-1" eventType="touchUpInside" id="Y95-sQ-uiN"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FIl-do-oVk">
+                    <rect key="frame" x="112.5" y="171" width="189" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="189" id="WlD-kY-22u"/>
+                        <constraint firstAttribute="height" constant="68" id="ouQ-Qe-fEO"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6y2-g3-FCM" secondAttribute="bottom" constant="22" id="3HZ-tK-XJp"/>
+                <constraint firstItem="HtY-Lu-zqf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9tn-ac-NcN"/>
                 <constraint firstAttribute="bottom" secondItem="GbY-Z4-KvH" secondAttribute="bottom" id="ARE-jl-6df"/>
-                <constraint firstItem="FIl-do-oVk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="Doe-rx-RVu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vOs-3M-N9d" secondAttribute="bottom" constant="69" id="KJO-Kn-a7i"/>
                 <constraint firstItem="GbY-Z4-KvH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LDD-oz-fQz"/>
-                <constraint firstItem="6y2-g3-FCM" firstAttribute="top" secondItem="Goz-Oo-pvD" secondAttribute="bottom" constant="25" id="MvK-es-Nul"/>
-                <constraint firstItem="FIl-do-oVk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WDP-qG-QNb"/>
+                <constraint firstItem="vOs-3M-N9d" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TNN-zf-rBu"/>
+                <constraint firstItem="FIl-do-oVk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="127" id="Ua4-ew-beX"/>
+                <constraint firstItem="0cG-Q6-rUV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WZ1-Iq-HLq"/>
                 <constraint firstItem="GbY-Z4-KvH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Y0h-PZ-gMx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FIl-do-oVk" secondAttribute="trailing" constant="20" id="a1w-pa-9xI"/>
-                <constraint firstItem="6y2-g3-FCM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gWu-hg-WBe"/>
+                <constraint firstItem="kzu-Jg-wRc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zwf-TR-lne"/>
+                <constraint firstItem="FIl-do-oVk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="an2-f5-nH9"/>
+                <constraint firstItem="0cG-Q6-rUV" firstAttribute="top" secondItem="kzu-Jg-wRc" secondAttribute="bottom" constant="21" id="bvr-dW-qZW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gUe-P1-lV7" secondAttribute="trailing" constant="84" id="g6p-9C-dZE"/>
+                <constraint firstItem="kzu-Jg-wRc" firstAttribute="top" secondItem="HtY-Lu-zqf" secondAttribute="bottom" constant="9" id="lP8-xb-t88"/>
                 <constraint firstItem="GbY-Z4-KvH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rsF-x9-E2G"/>
-                <constraint firstItem="Goz-Oo-pvD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uoQ-A7-zav"/>
+                <constraint firstItem="vOs-3M-N9d" firstAttribute="top" secondItem="0cG-Q6-rUV" secondAttribute="bottom" constant="26" id="vDE-gR-K9B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gUe-P1-lV7" secondAttribute="bottom" constant="74" id="xnW-Lw-v1c"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
         </view>
     </objects>
     <resources>
-        <image name="HomeLogoR" width="415" height="340"/>
-        <image name="bgDark" width="376" height="671.5"/>
-        <image name="btnLogin" width="295" height="83"/>
-        <image name="btnRegister" width="295" height="65"/>
+        <image name="bgDark" width="414" height="736"/>
+        <image name="btnLogin" width="323" height="53"/>
+        <image name="homeLogo" width="518.5" height="203"/>
     </resources>
 </document>

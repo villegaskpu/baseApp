@@ -10,6 +10,7 @@ import Foundation
 import CoreTelephony
 import UIKit
 import AdSupport
+import a4SysCoreIOS
 
 class Commons{
     
@@ -439,6 +440,53 @@ class Commons{
     }
     static func wakeup(advertisementId:String?)
     {
+        
+        if Settings.sharedInstance.getSesion() {
+            print("Settings.sharedInstance.getDeviceId()APP: \(Settings.sharedInstance.getDeviceId())")
+            let network = Network()
+            let parameters = Requests.createWakeUpRequest(advertisementId: advertisementId)
+            
+            network.setEnvironment(Environment: ENVIROMENTAPP)
+            network.setConstants(constants: constantsParameters)
+            network.setUrlParameters(urlParameters: parameters)
+            network.endPointN(endPont: .WakeUp) { (statusCode, value, objeto) -> (Void) in
+                
+                
+                
+                let statusC = statusCode.toInt() ?? 0
+                
+                if statusC >= 200 && statusC < 300 {
+                    print("ya estufas: \(value)")
+                    if let obj = objeto as? WakeUpResponse { // no se forsa el cast para evitar que truene el app
+                        print("SetValues")
+                        
+                        let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+                        let build = Bundle.main.infoDictionary!["CFBundleVersion"] as! String
+                        let storeVersion = obj.iOSVersion ?? ""
+
+                        let ver = currentVersion + "-" + build
+                        let resultCompare = Commons.compareVersion(local: ver, storeVersion)
+                        Settings.sharedInstance.setAppActualizada(value: resultCompare)
+    //                    NotificationCenter.default.post(.init(name: .AppActualizadaMessaging))
+                        
+                    } else {
+//                        Commons.showMessage("Error de comunicación")
+                    }
+                }else {
+                    if let obj = objeto as? ApiError {
+                        if obj.code == "500" {
+//                            Commons.showMessage("GLOBAL_ERROR".localized, duration: .long)
+                        } else {
+                            Commons.showMessage("\(obj.message)", duration: .long)
+                        }
+                    } else {
+                        Commons.showMessage("Error de comunicación")
+                    }
+                }
+            }
+        }
+    }
+        
 //        if ((Settings.sharedInstance.getToken() != nil &&
 //            Settings.sharedInstance.getToken() != "" &&
 //            Settings.sharedInstance.getUsername() != nil &&
@@ -464,7 +512,6 @@ class Commons{
 //                }
 //            }
 //        }
-    }
     
     static func identifierForAdvertising() -> String? {
         guard ASIdentifierManager.shared().isAdvertisingTrackingEnabled else{
@@ -480,6 +527,7 @@ class Commons{
         let emailTest = NSPredicate.init(format: "SELF MATCHES %@", emailRegex)
         return emailTest.evaluate(with: test)
     }
+    
     
 }
 struct Screen {

@@ -10,6 +10,7 @@ depends-top-level:
 - !private "-"
 - !private "/"
 - "AssignmentPrecedence"
+- !private "BooleanLiteralType"
 - "CAAnimation"
 - !private "CAKeyframeAnimation"
 - "CALayer"
@@ -19,11 +20,14 @@ depends-top-level:
 - !private "CGFloat"
 - "CGRect"
 - "CGSize"
+- !private "FloatLiteralType"
 - !private "HUGE"
+- !private "IntegerLiteralType"
 - !private "NSValue"
 - "NVActivityIndicatorAnimationBallZigZag"
 - "NVActivityIndicatorAnimationDelegate"
 - !private "NVActivityIndicatorShape"
+- !private "StringLiteralType"
 - "UIColor"
 depends-member:
 - !private ["So8CAActionP", "duration"]

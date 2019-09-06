@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "baseApp/views/yopterCominicacells/cellOffert.swift"
-            timestampString = "588636879.8950551"
+            timestampString = "589393986.0510679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
             landmarkName = "saveOrDelete(_:)"
             landmarkType = "7">
             <Locations>
@@ -42,11 +42,11 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "589158629.6374511"
+                  timestampString = "589474991.230395"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "272"
-                  endingLineNumber = "272"
+                  startingLineNumber = "305"
+                  endingLineNumber = "305"
                   offsetFromSymbolStart = "7072">
                </Location>
                <Location
@@ -57,11 +57,11 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "589158629.640275"
+                  timestampString = "589474991.234061"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "272"
-                  endingLineNumber = "272"
+                  startingLineNumber = "305"
+                  endingLineNumber = "305"
                   offsetFromSymbolStart = "10896">
                </Location>
             </Locations>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "baseApp/views/yopterCominicacells/cellOffert.swift"
-            timestampString = "588637654.838066"
+            timestampString = "589393986.0511971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
             landmarkName = "saveOrDelete(_:)"
             landmarkType = "7">
             <Locations>
@@ -90,11 +90,11 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "589158629.64807"
+                  timestampString = "589474991.24203"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "278"
-                  endingLineNumber = "278"
+                  startingLineNumber = "311"
+                  endingLineNumber = "311"
                   offsetFromSymbolStart = "7804">
                </Location>
                <Location
@@ -105,11 +105,11 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "589158629.6514111"
+                  timestampString = "589474991.244908"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "279"
-                  endingLineNumber = "279"
+                  startingLineNumber = "312"
+                  endingLineNumber = "312"
                   offsetFromSymbolStart = "280">
                </Location>
             </Locations>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "baseApp/views/yopterCominicacells/cellOffert.swift"
-            timestampString = "588637796.782016"
+            timestampString = "589393986.051302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
             landmarkName = "saveOrDelete(_:)"
             landmarkType = "7">
          </BreakpointContent>

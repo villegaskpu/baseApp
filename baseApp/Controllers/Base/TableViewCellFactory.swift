@@ -66,7 +66,7 @@ class TableViewCellFactory: NSObject {
             case .scoreTcell:
                 return 190
             case .offertCell:
-                return 140
+                return 170
             default:
                 return item.itemHeight
             }

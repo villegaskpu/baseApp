@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "icoNew.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "icoNew@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Ellipse 821@3x.png",
+      "filename" : "icoNew@3x.png",
       "scale" : "3x"
     }
   ],

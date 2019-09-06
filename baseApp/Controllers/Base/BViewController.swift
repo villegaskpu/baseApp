@@ -9,12 +9,14 @@
 import UIKit
 import MessageUI
 import NVActivityIndicatorView
+import Lottie
 
 public class BViewController: UIViewController {
 
 //    public var sessionManager = SessionManager()
     private let loadingContainer = UIView()
     private var messageView = UIView()
+    let CARGANDO = UIView()   //variable global
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,5 +93,53 @@ public class BViewController: UIViewController {
     
     @objc(mailComposeController:didFinishWithResult:error:) func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
+    }
+    
+    func cargandoItem(_ target: AnyObject, message: String = "", activity: Bool, name: String = "gps") {
+        
+        for subview in CARGANDO.subviews {
+            subview.removeFromSuperview()
+        }
+        
+        CARGANDO.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+        
+        CARGANDO.backgroundColor = UIColor.white
+        CARGANDO.alpha = 0.0
+        
+        let cw: UIWindow = UIApplication.shared.keyWindow!
+        cw.addSubview(CARGANDO)
+        
+        let loading = AnimationView(name: name)
+        loading.frame = CGRect(x: Screen.midX - 100, y: Screen.midY - 100, width: 200, height: 200)
+        loading.contentMode = .scaleAspectFit
+        loading.loopMode = .loop
+        loading.play()
+        
+        CARGANDO.addSubview(loading)
+        
+        if !message.isEmpty {
+            let LabelText = UILabel()
+            LabelText.frame = CGRect(x: Screen.midX - 100, y: Screen.midY + 150, width: 200, height: 100)
+            LabelText.numberOfLines = 0
+            LabelText.text = message
+            LabelText.backgroundColor = UIColor.clear
+            LabelText.textAlignment = .center
+            LabelText.font = UIFont(name: Font.FONT_BOLD(), size: 20.0)
+            LabelText.textColor = UIColor.black
+            CARGANDO.addSubview(LabelText)
+        }
+        
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.CARGANDO.alpha = 1.0
+        })
+    }
+    
+    func removeLoading() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.CARGANDO.alpha = 0.0
+        },completion: { void in
+            self.CARGANDO.removeFromSuperview()
+        })
     }
 }

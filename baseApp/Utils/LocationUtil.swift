@@ -31,52 +31,23 @@ class LocationUtil : NSObject, CLLocationManagerDelegate
     
     private override init() {
         super.init()
+        
         self.locationManager = CLLocationManager()
         guard let locationManager = self.locationManager else {
             return
         }
-//        if CLLocationManager.authorizationStatus() == .notDetermined {
-//            // you have 2 choice
-//            // 1. requestAlwaysAuthorization
-//            // 2. requestWhenInUseAuthorization
-//            locationManager.requestAlwaysAuthorization()
-//        }
         
-        let status = CLLocationManager.authorizationStatus()
-        switch status
-        {
-        case .authorizedAlways, .authorizedWhenInUse, .authorized:
-            print("permitido")
-            break
-        case .denied:
-            let alert = YopterAlerts(title: "AVISO", message: "Para poder continuar es necesario acceder a tu ubicación. Activa los servicios de ubicación en los ajustes del sistema.", leftButtonTitle: "CANCELAR", rightButtonTitle: "IR A AJUSTES")
-//            alert.delegate = self
-            alert.presentAlert()
-        case .restricted:
-            let alert = YopterAlerts(title: "AVISO", message: "Para poder continuar es necesario acceder a tu ubicación. Activa los servicios de ubicación en los ajustes del sistema.", leftButtonTitle: "CANCELAR", rightButtonTitle: "IR A AJUSTES")
-//            alert.delegate = self
-            alert.presentAlert()
-        case .notDetermined:
-//            let alert = YopterAlerts(title: "AVISO", message: "Para poder continuar con la demo, es necesario acceder a tu ubicación. Activa los servicios de ubicación en los ajustes del sistema.", leftButtonTitle: "CANCELAR", rightButtonTitle: "IR A AJUSTES")
-////            alert.delegate = self
-//            alert.presentAlert()
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            // you have 2 choice
+            // 1. requestAlwaysAuthorization
+            // 2. requestWhenInUseAuthorization
             locationManager.requestAlwaysAuthorization()
         }
+        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest // The accuracy of the location data
         locationManager.allowsBackgroundLocationUpdates = true
         locationManager.delegate = self
-        locationManager.startUpdatingLocation()
-        locationManager.startMonitoringSignificantLocationChanges()
-    }
-    
-    func permisoAutorizado() {
-        self.locationManager = CLLocationManager()
-        guard let locationManager = self.locationManager else {
-            return
-        }
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest // The accuracy of the location data
-        locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.delegate = self
+        locationManager.distanceFilter = 100
         locationManager.startUpdatingLocation()
         locationManager.startMonitoringSignificantLocationChanges()
     }
@@ -297,7 +268,7 @@ class LocationUtil : NSObject, CLLocationManagerDelegate
         guard let delegate = self.delegate else {
             return
         }
-        
+        self.currentLocation = currentLocation
         delegate.tracingLocation(currentLocation: currentLocation)
     }
     

@@ -13,21 +13,47 @@ class HomeVC: BViewController {
     @IBOutlet weak var bgDark: UIImageView!
     @IBOutlet weak var HomeLogo: UIImageView!
     
+    @IBOutlet weak var lNoTienesCuenta: UILabel!
+    
+    @IBOutlet weak var txtWelcome: UILabel!
+    
+    @IBOutlet weak var lTitulos: UILabel!
+    
+    
     @IBOutlet weak var btnIniciarSesionO: UIButton!
     
     @IBOutlet weak var btnRegistrarseO: UIButton!
     
     
-    @IBOutlet weak var lVersion: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        lVersion.font = UIFont(name: Font.FONT_REGULAR(), size: Font.SIZE_FONT_REGULAR())
-        lVersion.adjustsFontSizeToFitWidth = true
-        lVersion.minimumScaleFactor = 0.5
-        lVersion.text = Commons.version()
+        
+        setAttributedText()
+    }
+    
+    private func setAttributedText() {
+        let attributedString = NSMutableAttributedString(string: "No tienes una cuenta?  Crear cuenta", attributes: [
+            .font: UIFont(name: "Roboto-Bold", size: 13.0)!,
+            .foregroundColor: UIColor.white,
+            .kern: -0.21
+            ])
+        attributedString.addAttribute(.font, value: UIFont(name: "Roboto-Regular", size: 13.0)!, range: NSRange(location: 23, length: 12))
+        attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 23, length: 12))
+        
+        lNoTienesCuenta.attributedText = attributedString
+        
+        
+        txtWelcome.font = UIFont.textWelcome
+        txtWelcome.textColor = UIColor.colorWhite
+        txtWelcome.shadow(height: 4, width: 2, shadowOpacity: 1.0, cornerRadius: 1.0, shadowRadius: 2.0, color: UIColor.black)
+        
+        lTitulos.font = UIFont.titulos
+        lTitulos.textColor = UIColor.colorWhite
+        
+        lTitulos.shadow(height: 2, width: 2, shadowOpacity: 1.0, cornerRadius: 1.0, shadowRadius: 3.0, color: UIColor.black.withAlphaComponent(0.5))
     }
     
     @IBAction func btnIniciarSesion(_ sender: Any) {
@@ -41,10 +67,7 @@ class HomeVC: BViewController {
     
     @IBAction func btnRegistrarse(_ sender: Any) {
         print("btnRegistrarse")
-        btnRegistrarseO.pulsate()
         let vc = RegistroVC()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.navigationController?.fadeTo(vc)
-        }
+        self.navigationController?.fadeTo(vc)
     }
 }

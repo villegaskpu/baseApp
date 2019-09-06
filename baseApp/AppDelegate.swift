@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         print("ver si es login : \(Settings.sharedInstance.getSesion())")
+        LocationUtil.sharedInstance.startUpdatingLocation()
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.goNext()
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Listo"
@@ -29,8 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         if Settings.sharedInstance.getSesion() { // si la sesion esta iniciada
-            let vc = principalTabBarVC() as UIViewController
+//            let vc = principalTabBarVC() as UIViewController
+            let vc = TemporalHome() as UIViewController
             navigationController = UINavigationController(rootViewController: vc)
+            navigationController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             var viewControllers = navigationController.viewControllers
             viewControllers.insert(vcHome, at: 0)
             navigationController.viewControllers = viewControllers
@@ -60,10 +63,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        if Settings.sharedInstance.getSesion() {
+//            Commons.wakeup(advertisementId: Commons.identifierForAdvertising())
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        if Settings.sharedInstance.getSesion() {
+//            Commons.wakeup(advertisementId: Commons.identifierForAdvertising())
+        }
     }
     
     // MARK: createRootViewController

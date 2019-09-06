@@ -20,8 +20,8 @@ class cellOffert: UITableViewCell {
     
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var offertTitle: UILabel!
-    @IBOutlet weak var offertDistance: UILabel!
     
+    @IBOutlet weak var lTituloOferta: UILabel!
     
     // botones
     @IBOutlet weak var likeImage: UIImageView!
@@ -31,7 +31,13 @@ class cellOffert: UITableViewCell {
     // imagenes
     @IBOutlet weak var newIndicator: UIImageView!
     @IBOutlet weak var offertImage: UIImageView!
-    @IBOutlet weak var companyLogo: UIImageView!
+    
+    @IBOutlet weak var viewContentImage: UIView!
+    
+    
+    @IBOutlet weak var constraintLTitulo: NSLayoutConstraint!
+    
+    @IBOutlet weak var constraintWsaveorDelete: NSLayoutConstraint!
     
     var isOffert = true
     var indexPath:IndexPath?
@@ -41,24 +47,46 @@ class cellOffert: UITableViewCell {
         didSet {
             guard let off = offer else {return}
             companyName.text = off.commerce.name
-            offertTitle.text = off.title
+            offertTitle.text = off.offerDescription
+            setShadowImage()
             validDistanceOfert(off: off)
             setImageLogo(infoCell: off)
             setActions()
             setIconButtons()
+            setStyle()
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        offertDistance.adjustsFontSizeToFitWidth = true
-        offertDistance.minimumScaleFactor = 0.3
         newIndicator.isHidden = true
+        setShadowImage()
     }
     
     override func prepareForReuse() {
         newIndicator.isHidden = true
+        setStyle()
+        setShadowImage()
+    }
+    
+    private func setShadowImage() {
+        offertImage.layer.cornerRadius = 5
+        Funciones.addShadow(view: viewContentImage, shadowOpacity: 0.5, cornerRadius: 2.0, color:UIColor.black)
+    }
+    
+    private func setStyle() {
+        lTituloOferta.font = UIFont.textCategoryOferta
+        lTituloOferta.textColor = UIColor.brownishOrange
+        
+        companyName.font = UIFont.titleOferta
+        offertTitle.font = UIFont.textDescription
+        offertTitle.textColor = UIColor.warmGrey
+        
+        
+        let attributedString = NSAttributedString(string: self.offer?.offerDescription ?? "", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        offertTitle.attributedText = attributedString
     }
     
     
@@ -80,21 +108,22 @@ class cellOffert: UITableViewCell {
     private func validDistanceOfert(off:Offer) {
         if let distance = off.commerce.stores.first?.distance {
             if distance > 50 {
-                if let city = off.commerce.stores.first?.city {
-                    offertDistance.text = String(format: "%@", city)
+                if let _ = off.commerce.stores.first?.city {
+                    constraintLTitulo.constant = 0
                 } else {
-                    offertDistance.text = String(format: "%.02f km", distance)
+                    constraintLTitulo.constant = 0
                 }
             } else {
-                offertDistance.text = String(format: "%.02f km", distance)
+                constraintLTitulo.constant = 0
             }
         } else {
-            offertDistance.isHidden = true
+            constraintLTitulo.constant = 0
         }
-        
+
         if off.virtual > 0
         {
-            offertDistance.text = "Oferta web"
+            lTituloOferta.text = "OFERTA WEB"
+            constraintLTitulo.constant = 0
         }
     }
     
@@ -103,9 +132,6 @@ class cellOffert: UITableViewCell {
         var offerImageP = infoCell.images.first?.s3URL != "" ? (infoCell.images.first?.imageURL != "" ? infoCell.images.first?.imageURL : nil) : nil
         offerImageP = offerImageP ?? commerceLogo
         commerceLogo = offerImageP == commerceLogo ? nil : commerceLogo
-        
-        _ = commerceLogo != nil ? (companyLogo.sd_setImage(with: URL.init(string: (commerceLogo?.replacingOccurrences(of: "{1}", with: "100").replacingOccurrences(of: "{2}", with: "full"))!), placeholderImage: nil)) : (companyLogo.isHidden = true)
-        
         
         if offerImageP != nil {
             offertImage.sd_setImage(with: URL.init(string: (offerImageP?.replacingOccurrences(of: "{1}", with: "320").replacingOccurrences(of: "{2}", with: "full"))!), placeholderImage: nil)
@@ -136,26 +162,32 @@ class cellOffert: UITableViewCell {
                 likeImage.image = UIImage(named: "like")
                 dislikeImage.image = UIImage(named: "dislike_on")
                 saveOrDeleteImage.isHidden = true
+                constraintWsaveorDelete.constant = 0
             case 5:
                 puedeSerFevoriota = 5
                 likeImage.image = UIImage(named: "like_on")
                 dislikeImage.image = UIImage(named: "dislike")
                 saveOrDeleteImage.image = UIImage(named: "star_off")
                 saveOrDeleteImage.isHidden = false
+                constraintWsaveorDelete.constant = 30
             default:
                 likeImage.image = UIImage(named: "like")
                 dislikeImage.image = UIImage(named: "dislike")
                 saveOrDeleteImage.isHidden = true
+                constraintWsaveorDelete.constant = 0
             }
 
             
             if infoCell.favorite > 0 {
                 saveOrDeleteImage.isHidden = false
+                constraintWsaveorDelete.constant = 30
                 saveOrDeleteImage.image = UIImage(named: "star")
             } else {
                 if puedeSerFevoriota == 5 {
                     saveOrDeleteImage.isHidden = false
+                    constraintWsaveorDelete.constant = 30
                 } else {
+                    constraintWsaveorDelete.constant = 0
                     saveOrDeleteImage.isHidden = true
                 }
             }
@@ -165,6 +197,7 @@ class cellOffert: UITableViewCell {
                 likeImage.isHidden = true
                 dislikeImage.isHidden = true
                 saveOrDeleteImage.isHidden = false
+                constraintWsaveorDelete.constant = 30
             }
         }
     }

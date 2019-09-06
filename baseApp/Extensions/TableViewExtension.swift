@@ -13,7 +13,7 @@ extension UITableView {
     
     open override func awakeFromNib() {
         super.awakeFromNib()
-        
+        separatorColor = UIColor.clear
         tableHeaderView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 1.0))
         tableFooterView = UIView()
     }

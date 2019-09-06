@@ -7,23 +7,44 @@
 //
 
 import UIKit
+import CoreLocation
 
-class principalTabBarVC: UITabBarController {
+protocol principalTabBarVCDelegate {
+    func setParameters(parametares: [String:Any])
+}
 
+class principalTabBarVC: BTabBarVC {
+
+    var delegateTab:principalTabBarVCDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        setControllers()
+        
+        self.view.backgroundColor = UIColor.white
+        showLoading()
+        
+        self.hideLoading()
+        self.setControllers()
     }
     
     func setControllers() {
         let ofertas = OffertsVC()
+//        ofertas = self
         ofertas.tabBarItem = UITabBarItem(title: "Ofertas", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_bold"))
         
         let favoritos = FavoritosVC()
         favoritos.tabBarItem = UITabBarItem(title: "Favoritas", image: UIImage(named: "star_icon"), selectedImage: UIImage(named: "star_iconBold"))
+        
+        let filtros = FiltrosVC()
+        filtros.tabBarItem = UITabBarItem(title: "Filtro", image: UIImage(named: "filter_icon"), selectedImage: UIImage(named: "filter_iconBold"))
+        
+        
+        let Mapa = MapaVC()
+        Mapa.view.backgroundColor = UIColor.red
+        Mapa.tabBarItem = UITabBarItem(title: "Mapa", image: UIImage(named: "nearby_icon"), selectedImage: UIImage(named: "nearby_iconBold"))
     
-        self.viewControllers = [ofertas,favoritos]
+        self.viewControllers = [ofertas,filtros,favoritos, Mapa]
     }
 }
 
@@ -85,5 +106,11 @@ class MyTransition: NSObject, UIViewControllerAnimatedTransitioning {
             if thisVC == vc { return index }
         }
         return nil
+    }
+}
+
+extension principalTabBarVC{
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("presionado: \(item)")
     }
 }

@@ -169,6 +169,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreGraphics;
 @import CoreLocation;
 @import Foundation;
+@import MapKit;
 @import MessageUI;
 @import ObjectiveC;
 @import UIKit;
@@ -204,9 +205,17 @@ SWIFT_CLASS("_TtC7baseApp11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class MFMailComposeViewController;
 @class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC7baseApp9BTabBarVC")
+@interface BTabBarVC : UITabBarController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MFMailComposeViewController;
 
 SWIFT_CLASS("_TtC7baseApp15BViewController")
 @interface BViewController : UIViewController
@@ -311,6 +320,32 @@ SWIFT_CLASS("_TtC7baseApp11FavoritosVC")
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems deleteCell:(NSIndexPath * _Nonnull)indexPath;
 @end
 
+@class UILabel;
+@class UICollectionView;
+
+SWIFT_CLASS("_TtC7baseApp9FiltrosVC")
+@interface FiltrosVC : BViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified LTitulo;
+@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified collectionView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified lViewTitulo;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UICollectionViewCell;
+@class UICollectionViewLayout;
+
+@interface FiltrosVC (SWIFT_EXTENSION(baseApp)) <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+- (void)viewWillAppear:(BOOL)animated;
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didHighlightItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
 
 SWIFT_CLASS("_TtC7baseApp4Font")
 @interface Font : NSObject
@@ -331,9 +366,11 @@ SWIFT_CLASS("_TtC7baseApp6HomeVC")
 @interface HomeVC : BViewController
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified bgDark;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified HomeLogo;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lNoTienesCuenta;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified txtWelcome;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lTitulos;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnIniciarSesionO;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnRegistrarseO;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lVersion;
 - (void)viewDidLoad;
 - (IBAction)btnIniciarSesion:(id _Nonnull)sender;
 - (IBAction)btnRegistrarse:(id _Nonnull)sender;
@@ -396,6 +433,33 @@ SWIFT_CLASS("_TtC7baseApp7LoginVC")
 
 
 
+
+
+@class MKMapView;
+
+SWIFT_CLASS("_TtC7baseApp6MapaVC")
+@interface MapaVC : BViewController
+@property (nonatomic, weak) IBOutlet MKMapView * _Null_unspecified mapView;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface MapaVC (SWIFT_EXTENSION(baseApp))
+- (void)handleSeeOffersButton:(UIButton * _Nonnull)btn;
+@end
+
+@protocol MKAnnotation;
+
+@interface MapaVC (SWIFT_EXTENSION(baseApp)) <MKMapViewDelegate>
+- (MKAnnotationView * _Nullable)mapView:(MKMapView * _Nonnull)mapView viewForAnnotation:(id <MKAnnotation> _Nonnull)annotation SWIFT_WARN_UNUSED_RESULT;
+- (void)mapView:(MKMapView * _Nonnull)mapView didSelectAnnotationView:(MKAnnotationView * _Nonnull)view;
+- (IBAction)centerInUserLocation:(id _Nonnull)sender;
+- (IBAction)updateOffers:(id _Nonnull)sender;
+@end
+
 @protocol UIViewControllerContextTransitioning;
 
 SWIFT_CLASS("_TtC7baseApp12MyTransition")
@@ -407,13 +471,20 @@ SWIFT_CLASS("_TtC7baseApp12MyTransition")
 @end
 
 
+
+
 SWIFT_CLASS("_TtC7baseApp9OffertsVC")
 @interface OffertsVC : BTableViewController
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lTitulo;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified lViewTitulo;
 - (void)viewDidLoad;
+- (void)openFromMap:(NSNotification * _Nonnull)notification;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 @interface OffertsVC (SWIFT_EXTENSION(baseApp)) <BTableViewDelegate>
@@ -565,20 +636,20 @@ SWIFT_CLASS("_TtC7baseApp11TTGSnackbar")
 
 
 
-
-
 @interface TTGSnackbar (SWIFT_EXTENSION(baseApp))
 /// Show the snackbar.
 - (void)show;
 @end
 
 
+
+
+
+
 @interface TTGSnackbar (SWIFT_EXTENSION(baseApp))
 /// Dismiss the snackbar manually.
 - (void)dismiss;
 @end
-
-
 
 /// Snackbar animation types.
 /// <ul>
@@ -642,6 +713,16 @@ SWIFT_CLASS("_TtC7baseApp20TableViewCellFactory")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC7baseApp12TemporalHome")
+@interface TemporalHome : BViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
 @class UITextView;
 
 SWIFT_CLASS("_TtC7baseApp22TerminosYCondicionesVC")
@@ -655,6 +736,12 @@ SWIFT_CLASS("_TtC7baseApp22TerminosYCondicionesVC")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+
+
+
+
 
 
 
@@ -702,6 +789,12 @@ SWIFT_PROTOCOL("_TtP7baseApp20YopterAlertsDelegate_")
 @end
 
 
+SWIFT_CLASS("_TtC7baseApp16YopterAnnotation")
+@interface YopterAnnotation : MKPointAnnotation
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC7baseApp5boton")
 @interface boton : UITableViewCell
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified boton;
@@ -726,19 +819,22 @@ SWIFT_CLASS("_TtC7baseApp11celdaStack3")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSLayoutConstraint;
 @class UITapGestureRecognizer;
 
 SWIFT_CLASS("_TtC7baseApp10cellOffert")
 @interface cellOffert : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified companyName;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified offertTitle;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified offertDistance;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lTituloOferta;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified likeImage;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified dislikeImage;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified saveOrDeleteImage;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified newIndicator;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified offertImage;
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified companyLogo;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified viewContentImage;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified constraintLTitulo;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified constraintWsaveorDelete;
 - (void)awakeFromNib;
 - (void)prepareForReuse;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
@@ -750,7 +846,6 @@ SWIFT_CLASS("_TtC7baseApp10cellOffert")
 @end
 
 @class UIDatePicker;
-@class NSLayoutConstraint;
 
 SWIFT_CLASS("_TtC7baseApp9datePiker")
 @interface datePiker : UITableViewCell
@@ -762,6 +857,15 @@ SWIFT_CLASS("_TtC7baseApp9datePiker")
 - (void)prepareForReuse;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp11filtrosCell")
+@interface filtrosCell : UICollectionViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified image;
+- (void)awakeFromNib;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -799,10 +903,17 @@ SWIFT_CLASS("_TtC7baseApp14pickerViewcell")
 
 
 SWIFT_CLASS("_TtC7baseApp17principalTabBarVC")
-@interface principalTabBarVC : UITabBarController
+@interface principalTabBarVC : BTabBarVC
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITabBar;
+@class UITabBarItem;
+
+@interface principalTabBarVC (SWIFT_EXTENSION(baseApp))
+- (void)tabBar:(UITabBar * _Nonnull)tabBar didSelectItem:(UITabBarItem * _Nonnull)item;
 @end
 
 

@@ -21,8 +21,10 @@ depends-top-level:
 - !private "/"
 - "<"
 - "=="
+- !private ">="
 - !private "??"
 - !private "ASIdentifierManager"
+- !private "ApiError"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "Bundle"
@@ -38,6 +40,7 @@ depends-top-level:
 - !private "Date"
 - !private "DateFormatter"
 - "Device"
+- !private "ENVIROMENTAPP"
 - !private "ExtendedGraphemeClusterType"
 - !private "FileManager"
 - "Int"
@@ -52,8 +55,11 @@ depends-top-level:
 - !private "NSSearchPathForDirectoriesInDomains"
 - !private "NSString"
 - "NSURL"
+- !private "Network"
+- !private "Requests"
 - "Screen"
 - "Selector"
+- !private "Settings"
 - "String"
 - !private "TTGSnackbar"
 - "TTGSnackbarDuration"
@@ -71,6 +77,10 @@ depends-top-level:
 - !private "UIView"
 - !private "UInt8"
 - !private "UnicodeScalar"
+- !private "UnicodeScalarType"
+- !private "Void"
+- !private "WakeUpResponse"
+- !private "constantsParameters"
 - "max"
 - "min"
 - !private "print"
@@ -82,8 +92,13 @@ depends-member:
 - !private ["So19ASIdentifierManagerC", "shared"]
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["s13AnyCollectionV", "reduce"]
+- !private ["12a4SysCoreIOS8ApiErrorC", "code"]
+- !private ["12a4SysCoreIOS8ApiErrorC", "message"]
 - !private ["Sa", "map"]
 - !private ["Sa", "subscript"]
+- !private ["12ObjectMapper12BaseMappableP", "code"]
+- !private ["12ObjectMapper12BaseMappableP", "iOSVersion"]
+- !private ["12ObjectMapper12BaseMappableP", "message"]
 - !private ["SK", "count"]
 - !private ["SK", "data"]
 - !private ["SK", "index"]
@@ -94,6 +109,7 @@ depends-member:
 - !private ["SK", "startIndex"]
 - !private ["SK", "subscript"]
 - !private ["SK", "suffix"]
+- !private ["SK", "toInt"]
 - !private ["SK", "trimmingCharacters"]
 - !private ["Sz", "init"]
 - !private ["So8NSBundleC", "bundleIdentifier"]
@@ -169,6 +185,7 @@ depends-member:
 - !private ["s7CVarArgP", "dateFormat"]
 - !private ["s7CVarArgP", "debugDescription"]
 - !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "endPointN"]
 - !private ["s7CVarArgP", "evaluate"]
 - !private ["s7CVarArgP", "extent"]
 - !private ["s7CVarArgP", "fileExists"]
@@ -194,6 +211,9 @@ depends-member:
 - !private ["s7CVarArgP", "removeFromSuperview"]
 - !private ["s7CVarArgP", "removeItem"]
 - !private ["s7CVarArgP", "setAttributedTitle"]
+- !private ["s7CVarArgP", "setConstants"]
+- !private ["s7CVarArgP", "setEnvironment"]
+- !private ["s7CVarArgP", "setUrlParameters"]
 - !private ["s7CVarArgP", "setValue"]
 - !private ["s7CVarArgP", "shared"]
 - !private ["s7CVarArgP", "show"]
@@ -209,6 +229,7 @@ depends-member:
 - !private ["s7CVarArgP", "textAlignment"]
 - !private ["s7CVarArgP", "textColor"]
 - !private ["s7CVarArgP", "titleLabel"]
+- !private ["s7CVarArgP", "toInt"]
 - !private ["s7CVarArgP", "transformed"]
 - !private ["s7CVarArgP", "trimmingCharacters"]
 - ["s7CVarArgP", "userInterfaceIdiom"]
@@ -229,8 +250,10 @@ depends-member:
 - !private ["Sl", "startIndex"]
 - !private ["Sl", "subscript"]
 - !private ["Sl", "suffix"]
+- !private ["Sl", "toInt"]
 - !private ["Sl", "trimmingCharacters"]
 - !private ["7baseApp7CommonsC", "ASIdentifierManager"]
+- !private ["7baseApp7CommonsC", "ApiError"]
 - ["7baseApp7CommonsC", "Bool"]
 - !private ["7baseApp7CommonsC", "Bundle"]
 - !private ["7baseApp7CommonsC", "CGAffineTransform"]
@@ -239,9 +262,11 @@ depends-member:
 - !private ["7baseApp7CommonsC", "CIFilter"]
 - !private ["7baseApp7CommonsC", "CTTelephonyNetworkInfo"]
 - !private ["7baseApp7CommonsC", "Calendar"]
+- !private ["7baseApp7CommonsC", "Commons"]
 - !private ["7baseApp7CommonsC", "Constants"]
 - !private ["7baseApp7CommonsC", "Date"]
 - !private ["7baseApp7CommonsC", "DateFormatter"]
+- !private ["7baseApp7CommonsC", "ENVIROMENTAPP"]
 - !private ["7baseApp7CommonsC", "FileManager"]
 - ["7baseApp7CommonsC", "Int"]
 - !private ["7baseApp7CommonsC", "Int8"]
@@ -255,8 +280,11 @@ depends-member:
 - !private ["7baseApp7CommonsC", "NSSearchPathForDirectoriesInDomains"]
 - !private ["7baseApp7CommonsC", "NSString"]
 - ["7baseApp7CommonsC", "NSURL"]
+- !private ["7baseApp7CommonsC", "Network"]
+- !private ["7baseApp7CommonsC", "Requests"]
 - !private ["7baseApp7CommonsC", "Screen"]
 - ["7baseApp7CommonsC", "Selector"]
+- !private ["7baseApp7CommonsC", "Settings"]
 - ["7baseApp7CommonsC", "String"]
 - !private ["7baseApp7CommonsC", "TTGSnackbar"]
 - ["7baseApp7CommonsC", "TTGSnackbarDuration"]
@@ -272,8 +300,11 @@ depends-member:
 - !private ["7baseApp7CommonsC", "UIView"]
 - !private ["7baseApp7CommonsC", "UInt8"]
 - !private ["7baseApp7CommonsC", "UnicodeScalar"]
+- !private ["7baseApp7CommonsC", "Void"]
+- !private ["7baseApp7CommonsC", "WakeUpResponse"]
 - ["7baseApp7CommonsC", "checkIfWifi"]
 - ["7baseApp7CommonsC", "compareVersion"]
+- !private ["7baseApp7CommonsC", "constantsParameters"]
 - ["7baseApp7CommonsC", "createDirectory"]
 - ["7baseApp7CommonsC", "deinit"]
 - ["7baseApp7CommonsC", "deleteDirectory"]
@@ -312,6 +343,7 @@ depends-member:
 - !private ["SL", "split"]
 - !private ["SL", "startIndex"]
 - !private ["SL", "suffix"]
+- !private ["SL", "toInt"]
 - !private ["SL", "trimmingCharacters"]
 - !private ["10Foundation8CalendarV9ComponentO", "day"]
 - !private ["7baseApp9ConstantsV", "baseURLString"]
@@ -343,6 +375,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "dateFormat"]
 - !private ["s28CustomDebugStringConvertibleP", "debugDescription"]
 - !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "endPointN"]
 - !private ["s28CustomDebugStringConvertibleP", "evaluate"]
 - !private ["s28CustomDebugStringConvertibleP", "extent"]
 - !private ["s28CustomDebugStringConvertibleP", "fileExists"]
@@ -373,6 +406,9 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "removeFromSuperview"]
 - !private ["s28CustomDebugStringConvertibleP", "removeItem"]
 - !private ["s28CustomDebugStringConvertibleP", "setAttributedTitle"]
+- !private ["s28CustomDebugStringConvertibleP", "setConstants"]
+- !private ["s28CustomDebugStringConvertibleP", "setEnvironment"]
+- !private ["s28CustomDebugStringConvertibleP", "setUrlParameters"]
 - !private ["s28CustomDebugStringConvertibleP", "setValue"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "show"]
@@ -390,6 +426,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "textAlignment"]
 - !private ["s28CustomDebugStringConvertibleP", "textColor"]
 - !private ["s28CustomDebugStringConvertibleP", "titleLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "toInt"]
 - !private ["s28CustomDebugStringConvertibleP", "transformed"]
 - !private ["s28CustomDebugStringConvertibleP", "trimmingCharacters"]
 - ["s28CustomDebugStringConvertibleP", "userInterfaceIdiom"]
@@ -418,6 +455,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "startOfDay"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "suffix"]
+- !private ["s17CustomReflectableP", "toInt"]
 - !private ["s17CustomReflectableP", "trimmingCharacters"]
 - !private ["s17CustomReflectableP", "uuidString"]
 - !private ["s17CustomReflectableP", "white"]
@@ -450,6 +488,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "dateFormat"]
 - !private ["s23CustomStringConvertibleP", "debugDescription"]
 - !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "endPointN"]
 - !private ["s23CustomStringConvertibleP", "evaluate"]
 - !private ["s23CustomStringConvertibleP", "extent"]
 - !private ["s23CustomStringConvertibleP", "fileExists"]
@@ -477,6 +516,9 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "removeFromSuperview"]
 - !private ["s23CustomStringConvertibleP", "removeItem"]
 - !private ["s23CustomStringConvertibleP", "setAttributedTitle"]
+- !private ["s23CustomStringConvertibleP", "setConstants"]
+- !private ["s23CustomStringConvertibleP", "setEnvironment"]
+- !private ["s23CustomStringConvertibleP", "setUrlParameters"]
 - !private ["s23CustomStringConvertibleP", "setValue"]
 - !private ["s23CustomStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "show"]
@@ -493,6 +535,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "textAlignment"]
 - !private ["s23CustomStringConvertibleP", "textColor"]
 - !private ["s23CustomStringConvertibleP", "titleLabel"]
+- !private ["s23CustomStringConvertibleP", "toInt"]
 - !private ["s23CustomStringConvertibleP", "transformed"]
 - !private ["s23CustomStringConvertibleP", "trimmingCharacters"]
 - ["s23CustomStringConvertibleP", "userInterfaceIdiom"]
@@ -531,6 +574,7 @@ depends-member:
 - !private ["Se", "startOfDay"]
 - !private ["Se", "subscript"]
 - !private ["Se", "suffix"]
+- !private ["Se", "toInt"]
 - !private ["Se", "trimmingCharacters"]
 - !private ["Se", "uuidString"]
 - !private ["Se", "white"]
@@ -570,6 +614,7 @@ depends-member:
 - !private ["SE", "startOfDay"]
 - !private ["SE", "subscript"]
 - !private ["SE", "suffix"]
+- !private ["SE", "toInt"]
 - !private ["SE", "trimmingCharacters"]
 - !private ["SE", "uuidString"]
 - !private ["SE", "white"]
@@ -577,6 +622,7 @@ depends-member:
 - ["SE", "width"]
 - !private ["SS10FoundationE8EncodingV", "ascii"]
 - !private ["SQ", "ContentMode"]
+- !private ["SQ", "WakeUp"]
 - !private ["SQ", "absoluteString"]
 - !private ["SQ", "addSubview"]
 - !private ["SQ", "addTarget"]
@@ -605,6 +651,7 @@ depends-member:
 - !private ["SQ", "debugDescription"]
 - !private ["SQ", "default"]
 - !private ["SQ", "documentDirectory"]
+- !private ["SQ", "endPointN"]
 - !private ["SQ", "evaluate"]
 - !private ["SQ", "extent"]
 - !private ["SQ", "fileExists"]
@@ -623,6 +670,7 @@ depends-member:
 - !private ["SQ", "isEmpty"]
 - !private ["SQ", "keyWindow"]
 - !private ["SQ", "layer"]
+- !private ["SQ", "long"]
 - ["SQ", "main"]
 - !private ["SQ", "map"]
 - ["SQ", "midX"]
@@ -641,6 +689,9 @@ depends-member:
 - !private ["SQ", "scaleAspectFill"]
 - !private ["SQ", "scaleAspectFit"]
 - !private ["SQ", "setAttributedTitle"]
+- !private ["SQ", "setConstants"]
+- !private ["SQ", "setEnvironment"]
+- !private ["SQ", "setUrlParameters"]
 - !private ["SQ", "setValue"]
 - !private ["SQ", "shared"]
 - !private ["SQ", "show"]
@@ -658,6 +709,7 @@ depends-member:
 - !private ["SQ", "textAlignment"]
 - !private ["SQ", "textColor"]
 - !private ["SQ", "titleLabel"]
+- !private ["SQ", "toInt"]
 - !private ["SQ", "touchUpInside"]
 - !private ["SQ", "transformed"]
 - !private ["SQ", "trimmingCharacters"]
@@ -688,6 +740,7 @@ depends-member:
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "split"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "startIndex"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "suffix"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "toInt"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "trimmingCharacters"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
@@ -702,6 +755,7 @@ depends-member:
 - !private ["s32ExpressibleByStringInterpolationP", "split"]
 - !private ["s32ExpressibleByStringInterpolationP", "startIndex"]
 - !private ["s32ExpressibleByStringInterpolationP", "suffix"]
+- !private ["s32ExpressibleByStringInterpolationP", "toInt"]
 - !private ["s32ExpressibleByStringInterpolationP", "trimmingCharacters"]
 - !private ["s26ExpressibleByStringLiteralP", "appendingPathComponent"]
 - !private ["s26ExpressibleByStringLiteralP", "count"]
@@ -712,6 +766,7 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", "split"]
 - !private ["s26ExpressibleByStringLiteralP", "startIndex"]
 - !private ["s26ExpressibleByStringLiteralP", "suffix"]
+- !private ["s26ExpressibleByStringLiteralP", "toInt"]
 - !private ["s26ExpressibleByStringLiteralP", "trimmingCharacters"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "appendingPathComponent"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
@@ -722,6 +777,7 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "split"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "startIndex"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "suffix"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "toInt"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "trimmingCharacters"]
 - !private ["So13NSFileManagerC", "createDirectory"]
 - !private ["So13NSFileManagerC", "createFile"]
@@ -736,6 +792,7 @@ depends-member:
 - !private ["So11NSFormatterC", "pmSymbol"]
 - !private ["So11NSFormatterC", "string"]
 - !private ["SH", "ContentMode"]
+- !private ["SH", "WakeUp"]
 - !private ["SH", "absoluteString"]
 - !private ["SH", "addSubview"]
 - !private ["SH", "addTarget"]
@@ -764,6 +821,7 @@ depends-member:
 - !private ["SH", "debugDescription"]
 - !private ["SH", "default"]
 - !private ["SH", "documentDirectory"]
+- !private ["SH", "endPointN"]
 - !private ["SH", "evaluate"]
 - !private ["SH", "extent"]
 - !private ["SH", "fileExists"]
@@ -781,6 +839,7 @@ depends-member:
 - !private ["SH", "isEmpty"]
 - !private ["SH", "keyWindow"]
 - !private ["SH", "layer"]
+- !private ["SH", "long"]
 - ["SH", "main"]
 - !private ["SH", "map"]
 - !private ["SH", "middle"]
@@ -796,6 +855,9 @@ depends-member:
 - !private ["SH", "scaleAspectFill"]
 - !private ["SH", "scaleAspectFit"]
 - !private ["SH", "setAttributedTitle"]
+- !private ["SH", "setConstants"]
+- !private ["SH", "setEnvironment"]
+- !private ["SH", "setUrlParameters"]
 - !private ["SH", "setValue"]
 - !private ["SH", "shared"]
 - !private ["SH", "show"]
@@ -812,6 +874,7 @@ depends-member:
 - !private ["SH", "textAlignment"]
 - !private ["SH", "textColor"]
 - !private ["SH", "titleLabel"]
+- !private ["SH", "toInt"]
 - !private ["SH", "transformed"]
 - !private ["SH", "trimmingCharacters"]
 - ["SH", "userInterfaceIdiom"]
@@ -832,7 +895,11 @@ depends-member:
 - !private ["s25LosslessStringConvertibleP", "split"]
 - !private ["s25LosslessStringConvertibleP", "startIndex"]
 - !private ["s25LosslessStringConvertibleP", "suffix"]
+- !private ["s25LosslessStringConvertibleP", "toInt"]
 - !private ["s25LosslessStringConvertibleP", "trimmingCharacters"]
+- !private ["12ObjectMapper8MappableP", "code"]
+- !private ["12ObjectMapper8MappableP", "iOSVersion"]
+- !private ["12ObjectMapper8MappableP", "message"]
 - !private ["s6MirrorV", "children"]
 - !private ["s6MirrorV", "init"]
 - !private ["s10MirrorPathP", "count"]
@@ -843,6 +910,7 @@ depends-member:
 - !private ["s10MirrorPathP", "split"]
 - !private ["s10MirrorPathP", "startIndex"]
 - !private ["s10MirrorPathP", "suffix"]
+- !private ["s10MirrorPathP", "toInt"]
 - !private ["s10MirrorPathP", "trimmingCharacters"]
 - !private ["SM", "map"]
 - !private ["SM", "subscript"]
@@ -892,6 +960,7 @@ depends-member:
 - !private ["So8NSCodingP", "textAlignment"]
 - !private ["So8NSCodingP", "textColor"]
 - !private ["So8NSCodingP", "titleLabel"]
+- !private ["So8NSCodingP", "toInt"]
 - !private ["So8NSCodingP", "transformed"]
 - !private ["So8NSCodingP", "trimmingCharacters"]
 - !private ["So8NSCodingP", "viewWithTag"]
@@ -916,6 +985,7 @@ depends-member:
 - !private ["So9NSCopyingP", "startIndex"]
 - !private ["So9NSCopyingP", "string"]
 - !private ["So9NSCopyingP", "suffix"]
+- !private ["So9NSCopyingP", "toInt"]
 - !private ["So9NSCopyingP", "transformed"]
 - !private ["So9NSCopyingP", "trimmingCharacters"]
 - !private ["So9NSCopyingP", "white"]
@@ -932,6 +1002,7 @@ depends-member:
 - !private ["So21NSItemProviderReadingP", "split"]
 - !private ["So21NSItemProviderReadingP", "startIndex"]
 - !private ["So21NSItemProviderReadingP", "suffix"]
+- !private ["So21NSItemProviderReadingP", "toInt"]
 - !private ["So21NSItemProviderReadingP", "trimmingCharacters"]
 - !private ["So21NSItemProviderReadingP", "white"]
 - !private ["So21NSItemProviderWritingP", "appendingPathComponent"]
@@ -946,6 +1017,7 @@ depends-member:
 - !private ["So21NSItemProviderWritingP", "split"]
 - !private ["So21NSItemProviderWritingP", "startIndex"]
 - !private ["So21NSItemProviderWritingP", "suffix"]
+- !private ["So21NSItemProviderWritingP", "toInt"]
 - !private ["So21NSItemProviderWritingP", "trimmingCharacters"]
 - !private ["So21NSItemProviderWritingP", "white"]
 - !private ["So16NSMutableCopyingP", "appendingPathComponent"]
@@ -957,6 +1029,7 @@ depends-member:
 - !private ["So16NSMutableCopyingP", "split"]
 - !private ["So16NSMutableCopyingP", "startIndex"]
 - !private ["So16NSMutableCopyingP", "suffix"]
+- !private ["So16NSMutableCopyingP", "toInt"]
 - !private ["So16NSMutableCopyingP", "trimmingCharacters"]
 - !private ["So8NSNumberC", "init"]
 - !private ["So8NSNumberC", "init"]
@@ -982,6 +1055,7 @@ depends-member:
 - !private ["So8NSObjectC", "dateFormat"]
 - !private ["So8NSObjectC", "debugDescription"]
 - !private ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "endPointN"]
 - !private ["So8NSObjectC", "evaluate"]
 - !private ["So8NSObjectC", "extent"]
 - !private ["So8NSObjectC", "fileExists"]
@@ -1006,6 +1080,9 @@ depends-member:
 - !private ["So8NSObjectC", "removeFromSuperview"]
 - !private ["So8NSObjectC", "removeItem"]
 - !private ["So8NSObjectC", "setAttributedTitle"]
+- !private ["So8NSObjectC", "setConstants"]
+- !private ["So8NSObjectC", "setEnvironment"]
+- !private ["So8NSObjectC", "setUrlParameters"]
 - !private ["So8NSObjectC", "setValue"]
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "show"]
@@ -1020,6 +1097,7 @@ depends-member:
 - !private ["So8NSObjectC", "textAlignment"]
 - !private ["So8NSObjectC", "textColor"]
 - !private ["So8NSObjectC", "titleLabel"]
+- !private ["So8NSObjectC", "toInt"]
 - !private ["So8NSObjectC", "transformed"]
 - !private ["So8NSObjectC", "trimmingCharacters"]
 - ["So8NSObjectC", "userInterfaceIdiom"]
@@ -1047,6 +1125,7 @@ depends-member:
 - !private ["So8NSObjectP", "dateFormat"]
 - !private ["So8NSObjectP", "debugDescription"]
 - !private ["So8NSObjectP", "default"]
+- !private ["So8NSObjectP", "endPointN"]
 - !private ["So8NSObjectP", "evaluate"]
 - !private ["So8NSObjectP", "extent"]
 - !private ["So8NSObjectP", "fileExists"]
@@ -1071,6 +1150,9 @@ depends-member:
 - !private ["So8NSObjectP", "removeFromSuperview"]
 - !private ["So8NSObjectP", "removeItem"]
 - !private ["So8NSObjectP", "setAttributedTitle"]
+- !private ["So8NSObjectP", "setConstants"]
+- !private ["So8NSObjectP", "setEnvironment"]
+- !private ["So8NSObjectP", "setUrlParameters"]
 - !private ["So8NSObjectP", "setValue"]
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "show"]
@@ -1085,6 +1167,7 @@ depends-member:
 - !private ["So8NSObjectP", "textAlignment"]
 - !private ["So8NSObjectP", "textColor"]
 - !private ["So8NSObjectP", "titleLabel"]
+- !private ["So8NSObjectP", "toInt"]
 - !private ["So8NSObjectP", "transformed"]
 - !private ["So8NSObjectP", "trimmingCharacters"]
 - ["So8NSObjectP", "userInterfaceIdiom"]
@@ -1111,6 +1194,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "split"]
 - !private ["So14NSSecureCodingP", "startIndex"]
 - !private ["So14NSSecureCodingP", "suffix"]
+- !private ["So14NSSecureCodingP", "toInt"]
 - !private ["So14NSSecureCodingP", "transformed"]
 - !private ["So14NSSecureCodingP", "trimmingCharacters"]
 - !private ["So14NSSecureCodingP", "white"]
@@ -1122,12 +1206,18 @@ depends-member:
 - !private ["So8NSStringC", "split"]
 - !private ["So8NSStringC", "startIndex"]
 - !private ["So8NSStringC", "suffix"]
+- !private ["So8NSStringC", "toInt"]
 - !private ["So8NSStringC", "trimmingCharacters"]
 - !private ["So15NSTextAlignmentV", "center"]
 - !private ["So5NSURLC", "appendingPathComponent"]
 - !private ["So5NSURLC", "init"]
 - !private ["So7NSValueC", "init"]
 - !private ["So7NSValueC", "init"]
+- !private ["12a4SysCoreIOS7NetworkC", "endPointN"]
+- !private ["12a4SysCoreIOS7NetworkC", "init"]
+- !private ["12a4SysCoreIOS7NetworkC", "setConstants"]
+- !private ["12a4SysCoreIOS7NetworkC", "setEnvironment"]
+- !private ["12a4SysCoreIOS7NetworkC", "setUrlParameters"]
 - !private ["Sj", "init"]
 - !private ["s9OptionSetP", "normal"]
 - !private ["s9OptionSetP", "touchUpInside"]
@@ -1145,12 +1235,14 @@ depends-member:
 - !private ["Sm", "startIndex"]
 - !private ["Sm", "subscript"]
 - !private ["Sm", "suffix"]
+- !private ["Sm", "toInt"]
 - !private ["Sm", "trimmingCharacters"]
 - !private ["SY", "ascii"]
 - !private ["SY", "center"]
 - !private ["SY", "custom"]
 - !private ["SY", "documentDirectory"]
 - !private ["SY", "font"]
+- !private ["SY", "long"]
 - !private ["SY", "middle"]
 - !private ["SY", "normal"]
 - ["SY", "pad"]
@@ -1169,6 +1261,7 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "startOfDay"]
 - !private ["10Foundation20ReferenceConvertibleP", "uuidString"]
 - !private ["10Foundation20ReferenceConvertibleP", "whitespacesAndNewlines"]
+- !private ["12a4SysCoreIOS8RequestsC", "createWakeUpRequest"]
 - !private ["s10SIMDScalarP", "init"]
 - !private ["s7UnicodeO6ScalarV", "init"]
 - ["7baseApp6ScreenV", "Screen"]
@@ -1196,11 +1289,16 @@ depends-member:
 - !private ["ST", "startIndex"]
 - !private ["ST", "subscript"]
 - !private ["ST", "suffix"]
+- !private ["ST", "toInt"]
 - !private ["ST", "trimmingCharacters"]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
 - !private ["s10SetAlgebraP", "userDomainMask"]
 - !private ["s10SetAlgebraP", "whitespacesAndNewlines"]
+- !private ["7baseApp8SettingsC", "getDeviceId"]
+- !private ["7baseApp8SettingsC", "getSesion"]
+- !private ["7baseApp8SettingsC", "setAppActualizada"]
+- !private ["7baseApp8SettingsC", "sharedInstance"]
 - !private ["So14UIControlStateV", "normal"]
 - !private ["Sx", "init"]
 - !private ["SS", "count"]
@@ -1211,6 +1309,7 @@ depends-member:
 - !private ["SS", "split"]
 - !private ["SS", "startIndex"]
 - !private ["SS", "suffix"]
+- !private ["SS", "toInt"]
 - !private ["SS", "trimmingCharacters"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
@@ -1222,11 +1321,13 @@ depends-member:
 - !private ["Sy", "split"]
 - !private ["Sy", "startIndex"]
 - !private ["Sy", "suffix"]
+- !private ["Sy", "toInt"]
 - !private ["Sy", "trimmingCharacters"]
 - !private ["7baseApp11TTGSnackbarC", "deinit"]
 - !private ["7baseApp11TTGSnackbarC", "init"]
 - !private ["7baseApp11TTGSnackbarC", "init"]
 - !private ["7baseApp11TTGSnackbarC", "show"]
+- !private ["7baseApp19TTGSnackbarDurationO", "long"]
 - !private ["7baseApp19TTGSnackbarDurationO", "middle"]
 - !private ["s16TextOutputStreamP", "appendInterpolation"]
 - !private ["s16TextOutputStreamP", "appendLiteral"]
@@ -1238,6 +1339,7 @@ depends-member:
 - !private ["s16TextOutputStreamP", "split"]
 - !private ["s16TextOutputStreamP", "startIndex"]
 - !private ["s16TextOutputStreamP", "suffix"]
+- !private ["s16TextOutputStreamP", "toInt"]
 - !private ["s16TextOutputStreamP", "trimmingCharacters"]
 - !private ["s20TextOutputStreamableP", "count"]
 - !private ["s20TextOutputStreamableP", "data"]
@@ -1247,6 +1349,7 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "split"]
 - !private ["s20TextOutputStreamableP", "startIndex"]
 - !private ["s20TextOutputStreamableP", "suffix"]
+- !private ["s20TextOutputStreamableP", "toInt"]
 - !private ["s20TextOutputStreamableP", "trimmingCharacters"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "backgroundColor"]
@@ -1674,9 +1777,11 @@ depends-member:
 - !private ["9Alamofire14URLConvertibleP", "split"]
 - !private ["9Alamofire14URLConvertibleP", "startIndex"]
 - !private ["9Alamofire14URLConvertibleP", "suffix"]
+- !private ["9Alamofire14URLConvertibleP", "toInt"]
 - !private ["9Alamofire14URLConvertibleP", "trimmingCharacters"]
 - !private ["10Foundation4UUIDV", "uuidString"]
 - !private ["SU", "init"]
+- !private ["12a4SysCoreIOS14WakeUpResponseC", "iOSVersion"]
 - !private ["s22_AnyCollectionProtocolP", "reduce"]
 - !private ["s14_ArrayProtocolP", "map"]
 - !private ["s14_ArrayProtocolP", "subscript"]
@@ -1696,6 +1801,7 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "split"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "startIndex"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "suffix"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "toInt"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "trimmingCharacters"]
 - ["s30_CustomPlaygroundQuickLookableP", "width"]
 - !private ["s24_DestructorSafeContainerP", "map"]
@@ -1708,6 +1814,7 @@ depends-member:
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "split"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "startIndex"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "suffix"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "toInt"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "trimmingCharacters"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
@@ -1718,6 +1825,7 @@ depends-member:
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "split"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "startIndex"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "suffix"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "toInt"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "trimmingCharacters"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "data"]
@@ -1727,6 +1835,7 @@ depends-member:
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "split"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "startIndex"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "suffix"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "toInt"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "trimmingCharacters"]
 - !private ["s26_ExpressibleByColorLiteralP", "hexStringToUIColor"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
@@ -1745,6 +1854,7 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "startIndex"]
 - !private ["s19_HasContiguousBytesP", "subscript"]
 - !private ["s19_HasContiguousBytesP", "suffix"]
+- !private ["s19_HasContiguousBytesP", "toInt"]
 - !private ["s19_HasContiguousBytesP", "trimmingCharacters"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "appendingPathComponent"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
@@ -1759,6 +1869,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "startIndex"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "suffix"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "toInt"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "trimmingCharacters"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ContentMode"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
@@ -1782,6 +1893,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "debugDescription"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endPointN"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "evaluate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "extent"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fileExists"]
@@ -1806,6 +1918,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeFromSuperview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeItem"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setAttributedTitle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setConstants"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setEnvironment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setUrlParameters"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "show"]
@@ -1820,6 +1935,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textAlignment"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "toInt"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "transformed"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trimmingCharacters"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "userInterfaceIdiom"]
@@ -1850,6 +1966,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "startOfDay"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "suffix"]
+- !private ["s21_ObjectiveCBridgeableP", "toInt"]
 - !private ["s21_ObjectiveCBridgeableP", "trimmingCharacters"]
 - !private ["s21_ObjectiveCBridgeableP", "uuidString"]
 - !private ["s21_ObjectiveCBridgeableP", "white"]
@@ -1881,13 +1998,16 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textColor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "viewWithTag"]
+- !private ["12a4SysCoreIOS8endPointO", "WakeUp"]
 - !private ["So7utsnameV", "init"]
 - !private ["So7utsnameV", "machine"]
 depends-nominal:
 - !private "So19ASIdentifierManagerC"
 - !private "s18AdditiveArithmeticP"
 - !private "s13AnyCollectionV"
+- !private "12a4SysCoreIOS8ApiErrorC"
 - !private "Sa"
+- !private "12ObjectMapper12BaseMappableP"
 - !private "SK"
 - !private "Sz"
 - !private "So8NSBundleC"
@@ -1945,6 +2065,7 @@ depends-nominal:
 - !private "So21NSAttributedStringKeya"
 - !private "10Foundation6LocaleV"
 - !private "s25LosslessStringConvertibleP"
+- !private "12ObjectMapper8MappableP"
 - !private "s6MirrorV"
 - !private "s10MirrorPathP"
 - !private "SM"
@@ -1965,6 +2086,7 @@ depends-nominal:
 - !private "So15NSTextAlignmentV"
 - !private "So5NSURLC"
 - !private "So7NSValueC"
+- !private "12a4SysCoreIOS7NetworkC"
 - !private "Sj"
 - !private "s9OptionSetP"
 - !private "Sq"
@@ -1972,6 +2094,7 @@ depends-nominal:
 - !private "Sm"
 - "SY"
 - !private "10Foundation20ReferenceConvertibleP"
+- !private "12a4SysCoreIOS8RequestsC"
 - !private "s10SIMDScalarP"
 - !private "s7UnicodeO6ScalarV"
 - "7baseApp6ScreenV"
@@ -1979,6 +2102,7 @@ depends-nominal:
 - !private "So22NSSearchPathDomainMaskV"
 - !private "ST"
 - !private "s10SetAlgebraP"
+- !private "7baseApp8SettingsC"
 - !private "So14UIControlStateV"
 - !private "Sx"
 - !private "SS"
@@ -2023,6 +2147,7 @@ depends-nominal:
 - !private "9Alamofire14URLConvertibleP"
 - !private "10Foundation4UUIDV"
 - !private "SU"
+- !private "12a4SysCoreIOS14WakeUpResponseC"
 - !private "s22_AnyCollectionProtocolP"
 - !private "s14_ArrayProtocolP"
 - "s30_CustomPlaygroundQuickLookableP"
@@ -2042,6 +2167,7 @@ depends-nominal:
 - !private "s14_StringElementP"
 - !private "s20_SwiftNewtypeWrapperP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
+- !private "12a4SysCoreIOS8endPointO"
 - !private "So7utsnameV"
 depends-dynamic-lookup:
 depends-external:
@@ -2064,6 +2190,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/MapKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS.h"
@@ -2129,7 +2256,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "229d69c490343586775fae89a5da20b3"
+interface-hash: "4dc190ca435311acaaebbada84ae08ad"

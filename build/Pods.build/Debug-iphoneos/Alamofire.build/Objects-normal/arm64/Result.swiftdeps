@@ -20,6 +20,7 @@ depends-top-level:
 - !private "!"
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
 - "CustomDebugStringConvertible"
 - "CustomStringConvertible"
 - "Error"

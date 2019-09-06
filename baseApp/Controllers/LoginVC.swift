@@ -45,6 +45,8 @@ class LoginVC: BViewController {
         txtPassword.adjustsFontSizeToFitWidth = true
         txtPassword.minimumFontSize = 0.3
         
+        txtCorreo.text = "vycotest40@yopmail.com"
+        txtPassword.text = "Yopter1."
         
         animateView(viewA: homeLogo, point: CGPoint(x: homeLogo.center.x - 150, y: homeLogo.center.y))
         animateView(viewA: viewTextFiels, point: CGPoint(x: viewTextFiels.center.x , y: viewTextFiels.center.y - 300))
@@ -55,12 +57,6 @@ class LoginVC: BViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        if Settings.sharedInstance.getSesion() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                LocationUtil.sharedInstance.delegate = self
-                LocationUtil.sharedInstance.startUpdatingLocation()
-            }
-        }
     }
     
     func addsTargets() {
@@ -117,15 +113,10 @@ class LoginVC: BViewController {
         showLoading()
         self.view.endEditing(true)
         if validateForm() {
-//            if Network.Login(correo: txtCorreo.text!, password: txtPassword.text!) {
-//                print("estamos dentro")
-//            } else {
-//                print("entro en el else")
-//            }
-
             let network = Network()
+            network.setConstants(constants: constantsParameters)
+            network.setEnvironment(Environment: ENVIROMENTAPP)
             network.setUrlParameters(urlParameters: Requests.createLoginRequest(txtCorreo.text!, txtPassword.text!, userAgent: Commons.getUserAgent()))
-
             network.endPointN(endPont: .Login) { (statusCode, value, objeto) -> (Void) in
                 let statusC = statusCode.toInt() ?? 0
                 
@@ -133,20 +124,29 @@ class LoginVC: BViewController {
                     print("ya estufas: \(value)")
                     if let obj = objeto as? LoginResponse { // no se forsa el cast para evitar que truene el app
                         print("SetValues")
-                        Settings.sharedInstance.setSesion(true)
-                        Settings.sharedInstance.setUsername(value: self.txtCorreo.text!)
-                        Settings.sharedInstance.setPassword(value: self.txtPassword.text!)
-                        Settings.sharedInstance.setToken(value: obj.token ?? "")
-                        Settings.sharedInstance.setOldToken(value: obj.tokenYopter ?? "")
-                        Settings.sharedInstance.setAnonymous(value: "false")
-                        let vc = principalTabBarVC()
-                        self.navigationController?.fadeTo(vc)
+                        DispatchQueue.main.async {
+                            Settings.sharedInstance.setSesion(true)
+                            Settings.sharedInstance.setUsername(value: self.txtCorreo.text!)
+                            Settings.sharedInstance.setPassword(value: self.txtPassword.text!)
+                            Settings.sharedInstance.setToken(value: obj.token ?? "")
+                            Settings.sharedInstance.setOldToken(value: obj.tokenYopter ?? "")
+                            Settings.sharedInstance.setAnonymous(value: "false")
+                            print("SetValues: \(Settings.sharedInstance.getOldToken())")
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                            let vc = TemporalHome()
+                            self.navigationController?.fadeTo(vc)
+                        })
                     } else {
                         Commons.showMessage("Error de comunicación")
                     }
                 }else {
                     if let obj = objeto as? ApiError {
-                        Commons.showMessage("\(obj.message)", duration: .long)
+                        if obj.code == "500" {
+                            Commons.showMessage("GLOBAL_ERROR".localized, duration: .long)
+                        } else {
+                            Commons.showMessage("\(obj.message)", duration: .long)
+                        }
                     } else {
                         Commons.showMessage("Error de comunicación")
                     }

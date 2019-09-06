@@ -35,6 +35,11 @@
 	<string>Lo usaremos para enviarte ofertas exclusivas, cuando ingreses a comercios participantes</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-Black.ttf</string>
 		<string>Como-Bold.ttf</string>
 		<string>Como-Regular.ttf</string>
 	</array>

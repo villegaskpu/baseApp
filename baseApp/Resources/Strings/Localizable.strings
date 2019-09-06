@@ -7,6 +7,7 @@
 */
 
 // MARK: Commons strings
+"GLOBAL_ERROR" = "Nuestro servicio está experimentando algunos problemas técnicos. Estamos trabajando en ello ...";
 "APP_NAME" = "Yopter Generico";
 "MISSING_INFO" = "Debe tener mínimo 6 caracteres";
 "MISSING_USER" = "Ingresa tu correo electrónico y contraseña";

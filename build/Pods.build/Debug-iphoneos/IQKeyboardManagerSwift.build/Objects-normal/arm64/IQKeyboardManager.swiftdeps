@@ -82,7 +82,6 @@ depends-top-level:
 - !private "??"
 - "AssignmentPrecedence"
 - "Bool"
-- "BooleanLiteralType"
 - !private "CACurrentMediaTime"
 - "CGFloat"
 - "CGPoint"
