@@ -782,6 +782,22 @@ depends-member:
 - !private ["9Alamofire14URLConvertibleP", "init"]
 - !private ["9Alamofire14URLConvertibleP", "prefix"]
 - !private ["9Alamofire14URLConvertibleP", "replacingOccurrences"]
+- !private ["7baseApp4WithP", "CompareOptions"]
+- !private ["7baseApp4WithP", "DocumentType"]
+- !private ["7baseApp4WithP", "addAttribute"]
+- !private ["7baseApp4WithP", "append"]
+- !private ["7baseApp4WithP", "capitalized"]
+- !private ["7baseApp4WithP", "count"]
+- !private ["7baseApp4WithP", "data"]
+- !private ["7baseApp4WithP", "dropFirst"]
+- !private ["7baseApp4WithP", "htmlToAttributedString"]
+- !private ["7baseApp4WithP", "init"]
+- !private ["7baseApp4WithP", "init"]
+- !private ["7baseApp4WithP", "localizedString"]
+- !private ["7baseApp4WithP", "main"]
+- !private ["7baseApp4WithP", "prefix"]
+- !private ["7baseApp4WithP", "replacingOccurrences"]
+- !private ["7baseApp4WithP", "string"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
@@ -1022,6 +1038,7 @@ depends-nominal:
 - !private "s20TextOutputStreamableP"
 - !private "So7UIColorC"
 - !private "9Alamofire14URLConvertibleP"
+- !private "7baseApp4WithP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"

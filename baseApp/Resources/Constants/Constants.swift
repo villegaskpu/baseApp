@@ -42,4 +42,11 @@ struct Constants{
     static let defaultColor = UIColor.init(red: 180/255, green: 3/255, blue: 56/255, alpha: 1)
     static let secondColor = UIColor.init(red: 132/255, green: 132/255, blue: 132/255, alpha: 1)
     static let thirdColor = UIColor.black
+    
+    struct Observer {
+        static let autoInteres = "AutoInteresObserver"
+        static let backgroundNotification = "BACKGROUND_NOTIFICATION"
+        static let foregroundNotification = "FOREGROUND_NOTIFICATION"
+        static let menuIconPressed = "MenuIconPressed"
+    }
 }

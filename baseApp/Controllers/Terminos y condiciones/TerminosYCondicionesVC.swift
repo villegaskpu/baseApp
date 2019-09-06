@@ -20,14 +20,17 @@ class TerminosYCondicionesVC: BViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewContent.backgroundColor = #colorLiteral(red: 0.4446854591, green: 0.222956419, blue: 0.3612287641, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.6718506217, green: 0.7186080813, blue: 0.7945843339, alpha: 1)
+        viewContent.backgroundColor = #colorLiteral(red: 0.8671034575, green: 0.8866966367, blue: 0.9186367393, alpha: 1)
+        viewContent.layer.cornerRadius = 10
+        viewContent.layer.borderColor = UIColor.white.cgColor
+        viewContent.layer.borderWidth = 2.0
         
         btnCloseO.setImage(#imageLiteral(resourceName: "green_close"), for: UIControl.State.normal)
         
-        lTitulo.font = UIFont(name: Font.FONT_BOLD(), size: 17)
-        lTerminosText.textColor = #colorLiteral(red: 0.9937927127, green: 0.5748035312, blue: 0.0008185596671, alpha: 1)
-        lTerminosText.font = UIFont(name: Font.FONT_REGULAR(), size: 14.0)
+        lTitulo.font = UIFont.titulosModales
+        lTerminosText.textColor = UIColor.colorBrownGrey
+        lTerminosText.font = UIFont.textJustGeneral
     }
     
     

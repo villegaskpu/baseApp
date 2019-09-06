@@ -30,8 +30,10 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwz-Z5-g2Z">
                             <rect key="frame" x="8" y="20" width="358" height="40"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terminos y Condiciones." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhK-yd-cI4">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhK-yd-cI4">
                                     <rect key="frame" x="19" y="8" width="325" height="24"/>
+                                    <string key="text">Terminos, condiciones y 
+aviso de privacidad</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -47,7 +49,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="Lsz-Hn-Aj8" firstAttribute="top" secondItem="Uwz-Z5-g2Z" secondAttribute="top" constant="4" id="2h2-nF-Qti"/>
                                 <constraint firstItem="OhK-yd-cI4" firstAttribute="top" secondItem="Uwz-Z5-g2Z" secondAttribute="top" constant="8" id="600-PW-bRH"/>
@@ -61,10 +63,10 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abd-aT-BvK">
                             <rect key="frame" x="8" y="68" width="358" height="685"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-7r-VjV">
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-7r-VjV">
                                     <rect key="frame" x="8" y="8" width="342" height="669"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <mutableString key="text">Términos y Condiciones del Servicio de la Aplicación Vyco Comunica
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <string key="text">Términos y Condiciones del Servicio de la Aplicación Vyco Comunica
 	
 Los servicios que esta aplicación te presta a través de YOPTER INNOVATION INTERNATIONAL S.A.P.I. DE C.V., para efectos del presente documento se le denominará YOPTER, cuyo domicilio fiscal está ubicado en Calle Juan Salvador Agraz No. 97 Piso 6-A Colonia Cuajimalpa, Delegación Cuajimalpa de Morelos C.P. 05000, Cd. de México.
 La utilización de esta aplicación te atribuye la condición de USUARIO e implica la aceptación el momento mismo en que aceptes los mismos.
@@ -131,12 +133,12 @@ Para cualquier aclaración o duda al respecto, los datos de contacto son los sig
 
 
 
-</mutableString>
+</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="yn1-7r-VjV" firstAttribute="top" secondItem="abd-aT-BvK" secondAttribute="top" constant="8" id="Cdg-Yl-p5n"/>
                                 <constraint firstAttribute="bottom" secondItem="yn1-7r-VjV" secondAttribute="bottom" constant="8" id="HmF-lp-8N2"/>

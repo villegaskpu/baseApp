@@ -5,18 +5,24 @@ provides-top-level:
 - "Constants"
 provides-nominal:
 - "7baseApp9ConstantsV"
+- "7baseApp9ConstantsV8ObserverV"
 provides-member:
 - ["7baseApp9ConstantsV", ""]
+- ["7baseApp9ConstantsV8ObserverV", ""]
 provides-dynamic-lookup:
 depends-top-level:
 - "/"
 - "??"
+- "BooleanLiteralType"
 - "CGFloat"
 - "Constants"
 - "ENVIROMENTAPP"
 - "Environment"
+- "FloatLiteralType"
+- "IntegerLiteralType"
 - "Settings"
 - "String"
+- "StringLiteralType"
 - "UIColor"
 - "constantsParameters"
 depends-member:
@@ -24,6 +30,7 @@ depends-member:
 - ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "init"]
 - ["7baseApp9ConstantsV", "CGFloat"]
+- ["7baseApp9ConstantsV", "Observer"]
 - ["7baseApp9ConstantsV", "UIColor"]
 - ["7baseApp9ConstantsV", "accept"]
 - ["7baseApp9ConstantsV", "animationDurationTextField"]
@@ -91,6 +98,11 @@ depends-member:
 - ["So14NSSecureCodingP", "black"]
 - ["So14NSSecureCodingP", "init"]
 - ["So14NSSecureCodingP", "init"]
+- ["7baseApp9ConstantsV8ObserverV", "autoInteres"]
+- ["7baseApp9ConstantsV8ObserverV", "backgroundNotification"]
+- ["7baseApp9ConstantsV8ObserverV", "foregroundNotification"]
+- ["7baseApp9ConstantsV8ObserverV", "init"]
+- ["7baseApp9ConstantsV8ObserverV", "menuIconPressed"]
 - ["7baseApp8SettingsC", "getAccessToken"]
 - ["7baseApp8SettingsC", "getOldToken"]
 - ["7baseApp8SettingsC", "sharedInstance"]
@@ -101,6 +113,9 @@ depends-member:
 - ["So7UIColorC", "black"]
 - ["So7UIColorC", "init"]
 - ["So7UIColorC", "init"]
+- ["7baseApp4WithP", "black"]
+- ["7baseApp4WithP", "init"]
+- ["7baseApp4WithP", "init"]
 - ["s26_ExpressibleByColorLiteralP", "black"]
 - ["s26_ExpressibleByColorLiteralP", "init"]
 - ["s26_ExpressibleByColorLiteralP", "init"]
@@ -123,10 +138,12 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - "So14NSSecureCodingP"
+- "7baseApp9ConstantsV8ObserverV"
 - "7baseApp8SettingsC"
 - "s27StringInterpolationProtocolP"
 - "s16TextOutputStreamP"
 - "So7UIColorC"
+- "7baseApp4WithP"
 - "s26_ExpressibleByColorLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 depends-dynamic-lookup:
@@ -220,4 +237,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "5ccbdad56d686dd35fe29a0e148d553e"
+interface-hash: "5b753e44189714bfce841c9d342f4b29"

@@ -88,6 +88,10 @@ depends-member:
 - ["7baseApp14ViewControllerC", "deinit"]
 - ["7baseApp14ViewControllerC", "init"]
 - ["7baseApp14ViewControllerC", "viewDidLoad"]
+- ["7baseApp4WithP", ""]
+- !private ["7baseApp4WithP", "init"]
+- !private ["7baseApp4WithP", "init"]
+- !private ["7baseApp4WithP", "viewDidLoad"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
@@ -113,6 +117,7 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So16UIViewControllerC"
 - "7baseApp14ViewControllerC"
+- "7baseApp4WithP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 depends-dynamic-lookup:
 depends-external:

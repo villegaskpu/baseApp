@@ -24,6 +24,7 @@ provides-member:
 - ["So7UIColorC", "black"]
 - ["So7UIColorC", "brownishOrange"]
 - ["So7UIColorC", "warmGrey"]
+- ["So7UIColorC", "lightBlueGrey"]
 - ["So7UIColorC", "color"]
 - ["So7UIColorC", "hexStringToUIColor"]
 provides-dynamic-lookup:
@@ -35,11 +36,15 @@ depends-top-level:
 - !private ">>"
 - !private "CGFloat"
 - "Float"
+- !private "FloatLiteralType"
 - "Int"
+- !private "IntegerLiteralType"
 - !private "Scanner"
 - "String"
+- !private "StringLiteralType"
 - "UIColor"
 - !private "UInt32"
+- !private "UnicodeScalarType"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["SK", "count"]
@@ -267,6 +272,7 @@ depends-member:
 - ["So8NSObjectC", "hexStringToUIColor"]
 - !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "lavender"]
+- ["So8NSObjectC", "lightBlueGrey"]
 - ["So8NSObjectC", "lightGreyBlue"]
 - ["So8NSObjectC", "lightGreyBlue99"]
 - ["So8NSObjectC", "maize"]
@@ -376,6 +382,7 @@ depends-member:
 - ["So7UIColorC", "hexStringToUIColor"]
 - !private ["So7UIColorC", "init"]
 - ["So7UIColorC", "lavender"]
+- ["So7UIColorC", "lightBlueGrey"]
 - ["So7UIColorC", "lightGreyBlue"]
 - ["So7UIColorC", "lightGreyBlue99"]
 - ["So7UIColorC", "maize"]
@@ -392,6 +399,18 @@ depends-member:
 - !private ["9Alamofire14URLConvertibleP", "startIndex"]
 - !private ["9Alamofire14URLConvertibleP", "trimmingCharacters"]
 - !private ["9Alamofire14URLConvertibleP", "uppercased"]
+- !private ["7baseApp4WithP", "CGFloat"]
+- !private ["7baseApp4WithP", "Scanner"]
+- !private ["7baseApp4WithP", "UIColor"]
+- !private ["7baseApp4WithP", "count"]
+- !private ["7baseApp4WithP", "gray"]
+- !private ["7baseApp4WithP", "hasPrefix"]
+- !private ["7baseApp4WithP", "init"]
+- !private ["7baseApp4WithP", "remove"]
+- !private ["7baseApp4WithP", "scanHexInt32"]
+- !private ["7baseApp4WithP", "startIndex"]
+- !private ["7baseApp4WithP", "trimmingCharacters"]
+- !private ["7baseApp4WithP", "uppercased"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "count"]
@@ -505,6 +524,7 @@ depends-nominal:
 - !private "s20TextOutputStreamableP"
 - "So7UIColorC"
 - !private "9Alamofire14URLConvertibleP"
+- !private "7baseApp4WithP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
@@ -607,4 +627,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "9723fb26fae6b136699b1cf95a074db5"
+interface-hash: "573df346369431afa1566a001ae72fa9"

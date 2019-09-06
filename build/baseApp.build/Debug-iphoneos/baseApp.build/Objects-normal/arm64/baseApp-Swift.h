@@ -236,15 +236,15 @@ SWIFT_CLASS("_TtC7baseApp20BTableViewController")
 
 
 
-
-
-
-
 @class UITextField;
 
 @interface BTableViewController (SWIFT_EXTENSION(baseApp))
 - (void)yopterTextFieldChangeWithTextField:(UITextField * _Nonnull)textField indexPath:(NSIndexPath * _Nonnull)indexPath text:(NSString * _Nonnull)text;
 @end
+
+
+
+
 
 
 
@@ -391,6 +391,19 @@ SWIFT_CLASS("_TtC7baseApp11InfoManager")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC7baseApp11InfoSession")
+@interface InfoSession : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified imageContent;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified nombre;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified correo;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified distribuidor;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class CLLocationManager;
 @class CLLocation;
 @class CLRegion;
@@ -460,6 +473,44 @@ SWIFT_CLASS("_TtC7baseApp6MapaVC")
 - (IBAction)updateOffers:(id _Nonnull)sender;
 @end
 
+@class UIActivityIndicatorView;
+@class NSLayoutConstraint;
+
+SWIFT_CLASS("_TtC7baseApp4Menu")
+@interface Menu : BTableViewController
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified indicator;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified container;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified version;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified constraintView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lterminosYCondiciones;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified txtFormato;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)closeMenu:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+@interface Menu (SWIFT_EXTENSION(baseApp))
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp10MenuOption")
+@interface MenuOption : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imagen;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titulo;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @protocol UIViewControllerContextTransitioning;
 
 SWIFT_CLASS("_TtC7baseApp12MyTransition")
@@ -469,6 +520,8 @@ SWIFT_CLASS("_TtC7baseApp12MyTransition")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
+
+
 
 
 
@@ -485,11 +538,11 @@ SWIFT_CLASS("_TtC7baseApp9OffertsVC")
 @end
 
 
-
-
 @interface OffertsVC (SWIFT_EXTENSION(baseApp)) <BTableViewDelegate>
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems updateCell:(NSIndexPath * _Nonnull)indexPath value:(NSString * _Nonnull)value action:(NSString * _Nonnull)action;
 @end
+
+
 
 @class UIScrollView;
 
@@ -636,20 +689,20 @@ SWIFT_CLASS("_TtC7baseApp11TTGSnackbar")
 
 
 
+
+
 @interface TTGSnackbar (SWIFT_EXTENSION(baseApp))
 /// Show the snackbar.
 - (void)show;
 @end
 
 
-
-
-
-
 @interface TTGSnackbar (SWIFT_EXTENSION(baseApp))
 /// Dismiss the snackbar manually.
 - (void)dismiss;
 @end
+
+
 
 /// Snackbar animation types.
 /// <ul>
@@ -738,6 +791,29 @@ SWIFT_CLASS("_TtC7baseApp22TerminosYCondicionesVC")
 @end
 
 
+SWIFT_CLASS("_TtC7baseApp21TransitionManagerMenu")
+@interface TransitionManagerMenu : UIPercentDrivenInteractiveTransition
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@protocol UIViewControllerInteractiveTransitioning;
+
+@interface TransitionManagerMenu (SWIFT_EXTENSION(baseApp))
+- (id <UIViewControllerInteractiveTransitioning> _Nullable)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning> _Nonnull)animator SWIFT_WARN_UNUSED_RESULT;
+- (id <UIViewControllerInteractiveTransitioning> _Nullable)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning> _Nonnull)animator SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface TransitionManagerMenu (SWIFT_EXTENSION(baseApp)) <UIViewControllerAnimatedTransitioning>
+- (void)animateTransition:(id <UIViewControllerContextTransitioning> _Nonnull)transitionContext;
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning> _Nullable)transitionContext SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface TransitionManagerMenu (SWIFT_EXTENSION(baseApp)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source SWIFT_WARN_UNUSED_RESULT;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@end
 
 
 
@@ -748,11 +824,22 @@ SWIFT_CLASS("_TtC7baseApp22TerminosYCondicionesVC")
 
 
 
+
+
+
+
+SWIFT_CLASS("_TtC7baseApp12UISOMenuIcon")
+@interface UISOMenuIcon : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 @interface UITableView (SWIFT_EXTENSION(baseApp))
 - (void)awakeFromNib;
 @end
+
+
 
 
 
@@ -819,7 +906,6 @@ SWIFT_CLASS("_TtC7baseApp11celdaStack3")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSLayoutConstraint;
 @class UITapGestureRecognizer;
 
 SWIFT_CLASS("_TtC7baseApp10cellOffert")
@@ -901,10 +987,13 @@ SWIFT_CLASS("_TtC7baseApp14pickerViewcell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIBarButtonItem;
 
 SWIFT_CLASS("_TtC7baseApp17principalTabBarVC")
 @interface principalTabBarVC : BTabBarVC
 - (void)viewDidLoad;
+- (void)actionWithSender:(UIBarButtonItem * _Nonnull)sender;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -919,6 +1008,13 @@ SWIFT_CLASS("_TtC7baseApp17principalTabBarVC")
 
 @interface principalTabBarVC (SWIFT_EXTENSION(baseApp)) <UITabBarControllerDelegate>
 - (id <UIViewControllerAnimatedTransitioning> _Nullable)tabBarController:(UITabBarController * _Nonnull)tabBarController animationControllerForTransitionFromViewController:(UIViewController * _Nonnull)fromVC toViewController:(UIViewController * _Nonnull)toVC SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
+
+@interface principalTabBarVC (SWIFT_EXTENSION(baseApp))
+- (void)openMenu;
 @end
 
 

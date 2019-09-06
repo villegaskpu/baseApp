@@ -20,6 +20,7 @@ public class BViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationItem.setHidesBackButton(true, animated:true)
     }
     
     func showLoading(overCurrentContext: Bool = false) {

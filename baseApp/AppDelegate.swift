@@ -13,6 +13,8 @@ import IQKeyboardManagerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    private let themeCustom = VycoTheme()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -23,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.goNext()
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Listo"
+        themeCustom.apply(for: application)
         
         var navigationController: UINavigationController!
         
@@ -34,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = TemporalHome() as UIViewController
             navigationController = UINavigationController(rootViewController: vc)
             navigationController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            navigationController.navigationItem.setHidesBackButton(true, animated:true)
             var viewControllers = navigationController.viewControllers
             viewControllers.insert(vcHome, at: 0)
             navigationController.viewControllers = viewControllers

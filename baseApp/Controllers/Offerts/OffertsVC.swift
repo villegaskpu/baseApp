@@ -33,6 +33,7 @@ class OffertsVC: BTableViewController {
         tableView.dataSource = self
         NotificationCenter.default.setObserver(self, selector: #selector(self.openFromMap(_:)), name: .offerFromMapNotificationName, object: nil)
         self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationItem.hidesBackButton = true
         setStyle()
         
         TableViewCellFactory.registerCells(tableView: tableView, types: .offertCell)
@@ -66,6 +67,9 @@ class OffertsVC: BTableViewController {
         self.getOferts(parameters: notification.userInfo as! [String : Any])
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .offerFromMapNotificationName, object: nil)
+    }
     
     func getHome(parameters: [String:Any]) {
         var parametersO:[String:Any] = [:]

@@ -20,6 +20,7 @@ class TemporalHome: BViewController {
         super.viewDidLoad()
         LocationUtil.sharedInstance.delegate = self
         LocationUtil.sharedInstance.startUpdatingLocation()
+        self.navigationController?.navigationItem.setHidesBackButton(true, animated:true)
         cargandoItem(self, message: "Buscando Ofertas cerca de ti...", activity: true)
     }
 }
