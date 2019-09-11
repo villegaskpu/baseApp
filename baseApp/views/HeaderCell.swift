@@ -20,20 +20,20 @@ class HeaderCell: UILabel {
             super.init(frame: CGRect(x: 0.0, y: 0.0, width: Screen.width, height: 30.0))
             
 //            backgroundColor = colorAzul
-            backgroundColor = UIColor.blue
+            backgroundColor = UIColor.darkHotPink
             textColor = .white
             text = title.uppercased()
-            font = UIFont(name: Font.FONT_REGULAR(), size: 16.0)
+            font = UIFont.titleOferta
             textAlignment = textalignment
         }
         else {
             super.init(frame: CGRect(x: 10, y: 0, width: Screen.width - 20.0, height: 40.0))
-            
+            backgroundColor = UIColor.darkHotPink
             text = title
-            textColor = .darkGray
+            textColor = .white
             textAlignment = .center
 //            font = UIFont(name: FONT_HEAVY_ITALIC, size: 20.0)
-            font = UIFont(name: Font.FONT_HEAVY_ITALIC(), size: 20.0)
+            font = UIFont.titleOferta
         }
         
         adjustsFontSizeToFitWidth = true

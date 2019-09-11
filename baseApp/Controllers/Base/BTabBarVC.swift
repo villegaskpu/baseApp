@@ -59,4 +59,23 @@ class BTabBarVC: UITabBarController {
             self.loadingContainer.removeFromSuperview()
         })
     }
+    
+    func setTitleview(logoImage: UIImage? = nil) -> UIView {
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 30))
+        titleView.backgroundColor = .clear
+        
+        var image = #imageLiteral(resourceName: "homeLogo")
+        
+        if let img = logoImage {
+            image = img
+        }
+        
+        let logo = UIImageView(image: image)
+        logo.contentMode = .scaleAspectFit
+        logo.frame = titleView.bounds
+        
+        titleView.addSubview(logo)
+        
+        return titleView
+    }
 }

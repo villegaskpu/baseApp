@@ -1,5 +1,13 @@
 PODS:
   - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - ImageSlideshow (1.7.0):
+    - ImageSlideshow/Core (= 1.7.0)
+  - ImageSlideshow/Alamofire (1.7.0):
+    - AlamofireImage (~> 3.0)
+    - ImageSlideshow/Core
+  - ImageSlideshow/Core (1.7.0)
   - IQKeyboardManagerSwift (6.4.0)
   - lottie-ios (3.1.0)
   - NVActivityIndicatorView/AppExtension (4.7.0)
@@ -11,6 +19,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - ImageSlideshow (~> 1.7.0)
+  - ImageSlideshow/Alamofire
   - IQKeyboardManagerSwift
   - lottie-ios
   - NVActivityIndicatorView/AppExtension
@@ -21,6 +31,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireImage
+    - ImageSlideshow
     - IQKeyboardManagerSwift
     - lottie-ios
     - NVActivityIndicatorView
@@ -30,6 +42,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  ImageSlideshow: f8eec5e37a980f60923b585ff23b0e140fd24018
   IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
   lottie-ios: 9467723922dfff46f6d4e3019c32594a62440b7c
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
@@ -37,6 +51,6 @@ SPEC CHECKSUMS:
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
 
-PODFILE CHECKSUM: 1bcb33256a169152cd3450ba547f278e16a16bb8
+PODFILE CHECKSUM: 9f830bc50e9e6444f08fd4fb3a685fba084bbc78
 
 COCOAPODS: 1.7.0.beta.3

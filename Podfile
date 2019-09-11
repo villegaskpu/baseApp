@@ -13,4 +13,6 @@ target 'baseApp' do
    pod 'NVActivityIndicatorView/AppExtension'
    pod 'lottie-ios'
    pod 'SDWebImage', '~>4.0'
+   pod 'ImageSlideshow', '~> 1.7.0'
+   pod 'ImageSlideshow/Alamofire'
 end

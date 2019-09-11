@@ -30,8 +30,24 @@ class HomeVC: BViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
+        self.reachability.startNotifier()
         setAttributedText()
+        
+    }
+    
+    
+    
+    @objc func reachabilityChanged(_ notification : Notification)
+    {
+        let reacha = notification.object as! Reachability
+        switch(reacha.currentReachabilityStatus())
+        {
+        case NotReachable:
+            //Commons.showMessage("Conexión a internet no disponible, intenta más tarde")
+            Commons.windowInternetError(action: nil, target: self)
+        default:
+            Commons.removeWindowInternetError()
+        }
     }
     
     private func setAttributedText() {

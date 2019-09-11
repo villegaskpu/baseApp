@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 protocol principalTabBarVCDelegate {
-    func setParameters(parametares: [String:Any])
+    func btnSearchPress()
 }
 
 protocol SOInitAppDelegate {
@@ -51,7 +51,7 @@ class principalTabBarVC: BTabBarVC {
     
     private func setItems() {
         menuItems.set(section: "")
-        let articulos = InfoItem.init(identifier: "info", type: InfoItemType.default, title: "ARTÍCULOS", value: "ARTÍCULOS")
+        let articulos = InfoItem.init(identifier: "articulos", type: InfoItemType.default, title: "ARTÍCULOS", value: "ARTÍCULOS")
         articulos.image = UIImage(named: "article_icon")
         
         let ofertas = InfoItem.init(identifier: "ofertas", type: InfoItemType.default, title: "OFERTAS ", value: "OFERTAS ")
@@ -71,14 +71,11 @@ class principalTabBarVC: BTabBarVC {
         menuItems.append(item: contacto)
         menuItems.append(item: tutorial)
         menuItems.append(item: salir)
-        
         self.menuDelegate?.updateMenu(menuItems: self.menuItems)
-        
-        print("self.menuDelegate: \(self.menuDelegate)")
     }
     
     @objc func action(sender: UIBarButtonItem) {
-        // Function body goes here
+        delegateTab?.btnSearchPress()
     }
     
     private func setupNavBar() {
@@ -87,7 +84,7 @@ class principalTabBarVC: BTabBarVC {
         navigationItem.titleView = setTitleview()
 
         let menuButton = UISOMenuIcon(frame: CGRect(x: 0, y: 0, width: 25, height: 40))
-        menuButton.delegate = self as? UISOMenuIconDelegate
+        menuButton.delegate = self //as? UISOMenuIconDelegate
         
         let left = UIBarButtonItem(customView: menuButton)
         navigationItem.leftBarButtonItem = left
@@ -98,28 +95,9 @@ class principalTabBarVC: BTabBarVC {
 
     }
     
-    private func setTitleview(logoImage: UIImage? = nil) -> UIView {
-        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 30))
-        titleView.backgroundColor = .clear
-        
-        var image = #imageLiteral(resourceName: "homeLogo")
-        
-        if let img = logoImage {
-            image = img
-        }
-        
-        let logo = UIImageView(image: image)
-        logo.contentMode = .scaleAspectFit
-        logo.frame = titleView.bounds
-        
-        titleView.addSubview(logo)
-        
-        return titleView
-    }
-    
     func setControllers() {
-        let ofertas = OffertsVC()
-//        ofertas = self
+        var ofertas = OffertsVC()
+        ofertas.delegate = self
         ofertas.tabBarItem = UITabBarItem(title: "Ofertas", image: UIImage(named: "home")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "home_bold")?.withRenderingMode(.alwaysOriginal))
         ofertas.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         ofertas.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.maize], for: .selected)
@@ -140,11 +118,6 @@ class principalTabBarVC: BTabBarVC {
         Mapa.tabBarItem = UITabBarItem(title: "Mapa", image: UIImage(named: "nearby_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "nearby_iconBold")?.withRenderingMode(.alwaysOriginal))
         Mapa.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         Mapa.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.maize], for: .selected)
-        
-        self.tabBar.backgroundColor = UIColor.red
-    
-        
-        
         
         self.viewControllers = [ofertas,filtros,favoritos, Mapa]
     }
@@ -252,14 +225,22 @@ extension principalTabBarVC: UISOMenuIconDelegate {
 extension principalTabBarVC: MenuDelegate {
     
     func selectedItem(idMenu: String, titulo: String) {
-        let vc = TerminosYCondicionesVC()
+//        let vc = TerminosYCondicionesVC()
         
-        self.navigationController?.fadeTo(vc)
-        if idMenu.elementsEqual("cerrar") {
-//            cerrarSesion()
+        if idMenu.elementsEqual("articulos") {
+            let vc = principalTabBarArticulosVC()
+            self.navigationController?.fadeTo(vc)
+        }
+        else if idMenu.elementsEqual("terminos") {
+            let vc = TerminosYCondicionesVC()
+            self.navigationController?.fadeTo(vc)
+        }
+        else if idMenu.elementsEqual("ofertas") {
+            let vc = principalTabBarVC()
+            self.navigationController?.fadeTo(vc)
         }
         else {
-//            Navigation.push(idMenu: idMenu, target: self, titulo: titulo)
+            
         }
     }
 }

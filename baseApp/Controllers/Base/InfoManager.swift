@@ -410,6 +410,7 @@ enum InfoItemType: String {
     case pickerView = "pickerViewcell"
     //yopter
     case offertCell = "cellOffert"
+    case articulosCell = "ArticulosCell"
     
 }
 
@@ -640,6 +641,9 @@ class InfoItem: NSObject {
         case .precioCell:
             break
         case .scoreTcell:
+            break
+        case .articulosCell:
+            self.itemHeight = 300.0
             break
         default:
             break

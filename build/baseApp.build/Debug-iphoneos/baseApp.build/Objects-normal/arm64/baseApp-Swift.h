@@ -205,17 +205,30 @@ SWIFT_CLASS("_TtC7baseApp11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBundle;
+@class UIImageView;
+@class UILabel;
+@class UIButton;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC7baseApp9BTabBarVC")
-@interface BTabBarVC : UITabBarController
-- (void)viewDidLoad;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC7baseApp13ArticulosCell")
+@interface ArticulosCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageArticulo;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titulo;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified descripcion;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified savoOrDeleteImage;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified likeImage;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified disLikeImage;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (IBAction)btnLikeA:(id _Nonnull)sender;
+- (IBAction)bntDisLikeA:(id _Nonnull)sender;
+- (IBAction)btnFavoritosA:(id _Nonnull)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class MFMailComposeViewController;
+@class NSBundle;
 
 SWIFT_CLASS("_TtC7baseApp15BViewController")
 @interface BViewController : UIViewController
@@ -234,6 +247,30 @@ SWIFT_CLASS("_TtC7baseApp20BTableViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITableView;
+
+SWIFT_CLASS("_TtC7baseApp11ArticulosVC")
+@interface ArticulosVC : BTableViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titulo;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp9BTabBarVC")
+@interface BTabBarVC : UITabBarController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+
 
 
 @class UITextField;
@@ -244,18 +281,12 @@ SWIFT_CLASS("_TtC7baseApp20BTableViewController")
 
 
 
-
-
-
-
 @class UIPresentationController;
 
 @interface BTableViewController (SWIFT_EXTENSION(baseApp)) <UIPopoverPresentationControllerDelegate>
 - (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController * _Nonnull)controller SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class UITableView;
-@class UITableViewCell;
 @class UIView;
 
 @interface BTableViewController (SWIFT_EXTENSION(baseApp)) <UITableViewDataSource, UITableViewDelegate>
@@ -317,10 +348,10 @@ SWIFT_CLASS("_TtC7baseApp11FavoritosVC")
 
 
 @interface FavoritosVC (SWIFT_EXTENSION(baseApp)) <BTableViewDelegate>
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems deleteCell:(NSIndexPath * _Nonnull)indexPath;
 @end
 
-@class UILabel;
 @class UICollectionView;
 
 SWIFT_CLASS("_TtC7baseApp9FiltrosVC")
@@ -359,8 +390,6 @@ SWIFT_CLASS("_TtC7baseApp10HeaderCell")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
-@class UIImageView;
-@class UIButton;
 
 SWIFT_CLASS("_TtC7baseApp6HomeVC")
 @interface HomeVC : BViewController
@@ -372,6 +401,7 @@ SWIFT_CLASS("_TtC7baseApp6HomeVC")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnIniciarSesionO;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnRegistrarseO;
 - (void)viewDidLoad;
+- (void)reachabilityChanged:(NSNotification * _Nonnull)notification;
 - (IBAction)btnIniciarSesion:(id _Nonnull)sender;
 - (IBAction)btnRegistrarse:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -419,27 +449,27 @@ SWIFT_CLASS("_TtC7baseApp12LocationUtil")
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nonnull)error;
 @end
 
-@class SkyFloatingLabelTextFieldWithIcon;
 
 SWIFT_CLASS("_TtC7baseApp7LoginVC")
 @interface LoginVC : BViewController
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified homeLogo;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified viewTextFiels;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified btnLogin;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified iconEye;
-@property (nonatomic, weak) IBOutlet SkyFloatingLabelTextFieldWithIcon * _Null_unspecified txtCorreo;
-@property (nonatomic, weak) IBOutlet SkyFloatingLabelTextFieldWithIcon * _Null_unspecified txtPassword;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified txtCorreo;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified txtPassword;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recuperarContraseña;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ingresoAnonimo;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified crearCuenta;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified tCorreoElectronico;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified tContraseñaText;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified txtBienvenida;
 - (void)viewDidLoad;
+- (void)showPasword;
 - (void)viewDidAppear:(BOOL)animated;
-- (IBAction)btnShowPassword:(id _Nonnull)sender;
 - (IBAction)btnEntrar:(id _Nonnull)sender;
 - (IBAction)btnCrearCuenta:(id _Nonnull)sender;
 - (IBAction)btnRecuperarPassword:(id _Nonnull)sender;
 - (IBAction)btnIngresoAnonimo:(id _Nonnull)sender;
-- (void)textFieldDidChange:(UITextField * _Nonnull)textfield;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -486,11 +516,14 @@ SWIFT_CLASS("_TtC7baseApp4Menu")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lterminosYCondiciones;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified txtFormato;
 - (void)viewDidLoad;
+- (void)irAterminosYcondiciones;
 - (void)didReceiveMemoryWarning;
 - (IBAction)closeMenu:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 
@@ -538,11 +571,13 @@ SWIFT_CLASS("_TtC7baseApp9OffertsVC")
 @end
 
 
+
+
 @interface OffertsVC (SWIFT_EXTENSION(baseApp)) <BTableViewDelegate>
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems updateCell:(NSIndexPath * _Nonnull)indexPath value:(NSString * _Nonnull)value action:(NSString * _Nonnull)action;
+- (void)BTableViewWithTableItems:(InfoManager * _Nonnull)tableItems deleteCell:(NSIndexPath * _Nonnull)indexPath;
 @end
-
-
 
 @class UIScrollView;
 
@@ -804,15 +839,15 @@ SWIFT_CLASS("_TtC7baseApp21TransitionManagerMenu")
 @end
 
 
-@interface TransitionManagerMenu (SWIFT_EXTENSION(baseApp)) <UIViewControllerAnimatedTransitioning>
-- (void)animateTransition:(id <UIViewControllerContextTransitioning> _Nonnull)transitionContext;
-- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning> _Nullable)transitionContext SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 @interface TransitionManagerMenu (SWIFT_EXTENSION(baseApp)) <UIViewControllerTransitioningDelegate>
 - (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source SWIFT_WARN_UNUSED_RESULT;
 - (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface TransitionManagerMenu (SWIFT_EXTENSION(baseApp)) <UIViewControllerAnimatedTransitioning>
+- (void)animateTransition:(id <UIViewControllerContextTransitioning> _Nonnull)transitionContext;
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning> _Nullable)transitionContext SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -838,6 +873,8 @@ SWIFT_CLASS("_TtC7baseApp12UISOMenuIcon")
 @interface UITableView (SWIFT_EXTENSION(baseApp))
 - (void)awakeFromNib;
 @end
+
+
 
 
 
@@ -946,6 +983,28 @@ SWIFT_CLASS("_TtC7baseApp9datePiker")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class ImageSlideshow;
+
+SWIFT_CLASS("_TtC7baseApp15detalleOfertaVC")
+@interface detalleOfertaVC : BViewController
+@property (nonatomic, weak) IBOutlet ImageSlideshow * _Null_unspecified sliderImage;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified secondImage;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titleOffert;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified fechaL;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified secondTitleL;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified detalleL;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified detalleDescripcionL;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified condicionesL;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified descripcionCondicionesL;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified promocionAplicableTitleL;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified sucursalesTextView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified contentViewSucursales;
+- (void)viewDidLoad;
+- (void)backBtn;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC7baseApp11filtrosCell")
 @interface filtrosCell : UICollectionViewCell
@@ -989,8 +1048,8 @@ SWIFT_CLASS("_TtC7baseApp14pickerViewcell")
 
 @class UIBarButtonItem;
 
-SWIFT_CLASS("_TtC7baseApp17principalTabBarVC")
-@interface principalTabBarVC : BTabBarVC
+SWIFT_CLASS("_TtC7baseApp26principalTabBarArticulosVC")
+@interface principalTabBarArticulosVC : BTabBarVC
 - (void)viewDidLoad;
 - (void)actionWithSender:(UIBarButtonItem * _Nonnull)sender;
 @property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
@@ -1000,6 +1059,33 @@ SWIFT_CLASS("_TtC7baseApp17principalTabBarVC")
 
 @class UITabBar;
 @class UITabBarItem;
+
+@interface principalTabBarArticulosVC (SWIFT_EXTENSION(baseApp))
+- (void)tabBar:(UITabBar * _Nonnull)tabBar didSelectItem:(UITabBarItem * _Nonnull)item;
+@end
+
+
+@interface principalTabBarArticulosVC (SWIFT_EXTENSION(baseApp)) <UITabBarControllerDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)tabBarController:(UITabBarController * _Nonnull)tabBarController animationControllerForTransitionFromViewController:(UIViewController * _Nonnull)fromVC toViewController:(UIViewController * _Nonnull)toVC SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
+
+@interface principalTabBarArticulosVC (SWIFT_EXTENSION(baseApp))
+- (void)openMenu;
+@end
+
+
+SWIFT_CLASS("_TtC7baseApp17principalTabBarVC")
+@interface principalTabBarVC : BTabBarVC
+- (void)viewDidLoad;
+- (void)actionWithSender:(UIBarButtonItem * _Nonnull)sender;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 @interface principalTabBarVC (SWIFT_EXTENSION(baseApp))
 - (void)tabBar:(UITabBar * _Nonnull)tabBar didSelectItem:(UITabBarItem * _Nonnull)item;

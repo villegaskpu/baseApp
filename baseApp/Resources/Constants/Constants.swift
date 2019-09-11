@@ -9,8 +9,8 @@
 import UIKit
 import a4SysCoreIOS
 
-let constantsParameters:[String:Any] = [ "appID" : "1ed3d6e03ee03c04bf3365f808fc28f1",
-                                         "token" : "\(Settings.sharedInstance.getAccessToken() ?? "")",
+var constantsParameters:[String:Any] = [ "appID" : "1ed3d6e03ee03c04bf3365f808fc28f1",
+                                         "token" : "\(Settings.sharedInstance.getToken() ?? "")",
                                          "tokenYopter" : "\(Settings.sharedInstance.getOldToken() ?? "")"
 ]
 
@@ -48,5 +48,6 @@ struct Constants{
         static let backgroundNotification = "BACKGROUND_NOTIFICATION"
         static let foregroundNotification = "FOREGROUND_NOTIFICATION"
         static let menuIconPressed = "MenuIconPressed"
+        static let reachabilityChanged = "static let "
     }
 }

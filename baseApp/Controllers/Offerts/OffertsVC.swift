@@ -12,9 +12,7 @@ import a4SysCoreIOS
 class OffertsVC: BTableViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var lTitulo: UILabel!
-    
     @IBOutlet weak var lViewTitulo: UIView!
     
     
@@ -23,26 +21,55 @@ class OffertsVC: BTableViewController {
     var pageHome = 1
     var pageOferts = 1
     
+    var delegate: principalTabBarVCDelegate?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showLoading()
         tableView.alpha = 0
         print("hola ofertas")
         BaseDelegate = self
+        self.delegate = principalTabBarVCDelegate.self as? principalTabBarVCDelegate
         tableView.delegate = self
         tableView.dataSource = self
         NotificationCenter.default.setObserver(self, selector: #selector(self.openFromMap(_:)), name: .offerFromMapNotificationName, object: nil)
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationItem.hidesBackButton = true
         setStyle()
-        
+        addRefreshControl()
         TableViewCellFactory.registerCells(tableView: tableView, types: .offertCell)
-        
+        setInitialHome()
+    }
+    
+    private func setInitialHome() {
+        tableView.alpha = 0
         tableItems.removeAll()
-        
         let param = Requests.createHomeRequest("", pageHome, Constants.numberOfRowsPerPage, LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0, LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0)
-        
+    
         getHome(parameters: param)
+    }
+    
+    private func addRefreshControl() {
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        
+        // Configure Refresh Control
+        refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
+        refreshControl.tintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
+        refreshControl.attributedTitle = NSAttributedString(string: "Actializar Ofertas", attributes: [NSAttributedString.Key.font : UIFont.titleOferta])
+    }
+    
+    @objc private func refreshWeatherData(_ sender: Any) {
+        pageHome = 1
+        pageOferts = 1
+        tableItems.removeAll()
+        tableView.reloadData()
+        setInitialHome()
     }
     
     private func setStyle() {
@@ -103,7 +130,7 @@ class OffertsVC: BTableViewController {
                         self.tableView.alpha = 1
                     })
                 } else {
-                    Commons.showMessage("GLOBAL_ERROR".localized)
+//                    Commons.showMessage("GLOBAL_ERROR".localized)
                 }
                 
                 
@@ -141,8 +168,9 @@ class OffertsVC: BTableViewController {
                         self.tableItems.append(item: ofert)
                     }
                     self.tableView.reloadData()
-                    UIView.animate(withDuration: 2.0, animations: {
+                    UIView.animate(withDuration: 1.0, animations: {
                         self.tableView.alpha = 1
+                        self.refreshControl.endRefreshing()
                     })
                 } else {
                     Commons.showMessage("GLOBAL_ERROR".localized)
@@ -156,8 +184,9 @@ class OffertsVC: BTableViewController {
                 
                 self.tableItems.set(section: "Sin resultados")
                 self.tableView.reloadData()
-                UIView.animate(withDuration: 2.0, animations: {
+                UIView.animate(withDuration: 1.0, animations: {
                     self.tableView.alpha = 1
+                    self.refreshControl.endRefreshing()
                 })
                 if let val = objeto as? ApiError {
                     Commons.showMessage("\(val.message)", duration: TTGSnackbarDuration.long)
@@ -169,15 +198,45 @@ class OffertsVC: BTableViewController {
     }
 }
 extension OffertsVC: BTableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("seleccionado: \(indexPath.row)")
+        
+        
+        let vc = detalleOfertaVC()
+        vc.offertSelect = tableItems.getItem(section: indexPath.section, at: indexPath.row).offer
+        self.navigationController?.fadeTo(vc)
+        
+    }
+    
     func BTableView(tableItems: InfoManager, updateCell indexPath: IndexPath, value: String, action: String) {
         print("delegateINOfert")
+        
+        self.tableItems.getItem(section: indexPath.section, at: indexPath.row).offer.favorite = value.toInt() ?? 0
+        
+        if action == "favorite" {
+            self.tableItems.getItem(section: indexPath.section, at: indexPath.row).offer.favorite = value.toInt() ?? 0
+        }
+        else if action == "likes" {
+            self.tableItems.getItem(section: indexPath.section, at: indexPath.row).offer.userRating.rating = value.toDouble() ?? Double(0)
+        }
+        
+        tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+    }
+    
+    func BTableView(tableItems: InfoManager, deleteCell indexPath: IndexPath) {
+        tableItems.removeItem(section: indexPath.section, at: indexPath.row)
+        self.tableView.deleteRows(at: [indexPath], with: .fade)
+        if self.tableItems.count == 0{
+            self.tableItems.set(section: "Sin Ofertas")
+        }
     }
 }
 
 extension OffertsVC: principalTabBarVCDelegate {
-    func setParameters(parametares: [String : Any]) {
-        print("estamosDentro")
-    }
     
+    func btnSearchPress() {
+        print("busqueda")
+    }
 
 }

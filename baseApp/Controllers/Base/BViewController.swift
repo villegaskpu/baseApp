@@ -16,11 +16,17 @@ public class BViewController: UIViewController {
 //    public var sessionManager = SessionManager()
     private let loadingContainer = UIView()
     private var messageView = UIView()
+    
+    let refreshControl = UIRefreshControl()
+    
+    
     let CARGANDO = UIView()   //variable global
+    let reachability = Reachability.forInternetConnection()!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationItem.setHidesBackButton(true, animated:true)
+        
     }
     
     func showLoading(overCurrentContext: Bool = false) {
@@ -142,5 +148,25 @@ public class BViewController: UIViewController {
         },completion: { void in
             self.CARGANDO.removeFromSuperview()
         })
+    }
+    
+    
+    func setTitleview(logoImage: UIImage? = nil) -> UIView {
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 30))
+        titleView.backgroundColor = .clear
+        
+        var image = #imageLiteral(resourceName: "homeLogo")
+        
+        if let img = logoImage {
+            image = img
+        }
+        
+        let logo = UIImageView(image: image)
+        logo.contentMode = .scaleAspectFit
+        logo.frame = titleView.bounds
+        
+        titleView.addSubview(logo)
+        
+        return titleView
     }
 }

@@ -32,43 +32,25 @@ class Settings
     
     func getToken() -> String?
     {
-        let prefs = UserDefaults.init(suiteName: "group.comunica.app")
-        
-        if let token = prefs?.string(forKey: "token"){
-            return token
-        }
-        else{
-            return nil
-        }
-        
+        let status = UserDefaults.standard.string(forKey: "token") ?? ""
+        return status
     }
     
     func setToken(value: String) -> Void{
-        let prefs = UserDefaults.init(suiteName: "group.comunica.app")
-        
-        prefs?.setValue(value, forKey: "token")
-        prefs?.synchronize()
+        UserDefaults.standard.set(value, forKey: "token")
     }
     
     func getOldToken() -> String?
     {
-        let prefs = UserDefaults.init(suiteName: "group.comunica.app")
         
-        if let token = prefs?.string(forKey: "oldToken"){
-            return token
-        }
-        else{
-            return nil
-        }
+        let status = UserDefaults.standard.string(forKey: "oldToken") ?? ""
+        return status
         
     }
     
     func setOldToken(value: String) -> Void
     {
-        let prefs = UserDefaults.init(suiteName: "group.comunica.app")
-        
-        prefs?.setValue(value, forKey: "oldToken")
-        prefs?.synchronize()
+        UserDefaults.standard.set(value, forKey: "oldToken")
     }
 
 

@@ -361,6 +361,7 @@ class Commons{
         let view = UIView(frame: CGRect(x: 0, y: 0, width: Screen.width, height: Screen.height))
         view.tag = 9999988
         view.alpha = 0.0
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "bgModal")!)
         
         let backgroundImage = UIImageView()
         backgroundImage.image = UIImage(named: "errorInternet")
@@ -370,13 +371,14 @@ class Commons{
         
         if action != nil {
             let button = UIButton(type: .custom)
+            button.setImage(UIImage(named: "button"), for: UIControl.State.normal)
             button.frame = CGRect(x: Screen.midX - 100, y: Screen.midY + 180, width: 200, height: 50)
-            button.backgroundColor = UIColor.hexStringToUIColor(hex: "#f2f2f2")
-            button.layer.cornerRadius = 10.0
-            button.titleLabel?.textColor = UIColor.hexStringToUIColor(hex: "#bcbcbc")
+//            button.backgroundColor = UIColor.hexStringToUIColor(hex: "#f2f2f2")
+//            button.layer.cornerRadius = 10.0
+//            button.titleLabel?.textColor = UIColor.hexStringToUIColor(hex: "#bcbcbc")
             
             
-            button.setAttributedTitle(NSAttributedString(string: "Reintentar", attributes: [.font: UIFont(name: "Avenir-Medium", size: 20.0)!]), for: .normal)
+//            button.setAttributedTitle(NSAttributedString(string: "Reintentar", attributes: [.font: UIFont(name: "Avenir-Medium", size: 20.0)!]), for: .normal)
             
             if let selector = action, let target = target {
                 button.addTarget(target, action: selector, for: .touchUpInside)

@@ -562,6 +562,12 @@ class TableViewCellFactory: NSObject {
                 cell.delegate = delegate as? cellOffertDelegate
                 cell.offer = item.offer
                 return cell
+            case .articulosCell:
+                let cell = cell_ as! ArticulosCell
+//                cell.indexPath = indexPath
+//                cell.delegate = delegate as? cellOffertDelegate
+                cell.articulo = item.offer
+                return cell
             default:
                 return UITableViewCell()
             }

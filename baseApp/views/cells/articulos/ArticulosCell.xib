@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ArticulosCell" rowHeight="294" id="KGk-i7-Jjw" customClass="ArticulosCell" customModule="baseApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="294"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="293.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rha-O7-B0i">
+                        <rect key="frame" x="8" y="0.0" width="333" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="ome-fy-n54"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSn-qv-1Ge">
+                        <rect key="frame" x="20" y="168" width="309" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="SSh-ZS-ERe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="601-Y1-B3d">
+                        <rect key="frame" x="20" y="203" width="309" height="47.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-uO-kD3">
+                        <rect key="frame" x="0.0" y="258.5" width="349" height="35"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJV-kk-J1p">
+                                <rect key="frame" x="304" y="0.0" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="sMr-o2-RDC"/>
+                                </constraints>
+                                <state key="normal" image="dislikeA"/>
+                                <connections>
+                                    <action selector="bntDisLikeA:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T05-Et-agi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-qP-AIG">
+                                <rect key="frame" x="256" y="0.0" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="HRk-Ea-4U9"/>
+                                </constraints>
+                                <state key="normal" image="LikeA"/>
+                                <connections>
+                                    <action selector="btnLikeA:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="w4F-A9-abb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARS-1N-K6V">
+                                <rect key="frame" x="208" y="0.0" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Jvt-eF-CZS"/>
+                                </constraints>
+                                <state key="normal" image="FavoritosA"/>
+                                <connections>
+                                    <action selector="btnFavoritosA:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="096-Ei-JEa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sJV-kk-J1p" firstAttribute="top" secondItem="aFo-uO-kD3" secondAttribute="top" id="19n-cI-z9A"/>
+                            <constraint firstItem="Jaz-qP-AIG" firstAttribute="top" secondItem="aFo-uO-kD3" secondAttribute="top" id="6lY-U4-6zV"/>
+                            <constraint firstItem="Jaz-qP-AIG" firstAttribute="leading" secondItem="ARS-1N-K6V" secondAttribute="trailing" constant="13" id="Cbg-sK-P5T"/>
+                            <constraint firstAttribute="bottom" secondItem="sJV-kk-J1p" secondAttribute="bottom" id="JJt-aK-vJS"/>
+                            <constraint firstAttribute="height" constant="35" id="OEi-60-SmD"/>
+                            <constraint firstAttribute="bottom" secondItem="Jaz-qP-AIG" secondAttribute="bottom" id="Shr-88-W3i"/>
+                            <constraint firstAttribute="trailing" secondItem="sJV-kk-J1p" secondAttribute="trailing" constant="10" id="dWK-y6-hfk"/>
+                            <constraint firstItem="sJV-kk-J1p" firstAttribute="leading" secondItem="Jaz-qP-AIG" secondAttribute="trailing" constant="13" id="etO-0Q-g5q"/>
+                            <constraint firstAttribute="bottom" secondItem="ARS-1N-K6V" secondAttribute="bottom" id="nP8-M7-w7t"/>
+                            <constraint firstItem="ARS-1N-K6V" firstAttribute="top" secondItem="aFo-uO-kD3" secondAttribute="top" id="nTh-GD-TCl"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="ymB-Vh-WFX">
+                        <rect key="frame" x="0.0" y="18" width="83" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="83" id="RQP-Im-pp4"/>
+                            <constraint firstAttribute="height" constant="47" id="kc7-jH-x5e"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rha-O7-B0i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="0EK-E5-P4t"/>
+                    <constraint firstItem="aFo-uO-kD3" firstAttribute="top" secondItem="601-Y1-B3d" secondAttribute="bottom" constant="8" id="29L-k0-hKB"/>
+                    <constraint firstAttribute="trailing" secondItem="aFo-uO-kD3" secondAttribute="trailing" id="3S5-xO-JmU"/>
+                    <constraint firstItem="rha-O7-B0i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6ko-V2-l1L"/>
+                    <constraint firstItem="pSn-qv-1Ge" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="AWE-AM-OCN"/>
+                    <constraint firstItem="aFo-uO-kD3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cv1-FT-MWm"/>
+                    <constraint firstItem="pSn-qv-1Ge" firstAttribute="top" secondItem="rha-O7-B0i" secondAttribute="bottom" constant="8" id="JLD-j7-wus"/>
+                    <constraint firstItem="601-Y1-B3d" firstAttribute="top" secondItem="pSn-qv-1Ge" secondAttribute="bottom" constant="5" id="MBF-4t-CJk"/>
+                    <constraint firstItem="ymB-Vh-WFX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="MhI-dR-kOt"/>
+                    <constraint firstAttribute="bottom" secondItem="aFo-uO-kD3" secondAttribute="bottom" id="Uvm-dU-11k"/>
+                    <constraint firstItem="ymB-Vh-WFX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YFG-eZ-qgi"/>
+                    <constraint firstItem="601-Y1-B3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="fL2-av-dqv"/>
+                    <constraint firstItem="pSn-qv-1Ge" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="n9K-8A-va1"/>
+                    <constraint firstAttribute="trailing" secondItem="rha-O7-B0i" secondAttribute="trailing" constant="8" id="swD-1I-0l6"/>
+                    <constraint firstItem="601-Y1-B3d" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ttW-m3-vNf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descripcion" destination="601-Y1-B3d" id="rdt-KI-zdV"/>
+                <outlet property="disLikeImage" destination="sJV-kk-J1p" id="QdE-yj-cbb"/>
+                <outlet property="imageArticulo" destination="rha-O7-B0i" id="VRC-EM-vpB"/>
+                <outlet property="likeImage" destination="Jaz-qP-AIG" id="l2l-fj-iTS"/>
+                <outlet property="savoOrDeleteImage" destination="ARS-1N-K6V" id="0Av-Hn-8Ck"/>
+                <outlet property="titulo" destination="pSn-qv-1Ge" id="jOJ-OT-E6p"/>
+            </connections>
+            <point key="canvasLocation" x="-94.927536231884062" y="254.46428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FavoritosA" width="19" height="19"/>
+        <image name="LikeA" width="21" height="21"/>
+        <image name="dislikeA" width="21" height="21"/>
+        <image name="new_indicator" width="80" height="47"/>
+    </resources>
+</document>

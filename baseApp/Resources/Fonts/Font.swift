@@ -10,6 +10,19 @@ import Foundation
 import UIKit
 
 extension UIFont {
+    
+    class var textStyle: UIFont {
+        return UIFont(name: "Roboto-Medium", size: 19.0)!
+    }
+    
+    class var textStyle2: UIFont {
+        return UIFont(name: "Roboto-Bold", size: 12.0)!
+    }
+    
+    class var textStyle3: UIFont {
+        return UIFont(name: "Roboto-Bold", size: 32.0)!
+    }
+    
     class var titulosPink: UIFont {
         return UIFont(name: "Avenir-Heavy", size: 32.0)!
     }

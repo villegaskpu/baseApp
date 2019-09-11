@@ -31,6 +31,7 @@ extension TemporalHome: LocationUtilDelegate {
             LocationUtil.sharedInstance.currentLocation = currentLocation
             DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
                 self.removeLoading()
+                self.navigationController?.isNavigationBarHidden = false
                 let vc = principalTabBarVC()
                 self.navigationController?.fadeTo(vc)
             }

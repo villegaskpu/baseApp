@@ -67,6 +67,7 @@ depends-top-level:
 - !private "UIApplication"
 - !private "UIButton"
 - !private "UIColor"
+- !private "UIControl"
 - "UIDevice"
 - !private "UIFont"
 - "UIImage"
@@ -77,7 +78,6 @@ depends-top-level:
 - !private "UIView"
 - !private "UInt8"
 - !private "UnicodeScalar"
-- !private "UnicodeScalarType"
 - !private "Void"
 - !private "WakeUpResponse"
 - !private "constantsParameters"
@@ -118,6 +118,7 @@ depends-member:
 - !private ["So12UIButtonTypeV", "custom"]
 - !private ["So7CALayerC", "cornerRadius"]
 - !private ["So15CALayerDelegateP", "ContentMode"]
+- !private ["So15CALayerDelegateP", "State"]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "addTarget"]
 - !private ["So15CALayerDelegateP", "alpha"]
@@ -134,6 +135,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "numberOfLines"]
 - !private ["So15CALayerDelegateP", "removeFromSuperview"]
 - !private ["So15CALayerDelegateP", "setAttributedTitle"]
+- !private ["So15CALayerDelegateP", "setImage"]
 - !private ["So15CALayerDelegateP", "show"]
 - !private ["So15CALayerDelegateP", "tag"]
 - !private ["So15CALayerDelegateP", "text"]
@@ -164,6 +166,7 @@ depends-member:
 - !private ["So22CTTelephonyNetworkInfoC", "init"]
 - !private ["So22CTTelephonyNetworkInfoC", "subscriberCellularProvider"]
 - !private ["s7CVarArgP", "ContentMode"]
+- !private ["s7CVarArgP", "State"]
 - !private ["s7CVarArgP", "addSubview"]
 - !private ["s7CVarArgP", "addTarget"]
 - !private ["s7CVarArgP", "advertisingIdentifier"]
@@ -213,6 +216,7 @@ depends-member:
 - !private ["s7CVarArgP", "setAttributedTitle"]
 - !private ["s7CVarArgP", "setConstants"]
 - !private ["s7CVarArgP", "setEnvironment"]
+- !private ["s7CVarArgP", "setImage"]
 - !private ["s7CVarArgP", "setUrlParameters"]
 - !private ["s7CVarArgP", "setValue"]
 - !private ["s7CVarArgP", "shared"]
@@ -291,6 +295,7 @@ depends-member:
 - !private ["7baseApp7CommonsC", "UIApplication"]
 - !private ["7baseApp7CommonsC", "UIButton"]
 - !private ["7baseApp7CommonsC", "UIColor"]
+- !private ["7baseApp7CommonsC", "UIControl"]
 - !private ["7baseApp7CommonsC", "UIDevice"]
 - !private ["7baseApp7CommonsC", "UIFont"]
 - ["7baseApp7CommonsC", "UIImage"]
@@ -352,6 +357,7 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "map"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "ContentMode"]
+- !private ["s28CustomDebugStringConvertibleP", "State"]
 - !private ["s28CustomDebugStringConvertibleP", "absoluteString"]
 - !private ["s28CustomDebugStringConvertibleP", "addSubview"]
 - !private ["s28CustomDebugStringConvertibleP", "addTarget"]
@@ -408,6 +414,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "setAttributedTitle"]
 - !private ["s28CustomDebugStringConvertibleP", "setConstants"]
 - !private ["s28CustomDebugStringConvertibleP", "setEnvironment"]
+- !private ["s28CustomDebugStringConvertibleP", "setImage"]
 - !private ["s28CustomDebugStringConvertibleP", "setUrlParameters"]
 - !private ["s28CustomDebugStringConvertibleP", "setValue"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
@@ -461,6 +468,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "white"]
 - ["s17CustomReflectableP", "width"]
 - !private ["s23CustomStringConvertibleP", "ContentMode"]
+- !private ["s23CustomStringConvertibleP", "State"]
 - !private ["s23CustomStringConvertibleP", "absoluteString"]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "addTarget"]
@@ -518,6 +526,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "setAttributedTitle"]
 - !private ["s23CustomStringConvertibleP", "setConstants"]
 - !private ["s23CustomStringConvertibleP", "setEnvironment"]
+- !private ["s23CustomStringConvertibleP", "setImage"]
 - !private ["s23CustomStringConvertibleP", "setUrlParameters"]
 - !private ["s23CustomStringConvertibleP", "setValue"]
 - !private ["s23CustomStringConvertibleP", "shared"]
@@ -622,6 +631,7 @@ depends-member:
 - ["SE", "width"]
 - !private ["SS10FoundationE8EncodingV", "ascii"]
 - !private ["SQ", "ContentMode"]
+- !private ["SQ", "State"]
 - !private ["SQ", "WakeUp"]
 - !private ["SQ", "absoluteString"]
 - !private ["SQ", "addSubview"]
@@ -691,6 +701,7 @@ depends-member:
 - !private ["SQ", "setAttributedTitle"]
 - !private ["SQ", "setConstants"]
 - !private ["SQ", "setEnvironment"]
+- !private ["SQ", "setImage"]
 - !private ["SQ", "setUrlParameters"]
 - !private ["SQ", "setValue"]
 - !private ["SQ", "shared"]
@@ -792,6 +803,7 @@ depends-member:
 - !private ["So11NSFormatterC", "pmSymbol"]
 - !private ["So11NSFormatterC", "string"]
 - !private ["SH", "ContentMode"]
+- !private ["SH", "State"]
 - !private ["SH", "WakeUp"]
 - !private ["SH", "absoluteString"]
 - !private ["SH", "addSubview"]
@@ -857,6 +869,7 @@ depends-member:
 - !private ["SH", "setAttributedTitle"]
 - !private ["SH", "setConstants"]
 - !private ["SH", "setEnvironment"]
+- !private ["SH", "setImage"]
 - !private ["SH", "setUrlParameters"]
 - !private ["SH", "setValue"]
 - !private ["SH", "shared"]
@@ -918,6 +931,7 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
 - !private ["So18NSAttributedStringC", "init"]
 - !private ["So8NSCodingP", "ContentMode"]
+- !private ["So8NSCodingP", "State"]
 - !private ["So8NSCodingP", "addSubview"]
 - !private ["So8NSCodingP", "addTarget"]
 - !private ["So8NSCodingP", "alpha"]
@@ -949,6 +963,7 @@ depends-member:
 - !private ["So8NSCodingP", "pngData"]
 - !private ["So8NSCodingP", "removeFromSuperview"]
 - !private ["So8NSCodingP", "setAttributedTitle"]
+- !private ["So8NSCodingP", "setImage"]
 - !private ["So8NSCodingP", "setValue"]
 - !private ["So8NSCodingP", "show"]
 - !private ["So8NSCodingP", "split"]
@@ -1034,6 +1049,7 @@ depends-member:
 - !private ["So8NSNumberC", "init"]
 - !private ["So8NSNumberC", "init"]
 - !private ["So8NSObjectC", "ContentMode"]
+- !private ["So8NSObjectC", "State"]
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "addTarget"]
 - !private ["So8NSObjectC", "advertisingIdentifier"]
@@ -1082,6 +1098,7 @@ depends-member:
 - !private ["So8NSObjectC", "setAttributedTitle"]
 - !private ["So8NSObjectC", "setConstants"]
 - !private ["So8NSObjectC", "setEnvironment"]
+- !private ["So8NSObjectC", "setImage"]
 - !private ["So8NSObjectC", "setUrlParameters"]
 - !private ["So8NSObjectC", "setValue"]
 - !private ["So8NSObjectC", "shared"]
@@ -1104,6 +1121,7 @@ depends-member:
 - !private ["So8NSObjectC", "viewWithTag"]
 - !private ["So8NSObjectC", "white"]
 - !private ["So8NSObjectP", "ContentMode"]
+- !private ["So8NSObjectP", "State"]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "addTarget"]
 - !private ["So8NSObjectP", "advertisingIdentifier"]
@@ -1152,6 +1170,7 @@ depends-member:
 - !private ["So8NSObjectP", "setAttributedTitle"]
 - !private ["So8NSObjectP", "setConstants"]
 - !private ["So8NSObjectP", "setEnvironment"]
+- !private ["So8NSObjectP", "setImage"]
 - !private ["So8NSObjectP", "setUrlParameters"]
 - !private ["So8NSObjectP", "setValue"]
 - !private ["So8NSObjectP", "shared"]
@@ -1359,8 +1378,10 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "layer"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setAttributedTitle"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setImage"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "titleLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "ContentMode"]
+- !private ["So29UIAccessibilityIdentificationP", "State"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "addTarget"]
 - !private ["So29UIAccessibilityIdentificationP", "alpha"]
@@ -1378,6 +1399,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "pngData"]
 - !private ["So29UIAccessibilityIdentificationP", "removeFromSuperview"]
 - !private ["So29UIAccessibilityIdentificationP", "setAttributedTitle"]
+- !private ["So29UIAccessibilityIdentificationP", "setImage"]
 - !private ["So29UIAccessibilityIdentificationP", "show"]
 - !private ["So29UIAccessibilityIdentificationP", "tag"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
@@ -1386,6 +1408,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "titleLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "viewWithTag"]
 - !private ["So12UIAppearanceP", "ContentMode"]
+- !private ["So12UIAppearanceP", "State"]
 - !private ["So12UIAppearanceP", "addSubview"]
 - !private ["So12UIAppearanceP", "addTarget"]
 - !private ["So12UIAppearanceP", "alpha"]
@@ -1402,6 +1425,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "numberOfLines"]
 - !private ["So12UIAppearanceP", "removeFromSuperview"]
 - !private ["So12UIAppearanceP", "setAttributedTitle"]
+- !private ["So12UIAppearanceP", "setImage"]
 - !private ["So12UIAppearanceP", "show"]
 - !private ["So12UIAppearanceP", "tag"]
 - !private ["So12UIAppearanceP", "text"]
@@ -1410,6 +1434,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "titleLabel"]
 - !private ["So12UIAppearanceP", "viewWithTag"]
 - !private ["So21UIAppearanceContainerP", "ContentMode"]
+- !private ["So21UIAppearanceContainerP", "State"]
 - !private ["So21UIAppearanceContainerP", "addSubview"]
 - !private ["So21UIAppearanceContainerP", "addTarget"]
 - !private ["So21UIAppearanceContainerP", "alpha"]
@@ -1426,6 +1451,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "numberOfLines"]
 - !private ["So21UIAppearanceContainerP", "removeFromSuperview"]
 - !private ["So21UIAppearanceContainerP", "setAttributedTitle"]
+- !private ["So21UIAppearanceContainerP", "setImage"]
 - !private ["So21UIAppearanceContainerP", "show"]
 - !private ["So21UIAppearanceContainerP", "tag"]
 - !private ["So21UIAppearanceContainerP", "text"]
@@ -1441,8 +1467,10 @@ depends-member:
 - !private ["So8UIButtonC", "init"]
 - !private ["So8UIButtonC", "layer"]
 - !private ["So8UIButtonC", "setAttributedTitle"]
+- !private ["So8UIButtonC", "setImage"]
 - !private ["So8UIButtonC", "titleLabel"]
 - !private ["So7UIColorC", "hexStringToUIColor"]
+- !private ["So7UIColorC", "init"]
 - !private ["So7UIColorC", "white"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "font"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "init"]
@@ -1450,14 +1478,17 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "textAlignment"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "textColor"]
+- !private ["So9UIControlC", "State"]
 - !private ["So9UIControlC", "addTarget"]
 - !private ["So9UIControlC", "backgroundColor"]
 - !private ["So9UIControlC", "frame"]
 - !private ["So9UIControlC", "init"]
 - !private ["So9UIControlC", "layer"]
 - !private ["So9UIControlC", "setAttributedTitle"]
+- !private ["So9UIControlC", "setImage"]
 - !private ["So9UIControlC", "titleLabel"]
 - !private ["So17UICoordinateSpaceP", "ContentMode"]
+- !private ["So17UICoordinateSpaceP", "State"]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
 - !private ["So17UICoordinateSpaceP", "addTarget"]
 - !private ["So17UICoordinateSpaceP", "alpha"]
@@ -1474,6 +1505,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "numberOfLines"]
 - !private ["So17UICoordinateSpaceP", "removeFromSuperview"]
 - !private ["So17UICoordinateSpaceP", "setAttributedTitle"]
+- !private ["So17UICoordinateSpaceP", "setImage"]
 - !private ["So17UICoordinateSpaceP", "show"]
 - !private ["So17UICoordinateSpaceP", "tag"]
 - !private ["So17UICoordinateSpaceP", "text"]
@@ -1485,6 +1517,7 @@ depends-member:
 - !private ["So8UIDeviceC", "systemVersion"]
 - ["So8UIDeviceC", "userInterfaceIdiom"]
 - !private ["So13UIDynamicItemP", "ContentMode"]
+- !private ["So13UIDynamicItemP", "State"]
 - !private ["So13UIDynamicItemP", "addSubview"]
 - !private ["So13UIDynamicItemP", "addTarget"]
 - !private ["So13UIDynamicItemP", "alpha"]
@@ -1501,6 +1534,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "numberOfLines"]
 - !private ["So13UIDynamicItemP", "removeFromSuperview"]
 - !private ["So13UIDynamicItemP", "setAttributedTitle"]
+- !private ["So13UIDynamicItemP", "setImage"]
 - !private ["So13UIDynamicItemP", "show"]
 - !private ["So13UIDynamicItemP", "tag"]
 - !private ["So13UIDynamicItemP", "text"]
@@ -1509,6 +1543,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "titleLabel"]
 - !private ["So13UIDynamicItemP", "viewWithTag"]
 - !private ["So18UIFocusEnvironmentP", "ContentMode"]
+- !private ["So18UIFocusEnvironmentP", "State"]
 - !private ["So18UIFocusEnvironmentP", "addSubview"]
 - !private ["So18UIFocusEnvironmentP", "addTarget"]
 - !private ["So18UIFocusEnvironmentP", "alpha"]
@@ -1525,6 +1560,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "numberOfLines"]
 - !private ["So18UIFocusEnvironmentP", "removeFromSuperview"]
 - !private ["So18UIFocusEnvironmentP", "setAttributedTitle"]
+- !private ["So18UIFocusEnvironmentP", "setImage"]
 - !private ["So18UIFocusEnvironmentP", "show"]
 - !private ["So18UIFocusEnvironmentP", "tag"]
 - !private ["So18UIFocusEnvironmentP", "text"]
@@ -1533,6 +1569,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "titleLabel"]
 - !private ["So18UIFocusEnvironmentP", "viewWithTag"]
 - !private ["So11UIFocusItemP", "ContentMode"]
+- !private ["So11UIFocusItemP", "State"]
 - !private ["So11UIFocusItemP", "addSubview"]
 - !private ["So11UIFocusItemP", "addTarget"]
 - !private ["So11UIFocusItemP", "alpha"]
@@ -1549,6 +1586,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "numberOfLines"]
 - !private ["So11UIFocusItemP", "removeFromSuperview"]
 - !private ["So11UIFocusItemP", "setAttributedTitle"]
+- !private ["So11UIFocusItemP", "setImage"]
 - !private ["So11UIFocusItemP", "show"]
 - !private ["So11UIFocusItemP", "tag"]
 - !private ["So11UIFocusItemP", "text"]
@@ -1557,6 +1595,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "titleLabel"]
 - !private ["So11UIFocusItemP", "viewWithTag"]
 - !private ["So20UIFocusItemContainerP", "ContentMode"]
+- !private ["So20UIFocusItemContainerP", "State"]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
 - !private ["So20UIFocusItemContainerP", "addTarget"]
 - !private ["So20UIFocusItemContainerP", "alpha"]
@@ -1573,6 +1612,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "numberOfLines"]
 - !private ["So20UIFocusItemContainerP", "removeFromSuperview"]
 - !private ["So20UIFocusItemContainerP", "setAttributedTitle"]
+- !private ["So20UIFocusItemContainerP", "setImage"]
 - !private ["So20UIFocusItemContainerP", "show"]
 - !private ["So20UIFocusItemContainerP", "tag"]
 - !private ["So20UIFocusItemContainerP", "text"]
@@ -1598,6 +1638,7 @@ depends-member:
 - !private ["So7UILabelC", "textAlignment"]
 - !private ["So7UILabelC", "textColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "ContentMode"]
+- !private ["So30UIPasteConfigurationSupportingP", "State"]
 - !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
 - !private ["So30UIPasteConfigurationSupportingP", "addTarget"]
 - !private ["So30UIPasteConfigurationSupportingP", "alpha"]
@@ -1615,6 +1656,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "numberOfLines"]
 - !private ["So30UIPasteConfigurationSupportingP", "removeFromSuperview"]
 - !private ["So30UIPasteConfigurationSupportingP", "setAttributedTitle"]
+- !private ["So30UIPasteConfigurationSupportingP", "setImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
 - !private ["So30UIPasteConfigurationSupportingP", "show"]
 - !private ["So30UIPasteConfigurationSupportingP", "tag"]
@@ -1624,6 +1666,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "titleLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewWithTag"]
 - !private ["So11UIResponderC", "ContentMode"]
+- !private ["So11UIResponderC", "State"]
 - !private ["So11UIResponderC", "addSubview"]
 - !private ["So11UIResponderC", "addTarget"]
 - !private ["So11UIResponderC", "alpha"]
@@ -1641,6 +1684,7 @@ depends-member:
 - !private ["So11UIResponderC", "numberOfLines"]
 - !private ["So11UIResponderC", "removeFromSuperview"]
 - !private ["So11UIResponderC", "setAttributedTitle"]
+- !private ["So11UIResponderC", "setImage"]
 - !private ["So11UIResponderC", "shared"]
 - !private ["So11UIResponderC", "show"]
 - !private ["So11UIResponderC", "tag"]
@@ -1650,6 +1694,7 @@ depends-member:
 - !private ["So11UIResponderC", "titleLabel"]
 - !private ["So11UIResponderC", "viewWithTag"]
 - !private ["So30UIResponderStandardEditActionsP", "ContentMode"]
+- !private ["So30UIResponderStandardEditActionsP", "State"]
 - !private ["So30UIResponderStandardEditActionsP", "addSubview"]
 - !private ["So30UIResponderStandardEditActionsP", "addTarget"]
 - !private ["So30UIResponderStandardEditActionsP", "alpha"]
@@ -1667,6 +1712,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "numberOfLines"]
 - !private ["So30UIResponderStandardEditActionsP", "removeFromSuperview"]
 - !private ["So30UIResponderStandardEditActionsP", "setAttributedTitle"]
+- !private ["So30UIResponderStandardEditActionsP", "setImage"]
 - !private ["So30UIResponderStandardEditActionsP", "shared"]
 - !private ["So30UIResponderStandardEditActionsP", "show"]
 - !private ["So30UIResponderStandardEditActionsP", "tag"]
@@ -1683,8 +1729,10 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "layer"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "setAttributedTitle"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "setImage"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "titleLabel"]
 - !private ["So18UITraitEnvironmentP", "ContentMode"]
+- !private ["So18UITraitEnvironmentP", "State"]
 - !private ["So18UITraitEnvironmentP", "addSubview"]
 - !private ["So18UITraitEnvironmentP", "addTarget"]
 - !private ["So18UITraitEnvironmentP", "alpha"]
@@ -1703,6 +1751,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "numberOfLines"]
 - !private ["So18UITraitEnvironmentP", "removeFromSuperview"]
 - !private ["So18UITraitEnvironmentP", "setAttributedTitle"]
+- !private ["So18UITraitEnvironmentP", "setImage"]
 - !private ["So18UITraitEnvironmentP", "show"]
 - !private ["So18UITraitEnvironmentP", "tag"]
 - !private ["So18UITraitEnvironmentP", "text"]
@@ -1711,6 +1760,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "titleLabel"]
 - !private ["So18UITraitEnvironmentP", "viewWithTag"]
 - !private ["So23UIUserActivityRestoringP", "ContentMode"]
+- !private ["So23UIUserActivityRestoringP", "State"]
 - !private ["So23UIUserActivityRestoringP", "addSubview"]
 - !private ["So23UIUserActivityRestoringP", "addTarget"]
 - !private ["So23UIUserActivityRestoringP", "alpha"]
@@ -1728,6 +1778,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "numberOfLines"]
 - !private ["So23UIUserActivityRestoringP", "removeFromSuperview"]
 - !private ["So23UIUserActivityRestoringP", "setAttributedTitle"]
+- !private ["So23UIUserActivityRestoringP", "setImage"]
 - !private ["So23UIUserActivityRestoringP", "shared"]
 - !private ["So23UIUserActivityRestoringP", "show"]
 - !private ["So23UIUserActivityRestoringP", "tag"]
@@ -1739,6 +1790,7 @@ depends-member:
 - ["So20UIUserInterfaceIdiomV", "pad"]
 - ["So20UIUserInterfaceIdiomV", "phone"]
 - !private ["So6UIViewC", "ContentMode"]
+- !private ["So6UIViewC", "State"]
 - !private ["So6UIViewC", "addSubview"]
 - !private ["So6UIViewC", "addTarget"]
 - !private ["So6UIViewC", "alpha"]
@@ -1755,6 +1807,7 @@ depends-member:
 - !private ["So6UIViewC", "numberOfLines"]
 - !private ["So6UIViewC", "removeFromSuperview"]
 - !private ["So6UIViewC", "setAttributedTitle"]
+- !private ["So6UIViewC", "setImage"]
 - !private ["So6UIViewC", "show"]
 - !private ["So6UIViewC", "tag"]
 - !private ["So6UIViewC", "text"]
@@ -1783,6 +1836,7 @@ depends-member:
 - !private ["SU", "init"]
 - !private ["12a4SysCoreIOS14WakeUpResponseC", "iOSVersion"]
 - !private ["7baseApp4WithP", "ContentMode"]
+- !private ["7baseApp4WithP", "State"]
 - !private ["7baseApp4WithP", "addSubview"]
 - !private ["7baseApp4WithP", "addTarget"]
 - !private ["7baseApp4WithP", "advertisingIdentifier"]
@@ -1831,6 +1885,7 @@ depends-member:
 - !private ["7baseApp4WithP", "setAttributedTitle"]
 - !private ["7baseApp4WithP", "setConstants"]
 - !private ["7baseApp4WithP", "setEnvironment"]
+- !private ["7baseApp4WithP", "setImage"]
 - !private ["7baseApp4WithP", "setUrlParameters"]
 - !private ["7baseApp4WithP", "setValue"]
 - !private ["7baseApp4WithP", "shared"]
@@ -1908,6 +1963,7 @@ depends-member:
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "toInt"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "trimmingCharacters"]
 - !private ["s26_ExpressibleByColorLiteralP", "hexStringToUIColor"]
+- !private ["s26_ExpressibleByColorLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "absoluteString"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "path"]
@@ -1942,6 +1998,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "toInt"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "trimmingCharacters"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ContentMode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "State"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addTarget"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "advertisingIdentifier"]
@@ -1990,6 +2047,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setAttributedTitle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setConstants"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setEnvironment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setUrlParameters"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
@@ -2045,6 +2103,7 @@ depends-member:
 - !private ["s14_StringElementP", "init"]
 - !private ["s20_SwiftNewtypeWrapperP", "font"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "ContentMode"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "State"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addTarget"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "alpha"]
@@ -2061,6 +2120,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "numberOfLines"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "removeFromSuperview"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setAttributedTitle"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setImage"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "show"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "tag"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
@@ -2244,11 +2304,13 @@ depends-dynamic-lookup:
 depends-external:
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Modules/AlamofireImage.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/Lottie.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/ObjectMapper.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ImageSlideshow/ImageSlideshow.framework/Modules/ImageSlideshow.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
@@ -2267,11 +2329,13 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Headers/AlamofireImage-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/lottie-ios-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ImageSlideshow/ImageSlideshow.framework/Headers/ImageSlideshow-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+ForceDecode.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSImage+WebCache.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIButton+WebCache.h"
@@ -2288,6 +2352,7 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloaderOperation.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageTransition.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDAnimatedImageRep.h"
+- "/Users/david/proyectosXcode/baseApp/baseApp/Utils/objc/baseApp-Bridging-Header.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloader.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageGIFCoder.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageImageIOCoder.h"
@@ -2300,20 +2365,25 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Headers/AlamofireImage-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/Lottie-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ImageSlideshow/ImageSlideshow.framework/Headers/ImageSlideshow-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
+- "/Users/david/proyectosXcode/baseApp/baseApp/Utils/objc/Reachability.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ImageSlideshow/ImageSlideshow.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"

@@ -20,6 +20,7 @@ class TerminosYCondicionesVC: BViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         view.backgroundColor = #colorLiteral(red: 0.6718506217, green: 0.7186080813, blue: 0.7945843339, alpha: 1)
         viewContent.backgroundColor = #colorLiteral(red: 0.8671034575, green: 0.8866966367, blue: 0.9186367393, alpha: 1)
         viewContent.layer.cornerRadius = 10
@@ -33,8 +34,8 @@ class TerminosYCondicionesVC: BViewController {
         lTerminosText.font = UIFont.textJustGeneral
     }
     
-    
     @IBAction func btnCloseA(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.popViewController(animated: true)
     }
 }

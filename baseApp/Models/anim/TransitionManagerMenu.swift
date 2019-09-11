@@ -15,6 +15,7 @@ class TransitionManagerMenu: UIPercentDrivenInteractiveTransition {
     private var presenting = true
     private var interactive = false
     private var menuWidth: CGFloat = Device.iPad ? 350 : Screen.width * 0.85
+    private var delegadoSelect = false
     
     var menuDelegate: SOInitAppDelegate?
     var menuItems: InfoManager!
@@ -24,6 +25,16 @@ class TransitionManagerMenu: UIPercentDrivenInteractiveTransition {
             enterPanGesture.addTarget(self, action: #selector(panGestureHandler(_:)))
             enterPanGesture.edges = .left
             sourceVC.view.addGestureRecognizer(enterPanGesture)
+        }
+    }
+    
+    var sourceVC2: principalTabBarArticulosVC! {
+        didSet {
+            enterPanGesture = UIScreenEdgePanGestureRecognizer()
+            enterPanGesture.addTarget(self, action: #selector(panGestureHandler(_:)))
+            enterPanGesture.edges = .left
+            sourceVC2.view.addGestureRecognizer(enterPanGesture)
+            delegadoSelect = true
         }
     }
     var menuVC: Menu! {
@@ -51,9 +62,15 @@ class TransitionManagerMenu: UIPercentDrivenInteractiveTransition {
 //            vc.tableItems = menuItems
 //            menuDelegate = vc
 //            menuVC = vc
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.red
-            sourceVC.present(vc, animated: true, completion: nil)
+            if delegadoSelect {
+                let vc = UIViewController()
+                vc.view.backgroundColor = UIColor.red
+                sourceVC2.present(vc, animated: true, completion: nil)
+            } else {
+                let vc = UIViewController()
+                vc.view.backgroundColor = UIColor.red
+                sourceVC.present(vc, animated: true, completion: nil)
+            }
             break
         case .changed:
             
@@ -154,14 +171,18 @@ extension TransitionManagerMenu: UIViewControllerAnimatedTransitioning {
         
         if presenting {
             let toView = transitionContext.viewController(forKey: .to)!
-            let fromRoot = sourceVC.viewControllers![0]
+            let fromRoot = (delegadoSelect) ? sourceVC2.viewControllers![0] : sourceVC.viewControllers![0]
             container.addSubview(toView.view)
             
             toView.view.frame = fromRoot.view.frame
             toView.view.transform = CGAffineTransform(translationX: -menuWidth, y: 0.0)
             
             UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.curveEaseOut], animations: {
-                self.sourceVC.capa.alpha = 1.0
+                if self.delegadoSelect {
+                  self.sourceVC2.capa.alpha = 1.0
+                } else {
+                    self.sourceVC.capa.alpha = 1.0
+                }
                 toView.view.transform = CGAffineTransform.identity
             }) { _ in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
@@ -171,7 +192,11 @@ extension TransitionManagerMenu: UIViewControllerAnimatedTransitioning {
             let fromView = transitionContext.viewController(forKey: .from)!
             
             UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.curveEaseOut], animations: {
-                self.sourceVC.capa.alpha = 0.0
+                if self.delegadoSelect {
+                    self.sourceVC2.capa.alpha = 0
+                } else {
+                    self.sourceVC.capa.alpha = 0
+                }
                 fromView.view.transform = CGAffineTransform.identity
                 fromView.view.transform = CGAffineTransform(translationX: -self.menuWidth, y: 0.0)
                 

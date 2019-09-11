@@ -55,7 +55,18 @@ class Menu: BTableViewController {
             indicator.stopAnimating()
         }
         
+        
+        let mytapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(irAterminosYcondiciones))
+        mytapGestureRecognizer.numberOfTapsRequired = 1
+        
+    lterminosYCondiciones.addGestureRecognizer(mytapGestureRecognizer)
+        
+        
         setTerminos()
+    }
+    
+    @objc func irAterminosYcondiciones() {
+        delegate?.selectedItem(idMenu: "terminos", titulo: "")
     }
     
     private func setTerminos() {
@@ -108,46 +119,23 @@ extension Menu: SOInitAppDelegate {
         tableView.reloadData()
         indicator.stopAnimating()
     }
+    
+    
+}
+
+extension Menu {
+    
 }
 
 //MARK: TABLEVIEW METHODS
 extension Menu {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = tableItems.getItem(section: indexPath.section, at: indexPath.row)
-//
-//        let cell = UITableViewCell()
-//        cell.backgroundColor = UIColor.clear
-//
-//        cell.textLabel?.text = item.subtitle
-//        cell.imageView?.image = item.image
-//        return cell
         
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MenuOption") as! MenuOption
                 cell.titulo.text = item.title
                 cell.imagen.image = item.image
                 return cell
-        
-        
-//        if item.identifier.elementsEqual("info") {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "InfoSession") as! InfoSession
-//            cell.nombre.text = item.title
-//            cell.correo.text = item.subtitle
-//            cell.distribuidor.text = item.value
-//
-//            return cell
-//        }
-//        else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "MenuOption") as! MenuOption
-//            cell.titulo.text = item.title
-//            //cell.descripcion.text = item.value
-//            cell.imagen.image = item.image
-//
-////            if item.identifier.elementsEqual("cerrar") {
-////                cell.titulo.textColor = item.titleColor
-////            }
-//
-//            return cell
-//        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
