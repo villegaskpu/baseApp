@@ -138,7 +138,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.268999"
+                  timestampString = "590687754.147047"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "571"
@@ -153,7 +153,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.273043"
+                  timestampString = "590687754.1494319"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "571"
@@ -186,7 +186,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.2808909"
+                  timestampString = "590687754.155383"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "581"
@@ -201,7 +201,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.28397"
+                  timestampString = "590687754.157602"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "581"
@@ -234,7 +234,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.291141"
+                  timestampString = "590687754.163556"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "539"
@@ -249,7 +249,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.293703"
+                  timestampString = "590687754.165872"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "539"
@@ -282,7 +282,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.2999851"
+                  timestampString = "590687754.171689"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "616"
@@ -297,7 +297,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.302425"
+                  timestampString = "590687754.1738991"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "616"
@@ -330,7 +330,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.308298"
+                  timestampString = "590687754.179824"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "674"
@@ -345,7 +345,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/views/yopterCominicacells/cellOffert.swift"
-                  timestampString = "590685184.310531"
+                  timestampString = "590687754.182094"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "674"
@@ -394,7 +394,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/Controllers/Registro/RegistroVC.swift"
-                  timestampString = "590685184.321411"
+                  timestampString = "590687754.19447"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "393"
@@ -409,7 +409,7 @@
                   moduleName = "baseApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/Controllers/Registro/RegistroVC.swift"
-                  timestampString = "590685184.323632"
+                  timestampString = "590687754.197337"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "394"
@@ -432,86 +432,6 @@
             startingLineNumber = "396"
             endingLineNumber = "396"
             landmarkName = "crearCuenta()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "baseApp/Controllers/TemporalHome.swift"
-            timestampString = "590685183.794987"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "timerAction()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "baseApp/Utils/Commons.swift"
-            timestampString = "590685183.795488"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "471"
-            endingLineNumber = "471"
-            landmarkName = "heardBeat()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static baseApp.Commons.heardBeat() -&gt; ()"
-                  moduleName = "baseApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/Utils/Commons.swift"
-                  timestampString = "590685184.33865"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "471"
-                  endingLineNumber = "471"
-                  offsetFromSymbolStart = "5392">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String, Any, Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; () in static baseApp.Commons.heardBeat() -&gt; ()"
-                  moduleName = "baseApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/david/proyectosXcode/baseApp/baseApp/Utils/Commons.swift"
-                  timestampString = "590685184.34088"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "472"
-                  endingLineNumber = "472"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "baseApp/Utils/Commons.swift"
-            timestampString = "590685183.795567"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "472"
-            endingLineNumber = "472"
-            landmarkName = "heardBeat()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

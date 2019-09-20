@@ -118,14 +118,22 @@ class LocationUtil : NSObject, CLLocationManagerDelegate
 //                startLocation = locations.first
                 Settings.sharedInstance.setLatitude(value: "\(location.coordinate.latitude)")
                 Settings.sharedInstance.setLongitude(value: "\(location.coordinate.longitude)")
+                if UIApplication.shared.applicationState == .background || UIApplication.shared.applicationState == .inactive{
+                    print("SEGUNDOPLANOnil")
+                    Commons.heardBeat()
+                }
             } else {
                 let ubicacionGuardada = CLLocation(latitude: Settings.sharedInstance.getLatitude()?.toDouble() ?? 0.0, longitude: Settings.sharedInstance.getLongitude()?.toDouble() ?? 0.0)
                 let mts = ubicacionGuardada.distance(from: locations.first!)
                 
                 print("mts: \(mts)")
-                if mts >= 1000 {
+                if mts >= 100 {
                     Settings.sharedInstance.setLatitude(value: "\(location.coordinate.latitude)")
                     Settings.sharedInstance.setLongitude(value: "\(location.coordinate.longitude)")
+                    if UIApplication.shared.applicationState == .background || UIApplication.shared.applicationState == .inactive{
+                        print("SEGUNDOPLANO")
+                        Commons.heardBeat()
+                    }
                 }
             }
         }

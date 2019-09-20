@@ -1,8 +1,8 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "cfdf7c38d5c945f675d6bfc548ecd22d"
-build_time: [1568991963, 633838000]
+build_time: [1568997499, 372495000]
 inputs:
-  "/Users/david/proyectosXcode/baseApp/baseApp/Utils/LocationUtil.swift": [1568927325, 412289972]
+  "/Users/david/proyectosXcode/baseApp/baseApp/Utils/LocationUtil.swift": [1568996363, 19598662]
   "/Users/david/proyectosXcode/baseApp/baseApp/Extensions/DateExtension.swift": [1567446967, 520034557]
   "/Users/david/proyectosXcode/baseApp/baseApp/Controllers/Offerts/detalleOferta/detalleOfertaVC.swift": [1568325409, 924479500]
   "/Users/david/proyectosXcode/baseApp/baseApp/Resources/Constants/Constants.swift": [1568917365, 412298993]
@@ -38,7 +38,7 @@ inputs:
   "/Users/david/proyectosXcode/baseApp/baseApp/Extensions/TableViewExtension.swift": [1567632488, 904694485]
   "/Users/david/proyectosXcode/baseApp/baseApp/Extensions/StringExtension.swift": [1566334708, 276996997]
   "/Users/david/proyectosXcode/baseApp/baseApp/views/cells/celdaStack3/celdaStack3.swift": [1567188319, 16701133]
-  "/Users/david/proyectosXcode/baseApp/baseApp/Controllers/TemporalHome.swift": [1568991962, 184564582]
+  "/Users/david/proyectosXcode/baseApp/baseApp/Controllers/TemporalHome.swift": [1568997429, 729489820]
   "/Users/david/proyectosXcode/baseApp/baseApp/Controllers/menu lateral/Navigation.swift": [1568910125, 709919177]
   "/Users/david/proyectosXcode/baseApp/baseApp/views/cells/PikerView/pickerViewcell.swift": [1567445705, 970917327]
   "/Users/david/proyectosXcode/baseApp/baseApp/Controllers/Offerts/OffertsVC.swift": [1568990289, 836734337]
@@ -57,7 +57,7 @@ inputs:
   "/Users/david/proyectosXcode/baseApp/baseApp/Utils/FiltrosVC.swift": [1568395573, 543851264]
   "/Users/david/proyectosXcode/baseApp/baseApp/Resources/Alerts/YopterAlerts.swift": [1566424416, 37263814]
   "/Users/david/proyectosXcode/baseApp/baseApp/Controllers/Home/HomeVC.swift": [1568221605, 828703493]
-  "/Users/david/proyectosXcode/baseApp/baseApp/AppDelegate.swift": [1567787875, 954527747]
+  "/Users/david/proyectosXcode/baseApp/baseApp/AppDelegate.swift": [1568997496, 106030191]
   "/Users/david/proyectosXcode/baseApp/baseApp/Controllers/Base/textFieldDidChange.swift": [1568736687, 434788058]
   "/Users/david/proyectosXcode/baseApp/baseApp/Resources/Fonts/Font.swift": [1568409008, 111291379]
   "/Users/david/proyectosXcode/baseApp/baseApp/Extensions/viewThemes/UIWindow.swift": [1567785661, 418423440]

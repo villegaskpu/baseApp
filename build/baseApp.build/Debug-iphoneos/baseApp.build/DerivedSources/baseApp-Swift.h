@@ -199,6 +199,7 @@ SWIFT_CLASS("_TtC7baseApp11AppDelegate")
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
 - (void)applicationDidEnterBackground:(UIApplication * _Nonnull)application;
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
+- (void)timerAction;
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -868,9 +869,6 @@ SWIFT_CLASS("_TtC7baseApp12TemporalHome")
 
 
 
-@interface TemporalHome (SWIFT_EXTENSION(baseApp))
-- (void)timerAction;
-@end
 
 @class UITextView;
 

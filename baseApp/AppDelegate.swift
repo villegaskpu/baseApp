@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -59,10 +60,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        if Settings.sharedInstance.getSesion() { // si la sesion esta iniciada
+            print("EnterBackground")
+            if CLLocationManager.locationServicesEnabled() && CLLocationManager.authorizationStatus() == .authorizedAlways {
+                timerHearBeats.invalidate()
+                LocationUtil.sharedInstance.stopUpdatingLocation()
+                LocationUtil.sharedInstance.startMonitoringSingnificantLocationChanges()
+            }
+        }
+        
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        if Settings.sharedInstance.getSesion() { // si la sesion esta iniciada
+            print("EnterBackground")
+            if CLLocationManager.locationServicesEnabled() && CLLocationManager.authorizationStatus() == .authorizedAlways {
+                LocationUtil.sharedInstance.stopMonitoringSignificantLocationChanges()
+                LocationUtil.sharedInstance.startUpdatingLocation()
+                timerHearBeats = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+            }
+            
+        }
+    }
+    
+    @objc func timerAction() {
+        print("solo soy un print")
+        Commons.heardBeat()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

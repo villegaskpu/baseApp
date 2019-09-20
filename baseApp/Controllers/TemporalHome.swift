@@ -75,18 +75,11 @@ extension TemporalHome: LocationUtilDelegate {
                 let vc = principalTabBarVC()
                 self.navigationController?.fadeTo(vc)
             }
-            timerHearBeats.invalidate()
             Commons.heardBeat()
-            timerHearBeats = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
             primeraVez = false
         }
     }
-    
-    @objc func timerAction() {
-        print("solo soy un print")
-        Commons.heardBeat()
-    }
-    
+
     func tracingLocationDidFailWithError(error: Error) {
         print("no QUEDO")
         hideLoading()
