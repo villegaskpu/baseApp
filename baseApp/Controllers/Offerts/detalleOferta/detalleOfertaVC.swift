@@ -31,7 +31,10 @@ class detalleOfertaVC: BViewController {
     @IBOutlet weak var sucursalesTextView: UITextView!
     
     
+    @IBOutlet weak var btnreportarOfertaO: UIButton!
     @IBOutlet weak var contentViewSucursales: UIView!
+    
+    var offerTakenResponse: OfferTakenResponse?
     
     var tiendas = ""
     
@@ -158,7 +161,63 @@ class detalleOfertaVC: BViewController {
     }
     
     
+    @IBAction func btnTomarOferta(_ sender: Any) {
+        
+        showLoading()
+        let requestTakeOffer = Requests.createTakeOfferRequest(LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0.0, LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0.0)
+        
+        let network = Network()
+        
+        network.setEnvironment(Environment: ENVIROMENTAPP)
+        network.setConstants(constants: constantsParameters)
+        network.setUrlParameters(urlParameters: requestTakeOffer)
+        network.setIdOffert(idOfert: "\(offertSelect?.idOffer ?? 0)")
+        
+        network.endPointN(endPont: .OfferTaken) { (statusCode, value, objeto) -> (Void) in
+            if StatusCode.validateStatusCode(code: statusCode.toInt() ?? 0) {
+                if let token = objeto as? OfferTakenResponse {
+                    self.offerTakenResponse = token
+                    
+                    
+                    let vc = TomarOfertaVC()
+                    vc.offerTakenResponse = self.offerTakenResponse
+                    vc.ofertResive = self.offertSelect
+                    self.navigationController?.fadeTo(vc)
+                    
+                    let request = Requests.createFavoriteOfferRequest((self.offertSelect?.idOffer ?? 0), 1, "",LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0.0, LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0.0)
+                    
+        
+                    let network2 = Network()
+                    
+                    network2.setEnvironment(Environment: ENVIROMENTAPP)
+                    network2.setConstants(constants: constantsParameters)
+                    network2.setUrlParameters(urlParameters: request)
+                    network2.setIdOffert(idOfert: "\(self.offertSelect?.idOffer ?? 0)")
+                    
+                    network2.endPointN(endPont: .OfferFavorite, { (statusCode, value, objeto) -> (Void) in
+                        if StatusCode.validateStatusCode(code: statusCode.toInt() ?? 0) {
+                            print("Favorite sucess")
+                        }
+                    })
+                    
+                    self.hideLoading()
+                } else {
+                    self.hideLoading()
+                }
+                
+            } else {
+                self.hideLoading()
+            }
+        }
+    }
     
     
-
+    @IBAction func btnReportarOfertaAtion(_ sender: Any) {
+        let vc = reportarOfertaVC()
+        vc.offertSelec = self.offertSelect
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+    
 }

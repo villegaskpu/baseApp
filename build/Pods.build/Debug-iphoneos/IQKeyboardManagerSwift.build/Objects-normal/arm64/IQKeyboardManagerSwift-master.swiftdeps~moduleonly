@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "d1027e82fd2e5e77d6e900749a3c4923"
-build_time: [1568220305, 605415000]
+build_time: [1568332009, 347303000]
 inputs:
   "/Users/david/proyectosXcode/baseApp/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift": [1565371695, 87017482]
   "/Users/david/proyectosXcode/baseApp/Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift": [1565371695, 232651976]

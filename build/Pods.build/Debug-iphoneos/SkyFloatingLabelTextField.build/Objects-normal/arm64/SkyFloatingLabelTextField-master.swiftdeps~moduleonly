@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "0618875b11c132d6cf48872eb434aee8"
-build_time: [1568220305, 486265000]
+build_time: [1568332009, 363037000]
 inputs:
   "/Users/david/proyectosXcode/baseApp/Pods/SkyFloatingLabelTextField/Sources/SkyFloatingLabelTextField.swift": [1565367121, 737745011]
   "/Users/david/proyectosXcode/baseApp/Pods/SkyFloatingLabelTextField/Sources/SkyFloatingLabelTextFieldWithIcon.swift": [1565367121, 738408691]

@@ -69,9 +69,32 @@ depends-top-level:
 - !private "Void"
 - !private "constantsParameters"
 - !private "print"
+- !private "recuperarContraseniaVC"
 - !private "||"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]
+- !private ["8DropDown10AnchorViewP", "addTarget"]
+- !private ["8DropDown10AnchorViewP", "adjustsFontSizeToFitWidth"]
+- !private ["8DropDown10AnchorViewP", "alpha"]
+- !private ["8DropDown10AnchorViewP", "animate"]
+- !private ["8DropDown10AnchorViewP", "attributedText"]
+- !private ["8DropDown10AnchorViewP", "center"]
+- !private ["8DropDown10AnchorViewP", "endEditing"]
+- !private ["8DropDown10AnchorViewP", "font"]
+- !private ["8DropDown10AnchorViewP", "frame"]
+- !private ["8DropDown10AnchorViewP", "imageEdgeInsets"]
+- !private ["8DropDown10AnchorViewP", "imageView"]
+- ["8DropDown10AnchorViewP", "init"]
+- !private ["8DropDown10AnchorViewP", "isSecureTextEntry"]
+- !private ["8DropDown10AnchorViewP", "minimumFontSize"]
+- !private ["8DropDown10AnchorViewP", "minimumScaleFactor"]
+- !private ["8DropDown10AnchorViewP", "rightView"]
+- !private ["8DropDown10AnchorViewP", "rightViewMode"]
+- !private ["8DropDown10AnchorViewP", "setImage"]
+- !private ["8DropDown10AnchorViewP", "text"]
+- !private ["8DropDown10AnchorViewP", "textColor"]
+- !private ["8DropDown10AnchorViewP", "tintColor"]
+- !private ["8DropDown10AnchorViewP", "titleLabel"]
 - !private ["So22UIViewAnimationOptionsV", "curveLinear"]
 - !private ["12a4SysCoreIOS8ApiErrorC", "code"]
 - !private ["12a4SysCoreIOS8ApiErrorC", "message"]
@@ -125,7 +148,9 @@ depends-member:
 - ["7baseApp15BViewControllerC", "init"]
 - !private ["7baseApp15BViewControllerC", "init"]
 - !private ["7baseApp15BViewControllerC", "navigationController"]
+- !private ["7baseApp15BViewControllerC", "present"]
 - !private ["7baseApp15BViewControllerC", "print"]
+- !private ["7baseApp15BViewControllerC", "recuperarContraseniaVC"]
 - ["7baseApp15BViewControllerC", "recuperarContrase\xF1a"]
 - ["7baseApp15BViewControllerC", "setEyeIcon"]
 - ["7baseApp15BViewControllerC", "setStyle"]
@@ -246,8 +271,10 @@ depends-member:
 - !private ["s7CVarArgP", "minimumFontSize"]
 - !private ["s7CVarArgP", "minimumScaleFactor"]
 - !private ["s7CVarArgP", "navigationController"]
+- !private ["s7CVarArgP", "present"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "pushViewController"]
+- !private ["s7CVarArgP", "recuperarContraseniaVC"]
 - !private ["s7CVarArgP", "recuperarContrase\xF1a"]
 - !private ["s7CVarArgP", "rightView"]
 - !private ["s7CVarArgP", "rightViewMode"]
@@ -351,8 +378,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "minimumFontSize"]
 - !private ["s28CustomDebugStringConvertibleP", "minimumScaleFactor"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
+- !private ["s28CustomDebugStringConvertibleP", "present"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "pushViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "recuperarContraseniaVC"]
 - !private ["s28CustomDebugStringConvertibleP", "recuperarContrase\xF1a"]
 - !private ["s28CustomDebugStringConvertibleP", "rightView"]
 - !private ["s28CustomDebugStringConvertibleP", "rightViewMode"]
@@ -473,8 +502,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "minimumFontSize"]
 - !private ["s23CustomStringConvertibleP", "minimumScaleFactor"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
+- !private ["s23CustomStringConvertibleP", "present"]
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "pushViewController"]
+- !private ["s23CustomStringConvertibleP", "recuperarContraseniaVC"]
 - !private ["s23CustomStringConvertibleP", "recuperarContrase\xF1a"]
 - !private ["s23CustomStringConvertibleP", "rightView"]
 - !private ["s23CustomStringConvertibleP", "rightViewMode"]
@@ -627,9 +658,11 @@ depends-member:
 - !private ["SQ", "navigationController"]
 - !private ["SQ", "normal"]
 - !private ["SQ", "now"]
+- !private ["SQ", "present"]
 - !private ["SQ", "print"]
 - !private ["SQ", "pushViewController"]
 - !private ["SQ", "rawValue"]
+- !private ["SQ", "recuperarContraseniaVC"]
 - !private ["SQ", "recuperarContrase\xF1a"]
 - !private ["SQ", "rightView"]
 - !private ["SQ", "rightViewMode"]
@@ -769,8 +802,10 @@ depends-member:
 - !private ["SH", "minimumFontSize"]
 - !private ["SH", "minimumScaleFactor"]
 - !private ["SH", "navigationController"]
+- !private ["SH", "present"]
 - !private ["SH", "print"]
 - !private ["SH", "pushViewController"]
+- !private ["SH", "recuperarContraseniaVC"]
 - !private ["SH", "recuperarContrase\xF1a"]
 - !private ["SH", "rightView"]
 - !private ["SH", "rightViewMode"]
@@ -844,7 +879,9 @@ depends-member:
 - !private ["7baseApp20LocationUtilDelegateP", "ingresoAnonimo"]
 - !private ["7baseApp20LocationUtilDelegateP", "init"]
 - !private ["7baseApp20LocationUtilDelegateP", "navigationController"]
+- !private ["7baseApp20LocationUtilDelegateP", "present"]
 - !private ["7baseApp20LocationUtilDelegateP", "print"]
+- !private ["7baseApp20LocationUtilDelegateP", "recuperarContraseniaVC"]
 - !private ["7baseApp20LocationUtilDelegateP", "recuperarContrase\xF1a"]
 - !private ["7baseApp20LocationUtilDelegateP", "setEyeIcon"]
 - !private ["7baseApp20LocationUtilDelegateP", "setStyle"]
@@ -909,7 +946,9 @@ depends-member:
 - ["7baseApp7LoginVCC", "ingresoAnonimo"]
 - ["7baseApp7LoginVCC", "init"]
 - !private ["7baseApp7LoginVCC", "navigationController"]
+- !private ["7baseApp7LoginVCC", "present"]
 - !private ["7baseApp7LoginVCC", "print"]
+- !private ["7baseApp7LoginVCC", "recuperarContraseniaVC"]
 - ["7baseApp7LoginVCC", "recuperarContrase\xF1a"]
 - !private ["7baseApp7LoginVCC", "setEyeIcon"]
 - !private ["7baseApp7LoginVCC", "setStyle"]
@@ -992,8 +1031,10 @@ depends-member:
 - !private ["So8NSCodingP", "minimumFontSize"]
 - !private ["So8NSCodingP", "minimumScaleFactor"]
 - !private ["So8NSCodingP", "navigationController"]
+- !private ["So8NSCodingP", "present"]
 - !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "pushViewController"]
+- !private ["So8NSCodingP", "recuperarContraseniaVC"]
 - !private ["So8NSCodingP", "recuperarContrase\xF1a"]
 - !private ["So8NSCodingP", "rightView"]
 - !private ["So8NSCodingP", "rightViewMode"]
@@ -1067,8 +1108,10 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
+- !private ["So26NSExtensionRequestHandlingP", "present"]
 - !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "recuperarContraseniaVC"]
 - !private ["So26NSExtensionRequestHandlingP", "recuperarContrase\xF1a"]
 - !private ["So26NSExtensionRequestHandlingP", "setEyeIcon"]
 - !private ["So26NSExtensionRequestHandlingP", "setStyle"]
@@ -1179,8 +1222,10 @@ depends-member:
 - !private ["So8NSObjectC", "minimumFontSize"]
 - !private ["So8NSObjectC", "minimumScaleFactor"]
 - !private ["So8NSObjectC", "navigationController"]
+- !private ["So8NSObjectC", "present"]
 - !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "pushViewController"]
+- !private ["So8NSObjectC", "recuperarContraseniaVC"]
 - ["So8NSObjectC", "recuperarContrase\xF1a"]
 - !private ["So8NSObjectC", "rightView"]
 - !private ["So8NSObjectC", "rightViewMode"]
@@ -1274,8 +1319,10 @@ depends-member:
 - !private ["So8NSObjectP", "minimumFontSize"]
 - !private ["So8NSObjectP", "minimumScaleFactor"]
 - !private ["So8NSObjectP", "navigationController"]
+- !private ["So8NSObjectP", "present"]
 - !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "pushViewController"]
+- !private ["So8NSObjectP", "recuperarContraseniaVC"]
 - !private ["So8NSObjectP", "recuperarContrase\xF1a"]
 - !private ["So8NSObjectP", "rightView"]
 - !private ["So8NSObjectP", "rightViewMode"]
@@ -1512,8 +1559,10 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "minimumFontSize"]
 - !private ["So21UIAppearanceContainerP", "minimumScaleFactor"]
 - !private ["So21UIAppearanceContainerP", "navigationController"]
+- !private ["So21UIAppearanceContainerP", "present"]
 - !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "pushViewController"]
+- !private ["So21UIAppearanceContainerP", "recuperarContraseniaVC"]
 - !private ["So21UIAppearanceContainerP", "recuperarContrase\xF1a"]
 - !private ["So21UIAppearanceContainerP", "rightView"]
 - !private ["So21UIAppearanceContainerP", "rightViewMode"]
@@ -1585,8 +1634,10 @@ depends-member:
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "navigationController"]
+- !private ["So18UIContentContainerP", "present"]
 - !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "pushViewController"]
+- !private ["So18UIContentContainerP", "recuperarContraseniaVC"]
 - !private ["So18UIContentContainerP", "recuperarContrase\xF1a"]
 - !private ["So18UIContentContainerP", "setEyeIcon"]
 - !private ["So18UIContentContainerP", "setStyle"]
@@ -1725,8 +1776,10 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "minimumFontSize"]
 - !private ["So18UIFocusEnvironmentP", "minimumScaleFactor"]
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
+- !private ["So18UIFocusEnvironmentP", "present"]
 - !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "pushViewController"]
+- !private ["So18UIFocusEnvironmentP", "recuperarContraseniaVC"]
 - !private ["So18UIFocusEnvironmentP", "recuperarContrase\xF1a"]
 - !private ["So18UIFocusEnvironmentP", "rightView"]
 - !private ["So18UIFocusEnvironmentP", "rightViewMode"]
@@ -1870,8 +1923,10 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "minimumFontSize"]
 - !private ["So30UIPasteConfigurationSupportingP", "minimumScaleFactor"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
+- !private ["So30UIPasteConfigurationSupportingP", "present"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "pushViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "recuperarContraseniaVC"]
 - !private ["So30UIPasteConfigurationSupportingP", "recuperarContrase\xF1a"]
 - !private ["So30UIPasteConfigurationSupportingP", "rightView"]
 - !private ["So30UIPasteConfigurationSupportingP", "rightViewMode"]
@@ -1959,8 +2014,10 @@ depends-member:
 - !private ["So11UIResponderC", "minimumFontSize"]
 - !private ["So11UIResponderC", "minimumScaleFactor"]
 - !private ["So11UIResponderC", "navigationController"]
+- !private ["So11UIResponderC", "present"]
 - !private ["So11UIResponderC", "print"]
 - !private ["So11UIResponderC", "pushViewController"]
+- !private ["So11UIResponderC", "recuperarContraseniaVC"]
 - ["So11UIResponderC", "recuperarContrase\xF1a"]
 - !private ["So11UIResponderC", "rightView"]
 - !private ["So11UIResponderC", "rightViewMode"]
@@ -2035,8 +2092,10 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "minimumFontSize"]
 - !private ["So30UIResponderStandardEditActionsP", "minimumScaleFactor"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationController"]
+- !private ["So30UIResponderStandardEditActionsP", "present"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "pushViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "recuperarContraseniaVC"]
 - !private ["So30UIResponderStandardEditActionsP", "recuperarContrase\xF1a"]
 - !private ["So30UIResponderStandardEditActionsP", "rightView"]
 - !private ["So30UIResponderStandardEditActionsP", "rightViewMode"]
@@ -2107,8 +2166,10 @@ depends-member:
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "navigationController"]
+- !private ["So16UIStateRestoringP", "present"]
 - !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "pushViewController"]
+- !private ["So16UIStateRestoringP", "recuperarContraseniaVC"]
 - !private ["So16UIStateRestoringP", "recuperarContrase\xF1a"]
 - !private ["So16UIStateRestoringP", "setEyeIcon"]
 - !private ["So16UIStateRestoringP", "setStyle"]
@@ -2220,8 +2281,10 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "minimumFontSize"]
 - !private ["So18UITraitEnvironmentP", "minimumScaleFactor"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
+- !private ["So18UITraitEnvironmentP", "present"]
 - !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "pushViewController"]
+- !private ["So18UITraitEnvironmentP", "recuperarContraseniaVC"]
 - !private ["So18UITraitEnvironmentP", "recuperarContrase\xF1a"]
 - !private ["So18UITraitEnvironmentP", "rightView"]
 - !private ["So18UITraitEnvironmentP", "rightViewMode"]
@@ -2296,8 +2359,10 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "minimumFontSize"]
 - !private ["So23UIUserActivityRestoringP", "minimumScaleFactor"]
 - !private ["So23UIUserActivityRestoringP", "navigationController"]
+- !private ["So23UIUserActivityRestoringP", "present"]
 - !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "pushViewController"]
+- !private ["So23UIUserActivityRestoringP", "recuperarContraseniaVC"]
 - !private ["So23UIUserActivityRestoringP", "recuperarContrase\xF1a"]
 - !private ["So23UIUserActivityRestoringP", "rightView"]
 - !private ["So23UIUserActivityRestoringP", "rightViewMode"]
@@ -2392,8 +2457,10 @@ depends-member:
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "navigationController"]
+- !private ["So16UIViewControllerC", "present"]
 - !private ["So16UIViewControllerC", "print"]
 - !private ["So16UIViewControllerC", "pushViewController"]
+- !private ["So16UIViewControllerC", "recuperarContraseniaVC"]
 - ["So16UIViewControllerC", "recuperarContrase\xF1a"]
 - ["So16UIViewControllerC", "setEyeIcon"]
 - ["So16UIViewControllerC", "setStyle"]
@@ -2476,8 +2543,10 @@ depends-member:
 - !private ["7baseApp4WithP", "minimumFontSize"]
 - !private ["7baseApp4WithP", "minimumScaleFactor"]
 - !private ["7baseApp4WithP", "navigationController"]
+- !private ["7baseApp4WithP", "present"]
 - !private ["7baseApp4WithP", "print"]
 - !private ["7baseApp4WithP", "pushViewController"]
+- !private ["7baseApp4WithP", "recuperarContraseniaVC"]
 - !private ["7baseApp4WithP", "recuperarContrase\xF1a"]
 - !private ["7baseApp4WithP", "rightView"]
 - !private ["7baseApp4WithP", "rightViewMode"]
@@ -2603,8 +2672,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "minimumFontSize"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "minimumScaleFactor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "pushViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "recuperarContraseniaVC"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "recuperarContrase\xF1a"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "rightView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "rightViewMode"]
@@ -2689,8 +2760,11 @@ depends-member:
 - !private ["7baseApp18datePickeProtocol2P", "init"]
 - !private ["12a4SysCoreIOS8endPointO", "Login"]
 - !private ["7baseApp22pickerViewcellDelegateP", "init"]
+- !private ["7baseApp22recuperarContraseniaVCC", "deinit"]
+- !private ["7baseApp22recuperarContraseniaVCC", "init"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
+- "8DropDown10AnchorViewP"
 - !private "So22UIViewAnimationOptionsV"
 - !private "12a4SysCoreIOS8ApiErrorC"
 - !private "7baseApp20BTableViewControllerC"
@@ -2842,13 +2916,16 @@ depends-nominal:
 - !private "7baseApp18datePickeProtocol2P"
 - !private "12a4SysCoreIOS8endPointO"
 - !private "7baseApp22pickerViewcellDelegateP"
+- !private "7baseApp22recuperarContraseniaVCC"
 depends-dynamic-lookup:
 depends-external:
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Modules/SearchTextField.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Modules/AlamofireImage.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/Lottie.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Modules/DropDown.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/ObjectMapper.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
@@ -2869,10 +2946,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Headers/SearchTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Headers/AlamofireImage-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Headers/DropDown-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/lottie-ios-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
@@ -2906,10 +2985,12 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Headers/SearchTextField-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Headers/AlamofireImage-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/Lottie-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Headers/DropDown-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
@@ -2917,11 +2998,13 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/Utils/objc/Reachability.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
@@ -2937,6 +3020,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"

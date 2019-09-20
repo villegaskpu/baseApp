@@ -36,14 +36,23 @@ class textField: UITableViewCell {
         
 //        addShadow(view: contenedor, cornerRadius: 6.0)
         
-        titulo.font = UIFont(name: Font.FONT_MEDIUM(), size: Font.SIZE_FONT_MEDIUM())
-        valor.font = UIFont(name: Font.FONT_REGULAR(), size: Font.SIZE_FONT_REGULAR())
+        titulo.font = UIFont.label
+        valor.font = UIFont.label
         
-        valor.addTarget(self, action: #selector(textChange), for: .editingChanged)
+        titulo.textColor = UIColor.warmGrey
+        valor.textColor = UIColor.black
+       
+//        valor.addTarget(self, action: #selector(textChange), for: .editingChanged)
+        valor.delegate = self
     }
 
     override func prepareForReuse() {
         contraintHeightTitulo.constant = 25
+        titulo.font = UIFont.label
+        valor.font = UIFont.label
+        
+        titulo.textColor = UIColor.warmGrey
+        valor.textColor = UIColor.black
         valor.alpha = 1.0
         contenedor.alpha = 1.0
     }
@@ -56,9 +65,23 @@ class textField: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    
+    
     @objc private func textChange() {
         if let _ = indexPath {
             delegate?.yopterTextFieldChange(textField: valor, indexPath: indexPath!, text: valor.text!)
         }
     }
+}
+
+extension textField:UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let _ = indexPath {
+            delegate?.yopterTextFieldChange(textField: valor, indexPath: indexPath!, text: valor.text!)
+        }
+    }
+    
+//    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+//        print("reason: \(reason)")
+//    }
 }

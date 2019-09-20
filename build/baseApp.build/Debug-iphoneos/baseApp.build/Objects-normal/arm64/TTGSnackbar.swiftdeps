@@ -128,6 +128,155 @@ depends-member:
 - !private ["14ImageSlideshow21ActivityIndicatorViewP", "style"]
 - !private ["14ImageSlideshow21ActivityIndicatorViewP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s18AdditiveArithmeticP", "init"]
+- ["8DropDown10AnchorViewP", "CGRect"]
+- !private ["8DropDown10AnchorViewP", "CGSize"]
+- ["8DropDown10AnchorViewP", "ContentMode"]
+- !private ["8DropDown10AnchorViewP", "DispatchQueue"]
+- !private ["8DropDown10AnchorViewP", "NSLayoutConstraint"]
+- !private ["8DropDown10AnchorViewP", "NotificationCenter"]
+- !private ["8DropDown10AnchorViewP", "RunLoop"]
+- !private ["8DropDown10AnchorViewP", "State"]
+- ["8DropDown10AnchorViewP", "Style"]
+- !private ["8DropDown10AnchorViewP", "TTGSnackbar"]
+- ["8DropDown10AnchorViewP", "TTGSnackbarAnimationType"]
+- ["8DropDown10AnchorViewP", "TTGSnackbarDuration"]
+- !private ["8DropDown10AnchorViewP", "TimeInterval"]
+- !private ["8DropDown10AnchorViewP", "Timer"]
+- !private ["8DropDown10AnchorViewP", "UIActivityIndicatorView"]
+- !private ["8DropDown10AnchorViewP", "UIApplication"]
+- !private ["8DropDown10AnchorViewP", "UIButton"]
+- ["8DropDown10AnchorViewP", "UIColor"]
+- !private ["8DropDown10AnchorViewP", "UIControl"]
+- !private ["8DropDown10AnchorViewP", "UIDevice"]
+- ["8DropDown10AnchorViewP", "UIEdgeInsets"]
+- ["8DropDown10AnchorViewP", "UIFont"]
+- !private ["8DropDown10AnchorViewP", "UIImageView"]
+- !private ["8DropDown10AnchorViewP", "UILabel"]
+- !private ["8DropDown10AnchorViewP", "UILayoutPriority"]
+- !private ["8DropDown10AnchorViewP", "UIResponder"]
+- !private ["8DropDown10AnchorViewP", "UIScreen"]
+- !private ["8DropDown10AnchorViewP", "UISwipeGestureRecognizer"]
+- !private ["8DropDown10AnchorViewP", "UITapGestureRecognizer"]
+- !private ["8DropDown10AnchorViewP", "UIView"]
+- ["8DropDown10AnchorViewP", ""]
+- !private ["8DropDown10AnchorViewP", "accessibilityIdentifier"]
+- !private ["8DropDown10AnchorViewP", "actionBlock"]
+- !private ["8DropDown10AnchorViewP", "actionButton"]
+- !private ["8DropDown10AnchorViewP", "actionButtonMaxWidthConstraint"]
+- !private ["8DropDown10AnchorViewP", "actionIcon"]
+- !private ["8DropDown10AnchorViewP", "actionMaxWidth"]
+- !private ["8DropDown10AnchorViewP", "actionText"]
+- !private ["8DropDown10AnchorViewP", "actionTextColor"]
+- !private ["8DropDown10AnchorViewP", "actionTextFont"]
+- !private ["8DropDown10AnchorViewP", "actionTextNumberOfLines"]
+- !private ["8DropDown10AnchorViewP", "activityIndicatorView"]
+- !private ["8DropDown10AnchorViewP", "addConstraint"]
+- !private ["8DropDown10AnchorViewP", "addConstraints"]
+- !private ["8DropDown10AnchorViewP", "addGestureRecognizer"]
+- !private ["8DropDown10AnchorViewP", "addSubview"]
+- !private ["8DropDown10AnchorViewP", "addTarget"]
+- !private ["8DropDown10AnchorViewP", "adjustsFontSizeToFitWidth"]
+- !private ["8DropDown10AnchorViewP", "alpha"]
+- !private ["8DropDown10AnchorViewP", "animate"]
+- !private ["8DropDown10AnchorViewP", "animationDuration"]
+- !private ["8DropDown10AnchorViewP", "animationInitialSpringVelocity"]
+- !private ["8DropDown10AnchorViewP", "animationSpringWithDamping"]
+- !private ["8DropDown10AnchorViewP", "animationType"]
+- !private ["8DropDown10AnchorViewP", "backgroundColor"]
+- !private ["8DropDown10AnchorViewP", "bottomMargin"]
+- !private ["8DropDown10AnchorViewP", "bottomMarginConstraint"]
+- !private ["8DropDown10AnchorViewP", "centerXConstraint"]
+- !private ["8DropDown10AnchorViewP", "color"]
+- !private ["8DropDown10AnchorViewP", "configure"]
+- !private ["8DropDown10AnchorViewP", "containerView"]
+- !private ["8DropDown10AnchorViewP", "contentEdgeInsets"]
+- !private ["8DropDown10AnchorViewP", "contentInset"]
+- !private ["8DropDown10AnchorViewP", "contentMode"]
+- !private ["8DropDown10AnchorViewP", "contentView"]
+- !private ["8DropDown10AnchorViewP", "contentViewBottomConstraint"]
+- !private ["8DropDown10AnchorViewP", "contentViewLeftConstraint"]
+- !private ["8DropDown10AnchorViewP", "contentViewRightConstraint"]
+- !private ["8DropDown10AnchorViewP", "contentViewTopConstraint"]
+- !private ["8DropDown10AnchorViewP", "cornerRadius"]
+- !private ["8DropDown10AnchorViewP", "customContentView"]
+- !private ["8DropDown10AnchorViewP", "didSwipeSelf"]
+- !private ["8DropDown10AnchorViewP", "didTapSelf"]
+- !private ["8DropDown10AnchorViewP", "dismiss"]
+- !private ["8DropDown10AnchorViewP", "dismissAnimated"]
+- !private ["8DropDown10AnchorViewP", "dismissBlock"]
+- !private ["8DropDown10AnchorViewP", "dismissTimer"]
+- !private ["8DropDown10AnchorViewP", "doAction"]
+- !private ["8DropDown10AnchorViewP", "duration"]
+- !private ["8DropDown10AnchorViewP", "fatalError"]
+- !private ["8DropDown10AnchorViewP", "font"]
+- !private ["8DropDown10AnchorViewP", "frame"]
+- !private ["8DropDown10AnchorViewP", "icon"]
+- !private ["8DropDown10AnchorViewP", "iconContentMode"]
+- !private ["8DropDown10AnchorViewP", "iconImageView"]
+- !private ["8DropDown10AnchorViewP", "iconImageViewWidthConstraint"]
+- !private ["8DropDown10AnchorViewP", "image"]
+- !private ["8DropDown10AnchorViewP", "init"]
+- !private ["8DropDown10AnchorViewP", "invalidDismissTimer"]
+- !private ["8DropDown10AnchorViewP", "isHidden"]
+- !private ["8DropDown10AnchorViewP", "isUserInteractionEnabled"]
+- !private ["8DropDown10AnchorViewP", "keyboardHeight"]
+- !private ["8DropDown10AnchorViewP", "keyboardIsShown"]
+- !private ["8DropDown10AnchorViewP", "layer"]
+- !private ["8DropDown10AnchorViewP", "layoutIfNeeded"]
+- !private ["8DropDown10AnchorViewP", "layoutSubviews"]
+- !private ["8DropDown10AnchorViewP", "leftMargin"]
+- !private ["8DropDown10AnchorViewP", "leftMarginConstraint"]
+- !private ["8DropDown10AnchorViewP", "lineBreakMode"]
+- !private ["8DropDown10AnchorViewP", "message"]
+- !private ["8DropDown10AnchorViewP", "messageLabel"]
+- !private ["8DropDown10AnchorViewP", "messageTextAlign"]
+- !private ["8DropDown10AnchorViewP", "messageTextColor"]
+- !private ["8DropDown10AnchorViewP", "messageTextFont"]
+- !private ["8DropDown10AnchorViewP", "numberOfLines"]
+- !private ["8DropDown10AnchorViewP", "onKeyboardHide"]
+- !private ["8DropDown10AnchorViewP", "onKeyboardShow"]
+- !private ["8DropDown10AnchorViewP", "onScreenRotateNotification"]
+- !private ["8DropDown10AnchorViewP", "onSwipeBlock"]
+- !private ["8DropDown10AnchorViewP", "onTapBlock"]
+- !private ["8DropDown10AnchorViewP", "preferredMaxLayoutWidth"]
+- !private ["8DropDown10AnchorViewP", "removeFromSuperview"]
+- !private ["8DropDown10AnchorViewP", "rightMargin"]
+- !private ["8DropDown10AnchorViewP", "rightMarginConstraint"]
+- !private ["8DropDown10AnchorViewP", "safeAreaInsets"]
+- !private ["8DropDown10AnchorViewP", "safeAreaLayoutGuide"]
+- !private ["8DropDown10AnchorViewP", "secondActionBlock"]
+- !private ["8DropDown10AnchorViewP", "secondActionButton"]
+- !private ["8DropDown10AnchorViewP", "secondActionButtonMaxWidthConstraint"]
+- !private ["8DropDown10AnchorViewP", "secondActionText"]
+- !private ["8DropDown10AnchorViewP", "secondActionTextColor"]
+- !private ["8DropDown10AnchorViewP", "secondActionTextFont"]
+- !private ["8DropDown10AnchorViewP", "separateView"]
+- !private ["8DropDown10AnchorViewP", "separateViewBackgroundColor"]
+- !private ["8DropDown10AnchorViewP", "setContentCompressionResistancePriority"]
+- !private ["8DropDown10AnchorViewP", "setContentHuggingPriority"]
+- !private ["8DropDown10AnchorViewP", "setImage"]
+- !private ["8DropDown10AnchorViewP", "setNeedsLayout"]
+- !private ["8DropDown10AnchorViewP", "setTitle"]
+- !private ["8DropDown10AnchorViewP", "setTitleColor"]
+- !private ["8DropDown10AnchorViewP", "shouldActivateLeftAndRightMarginOnCustomContentView"]
+- !private ["8DropDown10AnchorViewP", "shouldDismissOnSwipe"]
+- !private ["8DropDown10AnchorViewP", "showWithAnimation"]
+- !private ["8DropDown10AnchorViewP", "snackbarDefaultFrame"]
+- !private ["8DropDown10AnchorViewP", "snackbarIconImageViewWidth"]
+- !private ["8DropDown10AnchorViewP", "snackbarMinHeight"]
+- !private ["8DropDown10AnchorViewP", "startAnimating"]
+- !private ["8DropDown10AnchorViewP", "stopAnimating"]
+- !private ["8DropDown10AnchorViewP", "style"]
+- !private ["8DropDown10AnchorViewP", "subviews"]
+- !private ["8DropDown10AnchorViewP", "superview"]
+- !private ["8DropDown10AnchorViewP", "systemLayoutSizeFitting"]
+- !private ["8DropDown10AnchorViewP", "text"]
+- !private ["8DropDown10AnchorViewP", "textAlignment"]
+- !private ["8DropDown10AnchorViewP", "textColor"]
+- !private ["8DropDown10AnchorViewP", "titleLabel"]
+- !private ["8DropDown10AnchorViewP", "topMargin"]
+- !private ["8DropDown10AnchorViewP", "topMarginConstraint"]
+- !private ["8DropDown10AnchorViewP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So22UIViewAnimationOptionsV", "allowUserInteraction"]
 - !private ["So22UIViewAnimationOptionsV", "curveEaseIn"]
 - !private ["Sa", "forEach"]
@@ -5249,6 +5398,7 @@ depends-member:
 depends-nominal:
 - "14ImageSlideshow21ActivityIndicatorViewP"
 - !private "s18AdditiveArithmeticP"
+- "8DropDown10AnchorViewP"
 - !private "So22UIViewAnimationOptionsV"
 - !private "Sa"
 - !private "So17NSLayoutAttributeV"
@@ -5392,10 +5542,12 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Modules/SearchTextField.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Modules/AlamofireImage.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/Lottie.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Modules/DropDown.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/ObjectMapper.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
@@ -5416,10 +5568,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Headers/SearchTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Headers/AlamofireImage-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Headers/DropDown-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/lottie-ios-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
@@ -5453,10 +5607,12 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Headers/SearchTextField-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Headers/AlamofireImage-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/Lottie-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Headers/DropDown-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
@@ -5464,11 +5620,13 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/Utils/objc/Reachability.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
@@ -5484,6 +5642,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"

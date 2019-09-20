@@ -23,6 +23,10 @@ extension UIFont {
         return UIFont(name: "Roboto-Bold", size: 32.0)!
     }
     
+    class var textStyle4: UIFont {
+        return UIFont(name: "Roboto-Light", size: 15.0)!
+    }
+    
     class var titulosPink: UIFont {
         return UIFont(name: "Avenir-Heavy", size: 32.0)!
     }

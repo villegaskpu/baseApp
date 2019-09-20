@@ -8,9 +8,13 @@
 
 import UIKit
 import Foundation
+import a4SysCoreIOS
+import CoreLocation
 
 enum campos:String {
     case empresa = "empresa"
+    case noEmpleado = "noEmpleado"
+    case genero = "genero"
     case fechaNacimiento = "fechaDeNacimiento"
     case correoElectronico = "correoElectronico"
     case confirmaCorreoElectronico = "confirmaCorreoElectronico"
@@ -25,56 +29,52 @@ class RegistroVC: BTableViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let imageView = UIImageView()
-    let btnCerrar = UIButton()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         BaseDelegate = self
         
-        TableViewCellFactory.registerCells(tableView: tableView, types: .textField, .label, .button, .stack, .pickerView, .datePicker)
+        TableViewCellFactory.registerCells(tableView: tableView, types: .textField, .label, .button, .stack, .pickerView, .datePicker, .calendarCell)
         
         tableItems.removeAll()
-        setParalax()
         initData()
+        setupNavBar()
     }
     
-    func setParalax() {
-        tableView.contentInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0)
-        
-        imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 200)
-        imageView.image = UIImage.init(named: "HomeLogoR")
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        
-        
-        btnCerrar.frame = CGRect(x: UIScreen.main.bounds.size.width - 30, y: 30, width: 20, height: 20)
-        btnCerrar.setImage(#imageLiteral(resourceName: "black_close"), for: UIControl.State.normal)
-        btnCerrar.titleLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        btnCerrar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        btnCerrar.titleLabel?.font = UIFont(name: Font.FONT_BOLD(), size: 18.0)
-        btnCerrar.addTarget(self, action: #selector(close), for: UIControl.Event.touchUpInside)
-        view.addSubview(btnCerrar)
-        view.addSubview(imageView)
-        
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        navigationController?.isNavigationBarHidden = true
     }
     
-    @objc func close() {
-        print("close")
+    private func setupNavBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style:.plain, target: nil, action: nil)
+        navigationController?.isNavigationBarHidden = false
+        navigationItem.titleView = setTitleview()
+        
+        let menuButton = UIBarButtonItem(image: #imageLiteral(resourceName: "backArrow"), landscapeImagePhone: #imageLiteral(resourceName: "backArrow"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(backBtn))
+        menuButton.tintColor = #colorLiteral(red: 0.7780508399, green: 0.8403770328, blue: 0.9060906768, alpha: 1)
+        navigationItem.leftBarButtonItem = menuButton
+    }
+    
+    @objc func backBtn() {
+        navigationController?.isNavigationBarHidden = true
         self.navigationController?.popViewController(animated: true)
     }
     
     func initData() {
-        let empresa = InfoItem.init(identifier: campos.empresa.rawValue, type: InfoItemType.textField, title: "Empresa", value: "")
+        let empresa = InfoItem.init(identifier: campos.empresa.rawValue, type: InfoItemType.calendarCell, title: "Empresa", value: "")
+        empresa.typePikerView = .pikerView
         empresa.required = true
         empresa.showItem = false
         
-        let noEmpleado = InfoItem.init(identifier: campos.empresa.rawValue, type: InfoItemType.textField, title: "No. Epleado", value: "")
-        let genero = InfoItem.init(identifier: campos.empresa.rawValue, type: InfoItemType.pickerView, title: "Género", value: "")
+        let noEmpleado = InfoItem.init(identifier: campos.noEmpleado.rawValue, type: InfoItemType.textField, title: "No. Epleado", value: "")
+        
+        let genero = InfoItem.init(identifier: campos.genero.rawValue, type: InfoItemType.calendarCell, title: "Género", value: "")
         genero.tupleArray = [("G","Género"),("F", "Femenino"), ("M","Masculino")]
+        genero.typePikerView = .pikerView
         genero.showItem = false
+        genero.required = false
         
         
         let dateFormatter = DateFormatter()
@@ -84,26 +84,41 @@ class RegistroVC: BTableViewController {
         
         let strDate = "\(date.currentDay(true))-\(date.currentMonth(true))-\(date.currentYear())"
         
-        let pickerFecha = InfoItem(identifier: "datePiker", type: .datePicker, title: "Fecha de nacimiento", value: strDate)
+        let pickerFecha = InfoItem(identifier: campos.fechaNacimiento.rawValue, type: .calendarCell, title: "Fecha de nacimiento", value: strDate)
         pickerFecha.typePicker = .date
+        pickerFecha.typePikerView = .datePiker
         
-        let correo = InfoItem.init(identifier: campos.fechaNacimiento.rawValue, type: InfoItemType.textField, title: "Correo Electrónico", value: "")
+        
+        let correo = InfoItem.init(identifier: campos.correoElectronico.rawValue, type: InfoItemType.textField, title: "Correo Electrónico", value: "")
         let confirmaCorreo = InfoItem.init(identifier: campos.confirmaCorreoElectronico.rawValue, type: InfoItemType.textField, title: "Confirmar correo", value: "")
         
-        let contrasenia = InfoItem.init(identifier: campos.fechaNacimiento.rawValue, type: InfoItemType.textField, title: "Contraseña", value: "")
-        let confirmaContrasenia = InfoItem.init(identifier: campos.fechaNacimiento.rawValue, type: InfoItemType.textField, title: "Confirmar Contraseña", value: "")
+        let contrasenia = InfoItem.init(identifier: campos.contrasenia.rawValue, type: InfoItemType.textField, title: "Contraseña", value: "")
+        let confirmaContrasenia = InfoItem.init(identifier: campos.confirmaContrasenia.rawValue, type: InfoItemType.textField, title: "Confirmar Contraseña", value: "")
         
         let aviso = InfoItem.init(identifier: campos.aviso.rawValue, type: InfoItemType.label, title: "", value: "Al hacer clic en Crear cuenta, aceptas los Términos y Condiciones y nuestro Aviso de Privacidad")
         aviso.textAlignmentL = .center
         
-        let stack = InfoItem.init(identifier: campos.stack.rawValue, type: InfoItemType.stack, title: "Ya tengo cuenta, iniciar sesión", value: "|  Contacto", itemHeight: 40.0)
         
-        let guardar = InfoItem(identifier: "guardar", type: .button, title: "CREAR CUENTA", value: "")
+        let attributedString = NSMutableAttributedString(string: "Al dar clic en “Crear cuenta” estás\naceptando los terminos, condiciones\ny aviso de privacidad.", attributes: [
+            .font: UIFont(name: "Roboto-Light", size: 15.0)!,
+            .foregroundColor: UIColor(white: 128.0 / 255.0, alpha: 1.0),
+            .kern: 0.0
+            ])
+        attributedString.addAttribute(.font, value: UIFont(name: "Roboto-Medium", size: 15.0)!, range: NSRange(location: 16, length: 13))
+        
+        aviso.attributedString = attributedString
+        
+        let stack = InfoItem.init(identifier: campos.stack.rawValue, type: InfoItemType.stack, title: "Recuperar contraseña", value: "Iniciar sesión", itemHeight: 40.0)
+        
+        let guardar = InfoItem(identifier: "guardar", type: .button, title: "Crear cuenta", value: "BG_Bottom")
+        guardar.image = UIImage(named: "BG_Bottom")
+        
+        
         
         tableItems.set(section: "", identifier: "captura")
-        tableItems.append(item: empresa)
         tableItems.append(item: noEmpleado)
         tableItems.append(item: pickerFecha)
+        tableItems.append(item: empresa)
         tableItems.append(item: genero)
         tableItems.append(item: correo)
         tableItems.append(item: confirmaCorreo)
@@ -114,15 +129,56 @@ class RegistroVC: BTableViewController {
         tableItems.append(item: stack)
         
         tableView.reloadData()
-        
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let y = 0 - (scrollView.contentOffset.y + 0)
-        let height = min(max(y, 0), 200)
-        let heightImage = min(max(y, 0), 20)
-        btnCerrar.frame = CGRect(x: UIScreen.main.bounds.size.width - 30, y: 30, width: 20, height: heightImage)
-        imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: height)
+    private func getCommpany(_ idEmpleado:String, FechaDeNacimiento:String) {
+        let request =  [
+            "idEmployee" : "\(idEmpleado)",
+            "birthday":"\(FechaDeNacimiento)"
+        ]
+        
+        let network = Network()
+        network.setConstants(constants: constantsParameters)
+        network.setEnvironment(Environment: ENVIROMENTAPP)
+        network.setUrlParameters(urlParameters: request)
+        
+        network.endPointN(endPont: .GetCompanies) { (statusCode, value, objeto) -> (Void) in
+            if StatusCode.validateStatusCode(code: statusCode.toInt() ?? 0) {
+                if let companys = objeto as? [Company] {
+                    if companys.count > 1 {
+                        var empresas:[(String, String)] = []
+                        for a in companys {
+                            empresas.append(("\(a.idCompany)", a.name))
+                        }
+                        self.tableItems.getItem(identifier: campos.empresa.rawValue)?.tupleArray = empresas
+                        self.tableItems.getItem(identifier: campos.empresa.rawValue)?.showItem = true
+                        self.tableView.reloadData()
+                    } else {
+                        if companys.count > 0 {
+                            self.tableItems.getItem(identifier: campos.empresa.rawValue)?.value = companys[0].name
+                            self.tableItems.getItem(identifier: campos.empresa.rawValue)?.valueId = "\(companys[0].idCompany)"
+                            var empresas:[(String, String)] = []
+                            for a in companys {
+                                empresas.append(("\(a.idCompany)", a.name))
+                            }
+                            self.tableItems.getItem(identifier: campos.empresa.rawValue)?.tupleArray = empresas
+                            self.tableItems.getItem(identifier: campos.empresa.rawValue)?.showItem = true
+                        }
+                    }
+                }
+            } else {
+                print("falloValid")
+                if let obj = objeto as? ApiError {
+                    if obj.code == "500" {
+                        Commons.showMessage("GLOBAL_ERROR".localized, duration: .long)
+                    } else {
+                        Commons.showMessage("\(obj.message)", duration: .long)
+                    }
+                } else {
+                    Commons.showMessage("Error de comunicación")
+                }
+            }
+        }
     }
 }
 
@@ -163,11 +219,35 @@ extension RegistroVC {
 }
 
 extension RegistroVC : BTableViewDelegate , celdaStack3Delegate{
+    
+    
+    func BTableView(tableItems: InfoManager, textFieldDidChange text: String, indexPath: IndexPath) {
+        
+        self.tableItems.getItem(section: indexPath.section, at: indexPath.row).value = text
+//        tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        
+        if tableItems.getItem(section: indexPath.section, at: indexPath.row).identifier == campos.fechaNacimiento.rawValue {
+            print("seleccionado la fechadel empleado")
+            
+            let noEmpleado = tableItems.getItem(identifier: campos.noEmpleado.rawValue)?.value ?? ""
+            
+            self.getCommpany(noEmpleado, FechaDeNacimiento: tableItems.getItem(section: indexPath.section, at: indexPath.row).value)
+        }
+        else if tableItems.getItem(section: indexPath.section, at: indexPath.row).identifier == campos.noEmpleado.rawValue {
+            let noEmpleado = tableItems.getItem(identifier: campos.noEmpleado.rawValue)?.value ?? ""
+            self.getGenero(noEmpleado)
+        }
+    }
+    
     func BTableView(tableItems: InfoManager, buttonPressedAt indexPath: IndexPath) {
         print("presiono guardar")
         
         if tableItems.isReadyToSave() {
             print("todo chido")
+            if validateForm() {
+                print("todo chido2")
+                crearCuenta()
+            }
         } else {
             Commons.showMessage("Los campos marcados con (*) son obligatorios")
             tableView.reloadData()
@@ -175,15 +255,184 @@ extension RegistroVC : BTableViewDelegate , celdaStack3Delegate{
         
     }
     
+    func validateForm() -> Bool
+    {
+        let tamCon = tableItems.getItem(identifier: campos.contrasenia.rawValue)?.value.count ?? 0
+        let tamCon2 = tableItems.getItem(identifier: campos.confirmaContrasenia.rawValue)?.value.count ?? 0
+        
+        let con = tableItems.getItem(identifier: campos.contrasenia.rawValue)?.value
+        let con2 = tableItems.getItem(identifier: campos.confirmaContrasenia.rawValue)?.value
+        
+        if tableItems.getItem(identifier: campos.correoElectronico.rawValue)?.value == "" {
+            Commons.showMessage("Los campos marcados con (*) son obligatorios")
+            return false
+        }
+        else if tableItems.getItem(identifier: campos.noEmpleado.rawValue)?.value == ""
+        {
+            Commons.showMessage("Los campos marcados con (*) son obligatorios")
+            return false
+        }
+        
+        else if tableItems.getItem(identifier: campos.fechaNacimiento.rawValue)?.value == ""
+        {
+            Commons.showMessage("Los campos marcados con (*) son obligatorios")
+            return false
+        }
+        else if tableItems.getItem(identifier: campos.contrasenia.rawValue)?.value == ""
+        {
+            Commons.showMessage("Los campos marcados con (*) son obligatorios")
+            return false
+        }
+        else if tableItems.getItem(identifier: campos.confirmaContrasenia.rawValue)?.value == ""
+        {
+            Commons.showMessage("Los campos marcados con (*) son obligatorios")
+            return false
+        }
+        else if tamCon < 6 || tamCon2 < 6
+        {
+            Commons.showMessage("MISSING_INFO".localized)
+            return false
+        }
+        else if !Commons.isValidEmail(tableItems.getItem(identifier: campos.correoElectronico.rawValue)?.value ?? "")  || !Commons.isValidEmail(tableItems.getItem(identifier: campos.confirmaCorreoElectronico.rawValue)?.value ?? ""){
+            Commons.showMessage("INVALID_EMAIL".localized)
+            return false
+        }
+        else if let a = con?.lowercased().trimmingCharacters(in: NSCharacterSet.whitespaces), let b =  con2?.lowercased().trimmingCharacters(in: NSCharacterSet.whitespaces)
+        {
+            if a != b {
+                Commons.showMessage("Los correos electrónicos no coinciden")
+                return false
+            }
+        }
+        if con != con
+        {
+            Commons.showMessage("MISSING_DIFFERENT_PASSWORD".localized)
+            return false
+        }
+        
+        return true
+    }
+    
+    
+    
     func selectBtn(value: Int) {
         print("valuesSelected: \(value)")
         if value == 1 {
-            let vc = LoginVC()
+            let vc = recuperarContraseniaVC()
             self.navigationController?.fadeTo(vc)
         } else {
-            self.sendEmail()
+            let vc = LoginVC()
+            self.navigationController?.fadeTo(vc)
         }
     }
+    
+    private func getGenero(_ idEmpleado:String) {
+        
+        let network = Network()
+        network.setConstants(constants: constantsParameters)
+        network.setEnvironment(Environment: ENVIROMENTAPP)
+        network.setUrlParameters(urlParameters: [:])
+        network.setIdEmpleado(idEmpleado: idEmpleado)
+        
+        network.endPointN(endPont: .ValidateGender) { (statusCode, value, objeto) -> (Void) in
+            if StatusCode.validateStatusCode(code: statusCode.toInt() ?? 0) {
+                if let genero = objeto as? Customer {
+                    if genero.gender == "" {
+                        self.tableItems.getItem(identifier: campos.genero.rawValue)?.showItem = true
+                    } else {
+                        self.tableItems.getItem(identifier: campos.genero.rawValue)?.showItem = false
+                    }
+                } else {
+                    print("fallo parser")
+                }
+            } else {
+                if let obj = objeto as? ApiError {
+                    if obj.code == "500" {
+                        Commons.showMessage("GLOBAL_ERROR".localized, duration: .long)
+                    } else {
+                        Commons.showMessage("\(obj.message)", duration: .long)
+                    }
+                } else {
+                    Commons.showMessage("Error de comunicación")
+                }
+            }
+        }
+        
+    }
+    
+    
+    private func crearCuenta() {
+        showLoading()
+        var requestSignUp : [String : Any]
+        let empleado = tableItems.getItem(identifier: campos.noEmpleado.rawValue)?.value ?? ""
+        let fecha = tableItems.getItem(identifier: campos.fechaNacimiento.rawValue)?.value ?? ""
+        
+        let genero = tableItems.getItem(identifier: campos.genero.rawValue)?.value == "Masculino" ? "M" : (tableItems.getItem(identifier: campos.genero.rawValue)?.value == "Femenino" ? "F" : "")
+        let correo = tableItems.getItem(identifier: campos.correoElectronico.rawValue)?.value.lowercased().trimmingCharacters(in: CharacterSet.whitespaces) ?? ""
+        let pass = tableItems.getItem(identifier: campos.contrasenia.rawValue)?.value ?? ""
+        
+    
+        let em = tableItems.getItem(identifier: campos.empresa.rawValue)?.tupleArray
+        let val = tableItems.getItem(identifier: campos.empresa.rawValue)?.value ?? ""
+        
+        let emm = em?.filter({$0.1 == val}).first?.0.toInt() ?? 0
+        
+        let latitude = LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0.0
+        let longitude = LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0.0
+        
+        requestSignUp = Requests.createSignUpRequest(empleado.trimmingCharacters(in: CharacterSet.whitespaces), fecha.trimmingCharacters(in: CharacterSet.whitespaces), genero, correo, pass.trimmingCharacters(in: CharacterSet.whitespaces), "\(latitude)", "\(longitude)", emm)
+        
+        
+        
+        
+        
+        let network = Network()
+        network.setEnvironment(Environment: ENVIROMENTAPP)
+        network.setConstants(constants: constantsParameters)
+        network.setUrlParameters(urlParameters: requestSignUp)
+        network.endPointN(endPont: .Register) { (statusCode, value, objeto) -> (Void) in
+            if StatusCode.validateStatusCode(code: statusCode.toInt() ?? 0) {
+                
+                if let obj = objeto as? SignUpResponse { // no se forsa el cast para evitar que truene el app
+                    print("SetValues")
+                    DispatchQueue.main.async {
+                        Settings.sharedInstance.setSesion(true)
+                        Settings.sharedInstance.setUsername(value: correo)
+                        Settings.sharedInstance.setPassword(value: pass)
+                        Settings.sharedInstance.setToken(value: obj.token ?? "")
+                        Settings.sharedInstance.setOldToken(value: obj.tokenYopter ?? "")
+                        Settings.sharedInstance.setAnonymous(value: "false")
+                        
+                        constantsParameters = [ "appID" : "1ed3d6e03ee03c04bf3365f808fc28f1",
+                                                "token" : "\(Settings.sharedInstance.getToken() ?? "")",
+                            "tokenYopter" : "\(Settings.sharedInstance.getOldToken() ?? "")"
+                        ]
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                        let vc = TemporalHome()
+                        self.navigationController?.fadeTo(vc)
+                    })
+                } else {
+                    Commons.showMessage("Error de comunicación")
+                }
+            } else {
+                if let obj = objeto as? ApiError {
+                    if obj.code == "500" {
+                        Commons.showMessage("GLOBAL_ERROR".localized, duration: .long)
+                    } else {
+                        Commons.showMessage("\(obj.message)", duration: .long)
+                    }
+                } else {
+                    Commons.showMessage("Error de comunicación")
+                }
+            }
+            self.hideLoading()
+        }
+        
+        
+    }
+    
+    
     
 //    func BTableView(tableItems: InfoManager, dateSelected indexPath: IndexPath) {
 //

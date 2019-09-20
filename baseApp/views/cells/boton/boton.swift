@@ -23,6 +23,7 @@ class boton: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+//        boton.titleLabel?.font = UIFont.btnTextWhite
         boton.initButton(boton: boton, textColor: UIColor.white, image: nameImage)
     }
 

@@ -9,21 +9,9 @@
 import UIKit
 import CoreLocation
 
-protocol principalTabBarVCDelegate {
-    func btnSearchPress()
-}
-
-protocol SOInitAppDelegate {
-    func updateMenu(menuItems: InfoManager)
-}
-
 class principalTabBarVC: BTabBarVC {
 
     var capa: UIView!
-    var delegateTab:principalTabBarVCDelegate?
-    internal let transitionManager = TransitionManagerMenu()
-    private var menuDelegate: SOInitAppDelegate?
-    internal var menuItems = InfoManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +22,15 @@ class principalTabBarVC: BTabBarVC {
         navigationItem.hidesBackButton = true
         initCapa()
         transitionManager.sourceVC = self
-        setupNavBar()
-        showLoading()
-        
-        self.hideLoading()
         self.setControllers()
-        setItems()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func finishLoading() {
+        transitionManager.menuItems = menuItems
     }
     
     func initCapa() {
@@ -49,55 +40,9 @@ class principalTabBarVC: BTabBarVC {
         view.addSubview(capa)
     }
     
-    private func setItems() {
-        menuItems.set(section: "")
-        let articulos = InfoItem.init(identifier: "articulos", type: InfoItemType.default, title: "ARTÍCULOS", value: "ARTÍCULOS")
-        articulos.image = UIImage(named: "article_icon")
-        
-        let ofertas = InfoItem.init(identifier: "ofertas", type: InfoItemType.default, title: "OFERTAS ", value: "OFERTAS ")
-        ofertas.image = #imageLiteral(resourceName: "offer_icon")
-        
-        let contacto = InfoItem.init(identifier: "contacto", type: InfoItemType.default, title: "CONTACTO", value: "CONTACTO")
-        contacto.image = #imageLiteral(resourceName: "contacto_icon")
-        
-        let tutorial = InfoItem.init(identifier: "tutorial", type: InfoItemType.default, title: "TUTORIAL", value: "TUTORIAL")
-        tutorial.image = #imageLiteral(resourceName: "tutorial_icon")
-        
-        let salir = InfoItem.init(identifier: "salir", type: InfoItemType.default, title: "SALIR", value: "SALIR")
-        salir.image = #imageLiteral(resourceName: "salir_icon")
-        
-        menuItems.append(item: articulos)
-        menuItems.append(item: ofertas)
-        menuItems.append(item: contacto)
-        menuItems.append(item: tutorial)
-        menuItems.append(item: salir)
-        self.menuDelegate?.updateMenu(menuItems: self.menuItems)
-    }
-    
-    @objc func action(sender: UIBarButtonItem) {
-        delegateTab?.btnSearchPress()
-    }
-    
-    private func setupNavBar() {
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style:.plain, target: nil, action: nil)
-        navigationController?.isNavigationBarHidden = false
-        navigationItem.titleView = setTitleview()
-
-        let menuButton = UISOMenuIcon(frame: CGRect(x: 0, y: 0, width: 25, height: 40))
-        menuButton.delegate = self //as? UISOMenuIconDelegate
-        
-        let left = UIBarButtonItem(customView: menuButton)
-        navigationItem.leftBarButtonItem = left
-        
-        let btnDerecho = UIBarButtonItem(image: #imageLiteral(resourceName: "searchbar_icon").withRenderingMode(UIImage.RenderingMode.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: Any?.self, action: #selector(action))
-        
-        navigationItem.rightBarButtonItem = btnDerecho
-
-    }
-    
     func setControllers() {
-        var ofertas = OffertsVC()
-        ofertas.delegate = self
+        let ofertas = OffertsVC()
+        self.delegateTab = ofertas
         ofertas.tabBarItem = UITabBarItem(title: "Ofertas", image: UIImage(named: "home")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "home_bold")?.withRenderingMode(.alwaysOriginal))
         ofertas.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         ofertas.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.maize], for: .selected)
@@ -108,6 +53,7 @@ class principalTabBarVC: BTabBarVC {
         favoritos.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.maize], for: .selected)
         
         let filtros = FiltrosVC()
+        filtros.delegate = self
         filtros.tabBarItem = UITabBarItem(title: "Filtro", image: UIImage(named: "filter_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "filter_iconBold")?.withRenderingMode(.alwaysOriginal))
         filtros.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         filtros.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.maize], for: .selected)
@@ -190,12 +136,6 @@ class MyTransition: NSObject, UIViewControllerAnimatedTransitioning {
     }
 }
 
-extension principalTabBarVC{
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print("presionado: \(item)")
-    }
-}
-
 extension principalTabBarVC: UISOMenuIconDelegate {
     
     func menuPressed(menuIcon: UISOMenuIcon) {
@@ -206,41 +146,29 @@ extension principalTabBarVC: UISOMenuIconDelegate {
             openMenu()
         }
     }
-    
-    @objc func openMenu() {
-        let menuVC = Menu(nibName: "Menu", bundle: nil)
-        menuVC.modalPresentationStyle = .overCurrentContext
-        menuVC.transitioningDelegate = transitionManager
-        menuVC.delegate = self
-        menuVC.tableItems = menuItems
-        menuDelegate = menuVC
-        transitionManager.menuVC = menuVC
-//        transitionManager.menuDelegate = menuDelegate
-        
-        present(menuVC, animated: true, completion: nil)
+}
+
+extension principalTabBarVC{
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if let indexOfTab = tabBar.items?.index(of: item){
+            if indexOfTab == 0 {
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
+                self.navigationItem.rightBarButtonItem?.tintColor = UIColor.lightBlueGrey
+            }
+            else {
+                self.navigationItem.rightBarButtonItem?.isEnabled = false
+                self.navigationItem.rightBarButtonItem?.tintColor = UIColor.clear
+            }
+            print("pressed tabBar: \(String(describing: indexOfTab))")
+        }
     }
 }
 
-//MARK: OPTION MENU SELECTED
-extension principalTabBarVC: MenuDelegate {
-    
-    func selectedItem(idMenu: String, titulo: String) {
-//        let vc = TerminosYCondicionesVC()
-        
-        if idMenu.elementsEqual("articulos") {
-            let vc = principalTabBarArticulosVC()
-            self.navigationController?.fadeTo(vc)
-        }
-        else if idMenu.elementsEqual("terminos") {
-            let vc = TerminosYCondicionesVC()
-            self.navigationController?.fadeTo(vc)
-        }
-        else if idMenu.elementsEqual("ofertas") {
-            let vc = principalTabBarVC()
-            self.navigationController?.fadeTo(vc)
-        }
-        else {
-            
-        }
+extension principalTabBarVC: FiltrosVCDelegate {
+    func returnFiltros(menuFiltro: String) {
+        print("filtroSeleccionado: \(menuFiltro)")
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.lightBlueGrey
+        delegateTab?.aplicarFiltros(idFiltro: menuFiltro)
     }
 }

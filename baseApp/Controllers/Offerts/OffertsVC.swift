@@ -8,6 +8,7 @@
 
 import UIKit
 import a4SysCoreIOS
+import SearchTextField
 
 class OffertsVC: BTableViewController {
 
@@ -16,10 +17,20 @@ class OffertsVC: BTableViewController {
     @IBOutlet weak var lViewTitulo: UIView!
     
     
+    @IBOutlet weak var textSearchControl: SearchTextField!
+    @IBOutlet weak var iconSearchControl: UIImageView!
+    @IBOutlet weak var constraintHSearchControl: NSLayoutConstraint!
+    
+    @IBOutlet weak var constraintTopSearchControl: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var constraintTopOfertTitulo: NSLayoutConstraint!
+    
     var items = InfoManager()
     
     var pageHome = 1
     var pageOferts = 1
+    var isShowSearchControl = false
     
     var delegate: principalTabBarVCDelegate?
     
@@ -28,6 +39,11 @@ class OffertsVC: BTableViewController {
         super.viewDidLoad()
         showLoading()
         tableView.alpha = 0
+        self.textSearchControl.delegate = self
+        iconSearchControl.isHidden = true
+        constraintHSearchControl.constant = 0
+        constraintTopSearchControl.constant = 0
+        constraintTopOfertTitulo.constant = 80
         print("hola ofertas")
         BaseDelegate = self
         self.delegate = principalTabBarVCDelegate.self as? principalTabBarVCDelegate
@@ -40,6 +56,67 @@ class OffertsVC: BTableViewController {
         addRefreshControl()
         TableViewCellFactory.registerCells(tableView: tableView, types: .offertCell)
         setInitialHome()
+        setSearchControl()
+    }
+    
+    private func setSearchControl() {
+        self.textSearchControl.comparisonOptions = [.caseInsensitive]
+        self.textSearchControl.maxNumberOfResults = 5
+        self.textSearchControl.theme.bgColor = UIColor.white
+        self.textSearchControl.theme.font = UIFont.systemFont(ofSize: 16)
+        
+        
+        self.textSearchControl.itemSelectionHandler = { filteredResults, itemPosition in
+            let item = filteredResults[itemPosition]
+            self.textSearchControl.text = item.title
+            self.pageOferts = 1
+            let requestSearchOffers = Requests.createSearchOfferRequest(self.textSearchControl.text!, self.pageOferts, Constants.numberOfRowsPerPage, (LocationUtil.sharedInstance.currentLocation?.coordinate.latitude)!, (LocationUtil.sharedInstance.currentLocation?.coordinate.longitude)!)
+            
+            self.showLoading()
+            self.tableItems.removeAll()
+            self.tableView.reloadData()
+            self.getOferts(parameters: requestSearchOffers)
+//            self.showSearchControl()
+            self.showHiddeSearchControl(ocultar: !self.isShowSearchControl)
+            self.textSearchControl.resignFirstResponder()
+            
+        }
+        
+        self.textSearchControl.userStoppedTypingHandler = {
+            if let criteria = self.textSearchControl.text{
+                if criteria.count > 1
+                {
+                    self.textSearchControl.showLoadingIndicator()
+                    
+                    let network = Network()
+                    network.setEnvironment(Environment: ENVIROMENTAPP)
+                    network.setConstants(constants: constantsParameters)
+                    network.setUrlParameters(urlParameters: [:])
+                    network.setTerminoAbuscar(criteria)
+                    
+                    network.endPointN(endPont: .Suggest, { (statusCode, value, objeto) -> (Void) in
+                        if StatusCode.validateStatusCode(code: statusCode.toInt() ?? 0) {
+                            
+                            
+                            
+                            
+                            if let a = value as? [String] {
+                                var results = [SearchTextFieldItem]()
+                                
+                                for item in a {
+                                    results.append(SearchTextFieldItem.init(title: item))
+                                }
+                                self.textSearchControl.filterItems(results)
+                                self.textSearchControl.stopLoadingIndicator()
+                                print(a)
+                            }
+                        } else {
+                            print("fallo la busqueda")
+                        }
+                    })
+                }
+            }
+        }
     }
     
     private func setInitialHome() {
@@ -69,6 +146,8 @@ class OffertsVC: BTableViewController {
         pageOferts = 1
         tableItems.removeAll()
         tableView.reloadData()
+        isShowSearchControl = false
+        self.showHiddeSearchControl(ocultar: false)
         setInitialHome()
     }
     
@@ -156,7 +235,8 @@ class OffertsVC: BTableViewController {
         
         network.setConstants(constants: constantsParameters)
         network.setUrlParameters(urlParameters: parameters)
-        network.endPointN(endPont: .OfferSearch) { (statusCode, value, objeto) -> (Void) in
+        network.setEnvironment(Environment: ENVIROMENTAPP)
+        network.endPointN(endPont: isFilter ? .OfferSearchFilter : .OfferSearch) { (statusCode, value, objeto) -> (Void) in
             if StatusCode.validateStatusCode(code: statusCode.toInt() ?? 0) {
                 print("getOferts")
                 if let oferts = objeto as? [Offer] {
@@ -233,10 +313,45 @@ extension OffertsVC: BTableViewDelegate {
     }
 }
 
+// MARK: TEXTFIELD DELEGATE METHODS
 extension OffertsVC: principalTabBarVCDelegate {
+    func aplicarFiltros(idFiltro: String) {
+        print("filtro ya en ofertas")
+        self.pageOferts = 1
+        tableItems.removeAll()
+        tableView.reloadData()
+        let requestSearchOffers = Requests.createSearchOfferByCategoryRequest(idFiltro.toInt() ?? 0, self.pageOferts, Constants.numberOfRowsPerPage, LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0, LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0)
+        showLoading()
+        self.getOferts(isFilter: true, parameters: requestSearchOffers)
+    }
     
     func btnSearchPress() {
-        print("busqueda")
+        self.showHiddeSearchControl(ocultar:!isShowSearchControl)
+        isShowSearchControl = !isShowSearchControl
     }
+    
+    private func showHiddeSearchControl(ocultar:Bool) {
+        UIView.animate(withDuration: 1.5) {
+            self.iconSearchControl.isHidden = ocultar ? false : true
+            self.constraintHSearchControl.constant = ocultar ? 60 : 0
+            self.constraintTopSearchControl.constant = ocultar ? 60 : 0
+            self.constraintTopOfertTitulo.constant = ocultar ? 0 : 80
+        }
+    }
+}
 
+extension OffertsVC: UITextFieldDelegate {
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.pageOferts = 1
+        let requestSearchOffers = Requests.createSearchOfferRequest(self.textSearchControl.text!, self.pageOferts, Constants.numberOfRowsPerPage, (LocationUtil.sharedInstance.currentLocation?.coordinate.latitude)!, (LocationUtil.sharedInstance.currentLocation?.coordinate.longitude)!)
+        tableItems.removeAll()
+        tableView.reloadData()
+        self.getOferts(parameters: requestSearchOffers)
+        self.textSearchControl.text = ""
+        self.showHiddeSearchControl(ocultar:false)
+        self.textSearchControl.resignFirstResponder()
+        return false
+    }
 }

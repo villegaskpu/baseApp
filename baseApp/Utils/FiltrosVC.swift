@@ -10,6 +10,10 @@
 import UIKit
 import a4SysCoreIOS
 
+protocol FiltrosVCDelegate {
+    func returnFiltros(menuFiltro:String)
+}
+
 class FiltrosVC: BViewController {
     
     @IBOutlet weak var LTitulo: UILabel!
@@ -18,7 +22,7 @@ class FiltrosVC: BViewController {
     @IBOutlet weak var lViewTitulo: UIView!
     
     var filtros:[FiltersCategories] = []
-    
+    var delegate:FiltrosVCDelegate?
     
     
     override func viewDidLoad() {
@@ -150,17 +154,10 @@ extension FiltrosVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
         
         if self.tabBarController != nil
         {
+            let menuOption = self.filtros[indexPath.row].idCategoryAlias
+            delegate?.returnFiltros(menuFiltro: "\(menuOption ?? 0)")
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.tabBarController?.selectedIndex = 0
-                let menuOption = ["selectedMenu" : self.filtros[indexPath.row]]
-//                if self.isMap
-//                {
-////                    NotificationCenter.default.post(name: .filterMapNotificationName, object: self, userInfo: menuOption)
-//                }
-//                else
-//                {
-////                    NotificationCenter.default.post(name: .rightMenuNotificationName, object: self, userInfo: menuOption)
-//                }
             }
         }
     }

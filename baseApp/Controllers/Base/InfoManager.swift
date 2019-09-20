@@ -234,7 +234,7 @@ class InfoManager: NSObject {
                             color = colorVerde
                         }
                     }
-                    else if item.type == .textField || item.type == .observations {
+                    else if item.type == .textField || item.type == .observations || item.type == .calendarCell {
                         if item.value.isEmpty {
                             color = colorRojo
                             ready = false
@@ -411,6 +411,7 @@ enum InfoItemType: String {
     //yopter
     case offertCell = "cellOffert"
     case articulosCell = "ArticulosCell"
+    case calendarCell = "CalendarCell"
     
 }
 
@@ -423,6 +424,11 @@ class InfoItem: NSObject {
     
     var identifier: String = ""
     var type: InfoItemType = .default
+    var typePikerView:typePikerView = .datePiker
+    var webView = ""
+    var urlWebView = ""
+    
+    var attributedString = NSMutableAttributedString()
     var required = true {
         didSet {
             self.titleColor = required ? .black : UIColor.lightGray
@@ -563,6 +569,7 @@ class InfoItem: NSObject {
     var setEstadoColapsable = false
     
     var offer = Offer()
+    var article = Offer()
     var textAlignmentL:NSTextAlignment = .justified
 
 
@@ -589,7 +596,7 @@ class InfoItem: NSObject {
             self.itemHeight = 165.0
             break
         case .textField:
-            self.itemHeight = 68.0
+            self.itemHeight = 86.0
             break
         case .label:
             break

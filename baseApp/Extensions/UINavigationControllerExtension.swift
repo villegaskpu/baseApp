@@ -18,4 +18,12 @@ extension UINavigationController {
         view.layer.add(transition, forKey: nil)
         pushViewController(viewController, animated: false)
     }
+    
+    func moveIn(_ viewController: UIViewController) {
+        let transition: CATransition = CATransition()
+        transition.duration = 0.9
+        transition.type = CATransitionType.moveIn
+        view.layer.add(transition, forKey: nil)
+        pushViewController(viewController, animated: false)
+    }
 }

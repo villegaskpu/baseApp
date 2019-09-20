@@ -37,7 +37,7 @@ class TransitionManagerMenu: UIPercentDrivenInteractiveTransition {
             delegadoSelect = true
         }
     }
-    var menuVC: Menu! {
+    var menuVC: Menu2! {
         didSet {
             panGesture = UIPanGestureRecognizer()
             panGesture.addTarget(self, action: #selector(panGestureHandler2(_:)))

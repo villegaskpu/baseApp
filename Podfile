@@ -15,4 +15,6 @@ target 'baseApp' do
    pod 'SDWebImage', '~>4.0'
    pod 'ImageSlideshow', '~> 1.7.0'
    pod 'ImageSlideshow/Alamofire'
+   pod 'DropDown'
+   pod 'SearchTextField'
 end

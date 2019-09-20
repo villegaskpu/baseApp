@@ -12,7 +12,7 @@ protocol MenuDelegate {
     func selectedItem(idMenu: String, titulo: String)
 }
 
-class Menu: BTableViewController {
+class Menu2: BTableViewController {
 
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var container: UIView!
@@ -112,7 +112,7 @@ class Menu: BTableViewController {
 }
 
 //MARK: SOInitAppDelegate METHODS
-extension Menu: SOInitAppDelegate {
+extension Menu2: SOInitAppDelegate {
     
     func updateMenu(menuItems: InfoManager) {
         tableItems = menuItems
@@ -123,12 +123,12 @@ extension Menu: SOInitAppDelegate {
     
 }
 
-extension Menu {
+extension Menu2 {
     
 }
 
 //MARK: TABLEVIEW METHODS
-extension Menu {
+extension Menu2 {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = tableItems.getItem(section: indexPath.section, at: indexPath.row)
         

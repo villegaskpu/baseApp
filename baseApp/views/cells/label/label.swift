@@ -18,6 +18,8 @@ class label: UITableViewCell {
     @IBOutlet weak var viewContent: UIView!
     
     var textAlignmentL:NSTextAlignment = .justified
+    var attributedString = NSMutableAttributedString()
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +37,7 @@ class label: UITableViewCell {
         contenido.minimumScaleFactor = 0.9
         
         contenido.textAlignment = textAlignmentL
+        titulo.attributedText = attributedString
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

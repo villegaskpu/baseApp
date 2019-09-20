@@ -28,6 +28,8 @@ class LocationUtil : NSObject, CLLocationManagerDelegate
     var isInMall = false
     var isCallingService = false
     var geofencesUpdated = false
+    var startLocation: CLLocation!
+    var lastLocation: CLLocation!
     
     private override init() {
         super.init()
@@ -112,61 +114,26 @@ class LocationUtil : NSObject, CLLocationManagerDelegate
 //                }
 //            }
             
-            getBeat()
+            if startLocation == nil { // solo se ejecuta una vez
+//                startLocation = locations.first
+                Settings.sharedInstance.setLatitude(value: "\(location.coordinate.latitude)")
+                Settings.sharedInstance.setLongitude(value: "\(location.coordinate.longitude)")
+            } else {
+                let ubicacionGuardada = CLLocation(latitude: Settings.sharedInstance.getLatitude()?.toDouble() ?? 0.0, longitude: Settings.sharedInstance.getLongitude()?.toDouble() ?? 0.0)
+                let mts = ubicacionGuardada.distance(from: locations.first!)
+                
+                print("mts: \(mts)")
+                if mts >= 1000 {
+                    Settings.sharedInstance.setLatitude(value: "\(location.coordinate.latitude)")
+                    Settings.sharedInstance.setLongitude(value: "\(location.coordinate.longitude)")
+                }
+            }
         }
         
         
         //Fix Geolocalitation, Geocercas
         
         // self.checkMall()
-    }
-    
-    func getBeat(){
-
-        
-        
-        if UIApplication.shared.applicationState == .active || UIApplication.shared.applicationState == .background || UIApplication.shared.applicationState == .inactive{
-            Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { (Timer) in
-                let parameters = [[
-                    "latitude": "\(LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0)",
-                    "longitude": "\(LocationUtil.sharedInstance.currentLocation?.coordinate.longitude ?? 0)",
-                    "beatAt": Commons.getCurrentDate()]]
-                
-                print("parameters: \(parameters)")
-//
-//                let requestSerializer = AFJSONRequestSerializer.init()
-//                requestSerializer.setValue("application/json", forHTTPHeaderField: "content-type")
-//                requestSerializer.setValue("application/json", forHTTPHeaderField: "accept")
-//                requestSerializer.setValue(Constants.appID, forHTTPHeaderField: "x-app-id")
-//                requestSerializer.setValue(Commons.getUserAgent(), forHTTPHeaderField: "user-agent")
-//                requestSerializer.setValue("Bearer \(Settings.sharedInstance.getToken()!)", forHTTPHeaderField: "Authorization")
-//                
-//                let manager = AFHTTPSessionManager()
-//                manager.requestSerializer = requestSerializer
-//                manager.responseSerializer = AFJSONResponseSerializer()
-//                
-//                manager.put( "\(Constants.baseURLString)/customer/v1/heartbeat", parameters: parameters,
-//                             success: { (data, response) in
-//                                if response != nil
-//                                {
-//                                    print("heartbeat ok")
-//                                }
-//                }, failure: { (data, error) in
-//                    print(data ?? "Error getting fireannouncements")
-//                    print(error)
-//                })
-            }
-        } else {
-            let Device = UIDevice.current
-            let iosVersion = Double(Device.systemVersion) ?? 0
-            
-            let iOS10 = iosVersion >= 10
-            if iOS10{
-                LocationUtil.sharedInstance.locationManager?.allowsBackgroundLocationUpdates = true
-                LocationUtil.sharedInstance.locationManager?.pausesLocationUpdatesAutomatically = false
-                LocationUtil.sharedInstance.locationManager?.startMonitoringSignificantLocationChanges()
-            }
-        }
     }
     
     func removeAllGeofences()

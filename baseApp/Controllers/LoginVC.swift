@@ -37,7 +37,7 @@ class LoginVC: BViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        txtCorreo.text = "vycotic1@yopmail.com"
+        txtCorreo.text = "s33@yopmail.com"
         txtPassword.text = "Yopter1."
         setStyle()
         setEyeIcon()
@@ -218,6 +218,9 @@ class LoginVC: BViewController {
     
     @IBAction func btnRecuperarPassword(_ sender: Any) {
         print("recuperar pasword")
+        let vc = recuperarContraseniaVC()
+        
+        self.present(vc, animated: true, completion: nil)
     }
     
     

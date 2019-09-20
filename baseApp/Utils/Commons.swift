@@ -11,6 +11,9 @@ import CoreTelephony
 import UIKit
 import AdSupport
 import a4SysCoreIOS
+import MessageUI
+import CoreLocation
+import UserNotifications
 
 class Commons{
     
@@ -413,6 +416,71 @@ class Commons{
     }
     
     static func heardBeat() {
+        
+        if Settings.sharedInstance.getLatitude() != nil {
+            
+            var speed = LocationUtil.sharedInstance.currentLocation?.speed ?? 0
+            let accuracy = LocationUtil.sharedInstance.currentLocation?.verticalAccuracy ?? 0
+            
+            speed = speed == -1 ? 0 : speed
+            
+            let parameters:[String:Any] =
+                [
+                    "beatAt":Commons.getCurrentDate(),
+                    "latitude":"\(Settings.sharedInstance.getLatitude() ?? "0")" ,
+                    "longitude":"\(Settings.sharedInstance.getLongitude() ?? "0")",
+                    "altitude":LocationUtil.sharedInstance.currentLocation?.altitude ?? 0,
+                    "speed":Int(roundf(Float(speed))),
+                    "accuracy":Int(roundf(Float(accuracy))),
+                    "extras":[
+                        [
+                            "key":"locationPermission",
+                            "value":getPermiso()
+                        ],
+                        [
+                            "key":"notificationPermission",
+                            "value":getNotifications()
+                        ],
+                        [
+                            "key":"bluetoothPermission",
+                            "value":"false"
+                        ],
+                        [
+                            "key":"cameraPermission",
+                            "value":"false"
+                        ],
+                        [
+                            "key":"photosPermission",
+                            "value":"false"
+                        ],
+                        [
+                            "key":"backgroundRefreshPermission",
+                            "value":getBackground()
+                        ]
+                    ]
+                ]
+            
+            
+            
+            
+            
+            let network = Network()
+            network.setConstants(constants: constantsParameters)
+            network.setEnvironment(Environment: ENVIROMENTAPP)
+            network.setUrlParameters(urlParameters: parameters)
+            network.endPointN(endPont: .HeartBeat) { (statusCode, value, objeto) -> (Void) in
+                if StatusCode.validateStatusCode(code: statusCode.toInt() ?? 0) {
+                    print("heartbeat ok")
+                } else {
+                    print("fallo heardBeat")
+                }
+            }
+        }
+        
+        
+        
+        
+        
 //        let sessionManager = SessionManager()
 //        let parameters = [[
 //            "latitude": "\(LocationUtil.sharedInstance.currentLocation?.coordinate.latitude ?? 0)",
@@ -440,6 +508,60 @@ class Commons{
 //            }
 //        }
     }
+    
+    private static func getBackground() -> String {
+        // Check Background Refresh
+        switch UIApplication.shared.backgroundRefreshStatus {
+        case .available:
+            return "true"
+        case .denied:
+            return "false"
+        case .restricted:
+            return "false"
+        }
+    }
+    
+    private static func getPermiso() -> String {
+        if (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
+            return "true"
+        }
+        return "false"
+    }
+    
+    private static func getNotifications() -> String {
+        if #available(iOS 10.0, *) {
+            var str = "false"
+            let current = UNUserNotificationCenter.current()
+            current.getNotificationSettings(completionHandler: { settings in
+                
+                switch settings.authorizationStatus {
+                    
+                case .notDetermined:
+                    str = "false"
+                    break
+                case .denied:
+                    str = "false"
+                    break
+                case .authorized:
+                    str = "true"
+                    break
+                case .provisional:
+                    str = "true"
+                    break
+                }
+            })
+            return str
+        } else {
+            // Fallback on earlier versions
+            if UIApplication.shared.isRegisteredForRemoteNotifications {
+                return "true"
+            } else {
+                return "false"
+            }
+        }
+    }
+    
+    
     static func wakeup(advertisementId:String?)
     {
         
@@ -528,6 +650,20 @@ class Commons{
         let emailRegex =  "^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$" // validacion del backend
         let emailTest = NSPredicate.init(format: "SELF MATCHES %@", emailRegex)
         return emailTest.evaluate(with: test)
+    }
+    
+    static func sendEmail(target: UIViewController) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
+            mail.setToRecipients([Constants.emailContact])
+            mail.setSubject(Constants.emailSubject)
+            mail.setMessageBody("<br /><br /><br /><br /><br /><br /><br /><br /><br />\(Commons.getUserAgentForEmail())", isHTML: true)
+            
+            target.present(mail, animated: true)
+        } else {
+            Commons.showMessage("SEND_EMAIL_UNAVAILABLE".localized)
+        }
     }
     
     

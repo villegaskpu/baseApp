@@ -11,10 +11,7 @@ import UIKit
 class principalTabBarArticulosVC: BTabBarVC {
     
     var capa: UIView!
-    var delegateTab:principalTabBarVCDelegate?
-    internal let transitionManager = TransitionManagerMenu()
     private var menuDelegate: SOInitAppDelegate?
-    internal var menuItems = InfoManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +23,6 @@ class principalTabBarArticulosVC: BTabBarVC {
         
         initCapa()
         transitionManager.sourceVC2 = self
-        setupNavBar()
         showLoading()
         
         self.hideLoading()
@@ -69,22 +65,6 @@ class principalTabBarArticulosVC: BTabBarVC {
         print("self.menuDelegate: \(self.menuDelegate)")
     }
     
-    @objc func action(sender: UIBarButtonItem) {
-        // Function body goes here
-    }
-    
-    private func setupNavBar() {
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style:.plain, target: nil, action: nil)
-        navigationController?.isNavigationBarHidden = false
-        navigationItem.titleView = setTitleview()
-        
-        let menuButton = UISOMenuIcon(frame: CGRect(x: 0, y: 0, width: 25, height: 40))
-        menuButton.delegate = self as? UISOMenuIconDelegate
-        
-        let left = UIBarButtonItem(customView: menuButton)
-        navigationItem.leftBarButtonItem = left
-    }
-    
     func setControllers() {
         let articulos = ArticulosVC()
         //        ofertas = self
@@ -92,7 +72,7 @@ class principalTabBarArticulosVC: BTabBarVC {
         articulos.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         articulos.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.maize], for: .selected)
         
-        let favoritos = FavoritosVC()
+        let favoritos = ArticulosFavoritosVC()
         favoritos.tabBarItem = UITabBarItem(title: "Favoritas", image: UIImage(named: "star_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "star_iconBold")?.withRenderingMode(.alwaysOriginal))
         favoritos.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         favoritos.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.maize], for: .selected)
@@ -129,42 +109,6 @@ extension principalTabBarArticulosVC: UISOMenuIconDelegate {
         }
         else {
             openMenu()
-        }
-    }
-    
-    @objc func openMenu() {
-        let menuVC = Menu(nibName: "Menu", bundle: nil)
-        menuVC.modalPresentationStyle = .overCurrentContext
-        menuVC.transitioningDelegate = transitionManager
-        menuVC.delegate = self
-        menuVC.tableItems = menuItems
-        menuDelegate = menuVC
-        transitionManager.menuVC = menuVC
-        //        transitionManager.menuDelegate = menuDelegate
-        
-        present(menuVC, animated: true, completion: nil)
-    }
-}
-
-//MARK: OPTION MENU SELECTED
-extension principalTabBarArticulosVC: MenuDelegate {
-    
-    func selectedItem(idMenu: String, titulo: String) {
-        
-        if idMenu.elementsEqual("terminos") {
-            let vc = TerminosYCondicionesVC()
-            self.navigationController?.fadeTo(vc)
-        }
-        else if idMenu.elementsEqual("ofertas") {
-            let vc = principalTabBarVC()
-            self.navigationController?.fadeTo(vc)
-        }
-        else if idMenu.elementsEqual("terminos") {
-            let vc = TerminosYCondicionesVC()
-            self.navigationController?.fadeTo(vc)
-        }
-        else {
-            //            Navigation.push(idMenu: idMenu, target: self, titulo: titulo)
         }
     }
 }

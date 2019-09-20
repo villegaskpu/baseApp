@@ -9,6 +9,9 @@
 import UIKit
 import a4SysCoreIOS
 
+var timerHearBeats = Timer()
+
+
 var constantsParameters:[String:Any] = [ "appID" : "1ed3d6e03ee03c04bf3365f808fc28f1",
                                          "token" : "\(Settings.sharedInstance.getToken() ?? "")",
                                          "tokenYopter" : "\(Settings.sharedInstance.getOldToken() ?? "")"

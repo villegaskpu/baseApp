@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import ObjectMapper
+import a4SysCoreIOS
+import CoreLocation
 
 
 enum SettingsType: String {
@@ -369,29 +371,62 @@ class Settings
         let prefs = UserDefaults.standard
         
         if let date = prefs.string(forKey: "dateRefreshTheme"){
-            return date
+            if date == "" {
+                return Commons.getCurrentDate(-5)
+            } else  {
+                return date
+            }
         }
         else{
             return Commons.getCurrentDate(-5)
         }
     }
     
-    func setThemeCustom() -> Void{
+    func setThemeCustom(value: String) -> Void{
         let prefs = UserDefaults.standard
         
-        prefs.setValue("1", forKey: "themeCustom")
+        prefs.setValue(value, forKey: "themeCustom")
         prefs.synchronize()
     }
+    
     
     func getThemeCustom() -> Bool
     {
         let prefs = UserDefaults.standard
         
-        if let _ = prefs.string(forKey: "themeCustom"){
-            return true
+        if let a = prefs.string(forKey: "themeCustom"){
+            if a == "1" {
+                return true
+            } else {
+                return false
+            }
+            
         }
         else{
             return false
+        }
+    }
+    
+    
+    
+    func setMenu(value: [[String:Any]]) -> Void{
+        let prefs = UserDefaults.standard
+        prefs.set(value, forKey: "menuLeft")
+        prefs.synchronize()
+    }
+    
+    func getMenu() -> [[String:Any]]?
+    {
+        let prefs = UserDefaults.standard
+        
+        if let menu = prefs.object(forKey: "menuLeft") as? [[String:Any]] {
+            // Convert JSON String to Model
+            //let user = Mapper<Menu>().map(JSONString: menu)
+            let user = menu
+            return user
+        }
+        else{
+            return nil
         }
     }
     

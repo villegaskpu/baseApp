@@ -37,7 +37,9 @@ class TableViewCellFactory: NSObject {
         else {
             switch item.type {
             case .label, .labelInfo, .textField, .spinner, .isCorreo, .isTelefono:
-                return 70
+                return 86
+            case .calendarCell:
+                return 80
             case .observations:
                 return 180
             case .button, .isAddTelephone, .isAddCorreo, .checkBox, .segmented:
@@ -45,12 +47,9 @@ class TableViewCellFactory: NSObject {
             case .datePicker, .imagenCell:
                 return 150
             case .statusbar, .radio:
-                if item.rechazo
-                {
+                if item.rechazo {
                     return item.itemHeight
-                }
-                else
-                {
+                } else {
                     return 100
                 }
             case .cellCheckBoxRass:
@@ -110,7 +109,17 @@ class TableViewCellFactory: NSObject {
                 }
                 cell.contenido.text = item.value
                 cell.textAlignmentL = item.textAlignmentL
+                cell.attributedString = item.attributedString
 
+                return cell
+            case .calendarCell:
+                let cell = cell_ as! CalendarCell
+                cell.titulo.text = requiredStar + item.title
+                cell.arrayList = item.tupleArray
+                cell.indexPath = indexPath
+                cell.type = item.typePikerView
+                cell.delegate = delegate as? YopterTextFieldDelegate
+                
                 return cell
 //            case .labelInfo:
 //                let cell = cell_ as! labelInfo
@@ -130,7 +139,7 @@ class TableViewCellFactory: NSObject {
             case .textField:
                 let cell = cell_ as! textField
                 cell.titulo.text = requiredStar + item.title
-                cell.titulo.textColor = item.titleColor
+//                cell.titulo.textColor = item.titleColor
                 cell.valor.text = item.value
                 cell.indexPath = indexPath
                 cell.delegate = delegate as? YopterTextFieldDelegate
@@ -182,6 +191,8 @@ class TableViewCellFactory: NSObject {
             case .button:
                 let cell = cell_ as! boton
                 cell.boton.setTitle(item.title, for: .normal)
+                cell.boton.setImage(UIImage(named: "item.title"), for: UIControl.State.normal)
+                cell.nameImage = item.title
                 cell.indexPath = indexPath
                 cell.delegate = delegate as? botonDelegate
 

@@ -6,7 +6,6 @@ provides-nominal:
 provides-member:
 - ["7baseApp15BViewControllerC", ""]
 provides-dynamic-lookup:
-- "mailComposeController"
 - "viewDidLoad"
 depends-top-level:
 - !private "!"
@@ -22,10 +21,8 @@ depends-top-level:
 - "CastingPrecedence"
 - !private "Commons"
 - !private "Constants"
-- "Error"
 - !private "Font"
-- "MFMailComposeResult"
-- "MFMailComposeViewController"
+- !private "MFMailComposeViewController"
 - !private "MFMailComposeViewControllerDelegate"
 - !private "NVActivityIndicatorType"
 - !private "NVActivityIndicatorView"
@@ -45,6 +42,24 @@ depends-top-level:
 - !private "UIWindow"
 - !private "_ImageLiteralType"
 depends-member:
+- !private ["8DropDown10AnchorViewP", "addSubview"]
+- !private ["8DropDown10AnchorViewP", "alpha"]
+- !private ["8DropDown10AnchorViewP", "animate"]
+- !private ["8DropDown10AnchorViewP", "backgroundColor"]
+- !private ["8DropDown10AnchorViewP", "bounds"]
+- !private ["8DropDown10AnchorViewP", "contentMode"]
+- !private ["8DropDown10AnchorViewP", "font"]
+- !private ["8DropDown10AnchorViewP", "frame"]
+- ["8DropDown10AnchorViewP", "init"]
+- !private ["8DropDown10AnchorViewP", "loopMode"]
+- !private ["8DropDown10AnchorViewP", "numberOfLines"]
+- !private ["8DropDown10AnchorViewP", "play"]
+- !private ["8DropDown10AnchorViewP", "removeFromSuperview"]
+- !private ["8DropDown10AnchorViewP", "startAnimating"]
+- !private ["8DropDown10AnchorViewP", "subviews"]
+- !private ["8DropDown10AnchorViewP", "text"]
+- !private ["8DropDown10AnchorViewP", "textAlignment"]
+- !private ["8DropDown10AnchorViewP", "textColor"]
 - !private ["6Lottie13AnimationViewC", "contentMode"]
 - !private ["6Lottie13AnimationViewC", "frame"]
 - !private ["6Lottie13AnimationViewC", "init"]
@@ -57,10 +72,8 @@ depends-member:
 - !private ["7baseApp15BViewControllerC", "CGRect"]
 - !private ["7baseApp15BViewControllerC", "Commons"]
 - !private ["7baseApp15BViewControllerC", "Constants"]
-- ["7baseApp15BViewControllerC", "Error"]
 - !private ["7baseApp15BViewControllerC", "Font"]
-- ["7baseApp15BViewControllerC", "MFMailComposeResult"]
-- ["7baseApp15BViewControllerC", "MFMailComposeViewController"]
+- !private ["7baseApp15BViewControllerC", "MFMailComposeViewController"]
 - !private ["7baseApp15BViewControllerC", "MFMailComposeViewControllerDelegate"]
 - !private ["7baseApp15BViewControllerC", "NVActivityIndicatorType"]
 - !private ["7baseApp15BViewControllerC", "NVActivityIndicatorView"]
@@ -82,7 +95,6 @@ depends-member:
 - ["7baseApp15BViewControllerC", "hideLoading"]
 - ["7baseApp15BViewControllerC", "init"]
 - !private ["7baseApp15BViewControllerC", "loadingContainer"]
-- ["7baseApp15BViewControllerC", "mailComposeController"]
 - !private ["7baseApp15BViewControllerC", "messageView"]
 - !private ["7baseApp15BViewControllerC", "navigationController"]
 - !private ["7baseApp15BViewControllerC", "present"]
@@ -149,7 +161,6 @@ depends-member:
 - !private ["s7CVarArgP", "canSendMail"]
 - !private ["s7CVarArgP", "clear"]
 - !private ["s7CVarArgP", "contentMode"]
-- !private ["s7CVarArgP", "dismiss"]
 - !private ["s7CVarArgP", "font"]
 - ["s7CVarArgP", "forInternetConnection"]
 - !private ["s7CVarArgP", "frame"]
@@ -223,7 +234,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "canSendMail"]
 - !private ["s28CustomDebugStringConvertibleP", "clear"]
 - !private ["s28CustomDebugStringConvertibleP", "contentMode"]
-- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "font"]
 - ["s28CustomDebugStringConvertibleP", "forInternetConnection"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
@@ -300,7 +310,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "canSendMail"]
 - !private ["s23CustomStringConvertibleP", "clear"]
 - !private ["s23CustomStringConvertibleP", "contentMode"]
-- !private ["s23CustomStringConvertibleP", "dismiss"]
 - !private ["s23CustomStringConvertibleP", "font"]
 - ["s23CustomStringConvertibleP", "forInternetConnection"]
 - !private ["s23CustomStringConvertibleP", "frame"]
@@ -384,7 +393,6 @@ depends-member:
 - !private ["SQ", "center"]
 - !private ["SQ", "clear"]
 - !private ["SQ", "contentMode"]
-- !private ["SQ", "dismiss"]
 - !private ["SQ", "font"]
 - ["SQ", "forInternetConnection"]
 - !private ["SQ", "frame"]
@@ -466,7 +474,6 @@ depends-member:
 - !private ["SH", "center"]
 - !private ["SH", "clear"]
 - !private ["SH", "contentMode"]
-- !private ["SH", "dismiss"]
 - !private ["SH", "font"]
 - ["SH", "forInternetConnection"]
 - !private ["SH", "frame"]
@@ -510,7 +517,6 @@ depends-member:
 - !private ["6Lottie0A4ViewC", "loopMode"]
 - !private ["6Lottie0A4ViewC", "play"]
 - !private ["So27MFMailComposeViewControllerC", "canSendMail"]
-- !private ["So27MFMailComposeViewControllerC", "dismiss"]
 - !private ["So27MFMailComposeViewControllerC", "init"]
 - !private ["So27MFMailComposeViewControllerC", "mailComposeDelegate"]
 - !private ["So27MFMailComposeViewControllerC", "setMessageBody"]
@@ -547,7 +553,6 @@ depends-member:
 - !private ["So8NSCodingP", "canSendMail"]
 - !private ["So8NSCodingP", "clear"]
 - !private ["So8NSCodingP", "contentMode"]
-- !private ["So8NSCodingP", "dismiss"]
 - !private ["So8NSCodingP", "font"]
 - !private ["So8NSCodingP", "frame"]
 - !private ["So8NSCodingP", "hexStringToUIColor"]
@@ -606,7 +611,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UIView"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "canSendMail"]
-- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "loadingContainer"]
@@ -642,11 +646,9 @@ depends-member:
 - !private ["So8NSObjectC", "CGRect"]
 - !private ["So8NSObjectC", "Commons"]
 - !private ["So8NSObjectC", "Constants"]
-- ["So8NSObjectC", "Error"]
 - !private ["So8NSObjectC", "FONT_BOLD"]
 - !private ["So8NSObjectC", "Font"]
-- ["So8NSObjectC", "MFMailComposeResult"]
-- ["So8NSObjectC", "MFMailComposeViewController"]
+- !private ["So8NSObjectC", "MFMailComposeViewController"]
 - !private ["So8NSObjectC", "MFMailComposeViewControllerDelegate"]
 - !private ["So8NSObjectC", "NVActivityIndicatorType"]
 - !private ["So8NSObjectC", "NVActivityIndicatorView"]
@@ -673,7 +675,6 @@ depends-member:
 - ["So8NSObjectC", "cargandoItem"]
 - !private ["So8NSObjectC", "clear"]
 - !private ["So8NSObjectC", "contentMode"]
-- !private ["So8NSObjectC", "dismiss"]
 - !private ["So8NSObjectC", "font"]
 - ["So8NSObjectC", "forInternetConnection"]
 - !private ["So8NSObjectC", "frame"]
@@ -686,7 +687,6 @@ depends-member:
 - ["So8NSObjectC", "loadingContainer"]
 - !private ["So8NSObjectC", "localized"]
 - !private ["So8NSObjectC", "loopMode"]
-- ["So8NSObjectC", "mailComposeController"]
 - !private ["So8NSObjectC", "mailComposeDelegate"]
 - !private ["So8NSObjectC", "main"]
 - ["So8NSObjectC", "messageView"]
@@ -747,7 +747,6 @@ depends-member:
 - !private ["So8NSObjectP", "canSendMail"]
 - !private ["So8NSObjectP", "clear"]
 - !private ["So8NSObjectP", "contentMode"]
-- !private ["So8NSObjectP", "dismiss"]
 - !private ["So8NSObjectP", "font"]
 - ["So8NSObjectP", "forInternetConnection"]
 - !private ["So8NSObjectP", "frame"]
@@ -885,7 +884,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "bounds"]
 - !private ["So21UIAppearanceContainerP", "canSendMail"]
 - !private ["So21UIAppearanceContainerP", "contentMode"]
-- !private ["So21UIAppearanceContainerP", "dismiss"]
 - !private ["So21UIAppearanceContainerP", "font"]
 - !private ["So21UIAppearanceContainerP", "frame"]
 - ["So21UIAppearanceContainerP", "init"]
@@ -937,7 +935,6 @@ depends-member:
 - ["So18UIContentContainerP", "UIView"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "canSendMail"]
-- !private ["So18UIContentContainerP", "dismiss"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "loadingContainer"]
@@ -1022,7 +1019,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "bounds"]
 - !private ["So18UIFocusEnvironmentP", "canSendMail"]
 - !private ["So18UIFocusEnvironmentP", "contentMode"]
-- !private ["So18UIFocusEnvironmentP", "dismiss"]
 - !private ["So18UIFocusEnvironmentP", "font"]
 - !private ["So18UIFocusEnvironmentP", "frame"]
 - ["So18UIFocusEnvironmentP", "init"]
@@ -1095,7 +1091,6 @@ depends-member:
 - !private ["So7UILabelC", "textAlignment"]
 - !private ["So7UILabelC", "textColor"]
 - !private ["So22UINavigationControllerC", "canSendMail"]
-- !private ["So22UINavigationControllerC", "dismiss"]
 - !private ["So22UINavigationControllerC", "init"]
 - !private ["So22UINavigationControllerC", "mailComposeDelegate"]
 - !private ["So22UINavigationControllerC", "navigationItem"]
@@ -1130,7 +1125,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "bounds"]
 - !private ["So30UIPasteConfigurationSupportingP", "canSendMail"]
 - !private ["So30UIPasteConfigurationSupportingP", "contentMode"]
-- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - !private ["So30UIPasteConfigurationSupportingP", "font"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
@@ -1164,10 +1158,8 @@ depends-member:
 - !private ["So11UIResponderC", "CGRect"]
 - !private ["So11UIResponderC", "Commons"]
 - !private ["So11UIResponderC", "Constants"]
-- ["So11UIResponderC", "Error"]
 - !private ["So11UIResponderC", "Font"]
-- ["So11UIResponderC", "MFMailComposeResult"]
-- ["So11UIResponderC", "MFMailComposeViewController"]
+- !private ["So11UIResponderC", "MFMailComposeViewController"]
 - !private ["So11UIResponderC", "MFMailComposeViewControllerDelegate"]
 - !private ["So11UIResponderC", "NVActivityIndicatorType"]
 - !private ["So11UIResponderC", "NVActivityIndicatorView"]
@@ -1192,7 +1184,6 @@ depends-member:
 - !private ["So11UIResponderC", "canSendMail"]
 - ["So11UIResponderC", "cargandoItem"]
 - !private ["So11UIResponderC", "contentMode"]
-- !private ["So11UIResponderC", "dismiss"]
 - !private ["So11UIResponderC", "font"]
 - !private ["So11UIResponderC", "frame"]
 - ["So11UIResponderC", "hideLoading"]
@@ -1201,7 +1192,6 @@ depends-member:
 - !private ["So11UIResponderC", "keyWindow"]
 - ["So11UIResponderC", "loadingContainer"]
 - !private ["So11UIResponderC", "loopMode"]
-- ["So11UIResponderC", "mailComposeController"]
 - !private ["So11UIResponderC", "mailComposeDelegate"]
 - ["So11UIResponderC", "messageView"]
 - !private ["So11UIResponderC", "navigationController"]
@@ -1255,7 +1245,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "bounds"]
 - !private ["So30UIResponderStandardEditActionsP", "canSendMail"]
 - !private ["So30UIResponderStandardEditActionsP", "contentMode"]
-- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
 - !private ["So30UIResponderStandardEditActionsP", "font"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
 - ["So30UIResponderStandardEditActionsP", "init"]
@@ -1304,7 +1293,6 @@ depends-member:
 - ["So16UIStateRestoringP", "UIView"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "canSendMail"]
-- !private ["So16UIStateRestoringP", "dismiss"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "loadingContainer"]
@@ -1344,7 +1332,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "bounds"]
 - !private ["So18UITraitEnvironmentP", "canSendMail"]
 - !private ["So18UITraitEnvironmentP", "contentMode"]
-- !private ["So18UITraitEnvironmentP", "dismiss"]
 - !private ["So18UITraitEnvironmentP", "font"]
 - !private ["So18UITraitEnvironmentP", "frame"]
 - ["So18UITraitEnvironmentP", "init"]
@@ -1396,7 +1383,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "bounds"]
 - !private ["So23UIUserActivityRestoringP", "canSendMail"]
 - !private ["So23UIUserActivityRestoringP", "contentMode"]
-- !private ["So23UIUserActivityRestoringP", "dismiss"]
 - !private ["So23UIUserActivityRestoringP", "font"]
 - !private ["So23UIUserActivityRestoringP", "frame"]
 - ["So23UIUserActivityRestoringP", "init"]
@@ -1447,10 +1433,8 @@ depends-member:
 - !private ["So16UIViewControllerC", "CGRect"]
 - !private ["So16UIViewControllerC", "Commons"]
 - !private ["So16UIViewControllerC", "Constants"]
-- ["So16UIViewControllerC", "Error"]
 - !private ["So16UIViewControllerC", "Font"]
-- ["So16UIViewControllerC", "MFMailComposeResult"]
-- ["So16UIViewControllerC", "MFMailComposeViewController"]
+- !private ["So16UIViewControllerC", "MFMailComposeViewController"]
 - !private ["So16UIViewControllerC", "MFMailComposeViewControllerDelegate"]
 - !private ["So16UIViewControllerC", "NVActivityIndicatorType"]
 - !private ["So16UIViewControllerC", "NVActivityIndicatorView"]
@@ -1470,12 +1454,10 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - !private ["So16UIViewControllerC", "canSendMail"]
 - ["So16UIViewControllerC", "cargandoItem"]
-- !private ["So16UIViewControllerC", "dismiss"]
 - ["So16UIViewControllerC", "hideLoading"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "loadingContainer"]
-- ["So16UIViewControllerC", "mailComposeController"]
 - !private ["So16UIViewControllerC", "mailComposeDelegate"]
 - ["So16UIViewControllerC", "messageView"]
 - !private ["So16UIViewControllerC", "navigationController"]
@@ -1526,7 +1508,6 @@ depends-member:
 - !private ["7baseApp4WithP", "canSendMail"]
 - !private ["7baseApp4WithP", "clear"]
 - !private ["7baseApp4WithP", "contentMode"]
-- !private ["7baseApp4WithP", "dismiss"]
 - !private ["7baseApp4WithP", "font"]
 - ["7baseApp4WithP", "forInternetConnection"]
 - !private ["7baseApp4WithP", "frame"]
@@ -1611,7 +1592,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "canSendMail"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "clear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contentMode"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "font"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "forInternetConnection"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
@@ -1672,6 +1652,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textAlignment"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textColor"]
 depends-nominal:
+- "8DropDown10AnchorViewP"
 - !private "6Lottie13AnimationViewC"
 - "7baseApp15BViewControllerC"
 - !private "SK"
@@ -1773,10 +1754,12 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/a4SysCoreIOS.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Modules/SearchTextField.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/SkyFloatingLabelTextField.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Modules/AlamofireImage.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/Lottie.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Modules/DropDown.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/ObjectMapper.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
@@ -1797,10 +1780,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Headers/SearchTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Headers/AlamofireImage-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Headers/DropDown-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/lottie-ios-umbrella.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
@@ -1834,10 +1819,12 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Headers/a4SysCoreIOS-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Headers/SearchTextField-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers/SkyFloatingLabelTextField-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Headers/AlamofireImage-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Headers/Lottie-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Headers/DropDown-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Headers/ObjectMapper-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
@@ -1845,11 +1832,13 @@ depends-external:
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/Utils/objc/Reachability.h"
 - "/Users/david/proyectosXcode/baseApp/baseApp/newFrame/a4SysCoreIOS.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SearchTextField/SearchTextField.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/AlamofireImage/AlamofireImage.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/lottie-ios/Lottie.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/DropDown/DropDown.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Users/david/proyectosXcode/baseApp/build/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
@@ -1865,10 +1854,11 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/AdSupport.framework/Headers/AdSupport.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a08006b76b4c10649e0b5a288984f0a8"
+interface-hash: "408ef51c014efb63311be1dea4c2ca10"
